@@ -1,119 +1,149 @@
 #include "asclin.h"
+//
+//IFX_INTERRUPT(asclin0RxIsrHandler, 0, ISR_PRIORITY_ASCLIN0_RX);
+//void asclin0RxIsrHandler(void)
+//{
+//    char c = asclin0InUart();
+//    asclin0OutUart(c);
+//}
 
 void asclin0InitUart(void)
 {
-    // Table 285
-    // P14.0 OUT ALT(2)
-    // 0b10010 => ALT 2 OUT
-    MODULE_P14.IOCR0.B.PC0 = (1 << 4 | 1 << 1);
-    // P14.1 IN ARXA
-    // 0b0XX10 => PULL UP IN (Default)
-    MODULE_P14.IOCR0.B.PC1 = 1 << 2;
+    /* set numerator and denominator for 115200 baudrate */
+    unsigned int numerator = 576;
+    unsigned int denominator = 3125;
 
-    // ASCLIN0 CONFIG
+    /* RXA/P14.1, TX/P14.0 */
+    /* Set TX/P14.0 to "output" and "high" */
+    MODULE_P14.IOCR0.B.PC0 = 0x12;
+    MODULE_P14.OUT.B.P0 = 1;
+
+    /* Enable ASCn */
     IfxScuWdt_clearCpuEndinit(IfxScuWdt_getGlobalEndinitPassword());
-    MODULE_ASCLIN0.CLC.B.DISR = 0;
-    MODULE_ASCLIN0.CLC.B.EDIS = 1;
+    MODULE_ASCLIN0.CLC.U = 0;
     IfxScuWdt_setCpuEndinit(IfxScuWdt_getGlobalEndinitPassword());
+    /* read back for activating module */
+    (void)MODULE_ASCLIN0.CLC.U;
 
-    while (MODULE_ASCLIN0.CLC.B.DISS == 1);
+    /* select RX as input pin */
+    MODULE_ASCLIN0.IOCR.B.ALTI = 0; // Select Alternate Input A
 
-    // ARX (A => 0)
-    MODULE_ASCLIN0.IOCR.B.ALTI = 0;
+    /* Program ASC0 */
+    MODULE_ASCLIN0.CSR.U = 0;
 
-    // TxFIFO CON
-    MODULE_ASCLIN0.TXFIFOCON.B.FLUSH = 1;
-    MODULE_ASCLIN0.TXFIFOCON.B.ENO = 1;
-    MODULE_ASCLIN0.TXFIFOCON.B.INW = 1;
+    /* configure TX and RX FIFOs */
+    MODULE_ASCLIN0.TXFIFOCON.U = (1 << 6)   /* INW: (1 == 1 byte) */
+                               | (1 << 1)    /* ENO */
+                               | (1 << 0);   /* FLUSH */
+    MODULE_ASCLIN0.RXFIFOCON.U = (1 << 31)  /* BUF: (1 == Single Stage RX Buffer) */
+                               | (1 << 6)    /* OUTW: (1 == 1 byte) */
+                               | (1 << 1)    /* ENI */
+                               | (1 << 0);   /* FLUSH */
 
-    // RxFIFO CON
-    MODULE_ASCLIN0.RXFIFOCON.B.FLUSH = 1;
-    MODULE_ASCLIN0.RXFIFOCON.B.ENI = 1;
-    MODULE_ASCLIN0.RXFIFOCON.B.OUTW = 1;
+    /* 115200 */
+    MODULE_ASCLIN0.BITCON.U = ( 9 << 0)     /* PRESCALER: 10 */
+                            | (15 << 16)     /* OVERSAMPLING: 16 */
+                            | ( 9 << 24)     /* SAMPLEPOINT: position 7,8,9 */
+                            | (1u << 31);    /* SM: 3 samples per bit */
+    /* data format: 8N1 */
+    MODULE_ASCLIN0.FRAMECON.U = (1 << 9)        /* STOP: 1 bit */
+                              | (0 << 16)    /* MODE: Init */
+                              | (0 << 30);   /* PEN: no parity */
+    MODULE_ASCLIN0.DATCON.U = (7 << 0);     /* DATLEN: 8 bit */
 
-    // BIT CON
-    MODULE_ASCLIN0.BITCON.B.PRESCALER = 9;
-    MODULE_ASCLIN0.BITCON.B.OVERSAMPLING = 15;
+    /* set baudrate value */
+    MODULE_ASCLIN0.BRG.U = (denominator << 0)   /* DENOMINATOR */
+                         | (numerator << 16);    /* NUMERATOR */
 
-    // FRAME CONFIG
-    MODULE_ASCLIN0.FRAMECON.B.MODE = 0; // INIT MODE
-    MODULE_ASCLIN0.FRAMECON.B.STOP = 1;
-    MODULE_ASCLIN0.FRAMECON.B.PEN = 0;
-    MODULE_ASCLIN0.FRAMECON.B.MODE = 1; // ASC MODE
+    MODULE_ASCLIN0.FRAMECON.B.MODE = 1;     /* ASC mode */
+    MODULE_ASCLIN0.CSR.U = 1;               /* select CLC as clock source */
 
-    // DATA CONFIG
-    MODULE_ASCLIN0.DATCON.B.DATLEN = 7;
+    MODULE_ASCLIN0.FLAGSSET.U = (IFX_ASCLIN_FLAGSSET_TFLS_MSK << IFX_ASCLIN_FLAGSSET_TFLS_OFF);
 
-    // BAUD RATE CONFIG
-    MODULE_ASCLIN0.BRG.B.DENOMINATOR = 3125;
-    MODULE_ASCLIN0.BRG.B.NUMERATOR = 576;
-
-    // TRANSMIT POSSIBLE
-    MODULE_ASCLIN0.CSR.U = 1;
-    MODULE_ASCLIN0.FLAGSSET.B.TFLS = 1;
-
-//    // Interrupt
-//    Ifx_SRC_SRCR_Bits* src = (Ifx_SRC_SRCR_Bits*) &MODULE_SRC.ASCLIN.ASCLIN[0].RX.B;
-//    src->SRPN = ISR_PRIORITY_ASCLIN0_RX;
-//    src->SRE = 1;
-//    src->TOS = 0;
+    /* Initialize ASCLIN0 RX interrupt */
+//    volatile Ifx_SRC_SRCR *src;
+//    src = (volatile Ifx_SRC_SRCR *)(&MODULE_SRC.ASCLIN.ASCLIN[0].RX);
+//    src->B.SRPN = ISR_PRIORITY_ASCLIN0_RX;
+//    src->B.TOS  = 0;
+//    src->B.CLRR = 1; /* clear request */
+//    MODULE_ASCLIN0.FLAGSENABLE.B.RFLE = 1; /* enable rx fifo fill level flag */
+//    src->B.SRE = 1; /* interrupt enable */
 }
 
+/* Send character CHR via the serial line */
 void asclin0OutUart(const unsigned char chr)
 {
-    while (MODULE_ASCLIN0.FLAGS.B.TFL == 0);
-    MODULE_ASCLIN0.FLAGSCLEAR.B.TFLC = 1;
+    /* wait until space is available in the FIFO */
+    while (!(MODULE_ASCLIN0.FLAGS.B.TFL != 0));
+
+    /* TX Clear */
+    MODULE_ASCLIN0.FLAGSCLEAR.U = (IFX_ASCLIN_FLAGSCLEAR_TFLC_MSK << IFX_ASCLIN_FLAGSCLEAR_TFLC_OFF);
+
+    /* send the character */
     MODULE_ASCLIN0.TXDATA.U = chr;
 }
 
-int asclin0PollUart(unsigned char *chr)
-{
-    if (MODULE_ASCLIN0.FLAGS.B.RFL == 0)
-    {
-        return 0;
-    }
-    *chr = (char) MODULE_ASCLIN0.RXDATA.U;
-    MODULE_ASCLIN0.FLAGSCLEAR.B.RFLC = 1;
-    if (MODULE_ASCLIN0.FLAGS.B.FE || MODULE_ASCLIN0.FLAGS.B.PE || MODULE_ASCLIN0.FLAGS.B.RFO)
-    {
-        MODULE_ASCLIN0.FLAGSCLEAR.B.FEC = 1;
-        MODULE_ASCLIN0.FLAGSCLEAR.B.PEC = 1;
-        MODULE_ASCLIN0.FLAGSCLEAR.B.RFOC = 1;
-        return 0;
-    }
-    return 1;
-}
-
+/* Receive (and wait for) a character from the serial line */
 unsigned char asclin0InUart(void)
 {
     unsigned char ch;
+
+    /* wait for a new character */
     while (asclin0PollUart(&ch) == 0);
+
     return ch;
 }
 
 char asclin0InUartNonBlock(void)
 {
     unsigned char ch = 0;
-    return asclin0PollUart(&ch) ? ch : -1;
+    int res = asclin0PollUart(&ch);
+
+    return res == 1 ? ch : -1;
 }
 
-IFX_INTERRUPT(Asclin0RxIsrHandler, 0, ISR_PRIORITY_ASCLIN0_RX);
-void asclin0RxIsrHandler(void)
+/* Check the serial line if a character has been received.
+   returns 1 and the character in *chr if there is one
+   else 0
+ */
+int asclin0PollUart(unsigned char *chr)
 {
-    char c;
-    if(!asclin0PollUart(&c)) return;
-    asclin0OutUart(c);
-    if (c == '\r')
-        asclin0OutUart('\n');
+    unsigned char ret;
+    int res = 0;
+
+    if (MODULE_ASCLIN0.FLAGS.B.RFL != 0) /* If RX Ready */
+    {
+        ret = (unsigned char)MODULE_ASCLIN0.RXDATA.U;
+        /* acknowledge receive */
+        MODULE_ASCLIN0.FLAGSCLEAR.U = (IFX_ASCLIN_FLAGSCLEAR_RFLC_MSK << IFX_ASCLIN_FLAGSCLEAR_RFLC_OFF); // RX Clear
+        /* check for error condition */
+        if ((MODULE_ASCLIN0.FLAGS.U) & ((IFX_ASCLIN_FLAGS_PE_MSK << IFX_ASCLIN_FLAGS_PE_OFF) | \
+                                        (IFX_ASCLIN_FLAGS_FE_MSK << IFX_ASCLIN_FLAGS_FE_OFF) | \
+                                        (IFX_ASCLIN_FLAGS_RFO_MSK << IFX_ASCLIN_FLAGS_RFO_OFF)))
+        {
+            /* reset error flags */
+            MODULE_ASCLIN0.FLAGSCLEAR.U = ((IFX_ASCLIN_FLAGSCLEAR_PEC_MSK << IFX_ASCLIN_FLAGSCLEAR_PEC_OFF) | \
+                                           (IFX_ASCLIN_FLAGSCLEAR_FEC_MSK << IFX_ASCLIN_FLAGSCLEAR_FEC_OFF) | \
+                                           (IFX_ASCLIN_FLAGSCLEAR_RFOC_MSK << IFX_ASCLIN_FLAGSCLEAR_RFOC_OFF));
+            /* Buffer clear, reset module */
+        }
+        else
+        {
+            /* this is a valid character */
+            *chr = ret;
+            res = 1;
+        }
+    }
+
+    return res;
 }
 
-
-
+/* Initialise asynchronous interface to operate at baudrate,8,n,1 */
+/* ASCLIN1 for mikroBUS */
 void asclin1InitUart(void)
 {
     /* set numerator and denominator for 9600 baudrate */
 //    unsigned int numerator = 48; // 9600
-//    unsigned int numerator = 192; // 38400
     unsigned int numerator = 576; // 115200
 
     unsigned int denominator = 3125;
@@ -164,57 +194,80 @@ void asclin1InitUart(void)
 
     MODULE_ASCLIN1.FLAGSSET.U = (IFX_ASCLIN_FLAGSSET_TFLS_MSK << IFX_ASCLIN_FLAGSSET_TFLS_OFF);
 
-
-
-    // Interrupt
-    Ifx_SRC_SRCR_Bits *src = (Ifx_SRC_SRCR_Bits*) &MODULE_SRC.ASCLIN.ASCLIN[1].RX.B;
-    src->SRPN = ISR_PRIORITY_ASCLIN1_RX;
-    src->TOS = 0;
-    src->CLRR = 1;
-    MODULE_ASCLIN1.FLAGSENABLE.B.RFLE = 1;
-    src->SRE = 1;
+    /* Initialize ASCLIN0 RX interrupt */
+    volatile Ifx_SRC_SRCR *src;
+    src = (volatile Ifx_SRC_SRCR *)(&MODULE_SRC.ASCLIN.ASCLIN[1].RX);
+    src->B.SRPN = ISR_PRIORITY_ASCLIN1_RX;
+    src->B.TOS  = 0;
+    src->B.CLRR = 1; /* clear request */
+    MODULE_ASCLIN1.FLAGSENABLE.B.RFLE = 1; /* enable rx fifo fill level flag */
+    src->B.SRE = 1; /* interrupt enable */
 }
 
-
-IFX_INTERRUPT(Asclin1RxIsrHandler, 0, ISR_PRIORITY_ASCLIN1_RX);
+IFX_INTERRUPT(asclin1RxIsrHandler, 0, ISR_PRIORITY_ASCLIN1_RX);
 void asclin1RxIsrHandler(void)
 {
     char c = asclin1InUart();
-    asclin0OutUart(c);
+    bluetoothIsr(c);
 }
 
 
-
+/* Send character CHR via the serial line */
 void asclin1OutUart(const unsigned char chr)
 {
-    while (MODULE_ASCLIN1.FLAGS.B.TFL == 0);
-    MODULE_ASCLIN1.FLAGSCLEAR.B.TFLC = 1;
+    /* wait until space is available in the FIFO */
+    while (!(MODULE_ASCLIN1.FLAGS.B.TFL != 0));
+
+    /* TX Clear */
+    MODULE_ASCLIN1.FLAGSCLEAR.U = (IFX_ASCLIN_FLAGSCLEAR_TFLC_MSK << IFX_ASCLIN_FLAGSCLEAR_TFLC_OFF);
+
+    /* send the character */
     MODULE_ASCLIN1.TXDATA.U = chr;
 }
 
+/* Receive (and wait for) a character from the serial line */
 unsigned char asclin1InUart(void)
 {
     unsigned char ch;
+
+    /* wait for a new character */
     while (asclin1PollUart(&ch) == 0);
+
     return ch;
 }
 
+/* Check the serial line if a character has been received.
+   returns 1 and the character in *chr if there is one
+   else 0
+ */
 int asclin1PollUart(unsigned char *chr)
 {
-    if (MODULE_ASCLIN1.FLAGS.B.RFL == 0)
+    unsigned char ret;
+    int res = 0;
+
+    if (MODULE_ASCLIN1.FLAGS.B.RFL != 0) /* If RX Ready */
     {
-        return 0;
+        ret = (unsigned char)MODULE_ASCLIN1.RXDATA.U;
+        /* acknowledge receive */
+        MODULE_ASCLIN1.FLAGSCLEAR.U = (IFX_ASCLIN_FLAGSCLEAR_RFLC_MSK << IFX_ASCLIN_FLAGSCLEAR_RFLC_OFF); // RX Clear
+        /* check for error condition */
+        if ((MODULE_ASCLIN1.FLAGS.U) & ((IFX_ASCLIN_FLAGS_PE_MSK << IFX_ASCLIN_FLAGS_PE_OFF) | \
+                                        (IFX_ASCLIN_FLAGS_FE_MSK << IFX_ASCLIN_FLAGS_FE_OFF) | \
+                                        (IFX_ASCLIN_FLAGS_RFO_MSK << IFX_ASCLIN_FLAGS_RFO_OFF)))
+        {
+            /* reset error flags */
+            MODULE_ASCLIN1.FLAGSCLEAR.U = ((IFX_ASCLIN_FLAGSCLEAR_PEC_MSK << IFX_ASCLIN_FLAGSCLEAR_PEC_OFF) | \
+                                           (IFX_ASCLIN_FLAGSCLEAR_FEC_MSK << IFX_ASCLIN_FLAGSCLEAR_FEC_OFF) | \
+                                           (IFX_ASCLIN_FLAGSCLEAR_RFOC_MSK << IFX_ASCLIN_FLAGSCLEAR_RFOC_OFF));
+            /* Buffer clear, reset module */
+        }
+        else
+        {
+            /* this is a valid character */
+            *chr = ret;
+            res = 1;
+        }
     }
-    *chr = (char) MODULE_ASCLIN1.RXDATA.U;
-    MODULE_ASCLIN1.FLAGSCLEAR.B.RFLC = 1;
-    if (MODULE_ASCLIN1.FLAGS.B.FE || MODULE_ASCLIN1.FLAGS.B.PE || MODULE_ASCLIN1.FLAGS.B.RFO)
-    {
-        MODULE_ASCLIN1.FLAGSCLEAR.B.FEC = 1;
-        MODULE_ASCLIN1.FLAGSCLEAR.B.PEC = 1;
-        MODULE_ASCLIN1.FLAGSCLEAR.B.RFOC = 1;
-        return 0;
-    }
-    return 1;
+
+    return res;
 }
-
-

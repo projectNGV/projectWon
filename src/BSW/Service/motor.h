@@ -27,7 +27,7 @@ void motorMovChB(int dir);
 void motorStopChB(void);
 ///* 1: 정방향, 0: 역방향 */
 void motorMovChBPwm(int duty, int dir);
-void Motor_keypad_PWM(char c, int duty);
+void motorKeypadPwm(char c, int duty);
 
 
 #endif /* BSW_DRIVER_MOTOR_H_ */

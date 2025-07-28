@@ -8,8 +8,8 @@ Cpu1_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Confi
 "C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Configurations\Ifx_Cfg.h" :
 Cpu1_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\Infra\\Platform\Tricore\Compilers\CompilerTasking.h"
 "C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\Infra\\Platform\Tricore\Compilers\CompilerTasking.h" :
-Cpu1_Main.o :	"C:\Infineon\AURIX-Studio-1.10.2\tools\Compilers\Tasking_1.1r8\ctc\include\stddef.h"
-"C:\Infineon\AURIX-Studio-1.10.2\tools\Compilers\Tasking_1.1r8\ctc\include\stddef.h" :
+Cpu1_Main.o :	"C:\Infineon\AURIX-Studio-1.10.16\tools\Compilers\Tasking_1.1r8\ctc\include\stddef.h"
+"C:\Infineon\AURIX-Studio-1.10.16\tools\Compilers\Tasking_1.1r8\ctc\include\stddef.h" :
 Cpu1_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\\Cpu\\Std\Platform_Types.h"
 "C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\\Cpu\\Std\Platform_Types.h" :
 Cpu1_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\\Cpu\\Std\Ifx_TypesTasking.h"

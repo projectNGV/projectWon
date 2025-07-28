@@ -10,7 +10,9 @@
 
 #include <stdarg.h>
 
+#include "uart.h"
 #include "util.h"
+#include "priority.h"
 
 void bluetoothInit(void);
 void bluetoothSetName(char *name);

@@ -118,3 +118,5 @@ can.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\priority.h"
 "C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\priority.h" :
 can.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\BSW\\Service\tof.h"
 "C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\BSW\\Service\tof.h" :
+can.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\BSW\\MCAL\can.h"
+"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\BSW\\MCAL\can.h" :

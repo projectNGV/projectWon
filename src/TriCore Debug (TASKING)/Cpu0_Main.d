@@ -8,8 +8,8 @@ Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Confi
 "C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Configurations\Ifx_Cfg.h" :
 Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\Infra\\Platform\Tricore\Compilers\CompilerTasking.h"
 "C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\Infra\\Platform\Tricore\Compilers\CompilerTasking.h" :
-Cpu0_Main.o :	"C:\Infineon\AURIX-Studio-1.10.2\tools\Compilers\Tasking_1.1r8\ctc\include\stddef.h"
-"C:\Infineon\AURIX-Studio-1.10.2\tools\Compilers\Tasking_1.1r8\ctc\include\stddef.h" :
+Cpu0_Main.o :	"C:\Infineon\AURIX-Studio-1.10.16\tools\Compilers\Tasking_1.1r8\ctc\include\stddef.h"
+"C:\Infineon\AURIX-Studio-1.10.16\tools\Compilers\Tasking_1.1r8\ctc\include\stddef.h" :
 Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\\Cpu\\Std\Platform_Types.h"
 "C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\\Cpu\\Std\Platform_Types.h" :
 Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\\Cpu\\Std\Ifx_TypesTasking.h"
@@ -104,6 +104,8 @@ Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\priori
 "C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\priority.h" :
 Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\BSW\\Service\tof.h"
 "C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\BSW\\Service\tof.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\BSW\\MCAL\can.h"
+"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\BSW\\MCAL\can.h" :
 Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\BSW\\MCAL\asclin.h"
 "C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\BSW\\MCAL\asclin.h" :
 Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\\Asclin\\Std\IfxAsclin.h"
@@ -118,3 +120,75 @@ Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libra
 "C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\_PinMap\IfxAsclin_PinMap.h" :
 Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxAsclin_bf.h"
 "C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxAsclin_bf.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\ASW\\app\systeminit.h"
+"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\ASW\\app\systeminit.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\BSW\\Service\bluetooth.h"
+"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\BSW\\Service\bluetooth.h" :
+Cpu0_Main.o :	"C:\Infineon\AURIX-Studio-1.10.16\tools\Compilers\Tasking_1.1r8\ctc\include\stdarg.h"
+"C:\Infineon\AURIX-Studio-1.10.16\tools\Compilers\Tasking_1.1r8\ctc\include\stdarg.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\BSW\\Service\uart.h"
+"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\BSW\\Service\uart.h" :
+Cpu0_Main.o :	"C:\Infineon\AURIX-Studio-1.10.16\tools\Compilers\Tasking_1.1r8\ctc\include\string.h"
+"C:\Infineon\AURIX-Studio-1.10.16\tools\Compilers\Tasking_1.1r8\ctc\include\string.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\BSW\\Service\bluetooth.h"
+"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\BSW\\Service\bluetooth.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\BSW\\Service\util.h"
+"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\BSW\\Service\util.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\\Stm\\Std\IfxStm.h"
+"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\\Stm\\Std\IfxStm.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxStm_cfg.h"
+"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxStm_cfg.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxCbs_reg.h"
+"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxCbs_reg.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxCbs_regdef.h"
+"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxCbs_regdef.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\BSW\\Service\motor.h"
+"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\BSW\\Service\motor.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\\Gpt12\\Std\IfxGpt12.h"
+"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\\Gpt12\\Std\IfxGpt12.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxGpt12_cfg.h"
+"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxGpt12_cfg.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxGpt12_reg.h"
+"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxGpt12_reg.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxGpt12_regdef.h"
+"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxGpt12_regdef.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\_PinMap\IfxGpt12_PinMap.h"
+"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\_PinMap\IfxGpt12_PinMap.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\BSW\\MCAL\gtm_atom_pwm.h"
+"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\BSW\\MCAL\gtm_atom_pwm.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\\Gtm\\Atom\\Pwm\IfxGtm_Atom_Pwm.h"
+"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\\Gtm\\Atom\\Pwm\IfxGtm_Atom_Pwm.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\_PinMap\IfxGtm_PinMap.h"
+"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\_PinMap\IfxGtm_PinMap.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxGtm_reg.h"
+"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxGtm_reg.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxGtm_regdef.h"
+"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxGtm_regdef.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxGtm_cfg.h"
+"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\_Impl\IfxGtm_cfg.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\Gtm\Std\IfxGtm_Atom.h"
+"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\Gtm\Std\IfxGtm_Atom.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\Gtm\Std\IfxGtm.h"
+"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\Gtm\Std\IfxGtm.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\Gtm\Std\IfxGtm_Tbu.h"
+"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\Gtm\Std\IfxGtm_Tbu.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\Gtm\Std\IfxGtm_Cmu.h"
+"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\Gtm\Std\IfxGtm_Cmu.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\Gtm\Std\IfxGtm_Tom.h"
+"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\Gtm\Std\IfxGtm_Tom.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxGtm_bf.h"
+"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxGtm_bf.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\Gtm\Std\IfxGtm_Tim.h"
+"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\Gtm\Std\IfxGtm_Tim.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\Gtm\Std\IfxGtm_Cmu.h"
+"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\Gtm\Std\IfxGtm_Cmu.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\Gtm\Std\IfxGtm_Dtm.h"
+"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\Libraries\\iLLD\\TC37A\\Tricore\Gtm\Std\IfxGtm_Dtm.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\BSW\\Service\ultrasonic.h"
+"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\BSW\\Service\ultrasonic.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\BSW\\MCAL\port.h"
+"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\BSW\\MCAL\port.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\ASW\control.h"
+"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\ASW\control.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\BSW\\Service\motor.h"
+"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\BSW\\Service\motor.h" :

@@ -1,6 +1,6 @@
 	; Module start
 	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
-	.compiler_invocation	"ctc -f cc18060a --dep-file=motor.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc37x -D__CPU_TC37X__ --core=tc1.6.2 --fp-model=+float -D__CPU__=tc37x -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\ASW -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\ASW\\\\app -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\BSW -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\BSW\\\\MCAL -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\BSW\\\\Service -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Configurations -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Platform -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Sfr -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Ssw -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Service -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric\\\\If -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric\\\\If\\\\Ccu6If -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Can -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Irq -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Trap -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12 -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_Impl -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_PinMap -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2004 -o BSW/Service/motor.src ../BSW/Service/motor.c"
+	.compiler_invocation	"ctc -f cc16840a --dep-file=BSW/Service/motor.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc37x -D__CPU_TC37X__ --core=tc1.6.2 --fp-model=+float -D__CPU__=tc37x -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\ASW -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\ASW\\\\app -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\BSW -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\BSW\\\\MCAL -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\BSW\\\\Service -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Configurations -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Platform -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Sfr -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Ssw -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Service -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Can -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Irq -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Trap -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12 -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_Impl -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_PinMap -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2004 -o BSW/Service/motor.src ../BSW/Service/motor.c"
 	.compiler_name		"ctc"
 	;source	'../BSW/Service/motor.c'
 
@@ -25,22 +25,40 @@ motorInit:	.type	func
 	st.b	[a15]@los(0xf003a217),d15
 .L167:
 	movh.a	a15,#61444
-	ld.bu	d0,[a15]@los(0xf003a216)
+	ld.bu	d0,[a15]@los(0xf003aa11)
 .L168:
 	mov	d15,#16
 .L169:
 	insert	d15,d0,d15,#3,#5
 	movh.a	a15,#61444
-	st.b	[a15]@los(0xf003a216),d15
+	st.b	[a15]@los(0xf003aa11),d15
 .L170:
-	call	gtmAtomPwmInit
+	movh.a	a15,#61444
+	ld.bu	d0,[a15]@los(0xf003a216)
 .L171:
+	mov	d15,#16
+.L172:
+	insert	d15,d0,d15,#3,#5
+	movh.a	a15,#61444
+	st.b	[a15]@los(0xf003a216),d15
+.L173:
+	movh.a	a15,#61444
+	ld.bu	d0,[a15]@los(0xf003aa12)
+.L174:
+	mov	d15,#16
+.L175:
+	insert	d15,d0,d15,#3,#5
+	movh.a	a15,#61444
+	st.b	[a15]@los(0xf003aa12),d15
+.L176:
+	call	gtmAtomPwmInit
+.L177:
 	mov	d4,#0
 	call	gtmAtomPwmASetDutyCycle
-.L172:
+.L178:
 	mov	d4,#0
 	call	gtmAtomPwmBSetDutyCycle
-.L173:
+.L179:
 	ret
 .L74:
 	
@@ -59,11 +77,11 @@ __motorInit_function_end:
 motorStopChA:	.type	func
 	movh.a	a15,#61444
 	ld.bu	d15,[a15]@los(0xf003a200)
-.L178:
+.L184:
 	or	d15,#128
 	movh.a	a15,#61444
 	st.b	[a15]@los(0xf003a200),d15
-.L179:
+.L185:
 	ret
 .L75:
 	
@@ -85,14 +103,14 @@ motorMovChAPwm:	.type	func
 	call	gtmAtomPwmASetDutyCycle
 .L88:
 	jeq	d15,#0,.L2
-.L184:
+.L190:
 	movh.a	a15,#61444
 	ld.bu	d15,[a15]@los(0xf003aa00)
 .L90:
 	or	d15,#2
 	movh.a	a15,#61444
 	st.b	[a15]@los(0xf003aa00),d15
-.L185:
+.L191:
 	j	.L3
 .L2:
 	movh.a	a15,#61444
@@ -104,11 +122,11 @@ motorMovChAPwm:	.type	func
 .L3:
 	movh.a	a15,#61444
 	ld.bu	d15,[a15]@los(0xf003a200)
-.L186:
+.L192:
 	insert	d15,d15,#0,#7,#1
 	movh.a	a15,#61444
 	st.b	[a15]@los(0xf003a200),d15
-.L187:
+.L193:
 	ret
 .L76:
 	
@@ -127,11 +145,11 @@ __motorMovChAPwm_function_end:
 motorStopChB:	.type	func
 	movh.a	a15,#61444
 	ld.bu	d15,[a15]@los(0xf003a200)
-.L192:
+.L198:
 	or	d15,#64
 	movh.a	a15,#61444
 	st.b	[a15]@los(0xf003a200),d15
-.L193:
+.L199:
 	ret
 .L80:
 	
@@ -153,14 +171,14 @@ motorMovChBPwm:	.type	func
 	call	gtmAtomPwmBSetDutyCycle
 .L92:
 	jeq	d15,#0,.L4
-.L198:
+.L204:
 	movh.a	a15,#61444
 	ld.bu	d15,[a15]@los(0xf003aa00)
 .L94:
 	or	d15,#4
 	movh.a	a15,#61444
 	st.b	[a15]@los(0xf003aa00),d15
-.L199:
+.L205:
 	j	.L5
 .L4:
 	movh.a	a15,#61444
@@ -172,11 +190,11 @@ motorMovChBPwm:	.type	func
 .L5:
 	movh.a	a15,#61444
 	ld.bu	d15,[a15]@los(0xf003a200)
-.L200:
+.L206:
 	insert	d15,d15,#0,#6,#1
 	movh.a	a15,#61444
 	st.b	[a15]@los(0xf003a200),d15
-.L201:
+.L207:
 	ret
 .L81:
 	
@@ -198,9 +216,9 @@ motorKeypadPwm:	.type	func
 	mov	d8,d5
 .L100:
 	mov	d0,#56
-.L206:
+.L212:
 	jne	d15,d0,.L6
-.L207:
+.L213:
 	mov	d5,#1
 .L97:
 	mov	d4,d8
@@ -219,9 +237,9 @@ motorKeypadPwm:	.type	func
 	j	.L7
 .L6:
 	mov	d0,#50
-.L208:
+.L214:
 	jne	d15,d0,.L8
-.L209:
+.L215:
 	mov	d5,#0
 .L107:
 	mov	d4,d8
@@ -240,9 +258,9 @@ motorKeypadPwm:	.type	func
 	j	.L9
 .L8:
 	mov	d0,#52
-.L210:
+.L216:
 	jne	d15,d0,.L10
-.L211:
+.L217:
 	mov	d5,#0
 .L114:
 	mov	d4,d8
@@ -261,9 +279,9 @@ motorKeypadPwm:	.type	func
 	j	.L11
 .L10:
 	mov	d0,#54
-.L212:
+.L218:
 	jne	d15,d0,.L12
-.L213:
+.L219:
 	mov	d5,#1
 .L121:
 	mov	d4,d8
@@ -282,9 +300,9 @@ motorKeypadPwm:	.type	func
 	j	.L13
 .L12:
 	mov	d0,#53
-.L214:
+.L220:
 	jne	d15,d0,.L14
-.L215:
+.L221:
 	mov	d8,#0
 .L128:
 	mov	d5,#1
@@ -304,9 +322,9 @@ motorKeypadPwm:	.type	func
 	j	.L15
 .L14:
 	mov	d0,#55
-.L216:
+.L222:
 	jne	d15,d0,.L16
-.L217:
+.L223:
 	call	motorStopChA
 .L134:
 	mov	d5,#1
@@ -321,9 +339,9 @@ motorKeypadPwm:	.type	func
 	j	.L17
 .L16:
 	mov	d0,#57
-.L218:
+.L224:
 	jne	d15,d0,.L18
-.L219:
+.L225:
 	mov	d5,#1
 .L140:
 	mov	d4,d8
@@ -331,7 +349,7 @@ motorKeypadPwm:	.type	func
 	call	motorMovChAPwm
 .L141:
 	call	motorStopChB
-.L220:
+.L226:
 	mov	d4,d15
 .L142:
 	call	bluetoothSendByteBlocked
@@ -339,9 +357,9 @@ motorKeypadPwm:	.type	func
 	j	.L19
 .L18:
 	mov	d0,#49
-.L221:
+.L227:
 	jne	d15,d0,.L20
-.L222:
+.L228:
 	call	motorStopChA
 .L144:
 	mov	d5,#0
@@ -356,9 +374,9 @@ motorKeypadPwm:	.type	func
 	j	.L21
 .L20:
 	mov	d0,#51
-.L223:
+.L229:
 	jne	d15,d0,.L22
-.L224:
+.L230:
 	mov	d5,#0
 .L150:
 	mov	d4,d8
@@ -366,7 +384,7 @@ motorKeypadPwm:	.type	func
 	call	motorMovChAPwm
 .L151:
 	call	motorStopChB
-.L225:
+.L231:
 	mov	d4,d15
 .L152:
 	call	bluetoothSendByteBlocked
@@ -374,11 +392,11 @@ motorKeypadPwm:	.type	func
 	j	.L23
 .L22:
 	mov	d0,#66
-.L226:
+.L232:
 	jne	d15,d0,.L24
-.L227:
+.L233:
 	jlt	d8,#1,.L25
-.L228:
+.L234:
 	add	d15,d8,#-10
 .L99:
 	mov	d5,#1
@@ -5750,8 +5768,8 @@ __motorKeypadPwm_function_end:
 	.byte	0,24
 	.word	18984
 	.byte	0,0,6,0,0,26
-	.byte	'bluetoothSendByteBlocked',0,20,22,6,1,1,1,1,5
-	.byte	'ch',0,20,22,45
+	.byte	'bluetoothSendByteBlocked',0,20,24,6,1,1,1,1,5
+	.byte	'ch',0,20,24,45
 	.word	641
 	.byte	0,21
 	.word	27557
@@ -42371,16 +42389,28 @@ __motorKeypadPwm_function_end:
 	.half	.L168-.L167
 	.byte	1,5,28,9
 	.half	.L169-.L168
-	.byte	1,5,19,9
+	.byte	1,5,23,9
 	.half	.L170-.L169
-	.byte	3,3,1,5,29,9
+	.byte	3,1,1,5,30,9
 	.half	.L171-.L170
-	.byte	3,3,1,9
+	.byte	1,5,28,9
 	.half	.L172-.L171
-	.byte	3,1,1,5,1,9
+	.byte	1,5,23,9
 	.half	.L173-.L172
+	.byte	3,1,1,5,30,9
+	.half	.L174-.L173
+	.byte	1,5,28,9
+	.half	.L175-.L174
+	.byte	1,5,19,9
+	.half	.L176-.L175
+	.byte	3,2,1,5,29,9
+	.half	.L177-.L176
+	.byte	3,2,1,9
+	.half	.L178-.L177
+	.byte	3,1,1,5,1,9
+	.half	.L179-.L178
 	.byte	3,1,1,7,9
-	.half	.L48-.L173
+	.half	.L48-.L179
 	.byte	0,1,1
 .L162:
 	.sdecl	'.debug_ranges',debug,cluster('motorInit')
@@ -42414,24 +42444,24 @@ __motorKeypadPwm_function_end:
 	.sdecl	'.debug_line',debug,cluster('motorStopChA')
 	.sect	'.debug_line'
 .L51:
-	.word	.L175-.L174
-.L174:
+	.word	.L181-.L180
+.L180:
 	.half	3
-	.word	.L177-.L176
-.L176:
+	.word	.L183-.L182
+.L182:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../BSW/Service/motor.c',0,0,0,0,0
-.L177:
+.L183:
 	.byte	5,21,7,0,5,2
 	.word	.L31
 	.byte	3,17,1,5,25,9
-	.half	.L178-.L31
+	.half	.L184-.L31
 	.byte	1,5,1,9
-	.half	.L179-.L178
+	.half	.L185-.L184
 	.byte	3,1,1,7,9
-	.half	.L53-.L179
+	.half	.L53-.L185
 	.byte	0,1,1
-.L175:
+.L181:
 	.sdecl	'.debug_ranges',debug,cluster('motorStopChA')
 	.sect	'.debug_ranges'
 .L52:
@@ -42469,14 +42499,14 @@ __motorKeypadPwm_function_end:
 	.sdecl	'.debug_line',debug,cluster('motorMovChAPwm')
 	.sect	'.debug_line'
 .L56:
-	.word	.L181-.L180
-.L180:
+	.word	.L187-.L186
+.L186:
 	.half	3
-	.word	.L183-.L182
-.L182:
+	.word	.L189-.L188
+.L188:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../BSW/Service/motor.c',0,0,0,0,0
-.L183:
+.L189:
 	.byte	5,6,7,0,5,2
 	.word	.L33
 	.byte	3,22,1,5,29,9
@@ -42484,25 +42514,25 @@ __motorKeypadPwm_function_end:
 	.byte	3,2,1,5,5,9
 	.half	.L88-.L89
 	.byte	3,1,1,5,25,7,9
-	.half	.L184-.L88
+	.half	.L190-.L88
 	.byte	3,2,1,5,29,9
-	.half	.L90-.L184
+	.half	.L90-.L190
 	.byte	1,5,32,9
-	.half	.L185-.L90
+	.half	.L191-.L90
 	.byte	1,5,25,9
-	.half	.L2-.L185
+	.half	.L2-.L191
 	.byte	3,3,1,5,29,9
 	.half	.L91-.L2
 	.byte	1,5,21,9
 	.half	.L3-.L91
 	.byte	3,3,1,5,25,9
-	.half	.L186-.L3
+	.half	.L192-.L3
 	.byte	1,5,1,9
-	.half	.L187-.L186
+	.half	.L193-.L192
 	.byte	3,1,1,7,9
-	.half	.L58-.L187
+	.half	.L58-.L193
 	.byte	0,1,1
-.L181:
+.L187:
 	.sdecl	'.debug_ranges',debug,cluster('motorMovChAPwm')
 	.sect	'.debug_ranges'
 .L57:
@@ -42534,24 +42564,24 @@ __motorKeypadPwm_function_end:
 	.sdecl	'.debug_line',debug,cluster('motorStopChB')
 	.sect	'.debug_line'
 .L61:
-	.word	.L189-.L188
-.L188:
+	.word	.L195-.L194
+.L194:
 	.half	3
-	.word	.L191-.L190
-.L190:
+	.word	.L197-.L196
+.L196:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../BSW/Service/motor.c',0,0,0,0,0
-.L191:
+.L197:
 	.byte	5,21,7,0,5,2
 	.word	.L35
 	.byte	3,38,1,5,25,9
-	.half	.L192-.L35
+	.half	.L198-.L35
 	.byte	1,5,1,9
-	.half	.L193-.L192
+	.half	.L199-.L198
 	.byte	3,1,1,7,9
-	.half	.L63-.L193
+	.half	.L63-.L199
 	.byte	0,1,1
-.L189:
+.L195:
 	.sdecl	'.debug_ranges',debug,cluster('motorStopChB')
 	.sect	'.debug_ranges'
 .L62:
@@ -42589,14 +42619,14 @@ __motorKeypadPwm_function_end:
 	.sdecl	'.debug_line',debug,cluster('motorMovChBPwm')
 	.sect	'.debug_line'
 .L66:
-	.word	.L195-.L194
-.L194:
+	.word	.L201-.L200
+.L200:
 	.half	3
-	.word	.L197-.L196
-.L196:
+	.word	.L203-.L202
+.L202:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../BSW/Service/motor.c',0,0,0,0,0
-.L197:
+.L203:
 	.byte	5,6,7,0,5,2
 	.word	.L37
 	.byte	3,43,1,5,29,9
@@ -42604,25 +42634,25 @@ __motorKeypadPwm_function_end:
 	.byte	3,2,1,5,5,9
 	.half	.L92-.L93
 	.byte	3,2,1,5,25,7,9
-	.half	.L198-.L92
+	.half	.L204-.L92
 	.byte	3,2,1,5,29,9
-	.half	.L94-.L198
+	.half	.L94-.L204
 	.byte	1,5,32,9
-	.half	.L199-.L94
+	.half	.L205-.L94
 	.byte	1,5,25,9
-	.half	.L4-.L199
+	.half	.L4-.L205
 	.byte	3,3,1,5,29,9
 	.half	.L95-.L4
 	.byte	1,5,21,9
 	.half	.L5-.L95
 	.byte	3,3,1,5,25,9
-	.half	.L200-.L5
+	.half	.L206-.L5
 	.byte	1,5,1,9
-	.half	.L201-.L200
+	.half	.L207-.L206
 	.byte	3,1,1,7,9
-	.half	.L68-.L201
+	.half	.L68-.L207
 	.byte	0,1,1
-.L195:
+.L201:
 	.sdecl	'.debug_ranges',debug,cluster('motorMovChBPwm')
 	.sect	'.debug_ranges'
 .L67:
@@ -42660,24 +42690,24 @@ __motorKeypadPwm_function_end:
 	.sdecl	'.debug_line',debug,cluster('motorKeypadPwm')
 	.sect	'.debug_line'
 .L71:
-	.word	.L203-.L202
-.L202:
+	.word	.L209-.L208
+.L208:
 	.half	3
-	.word	.L205-.L204
-.L204:
+	.word	.L211-.L210
+.L210:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../BSW/Service/motor.c',0,0,0,0,0
-.L205:
+.L211:
 	.byte	5,6,7,0,5,2
 	.word	.L39
 	.byte	3,58,1,5,14,9
 	.half	.L100-.L39
 	.byte	3,2,1,5,5,9
-	.half	.L206-.L100
+	.half	.L212-.L100
 	.byte	1,5,30,7,9
-	.half	.L207-.L206
+	.half	.L213-.L212
 	.byte	3,2,1,9
-	.half	.L101-.L207
+	.half	.L101-.L213
 	.byte	3,1,1,5,34,9
 	.half	.L103-.L101
 	.byte	3,1,1,5,32,9
@@ -42685,11 +42715,11 @@ __motorKeypadPwm_function_end:
 	.byte	3,126,1,5,19,9
 	.half	.L6-.L105
 	.byte	3,4,1,5,10,9
-	.half	.L208-.L6
+	.half	.L214-.L6
 	.byte	1,5,30,7,9
-	.half	.L209-.L208
+	.half	.L215-.L214
 	.byte	3,2,1,9
-	.half	.L108-.L209
+	.half	.L108-.L215
 	.byte	3,1,1,5,34,9
 	.half	.L110-.L108
 	.byte	3,1,1,5,32,9
@@ -42697,11 +42727,11 @@ __motorKeypadPwm_function_end:
 	.byte	3,126,1,5,19,9
 	.half	.L8-.L112
 	.byte	3,5,1,5,10,9
-	.half	.L210-.L8
+	.half	.L216-.L8
 	.byte	1,5,30,7,9
-	.half	.L211-.L210
+	.half	.L217-.L216
 	.byte	3,2,1,9
-	.half	.L115-.L211
+	.half	.L115-.L217
 	.byte	3,1,1,5,34,9
 	.half	.L117-.L115
 	.byte	3,1,1,5,32,9
@@ -42709,11 +42739,11 @@ __motorKeypadPwm_function_end:
 	.byte	3,126,1,5,19,9
 	.half	.L10-.L119
 	.byte	3,4,1,5,10,9
-	.half	.L212-.L10
+	.half	.L218-.L10
 	.byte	1,5,30,7,9
-	.half	.L213-.L212
+	.half	.L219-.L218
 	.byte	3,2,1,9
-	.half	.L122-.L213
+	.half	.L122-.L219
 	.byte	3,1,1,5,34,9
 	.half	.L124-.L122
 	.byte	3,1,1,5,32,9
@@ -42721,11 +42751,11 @@ __motorKeypadPwm_function_end:
 	.byte	3,126,1,5,19,9
 	.half	.L12-.L126
 	.byte	3,4,1,5,10,9
-	.half	.L214-.L12
+	.half	.L220-.L12
 	.byte	1,5,14,7,9
-	.half	.L215-.L214
+	.half	.L221-.L220
 	.byte	3,1,1,5,30,9
-	.half	.L128-.L215
+	.half	.L128-.L221
 	.byte	3,1,1,9
 	.half	.L129-.L128
 	.byte	3,1,1,5,34,9
@@ -42735,11 +42765,11 @@ __motorKeypadPwm_function_end:
 	.byte	3,125,1,5,19,9
 	.half	.L14-.L133
 	.byte	3,5,1,5,10,9
-	.half	.L216-.L14
+	.half	.L222-.L14
 	.byte	1,5,21,7,9
-	.half	.L217-.L216
+	.half	.L223-.L222
 	.byte	3,2,1,5,30,9
-	.half	.L134-.L217
+	.half	.L134-.L223
 	.byte	3,1,1,5,34,9
 	.half	.L136-.L134
 	.byte	3,1,1,5,23,9
@@ -42747,23 +42777,23 @@ __motorKeypadPwm_function_end:
 	.byte	3,126,1,5,19,9
 	.half	.L16-.L138
 	.byte	3,4,1,5,10,9
-	.half	.L218-.L16
+	.half	.L224-.L16
 	.byte	1,5,30,7,9
-	.half	.L219-.L218
+	.half	.L225-.L224
 	.byte	3,2,1,5,21,9
-	.half	.L141-.L219
+	.half	.L141-.L225
 	.byte	3,1,1,5,34,9
-	.half	.L220-.L141
+	.half	.L226-.L141
 	.byte	3,1,1,5,32,9
-	.half	.L143-.L220
+	.half	.L143-.L226
 	.byte	3,126,1,5,19,9
 	.half	.L18-.L143
 	.byte	3,4,1,5,10,9
-	.half	.L221-.L18
+	.half	.L227-.L18
 	.byte	1,5,21,7,9
-	.half	.L222-.L221
+	.half	.L228-.L227
 	.byte	3,2,1,5,30,9
-	.half	.L144-.L222
+	.half	.L144-.L228
 	.byte	3,1,1,5,34,9
 	.half	.L146-.L144
 	.byte	3,1,1,5,23,9
@@ -42771,25 +42801,25 @@ __motorKeypadPwm_function_end:
 	.byte	3,126,1,5,19,9
 	.half	.L20-.L148
 	.byte	3,4,1,5,10,9
-	.half	.L223-.L20
+	.half	.L229-.L20
 	.byte	1,5,30,7,9
-	.half	.L224-.L223
+	.half	.L230-.L229
 	.byte	3,2,1,5,21,9
-	.half	.L151-.L224
+	.half	.L151-.L230
 	.byte	3,1,1,5,34,9
-	.half	.L225-.L151
+	.half	.L231-.L151
 	.byte	3,1,1,5,32,9
-	.half	.L153-.L225
+	.half	.L153-.L231
 	.byte	3,126,1,5,19,9
 	.half	.L22-.L153
 	.byte	3,5,1,5,10,9
-	.half	.L226-.L22
+	.half	.L232-.L22
 	.byte	1,5,9,7,9
-	.half	.L227-.L226
+	.half	.L233-.L232
 	.byte	3,1,1,5,18,7,9
-	.half	.L228-.L227
+	.half	.L234-.L233
 	.byte	3,1,1,5,34,9
-	.half	.L99-.L228
+	.half	.L99-.L234
 	.byte	3,1,1,9
 	.half	.L155-.L99
 	.byte	3,1,1,5,9,9
@@ -42801,7 +42831,7 @@ __motorKeypadPwm_function_end:
 	.byte	3,2,1,7,9
 	.half	.L73-.L27
 	.byte	0,1,1
-.L203:
+.L209:
 	.sdecl	'.debug_ranges',debug,cluster('motorKeypadPwm')
 	.sect	'.debug_ranges'
 .L72:
@@ -43042,7 +43072,7 @@ __motorKeypadPwm_function_end:
 	.word	0,0
 	.sdecl	'.debug_frame',debug
 	.sect	'.debug_frame'
-.L229:
+.L235:
 	.word	48
 	.word	-1
 	.byte	3,0,2,1,27,12,26,0,8,26,8,27,8,30,8,29,8,28,8,16,8,17,8,24,8,25,8,31,8,32,8,33,8,34,8,35,8,36,8,37,8,38
@@ -43050,27 +43080,27 @@ __motorKeypadPwm_function_end:
 	.sdecl	'.debug_frame',debug,cluster('motorInit')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L229,.L29,.L74-.L29
+	.word	.L235,.L29,.L74-.L29
 	.sdecl	'.debug_frame',debug,cluster('motorStopChA')
 	.sect	'.debug_frame'
 	.word	24
-	.word	.L229,.L31,.L75-.L31
+	.word	.L235,.L31,.L75-.L31
 	.byte	8,18,8,19,8,20,8,21,8,22,8,23
 	.sdecl	'.debug_frame',debug,cluster('motorMovChAPwm')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L229,.L33,.L76-.L33
+	.word	.L235,.L33,.L76-.L33
 	.sdecl	'.debug_frame',debug,cluster('motorStopChB')
 	.sect	'.debug_frame'
 	.word	24
-	.word	.L229,.L35,.L80-.L35
+	.word	.L235,.L35,.L80-.L35
 	.byte	8,18,8,19,8,20,8,21,8,22,8,23
 	.sdecl	'.debug_frame',debug,cluster('motorMovChBPwm')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L229,.L37,.L81-.L37
+	.word	.L235,.L37,.L81-.L37
 	.sdecl	'.debug_frame',debug,cluster('motorKeypadPwm')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L229,.L39,.L84-.L39
+	.word	.L235,.L39,.L84-.L39
 	; Module end

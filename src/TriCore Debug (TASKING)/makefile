@@ -25,7 +25,6 @@ RM := rm -rf
 -include Libraries/iLLD/TC37A/Tricore/Can/Std/subdir.mk
 -include Libraries/iLLD/TC37A/Tricore/Can/Can/subdir.mk
 -include Libraries/iLLD/TC37A/Tricore/Asclin/Std/subdir.mk
--include Libraries/Service/CpuGeneric/If/subdir.mk
 -include Libraries/Infra/Ssw/TC37A/Tricore/subdir.mk
 -include Libraries/Infra/Platform/Tricore/Compilers/subdir.mk
 -include Configurations/Debug/subdir.mk
@@ -36,14 +35,23 @@ RM := rm -rf
 -include ASW/subdir.mk
 -include subdir.mk
 ifneq ($(MAKECMDGOALS),clean)
+ifneq ($(strip $(C++M_DEPS)),)
+-include $(C++M_DEPS)
+endif
 ifneq ($(strip $(C++_DEPS)),)
 -include $(C++_DEPS)
+endif
+ifneq ($(strip $(CCM_DEPS)),)
+-include $(CCM_DEPS)
 endif
 ifneq ($(strip $(CC_DEPS)),)
 -include $(CC_DEPS)
 endif
 ifneq ($(strip $(CPP_DEPS)),)
 -include $(CPP_DEPS)
+endif
+ifneq ($(strip $(CXXM_DEPS)),)
+-include $(CXXM_DEPS)
 endif
 ifneq ($(strip $(CXX_DEPS)),)
 -include $(CXX_DEPS)
@@ -81,12 +89,17 @@ all: main-build
 main-build: project-won.elf secondary-outputs
 
 # Tool invocations
-project-won.elf: $(OBJS) makefile $(OPTIONAL_TOOL_DEPS)
+project-won.elf: $(OBJS) makefile $(OPTIONAL_TOOL_DEPS) .project-won.elf.opt
 	@echo 'Building target: $@'
 	@echo 'Invoking: TASKING Linker'
-	cctc --lsl-file="../Lcf_Tasking_Tricore_Tc.lsl" -Wl-Oc -Wl-OL -Wl-Ot -Wl-Ox -Wl-Oy -Wl--map-file="project-won.map" -Wl-mc -Wl-mf -Wl-mi -Wl-mk -Wl-ml -Wl-mm -Wl-md -Wl-mr -Wl-mu --no-warnings= -Wl--error-limit=42 --fp-model=3 -lrt --lsl-core=vtc --exceptions --strict --anachronisms --force-c++ -Ctc37x -o"project-won.elf" -Wl-o"project-won.hex:IHEX" $(OBJS)
+	cctc -f .project-won.elf.opt
 	@echo 'Finished building target: $@'
 	@echo ' '
+
+.project-won.elf.opt:
+	@argfile .project-won.elf.opt --lsl-file="../Lcf_Tasking_Tricore_Tc.lsl" -Wl-Oc -Wl-OL -Wl-Ot -Wl-Ox -Wl-Oy -Wl--map-file="project-won.map" -Wl-mc -Wl-mf -Wl-mi -Wl-mk -Wl-ml -Wl-mm -Wl-md -Wl-mr -Wl-mu --no-warnings= -Wl--error-limit=42 --fp-model=3 -lrt --lsl-core=vtc --exceptions --strict --anachronisms --force-c++ -Ctc37x -o"project-won.elf" -Wl-o"project-won.hex:IHEX" $(OBJS)
+
+.PHONY: .project-won.elf.opt
 
 project-won.siz: project-won.elf makefile $(OPTIONAL_TOOL_DEPS)
 	@echo 'Invoking: Print Size'

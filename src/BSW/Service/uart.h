@@ -4,6 +4,8 @@
 #include <string.h>
 #include <stdarg.h>
 
+#include "bluetooth.h"
+
 #include "Ifx_Types.h"
 #define BUFSIZE     128
 #define KB_BS '\x7F'

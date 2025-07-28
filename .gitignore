@@ -1,73 +1,30 @@
-# TC375 AURIX Project .gitignore
-
-# Build artifacts
 *.o
 *.obj
 *.elf
 *.hex
-*.bin
+*.srec
 *.map
 *.lst
-*.a
-*.lib
-*.exe
+*.dep
+*.d
 
-# Build directories
-Debug/
-Release/
-build/
-out/
-bin/
-obj/
 
-# IDE files
-.vscode/
-.idea/
-*.swp
-*.swo
-*~
-
-# Eclipse/ADS specific
-.metadata/
-.settings/
-.project
-.cproject
-.ads/
+.metadata/      # Eclipse 워크스페이스 설정 (매우 중요!)
+.settings/      # 일부 로컬 설정이 포함될 수 있으나, 보통 핵심 설정을 포함하므로 아래에 예외 처리
+*.user
+*.useros
 *.launch
 
-# Temporary files
-*.tmp
-*.temp
-*.bak
-*.backup
-
-# Log files
-*.log
-
-# OS files
 .DS_Store
 Thumbs.db
+*~
+*.swp
+*.swo
+*.bak
+*.tmp
 
-# Compiler files
-*.i
-*.ii
-*.s
-*.asm
-
-# Flash files
-*.hex
-*.srec
-*.mot
-
-# Generated config files
 Configurations/Debug/sync_on_halt.c
 Configurations/Ifx_Cfg_Ssw.c
 Configurations/Ifx_Cfg_Ssw.h
 Configurations/Ifx_Cfg_SswBmhd.c
 Configurations/Ifx_Cfg.h
-
-# Pin config
-pinmapper.pincfg
-
-# ADS files
-src/.ads/ 

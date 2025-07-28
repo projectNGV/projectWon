@@ -19,7 +19,11 @@ typedef enum ledpins{
 
 typedef enum buzzerpins{
    BUZZER_1, BUZZER_2, BUZZER_NUM
-} buzzerPins;
+} BuzzerPins;
+
+typedef enum buttonpins{
+   BUTTON_1, BUTTON_NUM
+} ButtonPins;
 
 
 #endif /* BSW_MCAL_PORT_H_ */
