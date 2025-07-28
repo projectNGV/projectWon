@@ -3,40 +3,44 @@
 /*********************************************************************************************************************/
 /*-------------------------------------------------Global variables--------------------------------------------------*/
 /*********************************************************************************************************************/
-McmcanType                  g_mcmcan;                       /* Global MCMCAN configuration and control structure    */
+McmcanType g_mcmcan; /* Global MCMCAN configuration and control structure    */
 
 /*********************************************************************************************************************/
 /*---------------------------------------------Function Implementations----------------------------------------------*/
 /*********************************************************************************************************************/
 /* Default CAN Tx Handler */
-IFX_INTERRUPT(Can_TxIsrHandler, 0, ISR_PRIORITY_CAN_TX);
-void Can_TxIsrHandler(void)
+IFX_INTERRUPT(canTxIsrHandler, 0, ISR_PRIORITY_CAN_TX);
+void canTxIsrHandler (void)
 {
     /* Clear the "Transmission Completed" interrupt flag */
     IfxCan_Node_clearInterruptFlag(g_mcmcan.canSrcNode.node, IfxCan_Interrupt_transmissionCompleted);
 }
 /* Default CAN Rx Handler */
-IFX_INTERRUPT(Can_RxIsrHandler, 0, ISR_PRIORITY_CAN_RX);
-void Can_RxIsrHandler (void)
+IFX_INTERRUPT(canRxIsrHandler, 0, ISR_PRIORITY_CAN_RX);
+void canRxIsrHandler (void)
 {
     unsigned int rxID;
     char rxData[8] = {0, };
     int rxLen;
     canRecvMsg(&rxID, rxData, &rxLen);
-    myPrintf("ID: 0x%x", rxID);
-    myPrintf("CAN Rx: ");
-    for (int i = 0; i < rxLen; i++)
+    
+    switch (rxID)
     {
-        myPrintf("0x%x ", rxData[i]);
+        case CAN_TOF_ID :
+            tofUpdateFromCAN(rxData);
+            break;
+        default :
+            break;
     }
+
     myPrintf("\n");
 }
 
 /* Function to initialize MCMCAN module and nodes related for this application use case */
-void canInit(CAN_BAUDRATES ls_baudrate, CAN_NODE CAN_Node)
+void canInit (CAN_BAUDRATES ls_baudrate, CAN_NODE CAN_Node)
 {
     /* wake up transceiver (node 0) */
-    IfxPort_setPinModeOutput(&MODULE_P20,6, IfxPort_OutputMode_pushPull, IfxPort_OutputIdx_general);
+    IfxPort_setPinModeOutput(&MODULE_P20, 6, IfxPort_OutputMode_pushPull, IfxPort_OutputIdx_general);
     MODULE_P20.OUT.B.P6 = 0;
 
     IfxCan_Can_initModuleConfig(&g_mcmcan.canConfig, &MODULE_CAN0);
@@ -45,36 +49,33 @@ void canInit(CAN_BAUDRATES ls_baudrate, CAN_NODE CAN_Node)
 
     switch (ls_baudrate)
     {
-        case BD_NOUSE:
+        case BD_NOUSE :
             g_mcmcan.canNodeConfig.busLoopbackEnabled = TRUE;
             break;
-        case BD_500K:
+        case BD_500K :
             g_mcmcan.canNodeConfig.baudRate.baudrate = 500000;
             break;
-        case BD_1M:
+        case BD_1M :
             g_mcmcan.canNodeConfig.baudRate.baudrate = 1000000;
             break;
     }
 
     g_mcmcan.canNodeConfig.busLoopbackEnabled = FALSE;
 
-    if (CAN_Node == CAN_NODE0) { /* CAN Node 0 for lite kit */
+    if (CAN_Node == CAN_NODE0)
+    { /* CAN Node 0 for lite kit */
         g_mcmcan.canNodeConfig.nodeId = IfxCan_NodeId_0;
-        const IfxCan_Can_Pins pins =
-        {
-                &IfxCan_TXD00_P20_8_OUT, IfxPort_OutputMode_pushPull, /* TX Pin for lite kit (can node 0) */
-                &IfxCan_RXD00B_P20_7_IN, IfxPort_InputMode_pullUp, /* RX Pin for lite kit (can node 0) */
-                IfxPort_PadDriver_cmosAutomotiveSpeed1
-        };
+        const IfxCan_Can_Pins pins = {&IfxCan_TXD00_P20_8_OUT, IfxPort_OutputMode_pushPull, /* TX Pin for lite kit (can node 0) */
+        &IfxCan_RXD00B_P20_7_IN, IfxPort_InputMode_pullUp, /* RX Pin for lite kit (can node 0) */
+        IfxPort_PadDriver_cmosAutomotiveSpeed1};
         g_mcmcan.canNodeConfig.pins = &pins;
-    } else if (CAN_Node == CAN_NODE2) { /* CAN Node 2 for mikrobus */
+    }
+    else if (CAN_Node == CAN_NODE2)
+    { /* CAN Node 2 for mikrobus */
         g_mcmcan.canNodeConfig.nodeId = IfxCan_NodeId_2;
-        const IfxCan_Can_Pins pins =
-        {
-                &IfxCan_TXD02_P15_0_OUT, IfxPort_OutputMode_pushPull, /* TX Pin for mikrobus (can node 2) */
-                &IfxCan_RXD02A_P15_1_IN, IfxPort_InputMode_pullUp, /* RX Pin for mikrobus (can node 2) */
-                IfxPort_PadDriver_cmosAutomotiveSpeed1
-        };
+        const IfxCan_Can_Pins pins = {&IfxCan_TXD02_P15_0_OUT, IfxPort_OutputMode_pushPull, /* TX Pin for mikrobus (can node 2) */
+        &IfxCan_RXD02A_P15_1_IN, IfxPort_InputMode_pullUp, /* RX Pin for mikrobus (can node 2) */
+        IfxPort_PadDriver_cmosAutomotiveSpeed1};
         g_mcmcan.canNodeConfig.pins = &pins;
     }
 
@@ -106,7 +107,7 @@ void canInit(CAN_BAUDRATES ls_baudrate, CAN_NODE CAN_Node)
     canSetFilterRange(0x0, 0x7FF);
 }
 
-void canSetFilterRange(uint32 start, uint32 end)
+void canSetFilterRange (uint32 start, uint32 end)
 {
     g_mcmcan.canFilter.number = 0;
     g_mcmcan.canFilter.type = IfxCan_FilterType_range;
@@ -116,7 +117,7 @@ void canSetFilterRange(uint32 start, uint32 end)
     IfxCan_Can_setStandardFilter(&g_mcmcan.canDstNode, &g_mcmcan.canFilter);
 }
 
-void canSetFilterMask(uint32 id, uint32 mask)
+void canSetFilterMask (uint32 id, uint32 mask)
 {
     g_mcmcan.canFilter.number = 0;
     g_mcmcan.canFilter.type = IfxCan_FilterType_classic;
@@ -126,7 +127,7 @@ void canSetFilterMask(uint32 id, uint32 mask)
     IfxCan_Can_setStandardFilter(&g_mcmcan.canDstNode, &g_mcmcan.canFilter);
 }
 
-void canSendMsg(unsigned int id, const char *txData, int len)
+void canSendMsg (unsigned int id, const char *txData, int len)
 {
     /* Initialization of the TX message with the default configuration */
     IfxCan_Can_initMessage(&g_mcmcan.txMsg);
@@ -135,18 +136,19 @@ void canSendMsg(unsigned int id, const char *txData, int len)
     g_mcmcan.txMsg.dataLengthCode = len;
 
     /* Define the content of the data to be transmitted */
-    for (int i = 0; i < 8; i++) {
+    for (int i = 0; i < 8; i++)
+    {
         g_mcmcan.txData[i] = txData[i];
     }
 
     /* Send the CAN message with the previously defined TX message content */
-    while( IfxCan_Status_notSentBusy ==
-           IfxCan_Can_sendMessage(&g_mcmcan.canSrcNode, &g_mcmcan.txMsg, (uint32 *)&g_mcmcan.txData[0]) )
+    while (IfxCan_Status_notSentBusy
+            == IfxCan_Can_sendMessage(&g_mcmcan.canSrcNode, &g_mcmcan.txMsg, (uint32*) &g_mcmcan.txData[0]))
     {
     }
 }
 
-int canRecvMsg(unsigned int *id, char *rxData, int *len)
+int canRecvMsg (unsigned int *id, char *rxData, int *len)
 {
     int err = 0;
     /* Clear the "RX FIFO 0 new message" interrupt flag */
@@ -157,12 +159,11 @@ int canRecvMsg(unsigned int *id, char *rxData, int *len)
     g_mcmcan.rxMsg.readFromRxFifo1 = FALSE;
 
     /* Read the received CAN message */
-    IfxCan_Can_readMessage(&g_mcmcan.canDstNode,
-                           &g_mcmcan.rxMsg,
-                           (uint32*) &g_mcmcan.rxData);
+    IfxCan_Can_readMessage(&g_mcmcan.canDstNode, &g_mcmcan.rxMsg, (uint32*) &g_mcmcan.rxData);
 
     *id = g_mcmcan.rxMsg.messageId;
-    for (int i = 0; i < 8; i++) {
+    for (int i = 0; i < 8; i++)
+    {
         rxData[i] = g_mcmcan.rxData[i];
     }
     *len = g_mcmcan.rxMsg.dataLengthCode;
