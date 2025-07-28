@@ -1,0 +1,73 @@
+# TC375 AURIX Project .gitignore
+
+# Build artifacts
+*.o
+*.obj
+*.elf
+*.hex
+*.bin
+*.map
+*.lst
+*.a
+*.lib
+*.exe
+
+# Build directories
+Debug/
+Release/
+build/
+out/
+bin/
+obj/
+
+# IDE files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Eclipse/ADS specific
+.metadata/
+.settings/
+.project
+.cproject
+.ads/
+*.launch
+
+# Temporary files
+*.tmp
+*.temp
+*.bak
+*.backup
+
+# Log files
+*.log
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# Compiler files
+*.i
+*.ii
+*.s
+*.asm
+
+# Flash files
+*.hex
+*.srec
+*.mot
+
+# Generated config files
+Configurations/Debug/sync_on_halt.c
+Configurations/Ifx_Cfg_Ssw.c
+Configurations/Ifx_Cfg_Ssw.h
+Configurations/Ifx_Cfg_SswBmhd.c
+Configurations/Ifx_Cfg.h
+
+# Pin config
+pinmapper.pincfg
+
+# ADS files
+src/.ads/ 
