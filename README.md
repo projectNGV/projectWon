@@ -141,8 +141,7 @@ For issues and questions:
 - Review iLLD library documentation
 - Consult AURIX Development Studio help
 
-## Version History
-
+## Version 
 - **v1.0.0**: Initial multi-core setup with basic synchronization
 - Basic watchdog and interrupt configuration
 - iLLD framework integration

@@ -1,0 +1,575 @@
+	; Module start
+	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
+	.compiler_invocation	"ctc -f cc12440a --dep-file=tof.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc37x -D__CPU_TC37X__ --core=tc1.6.2 --fp-model=+float -D__CPU__=tc37x -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\ASW -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\ASW\\\\app -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\BSW -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\BSW\\\\MCAL -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\BSW\\\\Service -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Configurations -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Platform -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Sfr -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Ssw -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Service -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric\\\\If -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric\\\\If\\\\Ccu6If -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Can -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Irq -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Trap -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12 -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_Impl -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_PinMap -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2004 -o BSW/Service/tof.src ../BSW/Service/tof.c"
+	.compiler_name		"ctc"
+	;source	'../BSW/Service/tof.c'
+
+	
+$TC162
+	
+	.sdecl	'.text.tof.tofInit',code,cluster('tofInit')
+	.sect	'.text.tof.tofInit'
+	.align	2
+	
+	.global	tofInit
+; Function tofInit
+.L7:
+tofInit:	.type	func
+	movh.a	a15,#@his(g_TofValue)
+	lea	a15,[a15]@los(g_TofValue)
+.L58:
+	mov	d15,#0
+.L59:
+	st.w	[a15],d15
+.L60:
+	movh.a	a15,#@his(flag)
+	lea	a15,[a15]@los(flag)
+.L61:
+	mov	d15,#0
+.L62:
+	st.w	[a15],d15
+.L63:
+	ret
+.L35:
+	
+__tofInit_function_end:
+	.size	tofInit,__tofInit_function_end-tofInit
+.L20:
+	; End of function
+	
+	.sdecl	'.text.tof.tofUpdateFromCAN',code,cluster('tofUpdateFromCAN')
+	.sect	'.text.tof.tofUpdateFromCAN'
+	.align	2
+	
+	.global	tofUpdateFromCAN
+; Function tofUpdateFromCAN
+.L9:
+tofUpdateFromCAN:	.type	func
+	ld.b	d15,[a4]5
+.L68:
+	sha	d15,d15,#8
+.L69:
+	ld.b	d0,[a4]4
+.L70:
+	or	d15,d0
+	extr.u	d15,d15,#0,#16
+.L47:
+	jeq	d15,#0,.L2
+.L71:
+	movh.a	a15,#@his(g_TofValue)
+	lea	a15,[a15]@los(g_TofValue)
+.L72:
+	ld.b	d15,[a4]2
+.L48:
+	sha	d15,d15,#16
+.L73:
+	ld.b	d0,[a4]1
+.L74:
+	sha	d0,d0,#8
+.L75:
+	or	d15,d0
+.L76:
+	ld.b	d0,[a4]0
+.L77:
+	or	d15,d0
+.L78:
+	st.w	[a15],d15
+.L41:
+	movh.a	a4,#@his(.1.str)
+.L46:
+	lea	a4,[a4]@los(.1.str)
+.L79:
+	movh.a	a15,#@his(g_TofValue)
+	lea	a15,[a15]@los(g_TofValue)
+	ld.w	d4,[a15]
+	call	myPrintf
+.L80:
+	movh.a	a15,#@his(g_TofValue)
+	lea	a15,[a15]@los(g_TofValue)
+	ld.w	d15,[a15]
+.L81:
+	mov	d0,#300
+.L82:
+	jge.u	d15,d0,.L3
+.L83:
+	movh.a	a15,#@his(flag)
+	lea	a15,[a15]@los(flag)
+.L84:
+	mov	d15,#1
+.L85:
+	st.w	[a15],d15
+.L42:
+	call	motorStopChA
+.L86:
+	call	motorStopChB
+.L87:
+	movh.a	a4,#@his(.2.str)
+	lea	a4,[a4]@los(.2.str)
+	call	myPrintf
+.L3:
+	j	.L4
+.L2:
+	movh.a	a4,#@his(.3.str)
+.L49:
+	lea	a4,[a4]@los(.3.str)
+	call	myPrintf
+.L4:
+	ret
+.L36:
+	
+__tofUpdateFromCAN_function_end:
+	.size	tofUpdateFromCAN,__tofUpdateFromCAN_function_end-tofUpdateFromCAN
+.L25:
+	; End of function
+	
+	.sdecl	'.text.tof.tofGetValue',code,cluster('tofGetValue')
+	.sect	'.text.tof.tofGetValue'
+	.align	2
+	
+	.global	tofGetValue
+; Function tofGetValue
+.L11:
+tofGetValue:	.type	func
+	movh.a	a15,#@his(g_TofValue)
+	lea	a15,[a15]@los(g_TofValue)
+	ld.w	d2,[a15]
+.L92:
+	j	.L5
+.L5:
+	ret
+.L44:
+	
+__tofGetValue_function_end:
+	.size	tofGetValue,__tofGetValue_function_end-tofGetValue
+.L30:
+	; End of function
+	
+	.sdecl	'.data.tof.g_TofValue',data,cluster('g_TofValue')
+	.sect	'.data.tof.g_TofValue'
+	.align	2
+g_TofValue:	.type	object
+	.size	g_TofValue,4
+	.space	4
+	.sdecl	'.data.tof.flag',data,cluster('flag')
+	.sect	'.data.tof.flag'
+	.global	flag
+	.align	2
+flag:	.type	object
+	.size	flag,4
+	.space	4
+	.sdecl	'.rodata.tof..1.str',data,rom
+	.sect	'.rodata.tof..1.str'
+.1.str:	.type	object
+	.size	.1.str,18
+	.byte	84,79,70,32,68,105,115,116
+	.byte	97,110,99,101,58,32,37,100
+	.byte	10
+	.space	1
+	.sdecl	'.rodata.tof..2.str',data,rom
+	.sect	'.rodata.tof..2.str'
+.2.str:	.type	object
+	.size	.2.str,23
+	.byte	-20,-99,-72,-19,-124,-80,-21,-97
+	.byte	-67,-19,-118,-72,32,-22,-72,-119
+	.byte	-20,-96,-107,-22
+	.byte	-79,-80
+	.space	1
+	.sdecl	'.rodata.tof..3.str',data,rom
+	.sect	'.rodata.tof..3.str'
+.3.str:	.type	object
+	.size	.3.str,15
+	.byte	111,117,116,32,111,102,32,114
+	.byte	97,110,103,101
+	.byte	33,10
+	.space	1
+	.calls	'tofUpdateFromCAN','myPrintf'
+	.calls	'tofUpdateFromCAN','motorStopChA'
+	.calls	'tofUpdateFromCAN','motorStopChB'
+	.calls	'tofInit','',0
+	.calls	'tofUpdateFromCAN','',0
+	.extern	myPrintf
+	.extern	motorStopChA
+	.extern	motorStopChB
+	.calls	'tofGetValue','',0
+	.sdecl	'.debug_info',debug
+	.sect	'.debug_info'
+.L13:
+	.word	346
+	.half	3
+	.word	.L14
+	.byte	4
+.L12:
+	.byte	1
+	.byte	'../BSW/Service/tof.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L15
+	.byte	2
+	.byte	'char',0,1,6
+.L37:
+	.byte	3
+	.word	193
+.L39:
+	.byte	2
+	.byte	'unsigned short int',0,2,7
+.L43:
+	.byte	2
+	.byte	'unsigned int',0,4,7,2
+	.byte	'int',0,4,5,4
+	.byte	'myPrintf',0,1,20,9
+	.word	244
+	.byte	1,1,1,4
+	.byte	'motorStopChA',0,1,25,13
+	.word	244
+	.byte	1,1,1,4
+	.byte	'motorStopChB',0,1,26,13
+	.word	244
+	.byte	1,1,1,5,1,3
+	.word	319
+	.byte	6
+	.byte	'__codeptr',0,1,1,1
+	.word	321
+.L45:
+	.byte	7
+	.word	244
+	.byte	0
+	.sdecl	'.debug_abbrev',debug
+	.sect	'.debug_abbrev'
+.L14:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,16,6,0,0,2,36,0,3,8,11,15,62,15,0,0,3,15,0,73,19,0,0,4,46,0,3,8,58
+	.byte	15,59,15,57,15,73,19,54,15,63,12,60,12,0,0,5,21,0,54,15,0,0,6,22,0,3,8,58,15,59,15,57,15,73,19,0,0,7,53
+	.byte	0,73,19,0,0,0
+	.sdecl	'.debug_line',debug
+	.sect	'.debug_line'
+.L15:
+	.word	.L51-.L50
+.L50:
+	.half	3
+	.word	.L53-.L52
+.L52:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../BSW/Service/tof.c',0,0,0,0,0
+.L53:
+.L51:
+	.sdecl	'.debug_info',debug,cluster('tofInit')
+	.sect	'.debug_info'
+.L16:
+	.word	235
+	.half	3
+	.word	.L17
+	.byte	4,1
+	.byte	'../BSW/Service/tof.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L19,.L18
+	.byte	2
+	.word	.L12
+	.byte	3
+	.byte	'tofInit',0,1,6,6,1,1
+	.word	.L7,.L35,.L6
+	.byte	4
+	.word	.L7,.L35
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('tofInit')
+	.sect	'.debug_abbrev'
+.L17:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('tofInit')
+	.sect	'.debug_line'
+.L18:
+	.word	.L55-.L54
+.L54:
+	.half	3
+	.word	.L57-.L56
+.L56:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../BSW/Service/tof.c',0,0,0,0,0
+.L57:
+	.byte	5,5,7,0,5,2
+	.word	.L7
+	.byte	3,7,1,5,18,9
+	.half	.L58-.L7
+	.byte	1,5,16,9
+	.half	.L59-.L58
+	.byte	1,5,5,9
+	.half	.L60-.L59
+	.byte	3,1,1,5,12,9
+	.half	.L61-.L60
+	.byte	1,5,10,9
+	.half	.L62-.L61
+	.byte	1,5,1,9
+	.half	.L63-.L62
+	.byte	3,1,1,7,9
+	.half	.L20-.L63
+	.byte	0,1,1
+.L55:
+	.sdecl	'.debug_ranges',debug,cluster('tofInit')
+	.sect	'.debug_ranges'
+.L19:
+	.word	-1,.L7,0,.L20-.L7,0,0
+	.sdecl	'.debug_info',debug,cluster('tofUpdateFromCAN')
+	.sect	'.debug_info'
+.L21:
+	.word	321
+	.half	3
+	.word	.L22
+	.byte	4,1
+	.byte	'../BSW/Service/tof.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L24,.L23
+	.byte	2
+	.word	.L12
+	.byte	3
+	.byte	'tofUpdateFromCAN',0,1,12,6,1,1,1
+	.word	.L9,.L36,.L8
+	.byte	4
+	.byte	'rxData',0,1,12,30
+	.word	.L37,.L38
+	.byte	5
+	.word	.L9,.L36
+	.byte	6
+	.byte	'signal_strength',0,1,14,20
+	.word	.L39,.L40
+	.byte	5
+	.word	.L41,.L3
+	.byte	7
+	.word	.L42,.L3
+	.byte	0,7
+	.word	.L2,.L4
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('tofUpdateFromCAN')
+	.sect	'.debug_abbrev'
+.L22:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6,52,0,3
+	.byte	8,58,15,59,15,57,15,73,16,2,6,0,0,7,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('tofUpdateFromCAN')
+	.sect	'.debug_line'
+.L23:
+	.word	.L65-.L64
+.L64:
+	.half	3
+	.word	.L67-.L66
+.L66:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../BSW/Service/tof.c',0,0,0,0,0
+.L67:
+	.byte	5,44,7,0,5,2
+	.word	.L9
+	.byte	3,13,1,5,48,9
+	.half	.L68-.L9
+	.byte	1,5,61,9
+	.half	.L69-.L68
+	.byte	1,5,53,9
+	.half	.L70-.L69
+	.byte	1,5,5,9
+	.half	.L47-.L70
+	.byte	3,2,1,5,9,7,9
+	.half	.L71-.L47
+	.byte	3,2,1,5,28,9
+	.half	.L72-.L71
+	.byte	1,5,32,9
+	.half	.L48-.L72
+	.byte	1,5,46,9
+	.half	.L73-.L48
+	.byte	1,5,50,9
+	.half	.L74-.L73
+	.byte	1,5,38,9
+	.half	.L75-.L74
+	.byte	1,5,63,9
+	.half	.L76-.L75
+	.byte	1,5,55,9
+	.half	.L77-.L76
+	.byte	1,5,20,9
+	.half	.L78-.L77
+	.byte	1,5,18,9
+	.half	.L41-.L78
+	.byte	3,2,1,5,40,9
+	.half	.L79-.L41
+	.byte	1,5,13,9
+	.half	.L80-.L79
+	.byte	3,2,1,5,26,9
+	.half	.L81-.L80
+	.byte	1,5,9,9
+	.half	.L82-.L81
+	.byte	1,5,13,7,9
+	.half	.L83-.L82
+	.byte	3,2,1,5,20,9
+	.half	.L84-.L83
+	.byte	1,5,18,9
+	.half	.L85-.L84
+	.byte	1,5,25,9
+	.half	.L42-.L85
+	.byte	3,1,1,9
+	.half	.L86-.L42
+	.byte	3,1,1,5,22,9
+	.half	.L87-.L86
+	.byte	3,1,1,5,9,9
+	.half	.L3-.L87
+	.byte	3,123,1,5,18,9
+	.half	.L2-.L3
+	.byte	3,10,1,5,1,9
+	.half	.L4-.L2
+	.byte	3,2,1,7,9
+	.half	.L25-.L4
+	.byte	0,1,1
+.L65:
+	.sdecl	'.debug_ranges',debug,cluster('tofUpdateFromCAN')
+	.sect	'.debug_ranges'
+.L24:
+	.word	-1,.L9,0,.L25-.L9,0,0
+	.sdecl	'.debug_info',debug,cluster('tofGetValue')
+	.sect	'.debug_info'
+.L26:
+	.word	244
+	.half	3
+	.word	.L27
+	.byte	4,1
+	.byte	'../BSW/Service/tof.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L29,.L28
+	.byte	2
+	.word	.L12
+	.byte	3
+	.byte	'tofGetValue',0,1,36,14
+	.word	.L43
+	.byte	1,1,1
+	.word	.L11,.L44,.L10
+	.byte	4
+	.word	.L11,.L44
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('tofGetValue')
+	.sect	'.debug_abbrev'
+.L27:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('tofGetValue')
+	.sect	'.debug_line'
+.L28:
+	.word	.L89-.L88
+.L88:
+	.half	3
+	.word	.L91-.L90
+.L90:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../BSW/Service/tof.c',0,0,0,0,0
+.L91:
+	.byte	5,12,7,0,5,2
+	.word	.L11
+	.byte	3,37,1,5,5,9
+	.half	.L92-.L11
+	.byte	1,5,1,9
+	.half	.L5-.L92
+	.byte	3,1,1,7,9
+	.half	.L30-.L5
+	.byte	0,1,1
+.L89:
+	.sdecl	'.debug_ranges',debug,cluster('tofGetValue')
+	.sect	'.debug_ranges'
+.L29:
+	.word	-1,.L11,0,.L30-.L11,0,0
+	.sdecl	'.debug_info',debug,cluster('g_TofValue')
+	.sect	'.debug_info'
+.L31:
+	.word	216
+	.half	3
+	.word	.L32
+	.byte	4,1
+	.byte	'../BSW/Service/tof.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\TriCore Debug (TASKING)\\',0,12,1,2
+	.word	.L12
+	.byte	3
+	.byte	'g_TofValue',0,1,3,21
+	.word	.L43
+	.byte	5,3
+	.word	g_TofValue
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('g_TofValue')
+	.sect	'.debug_abbrev'
+.L32:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,2,9,0,0,0
+	.sdecl	'.debug_info',debug,cluster('flag')
+	.sect	'.debug_info'
+.L33:
+	.word	211
+	.half	3
+	.word	.L34
+	.byte	4,1
+	.byte	'../BSW/Service/tof.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\TriCore Debug (TASKING)\\',0,12,1,2
+	.word	.L12
+	.byte	3
+	.byte	'flag',0,1,4,14
+	.word	.L45
+	.byte	1,5,3
+	.word	flag
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('flag')
+	.sect	'.debug_abbrev'
+.L34:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,63,12,2,9
+	.byte	0,0,0
+	.sdecl	'.debug_loc',debug,cluster('tofGetValue')
+	.sect	'.debug_loc'
+.L10:
+	.word	-1,.L11,0,.L44-.L11
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('tofInit')
+	.sect	'.debug_loc'
+.L6:
+	.word	-1,.L7,0,.L35-.L7
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_loc',debug,cluster('tofUpdateFromCAN')
+	.sect	'.debug_loc'
+.L38:
+	.word	-1,.L9,0,.L46-.L9
+	.half	1
+	.byte	100
+	.word	.L2-.L9,.L49-.L9
+	.half	1
+	.byte	100
+	.word	0,0
+.L40:
+	.word	-1,.L9,.L47-.L9,.L48-.L9
+	.half	1
+	.byte	95
+	.word	.L2-.L9,.L4-.L9
+	.half	1
+	.byte	95
+	.word	0,0
+.L8:
+	.word	-1,.L9,0,.L36-.L9
+	.half	2
+	.byte	138,0
+	.word	0,0
+	.sdecl	'.debug_frame',debug
+	.sect	'.debug_frame'
+.L93:
+	.word	48
+	.word	-1
+	.byte	3,0,2,1,27,12,26,0,8,26,8,27,8,30,8,29,8,28,8,16,8,17,8,24,8,25,8,31,8,32,8,33,8,34,8,35,8,36,8,37,8,38
+	.byte	8,39
+	.sdecl	'.debug_frame',debug,cluster('tofInit')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L93,.L7,.L35-.L7
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	.sdecl	'.debug_frame',debug,cluster('tofUpdateFromCAN')
+	.sect	'.debug_frame'
+	.word	12
+	.word	.L93,.L9,.L36-.L9
+	.sdecl	'.debug_frame',debug,cluster('tofGetValue')
+	.sect	'.debug_frame'
+	.word	24
+	.word	.L93,.L11,.L44-.L11
+	.byte	8,18,8,19,8,20,8,21,8,22,8,23
+	; Module end
