@@ -1,4 +1,5 @@
 #include "asclin.h"
+
 //
 //IFX_INTERRUPT(asclin0RxIsrHandler, 0, ISR_PRIORITY_ASCLIN0_RX);
 //void asclin0RxIsrHandler(void)
@@ -6,6 +7,15 @@
 //    char c = asclin0InUart();
 //    asclin0OutUart(c);
 //}
+
+volatile char globalCommand;
+
+IFX_INTERRUPT(asclin1RxIsrHandler, 0, ISR_PRIORITY_ASCLIN1_RX);
+void asclin1RxIsrHandler(void)
+{
+    globalCommand = asclin1InUart();
+    bluetoothIsr(globalCommand);
+}
 
 void asclin0InitUart(void)
 {
@@ -202,13 +212,6 @@ void asclin1InitUart(void)
     src->B.CLRR = 1; /* clear request */
     MODULE_ASCLIN1.FLAGSENABLE.B.RFLE = 1; /* enable rx fifo fill level flag */
     src->B.SRE = 1; /* interrupt enable */
-}
-
-IFX_INTERRUPT(asclin1RxIsrHandler, 0, ISR_PRIORITY_ASCLIN1_RX);
-void asclin1RxIsrHandler(void)
-{
-    char c = asclin1InUart();
-    bluetoothIsr(c);
 }
 
 

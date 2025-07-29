@@ -2,25 +2,19 @@
 # Automatically-generated file. Do not edit!
 ################################################################################
 
-C++M_SRCS := 
 C++_SRCS := 
-CCM_SRCS := 
 CC_SRCS := 
 CPP_SRCS := 
-CXXM_SRCS := 
 CXX_SRCS := 
 C_SRCS := 
 C_UPPER_SRCS := 
 OBJ_SRCS := 
 O_SRCS := 
 SRC_SRCS := 
-C++M_DEPS := 
 C++_DEPS := 
-CCM_DEPS := 
 CC_DEPS := 
 COMPILED_SRCS := 
 CPP_DEPS := 
-CXXM_DEPS := 
 CXX_DEPS := 
 C_DEPS := 
 C_UPPER_DEPS := 
@@ -40,7 +34,6 @@ Configurations \
 . \
 Libraries/Infra/Platform/Tricore/Compilers \
 Libraries/Infra/Ssw/TC37A/Tricore \
-Libraries/Service/CpuGeneric/If \
 Libraries/iLLD/TC37A/Tricore/Asclin/Std \
 Libraries/iLLD/TC37A/Tricore/Can/Can \
 Libraries/iLLD/TC37A/Tricore/Can/Std \

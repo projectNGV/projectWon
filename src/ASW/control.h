@@ -6,6 +6,7 @@
 #include "motor.h"
 #include "tof.h"
 
-
+void motorRunCommand (char dir, int duty);
+void motorUpdateState(char cmd);
 
 #endif /* ASW_CONTROL_H_ */

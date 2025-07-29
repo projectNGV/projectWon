@@ -1,2 +1,2 @@
-autopark.o :	../ASW/autopark.c
-../ASW/autopark.c :
+autopark.o :	../ASW/autopark/autopark.c
+../ASW/autopark/autopark.c :

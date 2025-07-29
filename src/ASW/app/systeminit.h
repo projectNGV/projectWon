@@ -4,9 +4,12 @@
 
 #include "bluetooth.h"
 #include "motor.h"
+#include "control.h"
 #include "tof.h"
 #include "uart.h"
 #include "ultrasonic.h"
+#include "asclin.h"
 
+void systemInit();
 
 #endif /* ASW_APP_SYSTEMINIT_H_ */

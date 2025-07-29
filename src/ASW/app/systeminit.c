@@ -4,7 +4,8 @@
 void systemInit(){
     bluetoothInit();
     motorInit();
-    tofInit();
-    uartInit();
-    ultrasonicInit();
+    asclin0InitUart();
+    //tofInit();
+    //uartInit();
+    //ultrasonicInit();
 }
