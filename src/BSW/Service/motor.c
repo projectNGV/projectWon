@@ -56,6 +56,27 @@ void motorMovChBPwm(int duty, int dir)
     MODULE_P02.OUT.B.P6 = 0;   /* 모터 Brake 해제 (1: 정지, 0: PWM-A에 따라 동작) */
 }
 
+void motorMoveForward(int duty){
+    MODULE_P10.OUT.B.P1 = 1;
+    MODULE_P10.OUT.B.P2 = 1;
+
+    gtmAtomPwmASetDutyCycle(duty);
+    gtmAtomPwmBSetDutyCycle(duty);
+}
+
+void motorReverse(int duty){
+    MODULE_P10.OUT.B.P1 = 0;
+    MODULE_P10.OUT.B.P2 = 0;
+
+    gtmAtomPwmASetDutyCycle(duty);
+    gtmAtomPwmBSetDutyCycle(duty);
+}
+
+void motorStop(){
+    MODULE_P02.OUT.B.P7 = 1;
+    MODULE_P02.OUT.B.P6 = 1;
+}
+
 void motorKeypadPwm(char c, int duty)
 {
     if (c == '8') { // 전진

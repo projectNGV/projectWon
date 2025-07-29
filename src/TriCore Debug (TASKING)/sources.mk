@@ -31,6 +31,7 @@ SECONDARY_SIZE :=
 # Every subdirectory with source files must be described here
 SUBDIRS := \
 ASW/app \
+ASW/autopark \
 ASW \
 BSW/MCAL \
 BSW/Service \
@@ -39,6 +40,7 @@ Configurations \
 . \
 Libraries/Infra/Platform/Tricore/Compilers \
 Libraries/Infra/Ssw/TC37A/Tricore \
+Libraries/Service/CpuGeneric/If \
 Libraries/iLLD/TC37A/Tricore/Asclin/Std \
 Libraries/iLLD/TC37A/Tricore/Can/Can \
 Libraries/iLLD/TC37A/Tricore/Can/Std \

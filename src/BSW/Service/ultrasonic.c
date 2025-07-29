@@ -1,9 +1,9 @@
 #include "ultrasonic.h"
 
 const UltPin ULT_PINS[ULT_SENSORS_NUM] = {
-        [ULT_LEFT] = {.trigger = {&MODULE_P02, 4}, .echo = {&MODULE_P02, 5}},
-        [ULT_RIGHT] = {.trigger = {&MODULE_P10, 4}, .echo = {&MODULE_P02, 3}},
-        [ULT_REAR] = {.trigger = {&MODULE_P10, 4}, .echo = {&MODULE_P02, 3}}
+        [ULT_LEFT] = {.trigger = {&MODULE_P02, 7}, .echo = {&MODULE_P02, 6}},
+        [ULT_RIGHT] = {.trigger = {&MODULE_P10, 5}, .echo = {&MODULE_P02, 4}},
+        [ULT_REAR] = {.trigger = {&MODULE_P02, 5}, .echo = {&MODULE_P02, 3}}
 };
 
 void ultrasonicInit(void)

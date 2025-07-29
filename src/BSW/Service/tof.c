@@ -18,14 +18,12 @@ void tofUpdateFromCAN (char *rxData)
     {
         g_TofValue = rxData[2] << 16 | rxData[1] << 8 | rxData[0];
 
-        myPrintf("TOF Distance: %d\n", g_TofValue); // for debugging
-
         if (g_TofValue < 300)
         {
+            int num = 9;
             aebFlag = 1;
             motorStopChA();
             motorStopChB();
-            myPrintf("인터럽트 급정거");
         }
     }
     else

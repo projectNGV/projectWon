@@ -128,6 +128,10 @@ Cpu0_Main.o :	"C:\Infineon\AURIX-Studio-1.10.16\tools\Compilers\Tasking_1.1r8\ct
 "C:\Infineon\AURIX-Studio-1.10.16\tools\Compilers\Tasking_1.1r8\ctc\include\stdarg.h" :
 Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\BSW\\Service\uart.h"
 "C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\BSW\\Service\uart.h" :
+Cpu0_Main.o :	"C:\Infineon\AURIX-Studio-1.10.16\tools\Compilers\Tasking_1.1r8\ctc\include\stdlib.h"
+"C:\Infineon\AURIX-Studio-1.10.16\tools\Compilers\Tasking_1.1r8\ctc\include\stdlib.h" :
+Cpu0_Main.o :	"C:\Infineon\AURIX-Studio-1.10.16\tools\Compilers\Tasking_1.1r8\ctc\include\stdio.h"
+"C:\Infineon\AURIX-Studio-1.10.16\tools\Compilers\Tasking_1.1r8\ctc\include\stdio.h" :
 Cpu0_Main.o :	"C:\Infineon\AURIX-Studio-1.10.16\tools\Compilers\Tasking_1.1r8\ctc\include\string.h"
 "C:\Infineon\AURIX-Studio-1.10.16\tools\Compilers\Tasking_1.1r8\ctc\include\string.h" :
 Cpu0_Main.o :	"C:\\Users\\USER\\Documents\\repos\\tc375\\project-won\\src\\BSW\\Service\bluetooth.h"

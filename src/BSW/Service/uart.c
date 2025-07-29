@@ -31,6 +31,9 @@ void myPuts(const char *str)
     for (ptr = buffer; *ptr; ++ptr)
         asclin0OutUart((const unsigned char)*ptr);
 }
+
+
+
 void myPrintf(const char *fmt, ...)
 {
     char buffer[128];
@@ -57,6 +60,8 @@ void myPrintf(const char *fmt, ...)
     for (int i = 0; buffer2[i] != '\0'; i++)
         asclin0OutUart((const unsigned char)buffer2[i]);
 }
+
+
 
 void myScanf(const char *fmt, ...)
 {

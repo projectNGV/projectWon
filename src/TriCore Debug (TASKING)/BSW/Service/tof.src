@@ -1,6 +1,6 @@
 	; Module start
 	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
-	.compiler_invocation	"ctc -f cc32752a --dep-file=BSW/Service/tof.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc37x -D__CPU_TC37X__ --core=tc1.6.2 --fp-model=+float -D__CPU__=tc37x -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\ASW -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\ASW\\\\app -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\BSW -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\BSW\\\\MCAL -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\BSW\\\\Service -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Configurations -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Platform -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Sfr -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Ssw -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Service -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Can -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Irq -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Trap -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12 -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_Impl -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_PinMap -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2004 -o BSW/Service/tof.src ../BSW/Service/tof.c"
+	.compiler_invocation	"ctc -f cc2304a --dep-file=BSW/Service/tof.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc37x -D__CPU_TC37X__ --core=tc1.6.2 --fp-model=+float -D__CPU__=tc37x -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\ASW -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\ASW\\\\app -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\ASW\\\\autopark -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\BSW -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\BSW\\\\MCAL -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\BSW\\\\Service -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Configurations -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Platform -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Sfr -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Ssw -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Service -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric\\\\If -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric\\\\If\\\\Ccu6If -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Can -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Irq -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Trap -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12 -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_Impl -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_PinMap -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2004 -o BSW/Service/tof.src ../BSW/Service/tof.c"
 	.compiler_name		"ctc"
 	;source	'../BSW/Service/tof.c'
 
@@ -16,24 +16,24 @@ $TC162
 .L7:
 tofInit:	.type	func
 	mov	d4,#1
-.L58:
+.L59:
 	mov	d5,#0
 	call	canInit
-.L59:
+.L60:
 	movh.a	a15,#@his(g_TofValue)
 	lea	a15,[a15]@los(g_TofValue)
-.L60:
-	mov	d15,#0
 .L61:
-	st.w	[a15],d15
+	mov	d15,#0
 .L62:
+	st.w	[a15],d15
+.L63:
 	movh.a	a15,#@his(aebFlag)
 	lea	a15,[a15]@los(aebFlag)
-.L63:
-	mov	d15,#0
 .L64:
-	st.w	[a15],d15
+	mov	d15,#0
 .L65:
+	st.w	[a15],d15
+.L66:
 	ret
 .L35:
 	
@@ -51,43 +51,34 @@ __tofInit_function_end:
 .L9:
 tofUpdateFromCAN:	.type	func
 	ld.b	d15,[a4]5
-.L70:
-	sha	d15,d15,#8
 .L71:
-	ld.b	d0,[a4]4
+	sha	d15,d15,#8
 .L72:
+	ld.b	d0,[a4]4
+.L73:
 	or	d15,d0
 	extr.u	d15,d15,#0,#16
-.L47:
-	jeq	d15,#0,.L2
-.L73:
-	movh.a	a15,#@his(g_TofValue)
-	lea	a15,[a15]@los(g_TofValue)
-.L74:
-	ld.b	d15,[a4]2
 .L48:
-	sha	d15,d15,#16
-.L75:
-	ld.b	d0,[a4]1
-.L76:
-	sha	d0,d0,#8
-.L77:
-	or	d15,d0
-.L78:
-	ld.b	d0,[a4]0
-.L79:
-	or	d15,d0
-.L80:
-	st.w	[a15],d15
-.L41:
-	movh.a	a4,#@his(.2.str)
-.L46:
-	lea	a4,[a4]@los(.2.str)
-.L81:
+	jeq	d15,#0,.L2
+.L74:
 	movh.a	a15,#@his(g_TofValue)
 	lea	a15,[a15]@los(g_TofValue)
-	ld.w	d4,[a15]
-	call	myPrintf
+.L75:
+	ld.b	d15,[a4]2
+.L49:
+	sha	d15,d15,#16
+.L76:
+	ld.b	d0,[a4]1
+.L77:
+	sha	d0,d0,#8
+.L78:
+	or	d15,d0
+.L79:
+	ld.b	d0,[a4]0
+.L80:
+	or	d15,d0
+.L81:
+	st.w	[a15],d15
 .L82:
 	movh.a	a15,#@his(g_TofValue)
 	lea	a15,[a15]@los(g_TofValue)
@@ -96,27 +87,23 @@ tofUpdateFromCAN:	.type	func
 	mov	d0,#300
 .L84:
 	jge.u	d15,d0,.L3
-.L85:
+.L41:
 	movh.a	a15,#@his(aebFlag)
 	lea	a15,[a15]@los(aebFlag)
-.L86:
+.L85:
 	mov	d15,#1
-.L87:
+.L86:
 	st.w	[a15],d15
-.L42:
+.L87:
 	call	motorStopChA
-.L88:
+.L47:
 	call	motorStopChB
-.L89:
-	movh.a	a4,#@his(.3.str)
-	lea	a4,[a4]@los(.3.str)
-	call	myPrintf
 .L3:
 	j	.L4
 .L2:
-	movh.a	a4,#@his(.4.str)
-.L49:
-	lea	a4,[a4]@los(.4.str)
+	movh.a	a4,#@his(.2.str)
+.L50:
+	lea	a4,[a4]@los(.2.str)
 	call	myPrintf
 .L4:
 	ret
@@ -138,11 +125,11 @@ tofGetValue:	.type	func
 	movh.a	a15,#@his(g_TofValue)
 	lea	a15,[a15]@los(g_TofValue)
 	ld.w	d2,[a15]
-.L94:
+.L92:
 	j	.L5
 .L5:
 	ret
-.L44:
+.L45:
 	
 __tofGetValue_function_end:
 	.size	tofGetValue,__tofGetValue_function_end-tofGetValue
@@ -165,38 +152,21 @@ aebFlag:	.type	object
 	.sdecl	'.rodata.tof..2.str',data,rom
 	.sect	'.rodata.tof..2.str'
 .2.str:	.type	object
-	.size	.2.str,18
-	.byte	84,79,70,32,68,105,115,116
-	.byte	97,110,99,101,58,32,37,100
-	.byte	10
-	.space	1
-	.sdecl	'.rodata.tof..3.str',data,rom
-	.sect	'.rodata.tof..3.str'
-.3.str:	.type	object
-	.size	.3.str,23
-	.byte	-20,-99,-72,-19,-124,-80,-21,-97
-	.byte	-67,-19,-118,-72,32,-22,-72,-119
-	.byte	-20,-96,-107,-22
-	.byte	-79,-80
-	.space	1
-	.sdecl	'.rodata.tof..4.str',data,rom
-	.sect	'.rodata.tof..4.str'
-.4.str:	.type	object
-	.size	.4.str,15
+	.size	.2.str,15
 	.byte	111,117,116,32,111,102,32,114
 	.byte	97,110,103,101
 	.byte	33,10
 	.space	1
 	.calls	'tofInit','canInit'
-	.calls	'tofUpdateFromCAN','myPrintf'
 	.calls	'tofUpdateFromCAN','motorStopChA'
 	.calls	'tofUpdateFromCAN','motorStopChB'
+	.calls	'tofUpdateFromCAN','myPrintf'
 	.calls	'tofInit','',0
 	.calls	'tofUpdateFromCAN','',0
 	.extern	canInit
-	.extern	myPrintf
 	.extern	motorStopChA
 	.extern	motorStopChB
+	.extern	myPrintf
 	.calls	'tofGetValue','',0
 	.sdecl	'.debug_info',debug
 	.sect	'.debug_info'
@@ -244,9 +214,11 @@ aebFlag:	.type	object
 	.byte	'value',0,2,143,1,43
 	.word	339
 	.byte	6,0
-.L43:
+.L44:
 	.byte	7
-	.byte	'unsigned int',0,4,7,7
+	.byte	'unsigned int',0,4,7
+.L42:
+	.byte	7
 	.byte	'int',0,4,5,7
 	.byte	'unsigned int',0,4,7,10
 	.byte	'_Ifx_SCU_WDTCPU_CON0_Bits',0,4,208,9,16,4,11
@@ -5315,13 +5287,13 @@ aebFlag:	.type	object
 	.byte	3
 	.word	31074
 	.byte	25
-	.byte	'myPrintf',0,15,21,9
+	.byte	'motorStopChA',0,15,25,13
 	.word	473
 	.byte	1,1,1,25
-	.byte	'motorStopChA',0,15,26,13
+	.byte	'motorStopChB',0,15,26,13
 	.word	473
 	.byte	1,1,1,25
-	.byte	'motorStopChB',0,15,27,13
+	.byte	'myPrintf',0,15,31,9
 	.word	473
 	.byte	1,1,1,7
 	.byte	'short int',0,2,5,26
@@ -24934,7 +24906,7 @@ aebFlag:	.type	object
 	.byte	26
 	.byte	'CAN_NODE',0,14,48,3
 	.word	30990
-.L45:
+.L46:
 	.byte	14
 	.word	473
 	.byte	0
@@ -24953,11 +24925,11 @@ aebFlag:	.type	object
 	.sdecl	'.debug_line',debug
 	.sect	'.debug_line'
 .L15:
-	.word	.L51-.L50
-.L50:
+	.word	.L52-.L51
+.L51:
 	.half	3
-	.word	.L53-.L52
-.L52:
+	.word	.L54-.L53
+.L53:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
 	.byte	'C:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg',0
 	.byte	'C:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std',0
@@ -25005,8 +24977,8 @@ aebFlag:	.type	object
 	.byte	'C:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\_Impl\\IfxSrc_cfg.h',0
 	.byte	0,0,0
 	.byte	'IfxCan_Can.h',0,5,0,0,0
-.L53:
-.L51:
+.L54:
+.L52:
 	.sdecl	'.debug_info',debug,cluster('tofInit')
 	.sect	'.debug_info'
 .L16:
@@ -25034,36 +25006,36 @@ aebFlag:	.type	object
 	.sdecl	'.debug_line',debug,cluster('tofInit')
 	.sect	'.debug_line'
 .L18:
-	.word	.L55-.L54
-.L54:
+	.word	.L56-.L55
+.L55:
 	.half	3
-	.word	.L57-.L56
-.L56:
+	.word	.L58-.L57
+.L57:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../BSW/Service/tof.c',0,0,0,0,0
-.L57:
+.L58:
 	.byte	5,13,7,0,5,2
 	.word	.L7
 	.byte	3,7,1,5,22,9
-	.half	.L58-.L7
+	.half	.L59-.L7
 	.byte	1,5,5,9
-	.half	.L59-.L58
-	.byte	3,1,1,5,18,9
 	.half	.L60-.L59
-	.byte	1,5,16,9
+	.byte	3,1,1,5,18,9
 	.half	.L61-.L60
-	.byte	1,5,5,9
+	.byte	1,5,16,9
 	.half	.L62-.L61
-	.byte	3,1,1,5,15,9
+	.byte	1,5,5,9
 	.half	.L63-.L62
-	.byte	1,5,13,9
+	.byte	3,1,1,5,15,9
 	.half	.L64-.L63
-	.byte	1,5,1,9
+	.byte	1,5,13,9
 	.half	.L65-.L64
+	.byte	1,5,1,9
+	.half	.L66-.L65
 	.byte	3,1,1,7,9
-	.half	.L20-.L65
+	.half	.L20-.L66
 	.byte	0,1,1
-.L55:
+.L56:
 	.sdecl	'.debug_ranges',debug,cluster('tofInit')
 	.sect	'.debug_ranges'
 .L19:
@@ -25071,7 +25043,7 @@ aebFlag:	.type	object
 	.sdecl	'.debug_info',debug,cluster('tofUpdateFromCAN')
 	.sect	'.debug_info'
 .L21:
-	.word	321
+	.word	328
 	.half	3
 	.word	.L22
 	.byte	4,1
@@ -25094,8 +25066,9 @@ aebFlag:	.type	object
 	.word	.L39,.L40
 	.byte	5
 	.word	.L41,.L3
-	.byte	7
-	.word	.L42,.L3
+	.byte	6
+	.byte	'num',0,1,23,17
+	.word	.L42,.L43
 	.byte	0,7
 	.word	.L2,.L4
 	.byte	0,0,0
@@ -25108,46 +25081,42 @@ aebFlag:	.type	object
 	.sdecl	'.debug_line',debug,cluster('tofUpdateFromCAN')
 	.sect	'.debug_line'
 .L23:
-	.word	.L67-.L66
-.L66:
+	.word	.L68-.L67
+.L67:
 	.half	3
-	.word	.L69-.L68
-.L68:
+	.word	.L70-.L69
+.L69:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../BSW/Service/tof.c',0,0,0,0,0
-.L69:
+.L70:
 	.byte	5,44,7,0,5,2
 	.word	.L9
 	.byte	3,14,1,5,48,9
-	.half	.L70-.L9
+	.half	.L71-.L9
 	.byte	1,5,61,9
-	.half	.L71-.L70
-	.byte	1,5,53,9
 	.half	.L72-.L71
+	.byte	1,5,53,9
+	.half	.L73-.L72
 	.byte	1,5,5,9
-	.half	.L47-.L72
+	.half	.L48-.L73
 	.byte	3,2,1,5,9,7,9
-	.half	.L73-.L47
+	.half	.L74-.L48
 	.byte	3,2,1,5,28,9
-	.half	.L74-.L73
+	.half	.L75-.L74
 	.byte	1,5,32,9
-	.half	.L48-.L74
+	.half	.L49-.L75
 	.byte	1,5,46,9
-	.half	.L75-.L48
+	.half	.L76-.L49
 	.byte	1,5,50,9
-	.half	.L76-.L75
-	.byte	1,5,38,9
 	.half	.L77-.L76
-	.byte	1,5,63,9
+	.byte	1,5,38,9
 	.half	.L78-.L77
-	.byte	1,5,55,9
+	.byte	1,5,63,9
 	.half	.L79-.L78
-	.byte	1,5,20,9
+	.byte	1,5,55,9
 	.half	.L80-.L79
-	.byte	1,5,18,9
-	.half	.L41-.L80
-	.byte	3,2,1,5,40,9
-	.half	.L81-.L41
+	.byte	1,5,20,9
+	.half	.L81-.L80
 	.byte	1,5,13,9
 	.half	.L82-.L81
 	.byte	3,2,1,5,26,9
@@ -25155,19 +25124,17 @@ aebFlag:	.type	object
 	.byte	1,5,9,9
 	.half	.L84-.L83
 	.byte	1,5,13,7,9
-	.half	.L85-.L84
-	.byte	3,2,1,5,23,9
-	.half	.L86-.L85
+	.half	.L41-.L84
+	.byte	3,3,1,5,23,9
+	.half	.L85-.L41
 	.byte	1,5,21,9
-	.half	.L87-.L86
+	.half	.L86-.L85
 	.byte	1,5,25,9
-	.half	.L42-.L87
+	.half	.L87-.L86
 	.byte	3,1,1,9
-	.half	.L88-.L42
-	.byte	3,1,1,5,22,9
-	.half	.L89-.L88
+	.half	.L47-.L87
 	.byte	3,1,1,5,9,9
-	.half	.L3-.L89
+	.half	.L3-.L47
 	.byte	3,123,1,5,18,9
 	.half	.L2-.L3
 	.byte	3,10,1,5,1,9
@@ -25175,7 +25142,7 @@ aebFlag:	.type	object
 	.byte	3,2,1,7,9
 	.half	.L25-.L4
 	.byte	0,1,1
-.L67:
+.L68:
 	.sdecl	'.debug_ranges',debug,cluster('tofUpdateFromCAN')
 	.sect	'.debug_ranges'
 .L24:
@@ -25194,12 +25161,12 @@ aebFlag:	.type	object
 	.byte	2
 	.word	.L12
 	.byte	3
-	.byte	'tofGetValue',0,1,37,14
-	.word	.L43
+	.byte	'tofGetValue',0,1,35,14
+	.word	.L44
 	.byte	1,1,1
-	.word	.L11,.L44,.L10
+	.word	.L11,.L45,.L10
 	.byte	4
-	.word	.L11,.L44
+	.word	.L11,.L45
 	.byte	0,0
 	.sdecl	'.debug_abbrev',debug,cluster('tofGetValue')
 	.sect	'.debug_abbrev'
@@ -25209,24 +25176,24 @@ aebFlag:	.type	object
 	.sdecl	'.debug_line',debug,cluster('tofGetValue')
 	.sect	'.debug_line'
 .L28:
+	.word	.L89-.L88
+.L88:
+	.half	3
 	.word	.L91-.L90
 .L90:
-	.half	3
-	.word	.L93-.L92
-.L92:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../BSW/Service/tof.c',0,0,0,0,0
-.L93:
+.L91:
 	.byte	5,12,7,0,5,2
 	.word	.L11
-	.byte	3,38,1,5,5,9
-	.half	.L94-.L11
+	.byte	3,36,1,5,5,9
+	.half	.L92-.L11
 	.byte	1,5,1,9
-	.half	.L5-.L94
+	.half	.L5-.L92
 	.byte	3,1,1,7,9
 	.half	.L30-.L5
 	.byte	0,1,1
-.L91:
+.L89:
 	.sdecl	'.debug_ranges',debug,cluster('tofGetValue')
 	.sect	'.debug_ranges'
 .L29:
@@ -25244,7 +25211,7 @@ aebFlag:	.type	object
 	.word	.L12
 	.byte	3
 	.byte	'g_TofValue',0,15,3,21
-	.word	.L43
+	.word	.L44
 	.byte	5,3
 	.word	g_TofValue
 	.byte	0
@@ -25265,7 +25232,7 @@ aebFlag:	.type	object
 	.word	.L12
 	.byte	3
 	.byte	'aebFlag',0,15,4,14
-	.word	.L45
+	.word	.L46
 	.byte	1,5,3
 	.word	aebFlag
 	.byte	0
@@ -25277,7 +25244,7 @@ aebFlag:	.type	object
 	.sdecl	'.debug_loc',debug,cluster('tofGetValue')
 	.sect	'.debug_loc'
 .L10:
-	.word	-1,.L11,0,.L44-.L11
+	.word	-1,.L11,0,.L45-.L11
 	.half	2
 	.byte	138,0
 	.word	0,0
@@ -25290,16 +25257,18 @@ aebFlag:	.type	object
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('tofUpdateFromCAN')
 	.sect	'.debug_loc'
+.L43:
+	.word	0,0
 .L38:
-	.word	-1,.L9,0,.L46-.L9
+	.word	-1,.L9,0,.L47-.L9
 	.half	1
 	.byte	100
-	.word	.L2-.L9,.L49-.L9
+	.word	.L2-.L9,.L50-.L9
 	.half	1
 	.byte	100
 	.word	0,0
 .L40:
-	.word	-1,.L9,.L47-.L9,.L48-.L9
+	.word	-1,.L9,.L48-.L9,.L49-.L9
 	.half	1
 	.byte	95
 	.word	.L2-.L9,.L4-.L9
@@ -25313,7 +25282,7 @@ aebFlag:	.type	object
 	.word	0,0
 	.sdecl	'.debug_frame',debug
 	.sect	'.debug_frame'
-.L95:
+.L93:
 	.word	48
 	.word	-1
 	.byte	3,0,2,1,27,12,26,0,8,26,8,27,8,30,8,29,8,28,8,16,8,17,8,24,8,25,8,31,8,32,8,33,8,34,8,35,8,36,8,37,8,38
@@ -25321,14 +25290,14 @@ aebFlag:	.type	object
 	.sdecl	'.debug_frame',debug,cluster('tofInit')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L95,.L7,.L35-.L7
+	.word	.L93,.L7,.L35-.L7
 	.sdecl	'.debug_frame',debug,cluster('tofUpdateFromCAN')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L95,.L9,.L36-.L9
+	.word	.L93,.L9,.L36-.L9
 	.sdecl	'.debug_frame',debug,cluster('tofGetValue')
 	.sect	'.debug_frame'
 	.word	24
-	.word	.L95,.L11,.L44-.L11
+	.word	.L93,.L11,.L45-.L11
 	.byte	8,18,8,19,8,20,8,21,8,22,8,23
 	; Module end

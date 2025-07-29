@@ -5,7 +5,6 @@
 #include "asclin.h"
 #include "systeminit.h"
 
-
 #include "control.h"
 
 void main0();

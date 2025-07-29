@@ -25,12 +25,14 @@ RM := rm -rf
 -include Libraries/iLLD/TC37A/Tricore/Can/Std/subdir.mk
 -include Libraries/iLLD/TC37A/Tricore/Can/Can/subdir.mk
 -include Libraries/iLLD/TC37A/Tricore/Asclin/Std/subdir.mk
+-include Libraries/Service/CpuGeneric/If/subdir.mk
 -include Libraries/Infra/Ssw/TC37A/Tricore/subdir.mk
 -include Libraries/Infra/Platform/Tricore/Compilers/subdir.mk
 -include Configurations/Debug/subdir.mk
 -include Configurations/subdir.mk
 -include BSW/Service/subdir.mk
 -include BSW/MCAL/subdir.mk
+-include ASW/autopark/subdir.mk
 -include ASW/app/subdir.mk
 -include ASW/subdir.mk
 -include subdir.mk

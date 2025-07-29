@@ -30,10 +30,9 @@ void canRxIsrHandler (void)
             tofUpdateFromCAN(rxData);
             break;
         default :
+            tofUpdateFromCAN(rxData);
             break;
     }
-
-    myPrintf("\n");
 }
 
 /* Function to initialize MCMCAN module and nodes related for this application use case */
