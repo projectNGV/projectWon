@@ -2,7 +2,7 @@
 
 void bluetoothIsr(char c)
 {
-    myPrintf("%c", c);
+//    myPrintf("%c", c);
 }
 
 

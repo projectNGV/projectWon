@@ -1,6 +1,6 @@
 	; Module start
 	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
-	.compiler_invocation	"ctc -f cc35920a --dep-file=BSW/Service/ultrasonic.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc37x -D__CPU_TC37X__ --core=tc1.6.2 --fp-model=+float -D__CPU__=tc37x -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\ASW -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\ASW\\\\app -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\ASW\\\\autopark -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\BSW -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\BSW\\\\MCAL -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\BSW\\\\Service -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Configurations -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Platform -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Sfr -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Ssw -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Service -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric\\\\If -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric\\\\If\\\\Ccu6If -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Can -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Irq -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Trap -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12 -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_Impl -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_PinMap -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2004 -o BSW/Service/ultrasonic.src ../BSW/Service/ultrasonic.c"
+	.compiler_invocation	"ctc -f cc26164a --dep-file=BSW/Service/ultrasonic.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc37x -D__CPU_TC37X__ --core=tc1.6.2 --fp-model=+float -D__CPU__=tc37x -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\ASW -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\ASW\\\\app -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\ASW\\\\autopark -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\BSW -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\BSW\\\\MCAL -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\BSW\\\\Service -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Configurations -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Platform -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Sfr -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Ssw -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Service -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric\\\\If -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric\\\\If\\\\Ccu6If -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Can -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Irq -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Trap -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12 -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_Impl -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_PinMap -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2004 -o BSW/Service/ultrasonic.src ../BSW/Service/ultrasonic.c"
 	.compiler_name		"ctc"
 	;source	'../BSW/Service/ultrasonic.c'
 
@@ -20,47 +20,47 @@ ultrasonicInit:	.type	func
 	j	.L2
 .L3:
 	mul	d15,d8,#16
+.L102:
+	movh.a	a15,#@his(ULT_PINS)
+	lea	a15,[a15]@los(ULT_PINS)
 .L103:
-	movh.a	a15,#@his(ULT_PINS)
-	lea	a15,[a15]@los(ULT_PINS)
+	addsc.a	a15,a15,d15,#0
 .L104:
-	addsc.a	a15,a15,d15,#0
-.L105:
 	ld.a	a4,[a15]
-.L106:
+.L105:
 	mul	d15,d8,#16
-.L107:
+.L106:
 	movh.a	a15,#@his(ULT_PINS)
 	lea	a15,[a15]@los(ULT_PINS)
-.L108:
+.L107:
 	addsc.a	a15,a15,d15,#0
-.L109:
+.L108:
 	ld.bu	d4,[a15]4
-.L110:
+.L109:
 	mov	d5,#128
 	call	IfxPort_setPinMode
+.L110:
+	mul	d15,d8,#16
 .L111:
-	mul	d15,d8,#16
+	movh.a	a15,#@his(ULT_PINS)
+	lea	a15,[a15]@los(ULT_PINS)
 .L112:
-	movh.a	a15,#@his(ULT_PINS)
-	lea	a15,[a15]@los(ULT_PINS)
+	addsc.a	a15,a15,d15,#0
 .L113:
-	addsc.a	a15,a15,d15,#0
-.L114:
 	ld.a	a4,[a15]8
-.L115:
+.L114:
 	mul	d15,d8,#16
-.L116:
+.L115:
 	movh.a	a15,#@his(ULT_PINS)
 	lea	a15,[a15]@los(ULT_PINS)
-.L117:
+.L116:
 	addsc.a	a15,a15,d15,#0
-.L118:
+.L117:
 	ld.bu	d4,[a15]12
-.L119:
+.L118:
 	mov	d5,#16
 	call	IfxPort_setPinMode
-.L120:
+.L119:
 	add	d8,#1
 .L2:
 	jlt	d8,#3,.L3
@@ -83,55 +83,55 @@ sendTrigger:	.type	func
 	mov	d8,d4
 .L86:
 	mul	d15,d8,#16
-.L159:
-	movh.a	a15,#@his(ULT_PINS)
-	lea	a15,[a15]@los(ULT_PINS)
-.L160:
-	addsc.a	a15,a15,d15,#0
 .L161:
-	ld.a	a2,[a15]
-.L162:
-	mul	d15,d8,#16
-.L163:
 	movh.a	a15,#@his(ULT_PINS)
 	lea	a15,[a15]@los(ULT_PINS)
-.L164:
+.L162:
 	addsc.a	a15,a15,d15,#0
+.L163:
+	ld.a	a2,[a15]
+.L164:
+	mul	d15,d8,#16
 .L165:
-	ld.bu	d15,[a15]4
+	movh.a	a15,#@his(ULT_PINS)
+	lea	a15,[a15]@los(ULT_PINS)
 .L166:
+	addsc.a	a15,a15,d15,#0
+.L167:
+	ld.bu	d15,[a15]4
+.L168:
 	mov	d0,#1
 .L72:
 	sha	d0,d0,d15
-.L167:
+.L169:
 	st.w	[a2]4,d0
 .L73:
 	mov	d4,#10
 .L85:
 	call	delayUs
-.L168:
-	mul	d15,d8,#16
-.L169:
-	movh.a	a15,#@his(ULT_PINS)
-	lea	a15,[a15]@los(ULT_PINS)
 .L170:
-	addsc.a	a15,a15,d15,#0
-.L171:
-	ld.a	a2,[a15]
-.L172:
 	mul	d15,d8,#16
-.L173:
+.L171:
 	movh.a	a15,#@his(ULT_PINS)
 	lea	a15,[a15]@los(ULT_PINS)
-.L174:
+.L172:
 	addsc.a	a15,a15,d15,#0
+.L173:
+	ld.a	a2,[a15]
+.L174:
+	mul	d15,d8,#16
 .L175:
-	ld.bu	d15,[a15]4
+	movh.a	a15,#@his(ULT_PINS)
+	lea	a15,[a15]@los(ULT_PINS)
 .L176:
+	addsc.a	a15,a15,d15,#0
+.L177:
+	ld.bu	d15,[a15]4
+.L178:
 	movh	d0,#1
 .L81:
 	sha	d0,d0,d15
-.L177:
+.L179:
 	st.w	[a2]4,d0
 .L82:
 	ret
@@ -156,48 +156,54 @@ getDistanceByUltra:	.type	func
 	call	sendTrigger
 .L87:
 	call	getTime10Ns
-.L125:
+.L124:
 	mov.u	d0,#38528
 	addih	d0,d0,#152
+	mov	d1,#0
+.L125:
+	addx	d10,d2,d0
+	addc	d11,d3,d1
 .L89:
-	add	d0,d2
-.L91:
 	j	.L4
 .L5:
-	ld.w	d15,0xf0001010
+	call	getTime10Ns
 .L126:
-	jge.u	d0,d15,.L6
+	ge.u	d15,d10,d2
+	and.eq	d15,d3,d11
+	or.lt.u	d15,d3,d11
 .L127:
-	mov	d2,#-1
+	jne	d15,#0,.L6
 .L128:
+	mov	d2,#-1
+.L129:
 	j	.L7
 .L6:
 .L4:
 	mul	d15,d8,#16
-.L129:
-	movh.a	a15,#@his(ULT_PINS)
-	lea	a15,[a15]@los(ULT_PINS)
 .L130:
-	addsc.a	a15,a15,d15,#0
-.L131:
-	ld.a	a2,[a15]8
-.L132:
-	mul	d15,d8,#16
-.L133:
 	movh.a	a15,#@his(ULT_PINS)
 	lea	a15,[a15]@los(ULT_PINS)
-.L134:
+.L131:
 	addsc.a	a15,a15,d15,#0
+.L132:
+	ld.a	a2,[a15]8
+.L133:
+	mul	d15,d8,#16
+.L134:
+	movh.a	a15,#@his(ULT_PINS)
+	lea	a15,[a15]@los(ULT_PINS)
 .L135:
+	addsc.a	a15,a15,d15,#0
+.L136:
 	ld.bu	d15,[a15]12
 .L59:
-	ld.w	d1,[a2]36
-	extr.u	d15,d1,d15,#1
-.L136:
-	jeq	d15,#0,.L8
+	ld.w	d0,[a2]36
+	extr.u	d15,d0,d15,#1
 .L137:
-	mov	d15,#1
+	jeq	d15,#0,.L8
 .L138:
+	mov	d15,#1
+.L139:
 	j	.L9
 .L8:
 	mov	d15,#0
@@ -206,49 +212,56 @@ getDistanceByUltra:	.type	func
 .L10:
 	jeq	d15,#0,.L5
 .L60:
-	ld.w	d0,0xf0001010
+	call	getTime10Ns
+	mov	e10,d3,d2
 .L90:
-	mov.u	d1,#38528
-	addih	d1,d1,#152
-.L92:
-	add	d1,d0
-.L139:
+	mov.u	d0,#38528
+	addih	d0,d0,#152
+	mov	d1,#0
+.L140:
+	addx	d12,d10,d0
+	addc	d13,d11,d1
+.L91:
 	j	.L11
 .L12:
-	ld.w	d15,0xf0001010
-.L140:
-	jge.u	d1,d15,.L13
+	call	getTime10Ns
 .L141:
-	mov	d2,#-1
+	ge.u	d15,d12,d2
+	and.eq	d15,d3,d13
+	or.lt.u	d15,d3,d13
 .L142:
+	jne	d15,#0,.L13
+.L143:
+	mov	d2,#-1
+.L144:
 	j	.L14
 .L13:
 .L11:
 	mul	d15,d8,#16
-.L143:
-	movh.a	a15,#@his(ULT_PINS)
-	lea	a15,[a15]@los(ULT_PINS)
-.L144:
-	addsc.a	a15,a15,d15,#0
 .L145:
-	ld.a	a2,[a15]8
-.L146:
-	mul	d15,d8,#16
-.L147:
 	movh.a	a15,#@his(ULT_PINS)
 	lea	a15,[a15]@los(ULT_PINS)
-.L148:
+.L146:
 	addsc.a	a15,a15,d15,#0
+.L147:
+	ld.a	a2,[a15]8
+.L148:
+	mul	d15,d8,#16
 .L149:
-	ld.bu	d2,[a15]12
-.L66:
-	ld.w	d15,[a2]36
-	extr.u	d15,d15,d2,#1
+	movh.a	a15,#@his(ULT_PINS)
+	lea	a15,[a15]@los(ULT_PINS)
 .L150:
-	jeq	d15,#0,.L15
+	addsc.a	a15,a15,d15,#0
 .L151:
-	mov	d15,#1
+	ld.bu	d15,[a15]12
+.L66:
+	ld.w	d0,[a2]36
+	extr.u	d15,d0,d15,#1
 .L152:
+	jeq	d15,#0,.L15
+.L153:
+	mov	d15,#1
+.L154:
 	j	.L16
 .L15:
 	mov	d15,#0
@@ -257,14 +270,14 @@ getDistanceByUltra:	.type	func
 .L17:
 	jne	d15,#0,.L12
 .L67:
-	ld.w	d2,0xf0001010
-.L93:
-	sub	d2,d0
-.L153:
+	call	getTime10Ns
+.L155:
+	subx	d2,d2,d10
+.L92:
 	jge	d2,#0,.L18
-.L154:
+.L156:
 	mov	d2,#-1
-.L94:
+.L93:
 	j	.L19
 .L18:
 	j	.L20
@@ -342,7 +355,9 @@ ULT_PINS:	.type	object
 	.byte	'a',0,1,149,2,44
 	.word	260
 	.byte	6,0,4
-	.byte	'Ifx__stopPerfCounters',0,3,1,169,2,17,1,1,6,0,7
+	.byte	'Ifx__stopPerfCounters',0,3,1,169,2,17,1,1,6,0
+.L55:
+	.byte	7
 	.byte	'unsigned long long int',0,8,7,9
 	.byte	'void',0,3
 	.word	372
@@ -1886,9 +1901,7 @@ ULT_PINS:	.type	object
 	.byte	'IfxCpu_restoreInterrupts',0,3,7,130,8,17,1,1,5
 	.byte	'enabled',0,7,130,8,50
 	.word	639
-	.byte	6,0
-.L55:
-	.byte	7
+	.byte	6,0,7
 	.byte	'unsigned long int',0,4,7,8
 	.byte	'IfxCpu_getPerformanceCounter',0,3,7,251,6,19
 	.word	9673
@@ -21686,11 +21699,11 @@ ULT_PINS:	.type	object
 	.sdecl	'.debug_line',debug
 	.sect	'.debug_line'
 .L30:
-	.word	.L96-.L95
-.L95:
+	.word	.L95-.L94
+.L94:
 	.half	3
-	.word	.L98-.L97
-.L97:
+	.word	.L97-.L96
+.L96:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
 	.byte	'C:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg',0
 	.byte	'C:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std',0
@@ -21733,8 +21746,8 @@ ULT_PINS:	.type	object
 	.byte	'C:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\_Impl\\IfxSrc_cfg.h',0
 	.byte	0,0,0
 	.byte	'IfxCbs_regdef.h',0,1,0,0,0
-.L98:
-.L96:
+.L97:
+.L95:
 	.sdecl	'.debug_info',debug,cluster('ultrasonicInit')
 	.sect	'.debug_info'
 .L31:
@@ -21767,14 +21780,14 @@ ULT_PINS:	.type	object
 	.sdecl	'.debug_line',debug,cluster('ultrasonicInit')
 	.sect	'.debug_line'
 .L33:
-	.word	.L100-.L99
-.L99:
+	.word	.L99-.L98
+.L98:
 	.half	3
-	.word	.L102-.L101
-.L101:
+	.word	.L101-.L100
+.L100:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../BSW/Service/ultrasonic.c',0,0,0,0,0
-.L102:
+.L101:
 	.byte	5,16,7,0,5,2
 	.word	.L22
 	.byte	3,10,1,5,40,9
@@ -21782,49 +21795,49 @@ ULT_PINS:	.type	object
 	.byte	1,5,36,9
 	.half	.L3-.L84
 	.byte	3,2,1,5,28,9
-	.half	.L103-.L3
+	.half	.L102-.L3
 	.byte	1,5,36,9
-	.half	.L104-.L103
+	.half	.L103-.L102
 	.byte	1,5,47,9
+	.half	.L104-.L103
+	.byte	1,5,62,9
 	.half	.L105-.L104
-	.byte	1,5,62,9
-	.half	.L106-.L105
 	.byte	1,5,54,9
-	.half	.L107-.L106
+	.half	.L106-.L105
 	.byte	1,5,62,9
-	.half	.L108-.L107
+	.half	.L107-.L106
 	.byte	1,5,73,9
-	.half	.L109-.L108
+	.half	.L108-.L107
 	.byte	1,5,84,9
+	.half	.L109-.L108
+	.byte	1,5,36,9
 	.half	.L110-.L109
-	.byte	1,5,36,9
-	.half	.L111-.L110
 	.byte	3,1,1,5,28,9
-	.half	.L112-.L111
+	.half	.L111-.L110
 	.byte	1,5,36,9
-	.half	.L113-.L112
+	.half	.L112-.L111
 	.byte	1,5,44,9
+	.half	.L113-.L112
+	.byte	1,5,59,9
 	.half	.L114-.L113
-	.byte	1,5,59,9
-	.half	.L115-.L114
 	.byte	1,5,51,9
-	.half	.L116-.L115
+	.half	.L115-.L114
 	.byte	1,5,59,9
-	.half	.L117-.L116
+	.half	.L116-.L115
 	.byte	1,5,67,9
-	.half	.L118-.L117
+	.half	.L117-.L116
 	.byte	1,5,78,9
-	.half	.L119-.L118
+	.half	.L118-.L117
 	.byte	1,5,43,9
-	.half	.L120-.L119
+	.half	.L119-.L118
 	.byte	3,125,1,5,40,9
-	.half	.L2-.L120
+	.half	.L2-.L119
 	.byte	1,5,1,7,9
 	.half	.L49-.L2
 	.byte	3,5,1,7,9
 	.half	.L35-.L49
 	.byte	0,1,1
-.L100:
+.L99:
 	.sdecl	'.debug_ranges',debug,cluster('ultrasonicInit')
 	.sect	'.debug_ranges'
 .L34:
@@ -21856,7 +21869,7 @@ ULT_PINS:	.type	object
 	.byte	'start',0,1,28,12
 	.word	.L55,.L56
 	.byte	6
-	.byte	'timeOut',0,1,28,24
+	.byte	'timeOut',0,1,28,19
 	.word	.L55,.L57
 	.byte	7
 	.word	.L58,.L59,.L60
@@ -21890,17 +21903,17 @@ ULT_PINS:	.type	object
 	.sdecl	'.debug_line',debug,cluster('getDistanceByUltra')
 	.sect	'.debug_line'
 .L38:
-	.word	.L122-.L121
-.L121:
+	.word	.L121-.L120
+.L120:
 	.half	3
-	.word	.L124-.L123
-.L123:
+	.word	.L123-.L122
+.L122:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
 	.byte	'C:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std',0
 	.byte	0
 	.byte	'../BSW/Service/ultrasonic.c',0,0,0,0
 	.byte	'IfxPort.h',0,1,0,0,0
-.L124:
+.L123:
 	.byte	5,5,7,0,5,2
 	.word	.L26
 	.byte	3,25,1,5,17,9
@@ -21908,113 +21921,117 @@ ULT_PINS:	.type	object
 	.byte	3,3,1,5,26,9
 	.half	.L87-.L88
 	.byte	3,2,1,5,16,9
-	.half	.L125-.L87
+	.half	.L124-.L87
 	.byte	3,1,1,5,13,9
-	.half	.L89-.L125
+	.half	.L125-.L124
 	.byte	1,5,85,9
-	.half	.L91-.L89
-	.byte	3,2,1,5,28,9
-	.half	.L5-.L91
-	.byte	3,1,1,5,9,9
+	.half	.L89-.L125
+	.byte	3,2,1,5,23,9
+	.half	.L5-.L89
+	.byte	3,1,1,5,26,9
 	.half	.L126-.L5
-	.byte	1,5,49,7,9
+	.byte	1,5,9,9
 	.half	.L127-.L126
-	.byte	1,5,42,9
+	.byte	1,5,44,7,9
 	.half	.L128-.L127
+	.byte	1,5,37,9
+	.half	.L129-.L128
 	.byte	1,5,40,9
-	.half	.L4-.L128
+	.half	.L4-.L129
 	.byte	3,127,1,5,32,9
-	.half	.L129-.L4
+	.half	.L130-.L4
 	.byte	1,5,40,9
-	.half	.L130-.L129
-	.byte	1,5,50,9
 	.half	.L131-.L130
-	.byte	1,5,65,9
+	.byte	1,5,50,9
 	.half	.L132-.L131
-	.byte	1,5,57,9
-	.half	.L133-.L132
 	.byte	1,5,65,9
+	.half	.L133-.L132
+	.byte	1,5,57,9
 	.half	.L134-.L133
-	.byte	1,5,75,9
+	.byte	1,5,65,9
 	.half	.L135-.L134
+	.byte	1,5,75,9
+	.half	.L136-.L135
 	.byte	1,4,2,5,13,9
-	.half	.L59-.L135
+	.half	.L59-.L136
 	.byte	3,224,4,1,5,12,9
-	.half	.L136-.L59
+	.half	.L137-.L59
 	.byte	1,5,51,7,9
-	.half	.L137-.L136
-	.byte	1,5,58,9
 	.half	.L138-.L137
+	.byte	1,5,58,9
+	.half	.L139-.L138
 	.byte	1,5,51,9
-	.half	.L8-.L138
+	.half	.L8-.L139
 	.byte	1,5,5,9
 	.half	.L9-.L8
 	.byte	1,4,1,5,12,9
 	.half	.L10-.L9
-	.byte	3,160,123,1,5,29,7,9
+	.byte	3,160,123,1,5,24,7,9
 	.half	.L60-.L10
 	.byte	3,3,1,5,23,9
 	.half	.L90-.L60
 	.byte	3,1,1,5,21,9
-	.half	.L92-.L90
+	.half	.L140-.L90
 	.byte	1,5,84,9
-	.half	.L139-.L92
-	.byte	3,2,1,5,28,9
-	.half	.L12-.L139
-	.byte	3,1,1,5,9,9
-	.half	.L140-.L12
-	.byte	1,5,49,7,9
-	.half	.L141-.L140
-	.byte	1,5,42,9
+	.half	.L91-.L140
+	.byte	3,2,1,5,23,9
+	.half	.L12-.L91
+	.byte	3,1,1,5,26,9
+	.half	.L141-.L12
+	.byte	1,5,9,9
 	.half	.L142-.L141
-	.byte	1,5,39,9
-	.half	.L11-.L142
-	.byte	3,127,1,5,31,9
-	.half	.L143-.L11
-	.byte	1,5,39,9
+	.byte	1,5,44,7,9
+	.half	.L143-.L142
+	.byte	1,5,37,9
 	.half	.L144-.L143
-	.byte	1,5,49,9
-	.half	.L145-.L144
-	.byte	1,5,64,9
+	.byte	1,5,39,9
+	.half	.L11-.L144
+	.byte	3,127,1,5,31,9
+	.half	.L145-.L11
+	.byte	1,5,39,9
 	.half	.L146-.L145
-	.byte	1,5,56,9
+	.byte	1,5,49,9
 	.half	.L147-.L146
 	.byte	1,5,64,9
 	.half	.L148-.L147
-	.byte	1,5,74,9
+	.byte	1,5,56,9
 	.half	.L149-.L148
-	.byte	1,4,2,5,13,9
-	.half	.L66-.L149
-	.byte	3,218,4,1,5,12,9
-	.half	.L150-.L66
-	.byte	1,5,51,7,9
+	.byte	1,5,64,9
+	.half	.L150-.L149
+	.byte	1,5,74,9
 	.half	.L151-.L150
+	.byte	1,4,2,5,13,9
+	.half	.L66-.L151
+	.byte	3,218,4,1,5,12,9
+	.half	.L152-.L66
+	.byte	1,5,51,7,9
+	.half	.L153-.L152
 	.byte	1,5,58,9
-	.half	.L152-.L151
+	.half	.L154-.L153
 	.byte	1,5,51,9
-	.half	.L15-.L152
+	.half	.L15-.L154
 	.byte	1,5,5,9
 	.half	.L16-.L15
 	.byte	1,4,1,5,84,9
 	.half	.L17-.L16
-	.byte	3,166,123,1,5,31,7,9
+	.byte	3,166,123,1,5,33,7,9
 	.half	.L67-.L17
-	.byte	3,4,1,5,34,9
-	.half	.L93-.L67
+	.byte	3,4,1,5,36,9
+	.half	.L155-.L67
 	.byte	1,5,5,9
-	.half	.L153-.L93
+	.half	.L92-.L155
 	.byte	3,1,1,5,24,7,9
-	.half	.L154-.L153
+	.half	.L156-.L92
 	.byte	1,5,17,9
-	.half	.L94-.L154
+	.half	.L93-.L156
 	.byte	1,5,5,9
-	.half	.L18-.L94
+	.half	.L18-.L93
 	.byte	3,1,1,5,1,9
 	.half	.L7-.L18
 	.byte	3,1,1,7,9
 	.half	.L40-.L7
 	.byte	0,1,1
-.L122:
+.L121:
 	.sdecl	'.debug_ranges',debug,cluster('getDistanceByUltra')
 	.sect	'.debug_ranges'
 .L39:
@@ -22070,71 +22087,71 @@ ULT_PINS:	.type	object
 	.sdecl	'.debug_line',debug,cluster('sendTrigger')
 	.sect	'.debug_line'
 .L43:
-	.word	.L156-.L155
-.L155:
-	.half	3
 	.word	.L158-.L157
 .L157:
+	.half	3
+	.word	.L160-.L159
+.L159:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
 	.byte	'C:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\project-won\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std',0
 	.byte	0
 	.byte	'../BSW/Service/ultrasonic.c',0,0,0,0
 	.byte	'IfxPort.h',0,1,0,0,0
-.L158:
+.L160:
 	.byte	5,13,7,0,5,2
 	.word	.L24
 	.byte	3,17,1,5,33,9
 	.half	.L86-.L24
 	.byte	3,2,1,5,25,9
-	.half	.L159-.L86
+	.half	.L161-.L86
 	.byte	1,5,33,9
-	.half	.L160-.L159
-	.byte	1,5,46,9
-	.half	.L161-.L160
-	.byte	1,5,61,9
 	.half	.L162-.L161
-	.byte	1,5,53,9
+	.byte	1,5,46,9
 	.half	.L163-.L162
 	.byte	1,5,61,9
 	.half	.L164-.L163
-	.byte	1,5,74,9
-	.half	.L165-.L164
-	.byte	1,5,85,9
-	.half	.L166-.L165
-	.byte	1,4,2,5,26,9
-	.half	.L72-.L166
-	.byte	3,156,5,1,5,17,9
-	.half	.L167-.L72
-	.byte	1,4,1,5,13,9
-	.half	.L73-.L167
-	.byte	3,229,122,1,5,33,9
-	.half	.L168-.L73
-	.byte	3,1,1,5,25,9
-	.half	.L169-.L168
-	.byte	1,5,33,9
-	.half	.L170-.L169
-	.byte	1,5,46,9
-	.half	.L171-.L170
-	.byte	1,5,61,9
-	.half	.L172-.L171
 	.byte	1,5,53,9
+	.half	.L165-.L164
+	.byte	1,5,61,9
+	.half	.L166-.L165
+	.byte	1,5,74,9
+	.half	.L167-.L166
+	.byte	1,5,85,9
+	.half	.L168-.L167
+	.byte	1,4,2,5,26,9
+	.half	.L72-.L168
+	.byte	3,156,5,1,5,17,9
+	.half	.L169-.L72
+	.byte	1,4,1,5,13,9
+	.half	.L73-.L169
+	.byte	3,229,122,1,5,33,9
+	.half	.L170-.L73
+	.byte	3,1,1,5,25,9
+	.half	.L171-.L170
+	.byte	1,5,33,9
+	.half	.L172-.L171
+	.byte	1,5,46,9
 	.half	.L173-.L172
 	.byte	1,5,61,9
 	.half	.L174-.L173
-	.byte	1,5,74,9
+	.byte	1,5,53,9
 	.half	.L175-.L174
-	.byte	1,5,85,9
+	.byte	1,5,61,9
 	.half	.L176-.L175
+	.byte	1,5,74,9
+	.half	.L177-.L176
+	.byte	1,5,85,9
+	.half	.L178-.L177
 	.byte	1,4,2,5,26,9
-	.half	.L81-.L176
+	.half	.L81-.L178
 	.byte	3,154,5,1,5,17,9
-	.half	.L177-.L81
+	.half	.L179-.L81
 	.byte	1,4,1,5,1,9
-	.half	.L82-.L177
+	.half	.L82-.L179
 	.byte	3,232,122,1,7,9
 	.half	.L45-.L82
 	.byte	0,1,1
-.L156:
+.L158:
 	.sdecl	'.debug_ranges',debug,cluster('sendTrigger')
 	.sect	'.debug_ranges'
 .L44:
@@ -22181,7 +22198,7 @@ ULT_PINS:	.type	object
 .L62:
 	.word	0,0
 .L68:
-	.word	-1,.L26,.L93-.L26,.L94-.L26
+	.word	-1,.L26,.L92-.L26,.L93-.L26
 	.half	1
 	.byte	82
 	.word	.L18-.L26,.L7-.L26
@@ -22189,20 +22206,14 @@ ULT_PINS:	.type	object
 	.byte	82
 	.word	0,0
 .L56:
-	.word	-1,.L26,.L90-.L26,.L7-.L26
-	.half	5
-	.byte	144,32,157,32,0
 	.word	0,0
 .L57:
 	.word	-1,.L26,.L89-.L26,.L90-.L26
-	.half	5
-	.byte	144,32,157,32,0
-	.word	.L89-.L26,.L91-.L26
-	.half	1
-	.byte	82
-	.word	.L92-.L26,.L7-.L26
-	.half	1
-	.byte	81
+	.half	2
+	.byte	144,37
+	.word	.L91-.L26,.L7-.L26
+	.half	2
+	.byte	144,38
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('sendTrigger')
 	.sect	'.debug_loc'
@@ -22239,7 +22250,7 @@ ULT_PINS:	.type	object
 	.word	0,0
 	.sdecl	'.debug_frame',debug
 	.sect	'.debug_frame'
-.L178:
+.L180:
 	.word	48
 	.word	-1
 	.byte	3,0,2,1,27,12,26,0,8,26,8,27,8,30,8,29,8,28,8,16,8,17,8,24,8,25,8,31,8,32,8,33,8,34,8,35,8,36,8,37,8,38
@@ -22247,13 +22258,13 @@ ULT_PINS:	.type	object
 	.sdecl	'.debug_frame',debug,cluster('ultrasonicInit')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L178,.L22,.L48-.L22
+	.word	.L180,.L22,.L48-.L22
 	.sdecl	'.debug_frame',debug,cluster('sendTrigger')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L178,.L24,.L69-.L24
+	.word	.L180,.L24,.L69-.L24
 	.sdecl	'.debug_frame',debug,cluster('getDistanceByUltra')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L178,.L26,.L52-.L26
+	.word	.L180,.L26,.L52-.L26
 	; Module end

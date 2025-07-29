@@ -194,14 +194,14 @@ void asclin1InitUart(void)
 
     MODULE_ASCLIN1.FLAGSSET.U = (IFX_ASCLIN_FLAGSSET_TFLS_MSK << IFX_ASCLIN_FLAGSSET_TFLS_OFF);
 
-    /* Initialize ASCLIN0 RX interrupt */
-    volatile Ifx_SRC_SRCR *src;
-    src = (volatile Ifx_SRC_SRCR *)(&MODULE_SRC.ASCLIN.ASCLIN[1].RX);
-    src->B.SRPN = ISR_PRIORITY_ASCLIN1_RX;
-    src->B.TOS  = 0;
-    src->B.CLRR = 1; /* clear request */
-    MODULE_ASCLIN1.FLAGSENABLE.B.RFLE = 1; /* enable rx fifo fill level flag */
-    src->B.SRE = 1; /* interrupt enable */
+//    /* Initialize ASCLIN0 RX interrupt */
+//    volatile Ifx_SRC_SRCR *src;
+//    src = (volatile Ifx_SRC_SRCR *)(&MODULE_SRC.ASCLIN.ASCLIN[1].RX);
+//    src->B.SRPN = ISR_PRIORITY_ASCLIN1_RX;
+//    src->B.TOS  = 0;
+//    src->B.CLRR = 1; /* clear request */
+//    MODULE_ASCLIN1.FLAGSENABLE.B.RFLE = 1; /* enable rx fifo fill level flag */
+//    src->B.SRE = 1; /* interrupt enable */
 }
 
 IFX_INTERRUPT(asclin1RxIsrHandler, 0, ISR_PRIORITY_ASCLIN1_RX);
