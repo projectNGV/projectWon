@@ -1,16 +1,14 @@
 #include "level.h"
 
-#define LEVEL_DISTANCE 50000
 #define FILTER_SIZE 7
-
 float Kp = 0.001;
 float Ki = 0.0;
-float Kd = 0.0;
+//float Kd = 0.0;
 
 float error = 0;
 float last_error = 0;
 float integral = 0;
-float derivative = 0;
+//float derivative = 0;
 
 int steering_output = 0;
 
@@ -31,11 +29,11 @@ void upKp(int n, float i){
             Ki += i;
             bluetoothPrintf("cur Ki: %f\n", Ki);
         }
-
-    if(n == 2){
-            Kd += i;
-            bluetoothPrintf("cur Kd: %f\n", Kd);
-        }
+//
+//    if(n == 2){
+//            Kd += i;
+//            bluetoothPrintf("cur Kd: %f\n", Kd);
+//        }
 }
 
 int dis;
@@ -67,12 +65,14 @@ void levelInit (LevelDir dir)
 
 int steer (LevelDir dir)
 {
+
     UltraDir ultDir = ((dir == LEVEL_LEFT) ? ULT_LEFT : ULT_RIGHT);
     current_filtered_distance = getFilteredDistance(ultDir);
     error = (float) previous_filtered_distance - (float) current_filtered_distance;
     integral = integral + error;
-    derivative = error - last_error;
-    steering_output = (int) (Kp * error + Ki * integral + Kd * derivative);
+//    derivative = error - last_error;
+    steering_output = (int) (Kp * error + Ki * integral);
+//    steering_output = (int) (Kp * error + Ki * integral + Kd * derivative);
     last_error = error;
     previous_filtered_distance = current_filtered_distance;
 
@@ -83,7 +83,19 @@ int steer (LevelDir dir)
      * 가까워지면 + => 내쪽 바퀴 up / 반대편 바퀴 down
      */
 
+    if(steering_output < -200) steering_output = -200;
+    if(steering_output > 200) steering_output = 200;
+
     if(dir == LEVEL_RIGHT) steering_output *= -1;
+
+//    if( steering_output > 0 ){
+//        motorMovChAPwm(300, 1);
+//        motorMovChBPwm(300 + steering_output, 1);
+//    }
+//    else{
+//        motorMovChAPwm(300 - steering_output, 1);
+//        motorMovChBPwm(300, 1);
+//    }
 
     motorMovChAPwm(300 + steering_output, 1);
     motorMovChBPwm(300 - steering_output, 1);
