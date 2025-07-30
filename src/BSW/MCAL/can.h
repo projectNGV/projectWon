@@ -17,7 +17,7 @@
 #define MAXIMUM_CAN_DATA_PAYLOAD    2                       /* Define maximum classical CAN payload in 4-byte words */
 
 
-#define CAN_TOF_ID 0x10
+#define CAN_TOF_ID 0x200
 
 /*********************************************************************************************************************/
 /*--------------------------------------------------Data Structures--------------------------------------------------*/

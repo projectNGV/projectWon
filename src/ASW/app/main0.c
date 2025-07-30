@@ -13,7 +13,7 @@ MotorState motorState = {
     .lastKeyInput = '5' // 방금 받은 키보드 입력
 };
 
-//extern volatile int aebFlag;
+//extern volatile int aebFlag;  // for tof debugging
 
 void main0(void){
     systemInit();
@@ -24,7 +24,7 @@ void main0(void){
 
         // 최종 동작 호출: 이전에 저장한 방향 + 속도로
         motorRunCommand(&motorState);
-//        myPrintf("distance : %d mm,   flag : %d\n", tofGetValue(), aebFlag);
-//        delayMs(500);
+//        myPrintf("distance : %d mm,   flag : %d\n", tofGetValue(), aebFlag);  // for tof debugging
+//        delayMs(500); // for tof debugging
     }
 }

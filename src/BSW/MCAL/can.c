@@ -50,7 +50,7 @@ void canRxIsrHandler (void)
     unsigned char rxData[8] = {0, };
     int rxLen;
     canRecvMsg(&rxID, rxData, &rxLen);
-    
+
     switch (rxID)
     {
         case CAN_TOF_ID :
@@ -59,7 +59,7 @@ void canRxIsrHandler (void)
             }
             break;
         default :
-            tofUpdateFromCAN(rxData);
+            //tofUpdateFromCAN(rxData);
             break;
     }
 }
