@@ -50,6 +50,8 @@ typedef enum {
 /*********************************************************************************************************************/
 /*-----------------------------------------------Function Prototypes-------------------------------------------------*/
 /*********************************************************************************************************************/
+void canRegisterTofCallback(void (*callback)(unsigned char *));
+
 void canInit(CAN_BAUDRATES ls_baudrate, CAN_NODE CAN_Node);
 void canSetFilterRange(uint32 start, uint32 end);
 void canSetFilterMask(uint32 id, uint32 mask);

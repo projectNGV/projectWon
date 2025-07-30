@@ -10,6 +10,6 @@
 #include "ultrasonic.h"
 #include "asclin.h"
 
-void systemInit();
+void systemInit(void);
 
 #endif /* ASW_APP_SYSTEMINIT_H_ */

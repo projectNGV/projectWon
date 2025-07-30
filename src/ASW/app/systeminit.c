@@ -1,11 +1,11 @@
 #include "systeminit.h"
 
 
-void systemInit(){
+void systemInit(void){
     bluetoothInit();
     motorInit();
     asclin0InitUart();
-    //tofInit();
-    //uartInit();
+    tofInit();
+    uartInit();
     //ultrasonicInit();
 }

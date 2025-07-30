@@ -13,7 +13,9 @@ MotorState motorState = {
     .lastKeyInput = '5' // 방금 받은 키보드 입력
 };
 
-void main0(){
+//extern volatile int aebFlag;
+
+void main0(void){
     systemInit();
     myPrintf("System Start\n");
 
@@ -22,5 +24,7 @@ void main0(){
 
         // 최종 동작 호출: 이전에 저장한 방향 + 속도로
         motorRunCommand(&motorState);
+//        myPrintf("distance : %d mm,   flag : %d\n", tofGetValue(), aebFlag);
+//        delayMs(500);
     }
 }

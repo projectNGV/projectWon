@@ -1,6 +1,6 @@
 #include "control.h"
 
-extern volatile int AEBFlag;
+//extern volatile int aebFlag;
 
 // 전진
 void moveForward(int duty)

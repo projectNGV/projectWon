@@ -17,7 +17,7 @@ static void remove_null(char *s);
 /*********************************************************************************************************************/
 
 
-void uartInit(){
+void uartInit(void){
     asclin0InitUart();
 }
 

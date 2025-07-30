@@ -11,6 +11,7 @@
 #include <stdarg.h>
 
 #include "uart.h"
+#include "asclin.h"
 #include "util.h"
 #include "priority.h"
 
