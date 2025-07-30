@@ -15,6 +15,7 @@ MotorState motorState = {
 
 void main0(void){
     //jm 0730 07:50
+    //test
     systemInit();
     myPrintf("System Start\n");
 
