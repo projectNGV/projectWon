@@ -1,78 +1,44 @@
 #include "bluetooth.h"
 
-void bluetoothIsr(char c)
+#include <stdarg.h>
+
+#include "uart.h"
+#include "ecual.h"
+
+
+void Blt_Init (void)
 {
-//    myPrintf("%c", c);
+    Uart_Init(UART_CHANNEL_BLUETOOTH);
 }
 
-
-
-void bluetoothInit(void)
+void Blt_SendByte (uint8 data)
 {
-    asclin1InitUart();
+    Uart_Write(UART_CHANNEL_BLUETOOTH, data);
 }
 
-void bluetoothAtCommand(char *cmd)
+boolean Blt_ReceiveByte (uint8 *data)
 {
-    char buf[30];
-    int i = 0;
-    sprintf(buf, "%s", cmd);
-    while (buf[i] != 0)
-    {
-        asclin1OutUart(buf[i]);
-        i++;
-    }
-    asclin1OutUart(buf[i]);
-//    asclin1OutUart('\r');
-//    asclin1OutUart('\n');
-
-    delayMs(300);
+    return Uart_Read(UART_CHANNEL_BLUETOOTH, data);
 }
 
-char bluetoothRecvByteBlocked(void)
+void Blt_Printf (const char *fmt, ...)
 {
-    return asclin1InUart();
-}
-
-char bluetoothRecvByteNonBlocked(void)
-{
-    unsigned char ch = 0;
-    int res;
-    res = asclin1PollUart(&ch);
-
-    return res == 1 ? ch : -1;
-}
-
-void bluetoothSendByteBlocked(unsigned char ch)
-{
-    asclin1OutUart(ch);
-}
-
-void bluetoothPrintf(const char *fmt, ...)
-{
-    char buffer[128];
-    char buffer2[128]; // add \r before \n
-    char *ptr;
     va_list ap;
 
     va_start(ap, fmt);
-    vsprintf(buffer, fmt, ap);
+    Uart_Printf(UART_CHANNEL_BLUETOOTH, fmt, ap);
     va_end(ap);
-    int j = 0;
-    for (int i = 0; buffer[i]; i++)
-    {
-        if (buffer[i] == '\n')
-        {
-            buffer2[j++] = '\r';
-            buffer2[j++] = buffer[i];
-        }
-        else
-        {
-            buffer2[j++] = buffer[i];
-        }
-    }
-    buffer2[j] = '\0';
-
-    for (ptr = buffer2; *ptr; ++ptr)
-        bluetoothSendByteBlocked((const unsigned char) *ptr);
 }
+
+int Blt_Scanf (Uart_ChannelType channel, const char *fmt, ...)
+{
+    va_list ap;
+    int result;
+
+    va_start(ap, fmt);
+    result = Uart_Vscanf(channel, fmt, ap);
+    va_end(ap);
+
+    return result;
+}
+

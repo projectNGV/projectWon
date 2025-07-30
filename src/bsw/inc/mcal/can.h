@@ -7,7 +7,6 @@
 #include "IfxCan_Can.h"
 
 
-#include "priority.h"
 #include "tof.h"
 
 /*********************************************************************************************************************/
@@ -16,25 +15,19 @@
 #define CAN_MESSAGE_ID              (uint32)0x777           /* Message ID that will be used in arbitration phase    */
 #define MAXIMUM_CAN_DATA_PAYLOAD    2                       /* Define maximum classical CAN payload in 4-byte words */
 
-
-#define CAN_TOF_ID 0x10
-
 /*********************************************************************************************************************/
 /*--------------------------------------------------Data Structures--------------------------------------------------*/
 /*********************************************************************************************************************/
+
+
 typedef struct
 {
-    IfxCan_Can_Config canConfig;                            /* CAN module configuration structure                   */
-    IfxCan_Can canModule;                                   /* CAN module handle                                    */
-    IfxCan_Can_Node canSrcNode;                             /* CAN source node handle data structure                */
-    IfxCan_Can_Node canDstNode;                             /* CAN destination node handle data structure           */
-    IfxCan_Can_NodeConfig canNodeConfig;                    /* CAN node configuration structure                     */
-    IfxCan_Filter canFilter;                                /* CAN filter configuration structure                   */
-    IfxCan_Message txMsg;                                   /* Transmitted CAN message structure                    */
-    IfxCan_Message rxMsg;                                   /* Received CAN message structure                       */
-    uint8 txData[8];                                        /* Transmitted CAN data array                           */
-    uint8 rxData[8];                                        /* Received CAN data array                              */
-} McmcanType;
+    uint32 id;
+    uint8 data[8];
+    uint8 dlc; // Data Length Code
+} Can_FrameType;
+
+typedef void (*Can_RxCallbackType) (const Can_FrameType *frame);
 
 typedef enum {
     BD_NOUSE = 0,
@@ -50,12 +43,9 @@ typedef enum {
 /*********************************************************************************************************************/
 /*-----------------------------------------------Function Prototypes-------------------------------------------------*/
 /*********************************************************************************************************************/
-void canInit(CAN_BAUDRATES ls_baudrate, CAN_NODE CAN_Node);
-void canSetFilterRange(uint32 start, uint32 end);
-void canSetFilterMask(uint32 id, uint32 mask);
-
-void canSendMsg(unsigned int id, const char *txData, int len);
-int canRecvMsg(unsigned int *id, char *rxData, int *len);
+void Can_Init(CAN_BAUDRATES ls_baudrate, CAN_NODE CAN_Node);
+void Can_Receive (Can_FrameType *frame);
+boolean Can_RegisterRxCallback (uint32 canId, Can_RxCallbackType callback);
 
 
 #endif

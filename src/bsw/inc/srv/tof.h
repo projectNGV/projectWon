@@ -1,11 +1,13 @@
 #ifndef BSW_SERVICE_TOF_H_
 #define BSW_SERVICE_TOF_H_
 
-#include "can.h"
+#include "Ifx_Types.h"
 
-void tofInit ();
-void tofUpdateFromCAN (char *rxData);
-unsigned int tofGetValue (void);
+#define TOF_SENSOR_CAN_ID (0x10)
 
+typedef void (*Tof_AppCallbackType) (uint32 distance);
+
+void Tof_Init ();
+void Tof_RegisterApplicationCallback (Tof_AppCallbackType callback);
 
 #endif /* BSW_SERVICE_TOF_H_ */

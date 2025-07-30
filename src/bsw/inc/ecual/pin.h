@@ -4,12 +4,6 @@
 #include "IfxPort.h"
 #include "Ifx_Types.h"
 
-typedef struct
-{
-    Ifx_P *port;
-    uint8 pinIndex;
-} PinType;
-
 typedef enum ledpins{
    LED_1, LED_2, LED_NUM
 } LedPins;
@@ -22,8 +16,8 @@ typedef enum buttonpins{
    BUTTON_1, BUTTON_NUM
 } ButtonPins;
 
-extern const PinType LED_PINS[LED_NUM];
-extern const PinType BUZZER_PINS[BUZZER_NUM];
-extern const PinType BUTTON_PINS[BUTTON_NUM];
+extern const IfxPort_Pin LED_PINS[LED_NUM];
+extern const IfxPort_Pin BUZZER_PINS[BUZZER_NUM];
+extern const IfxPort_Pin BUTTON_PINS[BUTTON_NUM];
 
 #endif /* PIN_H_ */

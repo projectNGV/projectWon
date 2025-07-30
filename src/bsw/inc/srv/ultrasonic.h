@@ -1,33 +1,9 @@
-/*
- * Ultrasonic.h
- *
- *  Created on: 2025. 6. 26.
- *      Author: USER
- */
+#ifndef ULTRASONIC_H_
+#define ULTRASONIC_H_
 
-#ifndef BSW_IO_ULTRASONIC_H_
-#define BSW_IO_ULTRASONIC_H_
+#include "ecual.h"
 
-#include "IfxPort.h"
+void Ult_Init (void);
+uint32 Ult_GetDistance (Ult_DirType dir);
 
-#include "port.h"
-#include "util.h"
-
-typedef struct
-{
-    GpioPin trigger;
-    GpioPin echo;
-} UltPin;
-
-
-typedef enum ultradir
-{
-    ULT_LEFT, ULT_RIGHT, ULT_REAR, ULT_SENSORS_NUM
-} UltraDir;
-
-
-
-void ultrasonicInit(void);
-int getDistanceByUltra(UltraDir dir);
-
-#endif /* BSW_IO_ULTRASONIC_H_ */
+#endif /* ULTRASONIC_H_ */

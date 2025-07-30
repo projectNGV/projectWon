@@ -1,38 +1,30 @@
 #include "tof.h"
 
-static unsigned int g_TofValue = 0;
-volatile int aebFlag = 0;
+#include "can.h"
 
-void tofInit ()
+static Tof_AppCallbackType g_appCallback = NULL;
+
+static void Tof_CanRxHandler (const Can_FrameType *frame)
 {
-    canInit(BD_500K, CAN_NODE0);
-    g_TofValue = 0;
-    aebFlag = 0;
-}
-
-void tofUpdateFromCAN (char *rxData)
-{
-    unsigned short signal_strength = rxData[5] << 8 | rxData[4];
-
-    if (signal_strength != 0)
+    uint16 signalStrength = frame->data[5] << 8 | frame->data[4];
+    if (signalStrength > 0)
     {
-        g_TofValue = rxData[2] << 16 | rxData[1] << 8 | rxData[0];
-
-        if (g_TofValue < 300)
+        uint32 distance = frame->data[2] << 16 | frame->data[1] << 8 | frame->data[0];
+        if (g_appCallback != NULL)
         {
-            int num = 9;
-            aebFlag = 1;
-            motorStopChA();
-            motorStopChB();
+            g_appCallbackack(distance);
         }
     }
-    else
-    {
-        myPrintf("out of range!\n"); // for debugging
-    }
 }
 
-unsigned int tofGetValue (void)
+void Tof_Init ()
 {
-    return g_TofValue;
+    Can_Init(BD_500K, CAN_NODE0);
+    Can_RegisterRxCallback(TOF_SENSOR_CAN_ID, Tof_CanRxHandler);
+}
+
+
+void Tof_RegisterApplicationCallback (Tof_AppCallbackType callback)
+{
+    g_appCallback = callback;
 }

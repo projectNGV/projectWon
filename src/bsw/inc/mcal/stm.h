@@ -10,8 +10,6 @@
 
 #include "IfxStm.h"
 
-#include "priority.h"
-
 void stm0IsrHandler(void);
 void stmInterruptInit();
 

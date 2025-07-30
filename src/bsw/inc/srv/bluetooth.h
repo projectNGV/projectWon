@@ -5,24 +5,16 @@
  *      Author: USER
  */
 
-#ifndef BSW_IO_BLUETOOTH_H_
-#define BSW_IO_BLUETOOTH_H_
+#ifndef BLUETOOTH_H_
+#define BLUETOOTH_H_
 
-#include <stdarg.h>
+#include "Ifx_Types.h"
+#include "ecual.h"
 
-#include "uart.h"
-#include "util.h"
-#include "priority.h"
+void Blt_Init (void);
+void Blt_SendByte (uint8 data);
+boolean Blt_ReceiveByte (uint8 *data);
+void Blt_Printf (const char *fmt, ...);
+int Blt_Scanf (Uart_ChannelType channel, const char *fmt, ...);
 
-void bluetoothInit(void);
-void bluetoothSetName(char *name);
-void bluetoothSetPwd(char *pwd);
-void bluetoothSetBaud(int baudrate);
-void bluetoothAtCommand(char *cmd);
-char bluetoothRecvByteBlocked(void);
-char bluetoothRecvByteNonBlocked(void);
-void bluetoothSendByteBlocked(unsigned char ch);
-void bluetoothPrintf(const char *fmt, ...);
-
-
-#endif /* BSW_IO_BLUETOOTH_H_ */
+#endif /* BLUETOOTH_H_ */

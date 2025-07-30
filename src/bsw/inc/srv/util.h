@@ -1,11 +1,10 @@
-
 #ifndef BSW_SERVICE_UTIL_H_
 #define BSW_SERVICE_UTIL_H_
 
-#include "IfxStm.h"
+#include "Ifx_Types.h"
 
-void delayMs(int msec);
-void delayUs(int usec);
-uint64 getTime10Ns(void);
+void Util_DelayMs (uint32 msec);
+void Util_DelayUs (uint32 usec);
+uint64 Util_GetTime10Ns (void);
 
 #endif

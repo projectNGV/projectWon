@@ -1,12 +1,9 @@
 #include "ultrasonic.h"
+#include "IfxPort.h"
 
-const UltPin ULT_PINS[ULT_SENSORS_NUM] = {
-        [ULT_LEFT] = {.trigger = {&MODULE_P02, 7}, .echo = {&MODULE_P02, 6}},
-        [ULT_RIGHT] = {.trigger = {&MODULE_P10, 5}, .echo = {&MODULE_P02, 4}},
-        [ULT_REAR] = {.trigger = {&MODULE_P02, 5}, .echo = {&MODULE_P02, 3}}
-};
+extern const Ult_PinType ULT_PINS[ULT_SENSORS_NUM];
 
-void ultrasonicInit(void)
+void ULT_Init(void)
 {
     for (int i = 0; i < ULT_SENSORS_NUM; i++)
     {
@@ -15,7 +12,7 @@ void ultrasonicInit(void)
     }
 }
 
-static void sendTrigger(UltraDir dir)
+static void sendTrigger(Ult_DirType dir)
 {
     IfxPort_setPinState(ULT_PINS[dir].trigger.port, ULT_PINS[dir].trigger.pinIndex, IfxPort_State_high);
     delayUs(10);
@@ -23,7 +20,7 @@ static void sendTrigger(UltraDir dir)
 
 }
 
-int getDistanceByUltra(UltraDir dir)
+uint32 Ult_GetDistance(Ult_DirType dir)
 {
     uint64 start, timeOut;
     sendTrigger(dir);

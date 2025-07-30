@@ -9,8 +9,6 @@
 #define BSW_DRIVER_GPT12_H_
 
 #include "IfxGpt12.h"
-#include "priority.h"
-
 unsigned int getCnt();
 void gpt12Init();
 void runGpt12T6();

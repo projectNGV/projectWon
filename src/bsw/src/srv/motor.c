@@ -1,167 +1,58 @@
 #include "motor.h"
 
-void motorInit(void)
+#include "pwm.h"
+#include "IfxPort.h"
+#include "ecual.h"
+
+
+extern const Motor_PinType MOTOR_CONFIG[MOTOR_NUM_OF_MOTORS];
+
+void Motor_Init (void)
 {
-    MODULE_P02.IOCR4.B.PC7 = 0x10;  // A Break
-    MODULE_P10.IOCR0.B.PC1 = 0x10;  // A DIR
-    MODULE_P02.IOCR4.B.PC6 = 0x10;  // B Break
-    MODULE_P10.IOCR0.B.PC2 = 0x10;  // B DIR
-
-    gtmAtomPwmInit();
-
-    gtmAtomPwmASetDutyCycle(0);
-    gtmAtomPwmBSetDutyCycle(0);
+    for(int i = 0; i < MOTOR_NUM_OF_MOTORS; i++){
+        IfxPort_setPinMode(MOTOR_CONFIG[i].breakPin.port, MOTOR_CONFIG[i].breakPin.pinIndex, IfxPort_Mode_outputPushPullGeneral);
+        IfxPort_setPinMode(MOTOR_CONFIG[i].directionPin.port, MOTOR_CONFIG[i].directionPin.pinIndex, IfxPort_Mode_outputPushPullGeneral);
+    }
+    Pwm_Init();
+    for(int i = 0; i < PWM_NUM_OF_CHANNELS; i++){
+        Pwm_SetDutyCycle(i, 0);
+    }
 }
 
-void motorStopChA(void)
+static void setBrake (Motor_WheelType wheel, boolean enable)
 {
-    MODULE_P02.OUT.B.P7 = 1;   /* 모터 Brake 신호 인가 (1: 정지, 0: PWM-A에 따라 동작) */
+    IfxPort_setPinState(MOTOR_CONFIG[wheel].breakPin.port, MOTOR_CONFIG[wheel].breakPin.pinIndex, ((enable) ? IfxPort_State_high : IfxPort_State_low));
 }
 
-
-///* 1: 정방향, 0: 역방향 */
-void motorMovChAPwm(int duty, int dir)
+static void setDirection (Motor_WheelType wheel, Motor_DirectionType direction)
 {
-    gtmAtomPwmASetDutyCycle(duty);
-    if(dir)
-    {
-        MODULE_P10.OUT.B.P1 = 1; /* 모터 회전 방향 (1: 앞, 0: 뒤) */
-    }
-    else {
-        MODULE_P10.OUT.B.P1 = 0; /* 모터 회전 방향 (1: 앞, 0: 뒤) */
-    }
-
-    MODULE_P02.OUT.B.P7 = 0;   /* 모터 Brake 해제 (1: 정지, 0: PWM-A에 따라 동작) */
+    IfxPort_setPinState(MOTOR_CONFIG[wheel].directionPin.port, MOTOR_CONFIG[wheel].directionPin.pinIndex, ((direction == MOTOR_DIR_FORWARD) ? IfxPort_State_high : IfxPort_State_low));
 }
 
-void motorStopChB(void)
+void Motor_Control(Motor_WheelType wheel, Motor_DirectionType direction, uint16 speed){
+    setBrake(wheel, (speed > 0) ? FALSE : TRUE);
+    setDirection(wheel, direction);
+    Pwm_SetDutyCycle(MOTOR_CONFIG[wheel].pwmChannel, speed);
+}
+
+void Motor_GoForward (uint16 speed)
 {
-    MODULE_P02.OUT.B.P6 = 1;   /* 모터 Brake 신호 인가 (1: 정지, 0: PWM-A에 따라 동작) */
+    for(int i = 0; i < MOTOR_NUM_OF_MOTORS; i++){
+        Motor_Control(i, MOTOR_DIR_FORWARD, speed);
+    }
 }
 
-
-///* 1: 정방향, 0: 역방향 */
-void motorMovChBPwm(int duty, int dir)
+void Motor_GoBackward (uint16 speed)
 {
-    gtmAtomPwmBSetDutyCycle(duty);
-
-    if(dir)
-    {
-        MODULE_P10.OUT.B.P2 = 1; /* 모터 회전 방향 (1: 앞, 0: 뒤) */
+    for(int i = 0; i < MOTOR_NUM_OF_MOTORS; i++){
+        Motor_Control(i, MOTOR_DIR_BACKWARD, speed);
     }
-    else {
-        MODULE_P10.OUT.B.P2 = 0; /* 모터 회전 방향 (1: 앞, 0: 뒤) */
-    }
-
-    MODULE_P02.OUT.B.P6 = 0;   /* 모터 Brake 해제 (1: 정지, 0: PWM-A에 따라 동작) */
 }
 
-void motorMoveForward(int duty){
-
-    // Break
-    MODULE_P02.OUT.B.P7 = 0;
-    MODULE_P02.OUT.B.P6 = 0;
-
-    // DIR
-    MODULE_P10.OUT.B.P1 = 1;
-    MODULE_P10.OUT.B.P2 = 1;
-
-    //PWM
-    gtmAtomPwmASetDutyCycle(duty);
-    gtmAtomPwmBSetDutyCycle(duty);
-}
-
-void motorReverse(int duty){
-
-    // Break
-    MODULE_P02.OUT.B.P7 = 0;
-    MODULE_P02.OUT.B.P6 = 0;
-
-    // DIR
-    MODULE_P10.OUT.B.P1 = 0;
-    MODULE_P10.OUT.B.P2 = 0;
-
-    // PWM
-    gtmAtomPwmASetDutyCycle(duty);
-    gtmAtomPwmBSetDutyCycle(duty);
-}
-
-void motorStop(){
-    MODULE_P02.OUT.B.P7 = 1;
-    MODULE_P02.OUT.B.P6 = 1;
-
-
-    gtmAtomPwmASetDutyCycle(0);
-    gtmAtomPwmBSetDutyCycle(0);
-}
-
-void motorKeypadPwm(char c, int duty)
+void Motor_Stop (void)
 {
-    if (c == '8') { // 전진
-        //duty = 50; //여기서 duty = MotorDuty(키 입력)
-        motorMovChAPwm(duty, 1);
-        motorMovChBPwm(duty, 1);
-        bluetoothSendByteBlocked(c);
-    }
-    else if (c == '2') { // 후진
-        //duty = 30;
-        motorMovChAPwm(duty, 0);
-        motorMovChBPwm(duty, 0);
-        bluetoothSendByteBlocked(c);
-
-    }
-    else if (c == '4') { // 제자리 좌회전
-        //duty = 50;
-        motorMovChAPwm(duty, 0);
-        motorMovChBPwm(duty, 1);
-        bluetoothSendByteBlocked(c);
-    }
-    else if (c == '6') { // 제자리 우회전
-        //duty = 50;
-        motorMovChAPwm(duty, 1);
-        motorMovChBPwm(duty, 0);
-        bluetoothSendByteBlocked(c);
-    }
-    else if (c == '5') { // 정지
-        duty = 0;
-        motorMovChAPwm(duty, 1);
-        motorMovChBPwm(duty, 0);
-        bluetoothSendByteBlocked(c);
-    }
-    else if (c == '7') { // 앞 좌회전
-        //duty = 50;
-        motorStopChA();
-        motorMovChBPwm(duty, 1);
-        bluetoothSendByteBlocked(c);
-    }
-    else if (c == '9') { // 앞 우회전
-        //duty = 50;
-        motorMovChAPwm(duty, 1);
-        motorStopChB();
-        bluetoothSendByteBlocked(c);
-    }
-    else if (c == '1') { // 뒤 좌회전
-        //duty = 50;
-        motorStopChA();
-        motorMovChBPwm(duty, 0);
-        bluetoothSendByteBlocked(c);
-    }
-    else if (c == '3') { // 뒤 우회전
-        //duty = 50;
-        motorMovChAPwm(duty, 0);
-        motorStopChB();
-        bluetoothSendByteBlocked(c);
-    }
-
-    else if (c == 'B') { // 손가락 떼면 가던 방향으로 전진하면서 속도는 감소 -> 좌회전이면 죄회전을 하는게 아니라 좌회전하고 손가락 뗀 부분에서 전지하느거임.
-        if(duty > 0){
-            duty -= 10;  // 한번만 줄이고
-            motorMovChAPwm(duty, 1);
-            motorMovChBPwm(duty, 1);
-        }
-    }
-
-    else {
-        return;
+    for(int i = 0; i < MOTOR_NUM_OF_MOTORS; i++){
+        setBrake(i, TRUE);
+        Pwm_SetDutyCycle(MOTOR_CONFIG[i].pwmChannel, 0);
     }
 }

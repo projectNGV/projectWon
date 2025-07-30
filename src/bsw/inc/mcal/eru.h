@@ -12,8 +12,6 @@
 #include "IfxScuWdt.h"
 #include "IfxSrc.h"
 
-#include "priority.h"
-
 
 void scuEruInt0Handler();
 void scuEruInit();

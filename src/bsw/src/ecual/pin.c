@@ -1,20 +1,20 @@
 #include "pin.h"
 
-const PinType LED_PINS[LED_NUM] = {
+const IfxPort_Pin LED_PINS[LED_NUM] = {
         [LED_1] = {&MODULE_P00, 5},
         [LED_2] = {&MODULE_P00, 6}
 };
 
-const PinType BUZZER_PINS[BUZZER_NUM] = {
+const IfxPort_Pin BUZZER_PINS[BUZZER_NUM] = {
         [BUZZER_1] = {&MODULE_P00, 5},
         [BUZZER_2] = {&MODULE_P00, 6}
 };
 
-const PinType BUTTON_PINS[BUTTON_NUM] = {
+const IfxPort_Pin BUTTON_PINS[BUTTON_NUM] = {
         [BUTTON_1] = {&MODULE_P00, 7}
 };
 
-void portInit ()
+void pinInit ()
 {
     for (int i = 0; i < LED_NUM; i++)
     {

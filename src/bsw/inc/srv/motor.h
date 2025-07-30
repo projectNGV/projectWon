@@ -1,34 +1,23 @@
-/*
- * motor.h
- *
- *  Created on: 2025. 6. 27.
- *      Author: USER
- */
-
-#ifndef BSW_DRIVER_MOTOR_H_
-#define BSW_DRIVER_MOTOR_H_
+#ifndef MOTOR_H_
+#define MOTOR_H_
 
 #include "Ifx_Types.h"
-#include "IfxGpt12.h"
-#include "IfxPort.h"
+#include "ecual.h"
 
-#include "bluetooth.h"
-#include "gtm_atom_pwm.h"
+typedef enum
+{
+    MOTOR_DIR_FORWARD, MOTOR_DIR_BACKWARD
+} Motor_DirectionType;
 
-void motorInit(void);
+void Motor_Init (void);
 
-///* 1: 정방향, 2: 역방향 */
-void motorMovChA(int dir);
-void motorStopChA(void);
-///* 1: 정방향, 0: 역방향 */
-void motorMovChAPwm(int duty, int dir);
-///* 1: 정방향, 2: 역방향 */
-void motorMovChB(int dir);
-void motorStopChB(void);
-///* 1: 정방향, 0: 역방향 */
-void motorMovChBPwm(int duty, int dir);
-void motorKeypadPwm(char c, int duty);
+// Speed: 0 ~ 10000
+void Motor_Control (Motor_WheelType wheel, Motor_DirectionType direction, uint16 speed);
 
-void motorStop(void);
+void Motor_GoForward (uint16 speed);
 
-#endif /* BSW_DRIVER_MOTOR_H_ */
+void Motor_GoBackward (uint16 speed);
+
+void Motor_Stop (void);
+
+#endif /* MOTOR_H_ */
