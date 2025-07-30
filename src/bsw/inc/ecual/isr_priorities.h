@@ -1,5 +1,5 @@
-#ifndef PRIORITY_H_
-#define PRIORITY_H_
+#ifndef ISR_PRIORITIES_H_
+#define ISR_PRIORITIES_H_
 
 #define ISR_PRIORITY_ATOM   21
 
@@ -21,4 +21,4 @@
 #define ISR_PRIORITY_CAN_TX 52
 #define ISR_PRIORITY_CAN_RX 51
 
-#endif /* PRIORITY_H_ */
+#endif /* ISR_PRIORITIES_H_ */
