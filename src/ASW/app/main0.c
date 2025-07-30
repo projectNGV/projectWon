@@ -13,7 +13,7 @@ MotorState motorState = {
     .lastKeyInput = '5' // 방금 받은 키보드 입력
 };
 
-void main0(){
+void main0(void){
     systemInit();
     myPrintf("System Start\n");
 
