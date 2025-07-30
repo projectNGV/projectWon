@@ -120,8 +120,8 @@ Cpu0_Main.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\s
 "C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\Libraries\\iLLD\\TC37A\\Tricore\_PinMap\IfxAsclin_PinMap.h" :
 Cpu0_Main.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxAsclin_bf.h"
 "C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\Libraries\\Infra\\Sfr\\TC37A\\_Reg\IfxAsclin_bf.h" :
-Cpu0_Main.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\ASW\\app\systeminit.h"
-"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\ASW\\app\systeminit.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\ASW\\drivecontrol\control.h"
+"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\ASW\\drivecontrol\control.h" :
 Cpu0_Main.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\BSW\\Service\bluetooth.h"
 "C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\BSW\\Service\bluetooth.h" :
 Cpu0_Main.o :	"C:\Infineon\AURIX-Studio-1.10.2\tools\Compilers\Tasking_1.1r8\ctc\include\stdarg.h"
@@ -188,13 +188,15 @@ Cpu0_Main.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\s
 "C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\Libraries\\iLLD\\TC37A\\Tricore\Gtm\Std\IfxGtm_Cmu.h" :
 Cpu0_Main.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\Libraries\\iLLD\\TC37A\\Tricore\Gtm\Std\IfxGtm_Dtm.h"
 "C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\Libraries\\iLLD\\TC37A\\Tricore\Gtm\Std\IfxGtm_Dtm.h" :
-Cpu0_Main.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\ASW\control.h"
-"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\ASW\control.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\ASW\\app\systeminit.h"
+"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\ASW\\app\systeminit.h" :
 Cpu0_Main.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\BSW\\Service\motor.h"
 "C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\BSW\\Service\motor.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\ASW\\drivecontrol\control.h"
+"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\ASW\\drivecontrol\control.h" :
 Cpu0_Main.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\BSW\\Service\ultrasonic.h"
 "C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\BSW\\Service\ultrasonic.h" :
 Cpu0_Main.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\BSW\\MCAL\port.h"
 "C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\BSW\\MCAL\port.h" :
-Cpu0_Main.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\ASW\control.h"
-"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\ASW\control.h" :
+Cpu0_Main.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\BSW\\MCAL\asclin.h"
+"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\BSW\\MCAL\asclin.h" :

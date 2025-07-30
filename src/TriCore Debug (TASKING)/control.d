@@ -1,7 +1,7 @@
-control.o :	../ASW/control.c
-../ASW/control.c :
-control.o :	..\ASW\control.h
-..\ASW\control.h :
+control.o :	../ASW/drivecontrol/control.c
+../ASW/drivecontrol/control.c :
+control.o :	..\ASW\drivecontrol\control.h
+..\ASW\drivecontrol\control.h :
 control.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\BSW\\Service\bluetooth.h"
 "C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\BSW\\Service\bluetooth.h" :
 control.o :	"C:\Infineon\AURIX-Studio-1.10.2\tools\Compilers\Tasking_1.1r8\ctc\include\stdarg.h"

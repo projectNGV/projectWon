@@ -1,6 +1,6 @@
 	; Module start
 	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
-	.compiler_invocation	"ctc -f cc31100a --dep-file=motor.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc37x -D__CPU_TC37X__ --core=tc1.6.2 --fp-model=+float -D__CPU__=tc37x -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\ASW -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\ASW\\\\app -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\ASW\\\\autopark -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\BSW -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\BSW\\\\MCAL -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\BSW\\\\Service -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Configurations -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Platform -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Sfr -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Ssw -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Service -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Can -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Irq -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Trap -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12 -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_Impl -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_PinMap -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2004 -o BSW/Service/motor.src ../BSW/Service/motor.c"
+	.compiler_invocation	"ctc -f cc44228a --dep-file=motor.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc37x -D__CPU_TC37X__ --core=tc1.6.2 --fp-model=+float -D__CPU__=tc37x -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\ASW -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\ASW\\\\app -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\ASW\\\\autopark -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\ASW\\\\drivecontrol -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\BSW -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\BSW\\\\MCAL -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\BSW\\\\Service -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Configurations -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Platform -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Sfr -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Ssw -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Service -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Can -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Irq -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Trap -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12 -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_Impl -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_PinMap -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2004 -o BSW/Service/motor.src ../BSW/Service/motor.c"
 	.compiler_name		"ctc"
 	;source	'../BSW/Service/motor.c'
 
@@ -215,18 +215,18 @@ motorMoveForward:	.type	func
 .L90:
 	movh.a	a15,#61444
 	ld.bu	d15,[a15]@los(0xf003aa00)
-.L152:
+.L160:
 	or	d15,#2
 	movh.a	a15,#61444
 	st.b	[a15]@los(0xf003aa00),d15
-.L153:
+.L161:
 	movh.a	a15,#61444
 	ld.bu	d15,[a15]@los(0xf003aa00)
-.L154:
+.L162:
 	or	d15,#4
 	movh.a	a15,#61444
 	st.b	[a15]@los(0xf003aa00),d15
-.L155:
+.L163:
 	mov	d4,d8
 	call	gtmAtomPwmASetDutyCycle
 .L89:
@@ -235,11 +235,11 @@ motorMoveForward:	.type	func
 	call	gtmAtomPwmBSetDutyCycle
 .L92:
 	ret
-.L76:
+.L77:
 	
 __motorMoveForward_function_end:
 	.size	motorMoveForward,__motorMoveForward_function_end-motorMoveForward
-.L55:
+.L60:
 	; End of function
 	
 	.sdecl	'.text.motor.motorReverse',code,cluster('motorReverse')
@@ -254,18 +254,18 @@ motorReverse:	.type	func
 .L94:
 	movh.a	a15,#61444
 	ld.bu	d0,[a15]@los(0xf003aa00)
-.L160:
+.L168:
 	insert	d0,d0,#0,#1,#1
 	movh.a	a15,#61444
 	st.b	[a15]@los(0xf003aa00),d0
-.L161:
+.L169:
 	movh.a	a15,#61444
 	ld.bu	d0,[a15]@los(0xf003aa00)
-.L162:
+.L170:
 	insert	d0,d0,#0,#2,#1
 	movh.a	a15,#61444
 	st.b	[a15]@los(0xf003aa00),d0
-.L163:
+.L171:
 	mov	d4,d15
 	call	gtmAtomPwmASetDutyCycle
 .L93:
@@ -274,11 +274,11 @@ motorReverse:	.type	func
 	call	gtmAtomPwmBSetDutyCycle
 .L96:
 	ret
-.L78:
+.L79:
 	
 __motorReverse_function_end:
 	.size	motorReverse,__motorReverse_function_end-motorReverse
-.L60:
+.L65:
 	; End of function
 	
 	.sdecl	'.text.motor.motorStop',code,cluster('motorStop')
@@ -291,24 +291,24 @@ __motorReverse_function_end:
 motorStop:	.type	func
 	movh.a	a15,#61444
 	ld.bu	d15,[a15]@los(0xf003a200)
-.L168:
+.L152:
 	or	d15,#128
 	movh.a	a15,#61444
 	st.b	[a15]@los(0xf003a200),d15
-.L169:
+.L153:
 	movh.a	a15,#61444
 	ld.bu	d15,[a15]@los(0xf003a200)
-.L170:
+.L154:
 	or	d15,#64
 	movh.a	a15,#61444
 	st.b	[a15]@los(0xf003a200),d15
-.L171:
+.L155:
 	ret
-.L80:
+.L76:
 	
 __motorStop_function_end:
 	.size	motorStop,__motorStop_function_end-motorStop
-.L65:
+.L55:
 	; End of function
 	
 	.calls	'motorInit','gtmAtomPwmInit'
@@ -42540,10 +42540,10 @@ __motorStop_function_end:
 	.sect	'.debug_ranges'
 .L49:
 	.word	-1,.L15,0,.L50-.L15,0,0
-	.sdecl	'.debug_info',debug,cluster('motorMoveForward')
+	.sdecl	'.debug_info',debug,cluster('motorStop')
 	.sect	'.debug_info'
 .L51:
-	.word	274
+	.word	250
 	.half	3
 	.word	.L52
 	.byte	4,1
@@ -42555,20 +42555,17 @@ __motorStop_function_end:
 	.byte	2
 	.word	.L22
 	.byte	3
-	.byte	'motorMoveForward',0,1,59,6,1,1,1
-	.word	.L17,.L76,.L16
+	.byte	'motorStop',0,1,75,6,1,1,1
+	.word	.L21,.L76,.L20
 	.byte	4
-	.byte	'duty',0,1,59,27
-	.word	.L69,.L77
-	.byte	5
-	.word	.L17,.L76
+	.word	.L21,.L76
 	.byte	0,0
-	.sdecl	'.debug_abbrev',debug,cluster('motorMoveForward')
+	.sdecl	'.debug_abbrev',debug,cluster('motorStop')
 	.sect	'.debug_abbrev'
 .L52:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
-	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
-	.sdecl	'.debug_line',debug,cluster('motorMoveForward')
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('motorStop')
 	.sect	'.debug_line'
 .L53:
 	.word	.L149-.L148
@@ -42579,34 +42576,28 @@ __motorStop_function_end:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../BSW/Service/motor.c',0,0,0,0,0
 .L151:
-	.byte	5,6,7,0,5,2
-	.word	.L17
-	.byte	3,58,1,5,21,9
-	.half	.L90-.L17
-	.byte	3,1,1,5,25,9
-	.half	.L152-.L90
+	.byte	5,21,7,0,5,2
+	.word	.L21
+	.byte	3,203,0,1,5,25,9
+	.half	.L152-.L21
 	.byte	1,5,21,9
 	.half	.L153-.L152
 	.byte	3,1,1,5,25,9
 	.half	.L154-.L153
-	.byte	1,5,29,9
+	.byte	1,5,1,9
 	.half	.L155-.L154
-	.byte	3,2,1,9
-	.half	.L89-.L155
-	.byte	3,1,1,5,1,9
-	.half	.L92-.L89
 	.byte	3,1,1,7,9
-	.half	.L55-.L92
+	.half	.L55-.L155
 	.byte	0,1,1
 .L149:
-	.sdecl	'.debug_ranges',debug,cluster('motorMoveForward')
+	.sdecl	'.debug_ranges',debug,cluster('motorStop')
 	.sect	'.debug_ranges'
 .L54:
-	.word	-1,.L17,0,.L55-.L17,0,0
-	.sdecl	'.debug_info',debug,cluster('motorReverse')
+	.word	-1,.L21,0,.L55-.L21,0,0
+	.sdecl	'.debug_info',debug,cluster('motorMoveForward')
 	.sect	'.debug_info'
 .L56:
-	.word	270
+	.word	274
 	.half	3
 	.word	.L57
 	.byte	4,1
@@ -42618,20 +42609,20 @@ __motorStop_function_end:
 	.byte	2
 	.word	.L22
 	.byte	3
-	.byte	'motorReverse',0,1,67,6,1,1,1
-	.word	.L19,.L78,.L18
+	.byte	'motorMoveForward',0,1,59,6,1,1,1
+	.word	.L17,.L77,.L16
 	.byte	4
-	.byte	'duty',0,1,67,23
-	.word	.L69,.L79
+	.byte	'duty',0,1,59,27
+	.word	.L69,.L78
 	.byte	5
-	.word	.L19,.L78
+	.word	.L17,.L77
 	.byte	0,0
-	.sdecl	'.debug_abbrev',debug,cluster('motorReverse')
+	.sdecl	'.debug_abbrev',debug,cluster('motorMoveForward')
 	.sect	'.debug_abbrev'
 .L57:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
 	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
-	.sdecl	'.debug_line',debug,cluster('motorReverse')
+	.sdecl	'.debug_line',debug,cluster('motorMoveForward')
 	.sect	'.debug_line'
 .L58:
 	.word	.L157-.L156
@@ -42643,11 +42634,11 @@ __motorStop_function_end:
 	.byte	'../BSW/Service/motor.c',0,0,0,0,0
 .L159:
 	.byte	5,6,7,0,5,2
-	.word	.L19
-	.byte	3,194,0,1,5,21,9
-	.half	.L94-.L19
+	.word	.L17
+	.byte	3,58,1,5,21,9
+	.half	.L90-.L17
 	.byte	3,1,1,5,25,9
-	.half	.L160-.L94
+	.half	.L160-.L90
 	.byte	1,5,21,9
 	.half	.L161-.L160
 	.byte	3,1,1,5,25,9
@@ -42655,21 +42646,21 @@ __motorStop_function_end:
 	.byte	1,5,29,9
 	.half	.L163-.L162
 	.byte	3,2,1,9
-	.half	.L93-.L163
+	.half	.L89-.L163
 	.byte	3,1,1,5,1,9
-	.half	.L96-.L93
+	.half	.L92-.L89
 	.byte	3,1,1,7,9
-	.half	.L60-.L96
+	.half	.L60-.L92
 	.byte	0,1,1
 .L157:
-	.sdecl	'.debug_ranges',debug,cluster('motorReverse')
+	.sdecl	'.debug_ranges',debug,cluster('motorMoveForward')
 	.sect	'.debug_ranges'
 .L59:
-	.word	-1,.L19,0,.L60-.L19,0,0
-	.sdecl	'.debug_info',debug,cluster('motorStop')
+	.word	-1,.L17,0,.L60-.L17,0,0
+	.sdecl	'.debug_info',debug,cluster('motorReverse')
 	.sect	'.debug_info'
 .L61:
-	.word	249
+	.word	270
 	.half	3
 	.word	.L62
 	.byte	4,1
@@ -42681,17 +42672,20 @@ __motorStop_function_end:
 	.byte	2
 	.word	.L22
 	.byte	3
-	.byte	'motorStop',0,1,75,6,1,1
-	.word	.L21,.L80,.L20
+	.byte	'motorReverse',0,1,67,6,1,1,1
+	.word	.L19,.L79,.L18
 	.byte	4
-	.word	.L21,.L80
+	.byte	'duty',0,1,67,23
+	.word	.L69,.L80
+	.byte	5
+	.word	.L19,.L79
 	.byte	0,0
-	.sdecl	'.debug_abbrev',debug,cluster('motorStop')
+	.sdecl	'.debug_abbrev',debug,cluster('motorReverse')
 	.sect	'.debug_abbrev'
 .L62:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
-	.byte	63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
-	.sdecl	'.debug_line',debug,cluster('motorStop')
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('motorReverse')
 	.sect	'.debug_line'
 .L63:
 	.word	.L165-.L164
@@ -42702,24 +42696,30 @@ __motorStop_function_end:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../BSW/Service/motor.c',0,0,0,0,0
 .L167:
-	.byte	5,21,7,0,5,2
-	.word	.L21
-	.byte	3,203,0,1,5,25,9
-	.half	.L168-.L21
+	.byte	5,6,7,0,5,2
+	.word	.L19
+	.byte	3,194,0,1,5,21,9
+	.half	.L94-.L19
+	.byte	3,1,1,5,25,9
+	.half	.L168-.L94
 	.byte	1,5,21,9
 	.half	.L169-.L168
 	.byte	3,1,1,5,25,9
 	.half	.L170-.L169
-	.byte	1,5,1,9
+	.byte	1,5,29,9
 	.half	.L171-.L170
+	.byte	3,2,1,9
+	.half	.L93-.L171
+	.byte	3,1,1,5,1,9
+	.half	.L96-.L93
 	.byte	3,1,1,7,9
-	.half	.L65-.L171
+	.half	.L65-.L96
 	.byte	0,1,1
 .L165:
-	.sdecl	'.debug_ranges',debug,cluster('motorStop')
+	.sdecl	'.debug_ranges',debug,cluster('motorReverse')
 	.sect	'.debug_ranges'
 .L64:
-	.word	-1,.L21,0,.L65-.L21,0,0
+	.word	-1,.L19,0,.L65-.L19,0,0
 	.sdecl	'.debug_loc',debug,cluster('motorInit')
 	.sect	'.debug_loc'
 .L6:
@@ -42775,11 +42775,11 @@ __motorStop_function_end:
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('motorMoveForward')
 	.sect	'.debug_loc'
-.L77:
+.L78:
 	.word	-1,.L17,0,.L89-.L17
 	.half	1
 	.byte	84
-	.word	.L90-.L17,.L76-.L17
+	.word	.L90-.L17,.L77-.L17
 	.half	1
 	.byte	88
 	.word	.L91-.L17,.L92-.L17
@@ -42787,17 +42787,17 @@ __motorStop_function_end:
 	.byte	84
 	.word	0,0
 .L16:
-	.word	-1,.L17,0,.L76-.L17
+	.word	-1,.L17,0,.L77-.L17
 	.half	2
 	.byte	138,0
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('motorReverse')
 	.sect	'.debug_loc'
-.L79:
+.L80:
 	.word	-1,.L19,0,.L93-.L19
 	.half	1
 	.byte	84
-	.word	.L94-.L19,.L78-.L19
+	.word	.L94-.L19,.L79-.L19
 	.half	1
 	.byte	95
 	.word	.L95-.L19,.L96-.L19
@@ -42805,14 +42805,14 @@ __motorStop_function_end:
 	.byte	84
 	.word	0,0
 .L18:
-	.word	-1,.L19,0,.L78-.L19
+	.word	-1,.L19,0,.L79-.L19
 	.half	2
 	.byte	138,0
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('motorStop')
 	.sect	'.debug_loc'
 .L20:
-	.word	-1,.L21,0,.L80-.L21
+	.word	-1,.L21,0,.L76-.L21
 	.half	2
 	.byte	138,0
 	.word	0,0
@@ -42862,14 +42862,14 @@ __motorStop_function_end:
 	.sdecl	'.debug_frame',debug,cluster('motorMoveForward')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L172,.L17,.L76-.L17
+	.word	.L172,.L17,.L77-.L17
 	.sdecl	'.debug_frame',debug,cluster('motorReverse')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L172,.L19,.L78-.L19
+	.word	.L172,.L19,.L79-.L19
 	.sdecl	'.debug_frame',debug,cluster('motorStop')
 	.sect	'.debug_frame'
 	.word	24
-	.word	.L172,.L21,.L80-.L21
+	.word	.L172,.L21,.L76-.L21
 	.byte	8,18,8,19,8,20,8,21,8,22,8,23
 	; Module end

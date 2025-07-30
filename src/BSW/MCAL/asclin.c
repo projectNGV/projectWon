@@ -8,13 +8,14 @@
 //    asclin0OutUart(c);
 //}
 
-volatile char globalCommand;
+extern MotorState motorState;
 
 IFX_INTERRUPT(asclin1RxIsrHandler, 0, ISR_PRIORITY_ASCLIN1_RX);
 void asclin1RxIsrHandler(void)
 {
-    globalCommand = asclin1InUart();
-    bluetoothIsr(globalCommand);
+    char key = asclin1InUart();
+    motorState.lastKeyInput = key;
+//    bluetoothIsr(key);
 }
 
 void asclin0InitUart(void)

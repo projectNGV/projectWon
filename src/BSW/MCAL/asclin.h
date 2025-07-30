@@ -12,6 +12,7 @@
 #include "IfxAsclin.h"
 #include "IfxAsclin_bf.h"
 #include "priority.h"
+#include "control.h"
 
 
 void asclin0InitUart(void);

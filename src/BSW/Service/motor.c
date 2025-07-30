@@ -72,7 +72,7 @@ void motorReverse(int duty){
     gtmAtomPwmBSetDutyCycle(duty);
 }
 
-void motorStop(){
+void motorStop(void){
     MODULE_P02.OUT.B.P7 = 1;
     MODULE_P02.OUT.B.P6 = 1;
 }

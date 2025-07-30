@@ -26,7 +26,7 @@ SECONDARY_SIZE :=
 SUBDIRS := \
 ASW/app \
 ASW/autopark \
-ASW \
+ASW/drivecontrol \
 BSW/MCAL \
 BSW/Service \
 Configurations/Debug \

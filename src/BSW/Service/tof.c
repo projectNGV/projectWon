@@ -1,13 +1,13 @@
 #include "tof.h"
 
 static unsigned int g_TofValue = 0;
-volatile int aebFlag = 0;
+volatile int AEBFlag = 0;
 
 void tofInit ()
 {
     canInit(BD_500K, CAN_NODE0);
     g_TofValue = 0;
-    aebFlag = 0;
+    AEBFlag = 0;
 }
 
 void tofUpdateFromCAN (char *rxData)
@@ -21,7 +21,7 @@ void tofUpdateFromCAN (char *rxData)
         if (g_TofValue < 300)
         {
             int num = 9;
-            aebFlag = 1;
+            AEBFlag = 1;
             motorStopChA();
             motorStopChB();
         }
