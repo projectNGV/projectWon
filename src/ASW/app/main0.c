@@ -3,27 +3,87 @@
 #include "ultrasonic.h"
 #include "tof.h"
 #include "level.h"
-#include "control.h"
+#include "bluetooth.h"
+#include "motor.h"
 
-MotorState motorState = {
-    .baseDuty = 0,      // 사용자 설정 Duty
-    .currentDuty = 0,   // 현재 Duty
-    .currentDir = '5',  // 현재 주행 방향
-    .prevDir = '5',     // 이전 주행 방향
-    .lastKeyInput = '5' // 방금 받은 키보드 입력
-};
 
-void main0(void){
-    //jm 0730 07:50
-    //test
-    //test2
+int logging = 0;
+int start = 0;
+
+//
+//void main0(){
+//    systemInit();
+//
+//    while(1){
+//        int left = getDistanceByUltra(ULT_LEFT);
+//        myPrintf("left: %d\n", left);
+//        delayMs(50);
+//    }
+//
+//}
+
+
+void main0(){
     systemInit();
-    myPrintf("System Start\n");
-
     while(1){
-        motorUpdateState(&motorState);
+        char command = bluetoothRecvByteNonBlocked();
 
-        // 최종 동작 호출: 이전에 저장한 방향 + 속도로
-        motorRunCommand(&motorState);
+        if(command == 'y'){
+            upKp(0,0.001);
+        }
+
+
+        if(command == 'u'){
+            upKp(1,0.0001);
+        }
+
+//
+//        if(command == 'i'){
+//            upKp(2,0.0001);
+//        }
+
+
+        if(command == 'h'){
+            upKp(0,-0.001);
+        }
+
+        if(command == 'j'){
+            upKp(1,-0.0001);
+        }
+//
+//        if(command == 'k'){
+//            upKp(2,-0.0001);
+//        }
+
+        if(command == 'o'){
+            start = !start;
+            bluetoothSendByteBlocked(command);
+            if(start){
+                levelInit(LEVEL_LEFT);
+            } else {
+                motorStop();
+            }
+        }
+
+        if(start){
+            int str = steer(LEVEL_LEFT);
+            bluetoothPrintf("steer: %d\n", str);
+        }
+        if(command == 'x'){
+            motorStop();
+            bluetoothSendByteBlocked(command);
+        }
+
+        if(command == 'w'){
+            motorMoveForward(300);
+            bluetoothSendByteBlocked(command);
+        }
+
+        if(command == 's'){
+            motorReverse(300);
+            bluetoothSendByteBlocked(command);
+
+        }
+        delayMs(50);
     }
 }
