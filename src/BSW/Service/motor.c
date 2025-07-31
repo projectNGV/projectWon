@@ -56,32 +56,26 @@ void motorMovChBPwm(int duty, int dir)
     MODULE_P02.OUT.B.P6 = 0;   /* 모터 Brake 해제 (1: 정지, 0: PWM-A에 따라 동작) */
 }
 
-void motorMoveForward(int duty){
-
-    // Break
-    MODULE_P02.OUT.B.P7 = 0;
-    MODULE_P02.OUT.B.P6 = 0;
-
-    // DIR
-    MODULE_P10.OUT.B.P1 = 1;
-    MODULE_P10.OUT.B.P2 = 1;
-
-    //PWM
+void motorSoftBraking(int duty)
+{
     gtmAtomPwmASetDutyCycle(duty);
     gtmAtomPwmBSetDutyCycle(duty);
 }
 
-void motorReverse(int duty){
+void motorMoveForward(int duty)
+{
+    MODULE_P10.OUT.B.P1 = 1;
+    MODULE_P10.OUT.B.P2 = 1;
 
-    // Break
-    MODULE_P02.OUT.B.P7 = 0;
-    MODULE_P02.OUT.B.P6 = 0;
+    gtmAtomPwmASetDutyCycle(duty);
+    gtmAtomPwmBSetDutyCycle(duty);
+}
 
-    // DIR
+void motorMoveReverse (int duty)
+{
     MODULE_P10.OUT.B.P1 = 0;
     MODULE_P10.OUT.B.P2 = 0;
 
-    // PWM
     gtmAtomPwmASetDutyCycle(duty);
     gtmAtomPwmBSetDutyCycle(duty);
 }
@@ -89,9 +83,5 @@ void motorReverse(int duty){
 void motorStop(void){
     MODULE_P02.OUT.B.P7 = 1;
     MODULE_P02.OUT.B.P6 = 1;
-
-
-    gtmAtomPwmASetDutyCycle(0);
-    gtmAtomPwmBSetDutyCycle(0);
 }
 
