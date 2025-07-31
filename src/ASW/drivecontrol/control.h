@@ -28,7 +28,7 @@ void moveBackwardRight(int duty);
 
 void handleDirectionCommand(char cmd, MotorState* state);
 void handleDutyCommand(char cmd, MotorState* state);
-void handleBrakeCommand(char cmd, MotorState* state);
+void handleBrakeCommand(MotorState* state);
 void motorUpdateState(MotorState* state);
 void motorRunCommand (MotorState* state);
 
