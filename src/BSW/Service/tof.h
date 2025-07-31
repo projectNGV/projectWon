@@ -2,14 +2,9 @@
 #define BSW_SERVICE_TOF_H_
 
 #include "can.h"
-#include "motor.h"
-#include "stdbool.h"
 
-#define aebDistanceMM 830
-#define safetyDistanceMM 1000
-
-void tofInit (void);
-void tofUpdateFromCAN (unsigned char *rxData);
+void tofInit ();
+void tofUpdateFromCAN (char *rxData);
 unsigned int tofGetValue (void);
 
 

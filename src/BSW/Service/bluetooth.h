@@ -13,7 +13,6 @@
 #include "uart.h"
 #include "util.h"
 #include "priority.h"
-#include "asclin1.h"
 
 void bluetoothInit(void);
 void bluetoothSetName(char *name);

@@ -8,17 +8,6 @@ McmcanType g_mcmcan; /* Global MCMCAN configuration and control structure    */
 /*********************************************************************************************************************/
 /*---------------------------------------------Function Implementations----------------------------------------------*/
 /*********************************************************************************************************************/
-
-
-/* Callback 함수 포인터 */
-static void (*tofCallback)(unsigned char *rxData) = 0;
-
-void canRegisterTofCallback(void (*callback)(unsigned char *)){
-    tofCallback = callback;
-}
-
-
-
 /* Default CAN Tx Handler */
 IFX_INTERRUPT(canTxIsrHandler, 0, ISR_PRIORITY_CAN_TX);
 void canTxIsrHandler (void)
@@ -26,40 +15,22 @@ void canTxIsrHandler (void)
     /* Clear the "Transmission Completed" interrupt flag */
     IfxCan_Node_clearInterruptFlag(g_mcmcan.canSrcNode.node, IfxCan_Interrupt_transmissionCompleted);
 }
-
 /* Default CAN Rx Handler */
 IFX_INTERRUPT(canRxIsrHandler, 0, ISR_PRIORITY_CAN_RX);
 void canRxIsrHandler (void)
 {
-//    unsigned int rxID;
-//    char rxData[8] = {0, };
-//    int rxLen;
-//    canRecvMsg(&rxID, rxData, &rxLen);
-//
-//    switch (rxID)
-//    {
-//        case CAN_TOF_ID :
-//            tofUpdateFromCAN(rxData);
-//            break;
-//        default :
-//            tofUpdateFromCAN(rxData);
-//            break;
-//    }
-
     unsigned int rxID;
-    unsigned char rxData[8] = {0, };
+    char rxData[8] = {0, };
     int rxLen;
     canRecvMsg(&rxID, rxData, &rxLen);
     
     switch (rxID)
     {
         case CAN_TOF_ID :
-            if (tofCallback != NULL) {
-                tofCallback(rxData);  // ToF 모듈에서 등록한 처리 함수 호출
-            }
+            tofUpdateFromCAN(rxData);
             break;
         default :
-//            tofUpdateFromCAN(rxData);
+            tofUpdateFromCAN(rxData);
             break;
     }
 }
@@ -176,7 +147,7 @@ void canSendMsg (unsigned int id, const char *txData, int len)
     }
 }
 
-int canRecvMsg (unsigned int *id, unsigned char *rxData, int *len)
+int canRecvMsg (unsigned int *id, char *rxData, int *len)
 {
     int err = 0;
     /* Clear the "RX FIFO 0 new message" interrupt flag */

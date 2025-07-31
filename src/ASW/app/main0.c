@@ -3,36 +3,87 @@
 #include "ultrasonic.h"
 #include "tof.h"
 #include "level.h"
-#include "control.h"
+#include "bluetooth.h"
+#include "motor.h"
 
-extern volatile bool aebFlag;
 
-MotorState motorState = {
-        .baseDuty = 50,      // 사용자 설정 Duty
-        .currentDuty = 0,   // 현재 Duty
-        .currentDir = '5',  // 현재 주행 방향
-        .prevDir = '5',     // 이전 주행 방향
-        .lastKeyInput = '5' // 방금 받은 키보드 입력
-        };
+int logging = 0;
+int start = 0;
 
-void main0 (void)
-{
+//
+//void main0(){
+//    systemInit();
+//
+//    while(1){
+//        int left = getDistanceByUltra(ULT_LEFT);
+//        myPrintf("left: %d\n", left);
+//        delayMs(50);
+//    }
+//
+//}
+
+
+void main0(){
     systemInit();
-    myPrintf("System Start\n");
+    while(1){
+        char command = bluetoothRecvByteNonBlocked();
 
-    while (1)
-    {
-        if (aebFlag == false || ((motorState.lastKeyInput == '1' || motorState.lastKeyInput == '2' || motorState.lastKeyInput == '3') && aebFlag == true))
-        {
-            motorUpdateState(&motorState);
-            motorRunCommand(&motorState);
+        if(command == 'y'){
+            upKp(0,0.001);
         }
-        else if(aebFlag == true)
-        {
+
+
+        if(command == 'u'){
+            upKp(1,0.0001);
+        }
+
+//
+//        if(command == 'i'){
+//            upKp(2,0.0001);
+//        }
+
+
+        if(command == 'h'){
+            upKp(0,-0.001);
+        }
+
+        if(command == 'j'){
+            upKp(1,-0.0001);
+        }
+//
+//        if(command == 'k'){
+//            upKp(2,-0.0001);
+//        }
+
+        if(command == 'o'){
+            start = !start;
+            bluetoothSendByteBlocked(command);
+            if(start){
+                levelInit(LEVEL_LEFT);
+            } else {
+                motorStop();
+            }
+        }
+
+        if(start){
+            int str = steer(LEVEL_LEFT);
+            bluetoothPrintf("steer: %d\n", str);
+        }
+        if(command == 'x'){
             motorStop();
+            bluetoothSendByteBlocked(command);
         }
 
-//        myPrintf("distance : %d mm,   flag : %d\n", tofGetValue(), aebFlag);
-//        delayMs(500);
+        if(command == 'w'){
+            motorMoveForward(300);
+            bluetoothSendByteBlocked(command);
+        }
+
+        if(command == 's'){
+            motorReverse(300);
+            bluetoothSendByteBlocked(command);
+
+        }
+        delayMs(50);
     }
 }

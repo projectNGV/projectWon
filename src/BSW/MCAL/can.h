@@ -17,7 +17,7 @@
 #define MAXIMUM_CAN_DATA_PAYLOAD    2                       /* Define maximum classical CAN payload in 4-byte words */
 
 
-#define CAN_TOF_ID 0x200
+#define CAN_TOF_ID 0x10
 
 /*********************************************************************************************************************/
 /*--------------------------------------------------Data Structures--------------------------------------------------*/
@@ -50,14 +50,12 @@ typedef enum {
 /*********************************************************************************************************************/
 /*-----------------------------------------------Function Prototypes-------------------------------------------------*/
 /*********************************************************************************************************************/
-void canRegisterTofCallback(void (*callback)(unsigned char *));
-
 void canInit(CAN_BAUDRATES ls_baudrate, CAN_NODE CAN_Node);
 void canSetFilterRange(uint32 start, uint32 end);
 void canSetFilterMask(uint32 id, uint32 mask);
 
 void canSendMsg(unsigned int id, const char *txData, int len);
-int canRecvMsg (unsigned int *id, unsigned char *rxData, int *len);
+int canRecvMsg(unsigned int *id, char *rxData, int *len);
 
 
 #endif
