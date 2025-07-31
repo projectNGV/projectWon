@@ -4,8 +4,8 @@
 #include "can.h"
 #include "motor.h"
 
-#define aebDistanceMM 300
-#define safetyDistanceMM 500
+#define aebDistanceMM 830
+#define safetyDistanceMM 1000
 
 void tofInit (void);
 void tofUpdateFromCAN (unsigned char *rxData);

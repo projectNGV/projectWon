@@ -19,8 +19,8 @@ void moveBackward(int duty)
 // 제자리 좌회전
 void turnLeftInPlace(int duty)
 {
-    motorMovChAPwm(duty, Backward);
     motorMovChBPwm(duty, Forward);
+    motorMovChAPwm(duty, Backward);
 }
 
 // 제자리 우회전
@@ -33,29 +33,29 @@ void turnRightInPlace(int duty)
 // 직진 좌회전
 void moveForwardLeft(int duty)
 {
-    motorMovChAPwm(duty, Forward);
-    motorMovChBPwm(duty / 2, Forward);
+    motorMovChBPwm(duty, Forward);
+    motorMovChAPwm(duty / 3, Forward);
 }
 
 // 직진 우회전
 void moveForwardRight(int duty)
 {
     motorMovChAPwm(duty, Forward);
-    motorMovChBPwm(duty / 2, Forward);
+    motorMovChBPwm(duty / 3, Forward);
 }
 
 // 후진 좌회전
 void moveBackwardkLeft(int duty)
 {
-    motorMovChAPwm(duty / 2, Backward);
     motorMovChBPwm(duty, Backward);
+    motorMovChAPwm(duty / 3, Backward);
 }
 
 // 후진 우회전
 void moveBackwardRight(int duty)
 {
     motorMovChAPwm(duty, Backward);
-    motorMovChBPwm(duty / 2, Backward);
+    motorMovChBPwm(duty / 3, Backward);
 }
 
 // 숫자키(1~9) 입력에 따라 주행 방향 업데이트
@@ -69,15 +69,18 @@ void handleDirectionCommand(char cmd, MotorState* state)
 void handleDutyCommand(char cmd, MotorState* state)
 {
     switch (cmd) {
-        case 'a': state->baseDuty = 200; break;
-        case 's': state->baseDuty = 300; break;
-        case 'd': state->baseDuty = 400; break;
-        case 'f': state->baseDuty = 500; break;
-        case 'g': state->baseDuty = 600; break;
+        case 'a': state->baseDuty = 300; break;
+        case 's': state->baseDuty = 500; break;
+        case 'd': state->baseDuty = 550; break;
+        case 'f': state->baseDuty = 600; break;
+        case 'g': state->baseDuty = 650; break;
         case 'h': state->baseDuty = 700; break;
-        case 'j': state->baseDuty = 800; break;
-        case 'k': state->baseDuty = 900; break;
-        case 'l': state->baseDuty = 1000; break;
+        case 'j': state->baseDuty = 750; break;
+        case 'k': state->baseDuty = 800; break;
+        case 'l': state->baseDuty = 850; break;
+        case 'z': state->baseDuty = 900; break;
+        case 'x': state->baseDuty = 950; break;
+        case 'c': state->baseDuty = 1000; break;
         default: break;  // 예외 처리 (필요하면 로그 추가)
     }
 }
@@ -102,7 +105,8 @@ void motorUpdateState(MotorState* state)
     }
     // 알파벳 키(a,s,d,f,g,h,j,k,l) 입력에 따라 목표 듀티(baseDuty) 업데이트
     else if (cmd == 'a' || cmd == 's' || cmd == 'd' || cmd == 'f' ||
-        cmd == 'g' || cmd == 'h' || cmd == 'j' || cmd == 'k' || cmd == 'l') {
+        cmd == 'g' || cmd == 'h' || cmd == 'j' || cmd == 'k' || cmd == 'z' ||
+        cmd == 'x' || cmd == 'c') {
         handleDutyCommand(cmd, state);
     }
     // 키 떼면 감속
@@ -136,8 +140,8 @@ void motorRunCommand (MotorState* state)
         case '4' : turnLeftInPlace(duty); break;
         case '6' : turnRightInPlace(duty); break;
         case '5' : motorStop(); break;
-        case '7' : moveForwardLeft(duty); break;
-        case '9' : moveForwardRight(duty); break;
+        case '7' : moveForwardLeft(duty+25); break;
+        case '9' : moveForwardRight(duty+25); break;
         case '1' : moveBackwardkLeft(duty); break;
         case '3' : moveBackwardRight(duty); break;
     }

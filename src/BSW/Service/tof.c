@@ -21,9 +21,8 @@ void tofUpdateFromCAN (unsigned char *rxData)
 
         if (g_TofValue < aebDistanceMM)
         {
+            motorStop();
             aebFlag = 1;
-            motorStopChA();
-            motorStopChB();
         }
         else if(g_TofValue >= safetyDistanceMM){
             aebFlag = 0;
