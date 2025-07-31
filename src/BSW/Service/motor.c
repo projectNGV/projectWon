@@ -57,17 +57,31 @@ void motorMovChBPwm(int duty, int dir)
 }
 
 void motorMoveForward(int duty){
+
+    // Break
+    MODULE_P02.OUT.B.P7 = 0;
+    MODULE_P02.OUT.B.P6 = 0;
+
+    // DIR
     MODULE_P10.OUT.B.P1 = 1;
     MODULE_P10.OUT.B.P2 = 1;
 
+    //PWM
     gtmAtomPwmASetDutyCycle(duty);
     gtmAtomPwmBSetDutyCycle(duty);
 }
 
 void motorReverse(int duty){
+
+    // Break
+    MODULE_P02.OUT.B.P7 = 0;
+    MODULE_P02.OUT.B.P6 = 0;
+
+    // DIR
     MODULE_P10.OUT.B.P1 = 0;
     MODULE_P10.OUT.B.P2 = 0;
 
+    // PWM
     gtmAtomPwmASetDutyCycle(duty);
     gtmAtomPwmBSetDutyCycle(duty);
 }
@@ -75,5 +89,9 @@ void motorReverse(int duty){
 void motorStop(void){
     MODULE_P02.OUT.B.P7 = 1;
     MODULE_P02.OUT.B.P6 = 1;
+
+
+    gtmAtomPwmASetDutyCycle(0);
+    gtmAtomPwmBSetDutyCycle(0);
 }
 
