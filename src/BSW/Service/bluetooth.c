@@ -5,8 +5,6 @@ void bluetoothIsr(char c)
 //    myPrintf("%c", c);
 }
 
-
-
 void bluetoothInit(void)
 {
     asclin1InitUart();

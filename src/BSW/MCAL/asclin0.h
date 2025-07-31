@@ -5,8 +5,8 @@
  *      Author: USER
  */
 
-#ifndef BSW_MCAL_ASCLIN_H_
-#define BSW_MCAL_ASCLIN_H_
+#ifndef BSW_MCAL_ASCLIN0_H_
+#define BSW_MCAL_ASCLIN0_H_
 
 
 #include "IfxAsclin.h"
@@ -20,11 +20,5 @@ int asclin0PollUart(unsigned char *chr);
 unsigned char asclin0InUart(void);
 char asclin0InUartNonBlock(void);
 void asclin0RxIsrHandler(void);
-
-void asclin1InitUart(void);
-void asclin1OutUart(const unsigned char chr);
-unsigned char asclin1InUart(void);
-int asclin1PollUart(unsigned char *chr);
-
 
 #endif /* BSW_DRIVER_ASCLIN_H_ */
