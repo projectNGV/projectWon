@@ -1,105 +1,96 @@
+#include <log.h>
+#include <motor.h>
+#include <uart.h>
+#include <ultrasonic.h>
+#include <util.h>
 #include "level.h"
 
+#include "Ifx_Types.h"
+
+
 #define FILTER_SIZE 7
-float Kp = 0.001;
-float Ki = 0.0;
-//float Kd = 0.0;
 
-float error = 0;
-float last_error = 0;
-float integral = 0;
-//float derivative = 0;
+static float g_Kp = 0.001;
+static float g_Ki = 0.0;
+static float g_Kd = 0.0;
 
-int steering_output = 0;
+static float g_error = 0;
+static float g_lastError = 0;
+static float g_integral;
+static float g_derivative;
 
-uint32 readings[FILTER_SIZE] = {0};
-int read_index = 0;
-uint32 total = 0;
-uint32 filtered_distance = 0;
+static int g_mv = 0;
 
-uint32 previous_filtered_distance = 0;
-uint32 current_filtered_distance = 0;
+static uint32 g_filter[FILTER_SIZE] = {0};
+static int g_filterIdx= 0;
+static uint32 g_total = 0;
 
-void upKp(int n, float i){
+static uint32 g_previousFilteredDistance = 0;
+static uint32 g_currentFilteredDistance = 0;
+
+void Lvl_SetGain(int n, float i){
     if(n == 0){
-        Kp += i;
-        bluetoothPrintf("cur Kp: %f\n", Kp);
+        g_Kp += i;
+        Log_Info("cur g_Kp: %f\n", g_Kp);
     }
     if(n == 1){
-            Ki += i;
-            bluetoothPrintf("cur Ki: %f\n", Ki);
+            g_Ki += i;
+            Log_Info("cur Ki: %f\n", g_Ki);
         }
-//
-//    if(n == 2){
-//            Kd += i;
-//            bluetoothPrintf("cur Kd: %f\n", Kd);
-//        }
+
+    if(n == 2){
+            g_Kd += i;
+            Log_Info("cur Kd: %f\n", g_Kd);
+        }
 }
 
-int dis;
-static uint32 getFilteredDistance (UltraDir dir)
+
+static uint32 getFilteredDistance (Ult_DirType dir)
 {
-    total = total - readings[read_index];
-    dis = getDistanceByUltra(dir);
+    g_total = g_total - g_filter[g_filterIdx];
+    int dis = Ult_GetDistance(dir);
     while (dis < 0)
     {
-        dis = getDistanceByUltra(dir);
+        dis = Ult_GetDistance(dir);
     }
-    readings[read_index] = dis;
-    total = total + readings[read_index];
-    read_index = (read_index + 1) % FILTER_SIZE;
-    return total / FILTER_SIZE;
+    g_filter[g_filterIdx] = dis;
+    g_total += g_filter[g_filterIdx];
+    g_filterIdx = (g_filterIdx + 1) % FILTER_SIZE;
+    return g_total / FILTER_SIZE;
 }
 
-void levelInit (LevelDir dir)
+void Lvl_Init (LevelDir dir)
 {
-    UltraDir ultDir = (dir == LEVEL_LEFT) ? ULT_LEFT : ULT_RIGHT;
-    integral = 0;
+    Ult_DirType ultDir = (dir == LEVEL_LEFT) ? ULT_LEFT : ULT_RIGHT;
+    g_integral = 0;
     for (int i = 0; i < FILTER_SIZE; i++)
     {
-        getFilteredDistance(ultDir);
-        delayMs(50);
+        g_previousFilteredDistance = getFilteredDistance(ultDir);
+        Util_DelayMs(50);
     }
-    previous_filtered_distance = readings[FILTER_SIZE - 1];
 }
 
-int steer (LevelDir dir)
+int Lvl_Leveling (LevelDir dir)
 {
 
-    UltraDir ultDir = ((dir == LEVEL_LEFT) ? ULT_LEFT : ULT_RIGHT);
-    current_filtered_distance = getFilteredDistance(ultDir);
-    error = (float) previous_filtered_distance - (float) current_filtered_distance;
-    integral = integral + error;
-//    derivative = error - last_error;
-    steering_output = (int) (Kp * error + Ki * integral);
-//    steering_output = (int) (Kp * error + Ki * integral + Kd * derivative);
-    last_error = error;
-    previous_filtered_distance = current_filtered_distance;
+    Ult_DirType ultDir = ((dir == LEVEL_LEFT) ? ULT_LEFT : ULT_RIGHT);
+    g_currentFilteredDistance = getFilteredDistance(ultDir);
+    g_error = (float) g_previousFilteredDistance - (float) g_currentFilteredDistance;
+    g_integral = g_integral + g_error;
+    g_derivative = g_error - g_lastError;
+    g_mv = (int) (g_Kp * g_error + g_Ki * g_integral + g_Kd * g_derivative);
+    g_lastError = g_error;
+    g_previousFilteredDistance = g_currentFilteredDistance;
 
-//    myPrintf("error: %f\tintegral: %f\tde: %f\tstr: %d\n", error, integral, derivative, steering_output);
-    /*
-     * steer
-     * 멀어지면 - => 반대편 바퀴 up / 내쪽 바퀴 down
-     * 가까워지면 + => 내쪽 바퀴 up / 반대편 바퀴 down
-     */
+    Log_Debug("error: %f\tintegral: %f\tde: %f\tmv: %d\n", g_error, g_integral, g_derivative, g_mv);
 
-    if(steering_output < -200) steering_output = -200;
-    if(steering_output > 200) steering_output = 200;
+    if(g_mv < -200) g_mv = -200;
+    if(g_mv > 200) g_mv = 200;
 
-    if(dir == LEVEL_RIGHT) steering_output *= -1;
+    if(dir == LEVEL_RIGHT) g_mv *= -1;
 
-//    if( steering_output > 0 ){
-//        motorMovChAPwm(300, 1);
-//        motorMovChBPwm(300 + steering_output, 1);
-//    }
-//    else{
-//        motorMovChAPwm(300 - steering_output, 1);
-//        motorMovChBPwm(300, 1);
-//    }
+    Motor_Control(MOTOR_WHEEL_LEFT, MOTOR_DIR_FORWARD, 30000 + g_mv);
+    Motor_Control(MOTOR_WHEEL_RIGHT, MOTOR_DIR_FORWARD, 30000 + g_mv);
 
-    motorMovChAPwm(300 + steering_output, 1);
-    motorMovChBPwm(300 - steering_output, 1);
-
-
-    return steering_output;
+    return g_mv;
 }

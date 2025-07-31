@@ -1,4 +1,4 @@
-#include "pin.h"
+#include <pin.h>
 
 const IfxPort_Pin LED_PINS[LED_NUM] = {
         [LED_1] = {&MODULE_P00, 5},

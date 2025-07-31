@@ -1,16 +1,14 @@
-#include "uart.h"
-
 #include <stddef.h>
 #include <stdlib.h>
 #include <stdio.h>
 #include <string.h>
+#include <uart.h>
 
 #include "IfxAsclin_bf.h"
 
 #define BUFSIZE     128
 #define KB_BS '\x7F'
 #define KB_CR '\r'
-
 
 extern const Uart_ConfigType UART_CONFIG[UART_NUM_OF_CHANNELS];
 
@@ -80,9 +78,11 @@ void Uart_TransmitByte (Uart_ChannelType channel, const uint8 data)
     config->asclin->TXDATA.U = data;
 }
 
-void Uart_TransmitString(Uart_ChannelType channel, const char* str){
-    while(*str){
-        Uart_TransmitByte(channel, (*str)++);
+void Uart_TransmitString (Uart_ChannelType channel, const char *str)
+{
+    for (int i = 0; *(str + i) != 0; i++)
+    {
+        Uart_TransmitByte(channel, *(str + i));
     }
 }
 
@@ -121,7 +121,7 @@ boolean Uart_ReceiveByte (Uart_ChannelType channel, uint8 *data)
     return res;
 }
 
-void Uart_Printf(Uart_ChannelType channel, const char *fmt, va_list ap)
+void Uart_Printf (Uart_ChannelType channel, const char *fmt, va_list ap)
 {
     char buffer[128];
     char buffer2[128];
@@ -150,7 +150,15 @@ void Uart_Printf(Uart_ChannelType channel, const char *fmt, va_list ap)
     }
 }
 
-static int readLine(Uart_ChannelType channel, char* buffer, int bufferSize)
+static void uartPrintf (Uart_ChannelType channel, const char *fmt, ...)
+{
+    va_list ap;
+    va_start(ap, fmt);
+    Uart_Printf(channel, fmt, ap);
+    va_end(ap);
+}
+
+static int readLine (Uart_ChannelType channel, char *buffer, int bufferSize)
 {
     char c = 0;
     int index = 0;
@@ -160,11 +168,13 @@ static int readLine(Uart_ChannelType channel, char* buffer, int bufferSize)
 
     while (index < (bufferSize - 1))
     {
-        while (Uart_ReceiveByte(channel, &c) == FALSE){}
+        while (Uart_ReceiveByte(channel, &c) == FALSE)
+        {
+        }
 
         if (c == '\r')
         {
-            Uart_Printf(channel, "\r\n");
+            uartPrintf(channel, "\r\n");
             break;
         }
         else if (c == '\b' || c == 127)
@@ -173,7 +183,7 @@ static int readLine(Uart_ChannelType channel, char* buffer, int bufferSize)
             {
                 index--;
                 buffer[index] = '\0';
-                Uart_Printf(channel, "\b \b");
+                uartPrintf(channel, "\b \b");
             }
         }
         else
@@ -188,7 +198,7 @@ static int readLine(Uart_ChannelType channel, char* buffer, int bufferSize)
     return index;
 }
 
-int Uart_Scanf(Uart_ChannelType channel, const char *fmt, va_list ap)
+int Uart_Scanf (Uart_ChannelType channel, const char *fmt, va_list ap)
 {
     char line_buffer[128];
     int match_count = -1;

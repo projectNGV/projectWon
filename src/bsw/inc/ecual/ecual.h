@@ -30,7 +30,7 @@ typedef enum{
 
 typedef enum
 {
-    MOTOR_LEFT_WHEEL, MOTOR_RIGHT_WHEEL, MOTOR_NUM_OF_MOTORS
+    MOTOR_WHEEL_LEFT, MOTOR_WHEEL_RIGHT, MOTOR_NUM_OF_MOTORS
 } Motor_WheelType;
 
 

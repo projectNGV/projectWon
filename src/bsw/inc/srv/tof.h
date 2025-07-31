@@ -7,7 +7,7 @@
 
 typedef void (*Tof_AppCallbackType) (uint32 distance);
 
-void Tof_Init ();
+void Tof_Init (void);
 void Tof_RegisterApplicationCallback (Tof_AppCallbackType callback);
 
 #endif /* BSW_SERVICE_TOF_H_ */

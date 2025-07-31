@@ -1,6 +1,6 @@
-#include "tof.h"
-
 #include "can.h"
+#include <can.h>
+#include <tof.h>
 
 static Tof_AppCallbackType g_appCallback = NULL;
 
@@ -12,12 +12,12 @@ static void Tof_CanRxHandler (const Can_FrameType *frame)
         uint32 distance = frame->data[2] << 16 | frame->data[1] << 8 | frame->data[0];
         if (g_appCallback != NULL)
         {
-            g_appCallbackack(distance);
+            g_appCallback(distance);
         }
     }
 }
 
-void Tof_Init ()
+void Tof_Init (void)
 {
     Can_Init(BD_500K, CAN_NODE0);
     Can_RegisterRxCallback(TOF_SENSOR_CAN_ID, Tof_CanRxHandler);

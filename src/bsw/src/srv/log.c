@@ -1,16 +1,14 @@
-#include "log.h"
-
+#include <ecual.h>
+#include <log.h>
 #include <stdarg.h>
 #include <stdio.h>
 
-#include "uart.h"
-#include "ecual.h"
+#include <uart.h>
 
 void Log_Init (void)
 {
 #if LOG_SYSTEM_ENABLED == 1
     Uart_Init(UART_CHANNEL_USB);
-    LOG_INFO("Log Service Initialized.");
 #endif
 }
 

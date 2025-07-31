@@ -1,8 +1,8 @@
-#include "motor.h"
-
+#include <ecual.h>
+#include <motor.h>
+#include <pwm.h>
 #include "pwm.h"
 #include "IfxPort.h"
-#include "ecual.h"
 
 
 extern const Motor_PinType MOTOR_CONFIG[MOTOR_NUM_OF_MOTORS];
@@ -17,6 +17,10 @@ void Motor_Init (void)
     for(int i = 0; i < PWM_NUM_OF_CHANNELS; i++){
         Pwm_SetDutyCycle(i, 0);
     }
+}
+
+void Motor_SetSpeed (Motor_WheelType wheel, uint16 speed){
+    Pwm_SetDutyCycle(MOTOR_CONFIG[wheel].pwmChannel, speed);
 }
 
 static void setBrake (Motor_WheelType wheel, boolean enable)

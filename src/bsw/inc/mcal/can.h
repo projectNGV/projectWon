@@ -2,12 +2,12 @@
 #define BSW_MCAL_CAN_H_
 
 
+#include <tof.h>
 #include "IfxPort.h"
 #include "IfxCan.h"
 #include "IfxCan_Can.h"
 
 
-#include "tof.h"
 
 /*********************************************************************************************************************/
 /*------------------------------------------------------Macros-------------------------------------------------------*/
@@ -46,6 +46,6 @@ typedef enum {
 void Can_Init(CAN_BAUDRATES ls_baudrate, CAN_NODE CAN_Node);
 void Can_Receive (Can_FrameType *frame);
 boolean Can_RegisterRxCallback (uint32 canId, Can_RxCallbackType callback);
-
+void Can_SetFilterRange (uint32 start, uint32 end);
 
 #endif

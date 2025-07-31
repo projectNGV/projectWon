@@ -1,6 +1,6 @@
-#include "can.h"
+#include <can.h>
+#include <isr_priorities.h>
 #include "IfxCan.h"
-#include "isr_priorities.h"
 
 #define CAN_MAX_RX_SUBSCRIPTIONS 10
 
@@ -27,7 +27,7 @@ typedef struct
 
 static McmcanType g_mcmcan; /* Global MCMCAN configuration and control structure    */
 
-static Can_RxSubscriptionType g_rxSubscriptions[CAN_MAX_RX_SUBSCRIPTIONS] = {NULL};
+static Can_RxSubscriptionType g_rxSubscriptions[CAN_MAX_RX_SUBSCRIPTIONS];
 static uint32 g_rxSubscriptionsCount = 0;
 static boolean g_isInitialized = FALSE;
 

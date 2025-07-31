@@ -8,8 +8,8 @@
 #ifndef BLUETOOTH_H_
 #define BLUETOOTH_H_
 
+#include <ecual.h>
 #include "Ifx_Types.h"
-#include "ecual.h"
 
 void Blt_Init (void);
 void Blt_SendByte (uint8 data);
