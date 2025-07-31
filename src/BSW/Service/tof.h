@@ -3,6 +3,7 @@
 
 #include "can.h"
 #include "motor.h"
+#include "stdbool.h"
 
 #define aebDistanceMM 830
 #define safetyDistanceMM 1000

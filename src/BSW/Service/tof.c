@@ -1,14 +1,14 @@
 #include "tof.h"
 
 static unsigned int g_TofValue = 0;
-volatile int aebFlag = 0;
+volatile bool aebFlag = false;
 
 void tofInit (void)
 {
     canInit(BD_500K, CAN_NODE0);
     canRegisterTofCallback(tofUpdateFromCAN);
     g_TofValue = 0;
-    aebFlag = 0;
+    aebFlag = false;
 }
 
 void tofUpdateFromCAN (unsigned char *rxData)
@@ -21,11 +21,11 @@ void tofUpdateFromCAN (unsigned char *rxData)
 
         if (g_TofValue < aebDistanceMM)
         {
-            motorStop();
-            aebFlag = 1;
+            aebFlag = true;
         }
-        else if(g_TofValue >= safetyDistanceMM){
-            aebFlag = 0;
+        else if (g_TofValue >= safetyDistanceMM)
+        {
+            aebFlag = false;
         }
     }
 }

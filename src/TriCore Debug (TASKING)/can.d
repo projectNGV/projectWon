@@ -224,3 +224,5 @@ can.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\Li
 "C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\Libraries\\iLLD\\TC37A\\Tricore\Gtm\Std\IfxGtm_Dtm.h" :
 can.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\IfxCpu.h"
 "C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\Libraries\\iLLD\\TC37A\\Tricore\Cpu\Std\IfxCpu.h" :
+can.o :	"C:\Infineon\AURIX-Studio-1.10.2\tools\Compilers\Tasking_1.1r8\ctc\include\stdbool.h"
+"C:\Infineon\AURIX-Studio-1.10.2\tools\Compilers\Tasking_1.1r8\ctc\include\stdbool.h" :
