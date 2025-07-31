@@ -25,8 +25,8 @@ void main0(void){
         // 최종 동작 호출: 이전에 저장한 방향 + 속도로
         motorRunCommand(&motorState);
 
-        myPrintf("distance : %d mm,   flag : %d\n", tofGetValue(), aebFlag);
-        delayMs(500);
+//        myPrintf("distance : %d mm,   flag : %d\n", tofGetValue(), aebFlag);
+//        delayMs(500);
     }
 
 }
