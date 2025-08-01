@@ -1,7 +1,7 @@
 #include "ultrasonic.h"
 
 const UltPin ULT_PINS[ULT_SENSORS_NUM] = {
-        [ULT_LEFT] = {.trigger = {&MODULE_P02, 7}, .echo = {&MODULE_P02, 6}},
+        [ULT_LEFT] = {.trigger = {&MODULE_P15, 2}, .echo = {&MODULE_P15, 3}},
         [ULT_RIGHT] = {.trigger = {&MODULE_P10, 5}, .echo = {&MODULE_P02, 4}},
         [ULT_REAR] = {.trigger = {&MODULE_P02, 5}, .echo = {&MODULE_P02, 3}}
 };

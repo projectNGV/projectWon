@@ -1,12 +1,12 @@
 #include "asclin1.h"
 
-extern MotorState motorState;
+//extern MotorState motorState;
 
 IFX_INTERRUPT(asclin1RxIsrHandler, 0, ISR_PRIORITY_ASCLIN1_RX);
 void asclin1RxIsrHandler(void)
 {
-    char key = asclin1InUart();
-    motorState.lastKeyInput = key;
+//    char key = asclin1InUart();
+//    motorState.lastKeyInput = key;
 //    bluetoothIsr(key);
 }
 

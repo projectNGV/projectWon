@@ -24,6 +24,9 @@ char bluetoothRecvByteBlocked(void);
 char bluetoothRecvByteNonBlocked(void);
 void bluetoothSendByteBlocked(unsigned char ch);
 void bluetoothPrintf(const char *fmt, ...);
+void bluetoothScanf(const char *fmt, ...);
+
+static void remove_null(char *s);
 
 
 #endif /* BSW_IO_BLUETOOTH_H_ */
