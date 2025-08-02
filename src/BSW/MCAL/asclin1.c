@@ -7,7 +7,7 @@ void asclin1RxIsrHandler(void)
 {
     char key = asclin1InUart();
     motorState.lastKeyInput = key;
-//    bluetoothIsr(key);
+    //bluetoothIsr(key);
 }
 
 /* Initialise asynchronous interface to operate at baudrate,8,n,1 */

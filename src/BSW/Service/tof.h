@@ -12,6 +12,7 @@
 void tofInit (void);
 void tofUpdateFromCAN (unsigned char *rxData);
 unsigned int tofGetValue (void);
+void tofOnOff (void);
 
 
 #endif /* BSW_SERVICE_TOF_H_ */

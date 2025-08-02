@@ -70,10 +70,10 @@ void handleDutyCommand(char cmd, MotorState* state)
 {
     switch (cmd) {
         case 'a': state->baseDuty = 300; break;
-        case 's': state->baseDuty = 500; break;
-        case 'd': state->baseDuty = 550; break;
+        case 's': state->baseDuty = 400; break;
+        case 'd': state->baseDuty = 500; break;
         case 'f': state->baseDuty = 600; break;
-        case 'g': state->baseDuty = 650; break;
+        case 'g': state->baseDuty = 700; break;
         case 'h': state->baseDuty = 700; break;
         case 'j': state->baseDuty = 750; break;
         case 'k': state->baseDuty = 800; break;

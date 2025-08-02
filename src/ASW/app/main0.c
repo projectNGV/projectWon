@@ -22,13 +22,35 @@ void main0 (void)
 
     while (1)
     {
+        if(motorState.lastKeyInput == 't')
+        {
+            myPrintf("TOF toggle\n");
+            tofOnOff();
+            delayMs(1000);
+        }
         if (aebFlag == false || ((motorState.lastKeyInput == '1' || motorState.lastKeyInput == '2' || motorState.lastKeyInput == '3') && aebFlag == true))
         {
             motorUpdateState(&motorState);
             motorRunCommand(&motorState);
         }
+        else if(aebFlag == true)
+        {
+            MODULE_P10.OUT.B.P1 = 0;
+            MODULE_P10.OUT.B.P2 = 0;
 
-//        myPrintf("distance : %d mm,   flag : %d\n", tofGetValue(), aebFlag);
-//        delayMs(500);
+            int duty = (motorState.currentDuty < 800) ? 800 : motorState.currentDuty;
+
+            gtmAtomPwmASetDutyCycle(duty);
+            gtmAtomPwmBSetDutyCycle(duty);
+
+            delayMs(250);
+
+            motorState.currentDuty = 0;
+
+            motorStop();
+        }
+
+        myPrintf("distance : %d mm,   flag : %d,    duty : %d\n", tofGetValue(), aebFlag, motorState.currentDuty);
+        //delayMs(500);
     }
 }
