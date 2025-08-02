@@ -32,7 +32,9 @@ void main0(){
         asclin0OutUart(command);
 
         if(command == 'p'){
+            myPrintf("시작합니다! \n");
             parkingAutonomousProcess();
+
         }
 
         delayMs(50);
