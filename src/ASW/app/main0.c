@@ -27,10 +27,6 @@ void main0 (void)
             motorUpdateState(&motorState);
             motorRunCommand(&motorState);
         }
-        else if(aebFlag == true)
-        {
-            motorStop();
-        }
 
 //        myPrintf("distance : %d mm,   flag : %d\n", tofGetValue(), aebFlag);
 //        delayMs(500);

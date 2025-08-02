@@ -3,9 +3,10 @@
 
 #include "can.h"
 #include "motor.h"
+#include "util.h"
 #include "stdbool.h"
 
-#define aebDistanceMM 830
+#define aebDistanceMM 800
 #define safetyDistanceMM 1000
 
 void tofInit (void);

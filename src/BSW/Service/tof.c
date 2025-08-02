@@ -3,6 +3,8 @@
 static unsigned int g_TofValue = 0;
 volatile bool aebFlag = false;
 
+extern MotorState motorState;
+
 void tofInit (void)
 {
     canInit(BD_500K, CAN_NODE0);
@@ -19,11 +21,14 @@ void tofUpdateFromCAN (unsigned char *rxData)
     {
         g_TofValue = rxData[2] << 16 | rxData[1] << 8 | rxData[0];
 
-        if (g_TofValue < aebDistanceMM)
+        if (g_TofValue < aebDistanceMM && aebFlag == false)
         {
+            motorHardBraking(motorState.currentDuty);
+            motorState.currentDuty = 0;
+//            motorStop();
             aebFlag = true;
         }
-        else if (g_TofValue >= safetyDistanceMM)
+        else if (g_TofValue >= safetyDistanceMM && aebFlag == true)
         {
             aebFlag = false;
         }
