@@ -57,7 +57,7 @@ void canSetFilterRange(uint32 start, uint32 end);
 void canSetFilterMask(uint32 id, uint32 mask);
 
 void canSendMsg(unsigned int id, const char *txData, int len);
-int canRecvMsg(unsigned int *id, char *rxData, int *len);
+int canRecvMsg (unsigned int *id, unsigned char *rxData, int *len);
 
 
 #endif

@@ -3,13 +3,25 @@
 
 #include "can.h"
 #include "motor.h"
+<<<<<<< HEAD
 
 #define aebDistanceMM 300
 #define safetyDistanceMM 500
+=======
+#include "util.h"
+#include "stdbool.h"
+#include "IfxSrc_reg.h"
+
+#define SRC_CAN0_RX   ((Ifx_SRC_SRCR *)0xF0038504)
+
+#define aebDistanceMM 830
+#define safetyDistanceMM 1000
+>>>>>>> origin/jh
 
 void tofInit (void);
 void tofUpdateFromCAN (unsigned char *rxData);
 unsigned int tofGetValue (void);
+void tofOnOff (void);
 
 
 #endif /* BSW_SERVICE_TOF_H_ */

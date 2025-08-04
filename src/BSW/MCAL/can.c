@@ -59,7 +59,11 @@ void canRxIsrHandler (void)
             }
             break;
         default :
+<<<<<<< HEAD
             //tofUpdateFromCAN(rxData);
+=======
+//            tofUpdateFromCAN(rxData);
+>>>>>>> origin/jh
             break;
     }
 }
@@ -176,7 +180,7 @@ void canSendMsg (unsigned int id, const char *txData, int len)
     }
 }
 
-int canRecvMsg (unsigned int *id, char *rxData, int *len)
+int canRecvMsg (unsigned int *id, unsigned char *rxData, int *len)
 {
     int err = 0;
     /* Clear the "RX FIFO 0 new message" interrupt flag */

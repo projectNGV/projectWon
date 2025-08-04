@@ -30,6 +30,11 @@ void motorMovChBPwm(int duty, int dir);
 void motorKeypadPwm(char c, int duty);
 
 void motorSoftBraking(int duty);
+<<<<<<< HEAD
+=======
+void motorHardBraking(int duty);
+
+>>>>>>> origin/jh
 void motorMoveForward(int duty);
 void motorMoveReverse (int duty);
 void motorStop(void);
