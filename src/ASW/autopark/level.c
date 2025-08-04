@@ -1,5 +1,6 @@
 #include "level.h"
 #include "bluetooth.h"
+#include <stdlib.h>
 
 #define FILTER_SIZE 10
 
@@ -108,6 +109,10 @@ void levelInit (LevelDir dir)
 }
 
 
+typedef enum{
+    FOUNDWALL, FOUNDEDGE, FOUNDREAR
+}ParkingStatus;
+
 int getMv (LevelDir dir)
 {
     UltraDir ultDir = ((dir == LEVEL_LEFT) ? ULT_LEFT : ULT_RIGHT);
@@ -127,19 +132,55 @@ int getMv (LevelDir dir)
         {
 
             bluetoothPrintf("[autopark] #%d Ticking Distance: %d\n", tick + 1, ultDis);
+
+            int park_prevDis;
+
             if (++tick >= PARKING_TICK)
             {
                 bluetoothPrintf("[autopark] Parking Spot Found\n");
                 motorStop();
                 delayMs(1000);
+                park_prevDis = getDistanceByUltra(ULT_REAR);
+                delayMs(50);
                 motorMovChAPwm(550, 1);
                 motorMovChBPwm(50, 1);
-                delayMs(700);
+                for(int i = 700 / 50; i > 0; i--){
+                    int park_dis = getDistanceByUltra(ULT_REAR);
+                    bluetoothPrintf("[autopark] REAR DISTANCE: %d\n", park_dis);
+                    delayMs(50);
+
+                    if(abs(park_dis - park_prevDis) > 200000){
+                        bluetoothPrintf("[autopark] ABNORMAL STOP\n");
+                        motorStop();
+                        delayMs(1000);
+                        motorMovChAPwm(550, 1);
+                        motorMovChBPwm(50, 1);
+                        delayMs(50);
+                    }
+
+                    park_prevDis = park_dis;
+                }
                 motorStop();
                 delayMs(1000);
+
                 motorMovChAPwm(75, 0);
                 motorMovChBPwm(600, 0);
-                delayMs(1450);
+                for(int i = 1450 / 50; i > 0; i--){
+                    int park_dis = getDistanceByUltra(ULT_REAR);
+                    bluetoothPrintf("[autopark] REAR DISTANCE: %d\n", park_dis);
+                    delayMs(50);
+
+                    if(abs(park_dis - park_prevDis) > 200000){
+                        bluetoothPrintf("[autopark] ABNORMAL STOP\n");
+                        motorStop();
+                        delayMs(1000);
+                        motorMovChAPwm(75, 0);
+                        motorMovChBPwm(600, 0);
+                        delayMs(50);
+                    }
+
+                    park_prevDis = park_dis;
+                }
                 motorStop();
                 delayMs(3000);
 

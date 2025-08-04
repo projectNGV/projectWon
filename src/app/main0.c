@@ -11,6 +11,7 @@
 int logging = 0;
 boolean start = FALSE;
 
+
 void main0 ()
 {
     systemInit();
@@ -26,10 +27,26 @@ void main0 ()
             bluetoothPrintf("COMMAND: %c\n", command);
         }
 
+        if (command == 'g'){
+            int speed, round;
+            bluetoothPrintf("Speed(0 ~ 1000): ");
+            bluetoothScanf("%d", &speed);
+            bluetoothPrintf("Round: ");
+            bluetoothScanf("%d", &round);
+
+            while(round--){
+                motorMoveForward(speed);
+                delayMs(25);
+                motorStop();
+                delayMs(25);
+            }
+        }
+
         if (command == 'c')
         {
             printState();
             bluetoothPrintf("left dis: %d\n", getDistanceByUltra(ULT_LEFT));
+            bluetoothPrintf("rear dis: %d\n", getDistanceByUltra(ULT_REAR));
         }
 
         if (command == 'p')
