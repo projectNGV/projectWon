@@ -46,6 +46,10 @@ void tofUpdateFromCAN (unsigned char *rxData)
         }
         else{
             g_TofValue = rxData[2] << 16 | rxData[1] << 8 | rxData[0];
+            if(g_TofValue <= 800 && aebFlag == false)
+            {
+                motorState.baseDuty = 500;
+            }
             if (g_TofValue < aebDistanceMM && aebFlag == false)
             {
                 aebFlag = true;

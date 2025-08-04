@@ -24,34 +24,35 @@ void main0 (void)
     {
         if(motorState.lastKeyInput == 't')
         {
-            myPrintf("TOF toggle\n");
             tofOnOff();
             delayMs(250);
         }
 
+        // 평상시 주행
         if (aebFlag == false || ((motorState.lastKeyInput == '1' || motorState.lastKeyInput == '2' || motorState.lastKeyInput == '3') && aebFlag == true))
         {
             motorUpdateState(&motorState);
             motorRunCommand(&motorState);
         }
+        // 긴급제동
         else if(aebFlag == true)
         {
             MODULE_P10.OUT.B.P1 = 0;
             MODULE_P10.OUT.B.P2 = 0;
 
-            int duty = (motorState.currentDuty < 800) ? 800 : motorState.currentDuty;
+            int duty = motorState.currentDuty;
 
             gtmAtomPwmASetDutyCycle(duty);
             gtmAtomPwmBSetDutyCycle(duty);
 
-            delayMs(250);
+            delayMs(150);
 
             motorState.currentDuty = 0;
 
             motorStop();
         }
 
-        myPrintf("distance : %d mm,   flag : %d,    duty : %d\n", tofGetValue(), aebFlag, motorState.currentDuty);
+//        myPrintf("distance : %d mm,   flag : %d,    duty : %d\n", tofGetValue(), aebFlag, motorState.currentDuty);
         //delayMs(500);
     }
 }

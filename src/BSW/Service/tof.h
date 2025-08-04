@@ -9,8 +9,8 @@
 
 #define SRC_CAN0_RX   ((Ifx_SRC_SRCR *)0xF0038504)
 
-#define aebDistanceMM 830
-#define safetyDistanceMM 1000
+#define aebDistanceMM 350
+#define safetyDistanceMM 500
 
 void tofInit (void);
 void tofUpdateFromCAN (unsigned char *rxData);

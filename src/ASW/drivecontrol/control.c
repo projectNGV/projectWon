@@ -34,28 +34,28 @@ void turnRightInPlace(int duty)
 void moveForwardLeft(int duty)
 {
     motorMovChBPwm(duty, Forward);
-    motorMovChAPwm(duty / 3, Forward);
+    motorStopChA();
 }
 
 // 직진 우회전
 void moveForwardRight(int duty)
 {
     motorMovChAPwm(duty, Forward);
-    motorMovChBPwm(duty / 3, Forward);
+    motorStopChB();
 }
 
 // 후진 좌회전
 void moveBackwardkLeft(int duty)
 {
     motorMovChBPwm(duty, Backward);
-    motorMovChAPwm(duty / 3, Backward);
+    motorStopChA();
 }
 
 // 후진 우회전
 void moveBackwardRight(int duty)
 {
     motorMovChAPwm(duty, Backward);
-    motorMovChBPwm(duty / 3, Backward);
+    motorStopChB();
 }
 
 // 숫자키(1~9) 입력에 따라 주행 방향 업데이트
@@ -137,8 +137,8 @@ void motorRunCommand (MotorState* state)
         case '4' : turnLeftInPlace(duty); break;
         case '6' : turnRightInPlace(duty); break;
         case '5' : motorStop(); break;
-        case '7' : moveForwardLeft(duty+25); break;
-        case '9' : moveForwardRight(duty+25); break;
+        case '7' : moveForwardLeft(duty); break;
+        case '9' : moveForwardRight(duty); break;
         case '1' : moveBackwardkLeft(duty); break;
         case '3' : moveBackwardRight(duty); break;
     }
