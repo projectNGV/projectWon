@@ -7,4 +7,6 @@
 
 void main0();
 
+extern boolean g_isLogin;
+
 #endif /* ASW_APP_MAIN0_H_ */
