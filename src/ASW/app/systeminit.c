@@ -6,6 +6,7 @@ void systemInit(){
     motorInit();
     asclin0InitUart();
     tofInit();
-    uartInit();
+    gpt12Init();
+    ledInit();
     //ultrasonicInit();
 }
