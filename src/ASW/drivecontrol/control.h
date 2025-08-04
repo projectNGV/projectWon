@@ -1,4 +1,3 @@
-
 #ifndef ASW_CONTROL_H_
 #define ASW_CONTROL_H_
 
@@ -28,7 +27,7 @@ void moveBackwardRight(int duty);
 
 void handleDirectionCommand(char cmd, MotorState* state);
 void handleDutyCommand(char cmd, MotorState* state);
-void handleBrakeCommand(char cmd, MotorState* state);
+void handleBrakeCommand(MotorState* state);
 void motorUpdateState(MotorState* state);
 void motorRunCommand (MotorState* state);
 

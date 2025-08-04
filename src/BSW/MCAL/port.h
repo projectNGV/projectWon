@@ -4,6 +4,9 @@
 #define LED_ON 1
 #define LED_OFF 0
 
+#define BUZZER_ON 1
+#define BUZZER_OFF 0
+
 #include "IfxPort.h"
 
 typedef struct
@@ -13,9 +16,8 @@ typedef struct
 } GpioPin;
 
 typedef enum ledpins{
-   LED_1, LED_2, LED_NUM
+   LED_R, LED_G, LED_B, LED_NUM
 } LedPins;
-
 
 typedef enum buzzerpins{
    BUZZER_1, BUZZER_2, BUZZER_NUM
@@ -24,6 +26,11 @@ typedef enum buzzerpins{
 typedef enum buttonpins{
    BUTTON_1, BUTTON_NUM
 } ButtonPins;
+
+
+void portInit(void);
+void controlLed(LedPins led, int on);
+void toggleLed(LedPins led);
 
 
 #endif /* BSW_MCAL_PORT_H_ */

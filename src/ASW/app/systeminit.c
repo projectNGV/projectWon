@@ -8,4 +8,6 @@ void systemInit(void){
     tofInit();
     uartInit();
     //ultrasonicInit();
+
+    //portInit();
 }

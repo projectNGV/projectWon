@@ -9,6 +9,7 @@
 #include "uart.h"
 #include "ultrasonic.h"
 #include "asclin.h"
+#include "port.h"
 
 void systemInit(void);
 

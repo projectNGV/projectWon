@@ -1,6 +1,6 @@
 	; Module start
 	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
-	.compiler_invocation	"ctc -f cc5260a --dep-file=port.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc37x -D__CPU_TC37X__ --core=tc1.6.2 --fp-model=+float -D__CPU__=tc37x -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\ASW -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\ASW\\\\app -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\ASW\\\\autopark -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\ASW\\\\drivecontrol -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\BSW -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\BSW\\\\MCAL -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\BSW\\\\Service -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Configurations -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\Infra -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Platform -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Sfr -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Ssw -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\Service -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin\\\\Std -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Can -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Std -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Irq -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Std -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Trap -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12 -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12\\\\Std -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Std -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu\\\\Std -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms\\\\Std -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu\\\\Std -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src\\\\Std -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm\\\\Std -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_Impl -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_PinMap -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2004 -o BSW/MCAL/port.src ../BSW/MCAL/port.c"
+	.compiler_invocation	"ctc -f cc7696a --dep-file=port.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc37x -D__CPU_TC37X__ --core=tc1.6.2 --fp-model=+float -D__CPU__=tc37x -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\ASW -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\ASW\\\\app -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\ASW\\\\autopark -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\ASW\\\\drivecontrol -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\BSW -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\BSW\\\\MCAL -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\BSW\\\\Service -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Configurations -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\Infra -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Platform -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Sfr -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Ssw -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\Service -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin\\\\Std -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Can -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Std -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Irq -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Std -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Trap -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12 -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12\\\\Std -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Std -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu\\\\Std -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms\\\\Std -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu\\\\Std -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src\\\\Std -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm\\\\Std -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_Impl -IC:\\\\Users\\\\USER\\\\PROJECT\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_PinMap -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2004 -o BSW/MCAL/port.src ../BSW/MCAL/port.c"
 	.compiler_name		"ctc"
 	;source	'../BSW/MCAL/port.c'
 
@@ -42,7 +42,7 @@ portInit:	.type	func
 .L93:
 	add	d8,#1
 .L2:
-	jlt	d8,#2,.L3
+	jlt	d8,#3,.L3
 .L42:
 	mov	d8,#0
 .L75:
@@ -224,12 +224,15 @@ __toggleLed_function_end:
 	.global	LED_PINS
 	.align	4
 LED_PINS:	.type	object
-	.size	LED_PINS,16
-	.word	-268197888
-	.byte	5
+	.size	LED_PINS,24
+	.word	-268187648
+	.byte	7
 	.space	3
-	.word	-268197888
-	.byte	6
+	.word	-268187648
+	.byte	8
+	.space	3
+	.word	-268187648
+	.byte	9
 	.space	3
 	.sdecl	'.rodata.port.BUZZER_PINS',data,rom,cluster('BUZZER_PINS')
 	.sect	'.rodata.port.BUZZER_PINS'
@@ -237,8 +240,8 @@ LED_PINS:	.type	object
 	.align	4
 BUZZER_PINS:	.type	object
 	.size	BUZZER_PINS,16
-	.word	-268197888
-	.byte	5
+	.word	-268195328
+	.byte	4
 	.space	3
 	.word	-268197888
 	.byte	6
@@ -260,7 +263,7 @@ BUTTON_PINS:	.type	object
 	.sdecl	'.debug_info',debug
 	.sect	'.debug_info'
 .L17:
-	.word	38557
+	.word	38574
 	.half	3
 	.word	.L18
 	.byte	4
@@ -1701,13 +1704,14 @@ BUTTON_PINS:	.type	object
 	.byte	0
 .L50:
 	.byte	22
-	.byte	'ledpins',0,5,15,14,1,18
-	.byte	'LED_1',0,0,18
-	.byte	'LED_2',0,1,18
-	.byte	'LED_NUM',0,2,0,7
+	.byte	'ledpins',0,5,18,14,1,18
+	.byte	'LED_R',0,0,18
+	.byte	'LED_G',0,1,18
+	.byte	'LED_B',0,2,18
+	.byte	'LED_NUM',0,3,0,7
 	.byte	'short int',0,2,5,23
 	.byte	'__wchar_t',0,6,1,1
-	.word	9012
+	.word	9020
 	.byte	23
 	.byte	'__size_t',0,6,1,1
 	.word	408
@@ -1715,10 +1719,10 @@ BUTTON_PINS:	.type	object
 	.byte	'__ptrdiff_t',0,6,1,1
 	.word	424
 	.byte	24,1,3
-	.word	9080
+	.word	9088
 	.byte	23
 	.byte	'__codeptr',0,6,1,1
-	.word	9082
+	.word	9090
 	.byte	23
 	.byte	'boolean',0,7,104,29
 	.word	431
@@ -1731,21 +1735,21 @@ BUTTON_PINS:	.type	object
 	.byte	7
 	.byte	'unsigned long int',0,4,7,23
 	.byte	'uint32',0,7,116,29
-	.word	9150
+	.word	9158
 	.byte	23
 	.byte	'uint64',0,7,121,29
 	.word	290
 	.byte	23
 	.byte	'sint16',0,7,129,1,29
-	.word	9012
+	.word	9020
 	.byte	7
 	.byte	'long int',0,4,5,23
 	.byte	'sint32',0,7,134,1,29
-	.word	9217
+	.word	9225
 	.byte	7
 	.byte	'long long int',0,8,5,23
 	.byte	'sint64',0,7,141,1,29
-	.word	9245
+	.word	9253
 	.byte	23
 	.byte	'float32',0,7,170,1,29
 	.word	236
@@ -1754,7 +1758,7 @@ BUTTON_PINS:	.type	object
 	.word	322
 	.byte	23
 	.byte	'Ifx_TickTime',0,8,76,28
-	.word	9245
+	.word	9253
 	.byte	23
 	.byte	'Ifx_UReg_8Bit',0,9,96,24
 	.word	431
@@ -1924,13 +1928,13 @@ BUTTON_PINS:	.type	object
 	.word	7392
 	.byte	23
 	.byte	'Ifx_P',0,4,128,6,3
-	.word	10592
+	.word	10600
 	.byte	17,10,242,9,9,1,18
 	.byte	'IfxScu_WDTCON1_IR_divBy16384',0,0,18
 	.byte	'IfxScu_WDTCON1_IR_divBy256',0,1,18
 	.byte	'IfxScu_WDTCON1_IR_divBy64',0,2,0,23
 	.byte	'IfxScu_WDTCON1_IR',0,10,247,9,3
-	.word	10612
+	.word	10620
 	.byte	10
 	.byte	'_Ifx_SCU_ACCEN00_Bits',0,11,68,16,4,11
 	.byte	'EN0',0,1
@@ -2030,14 +2034,14 @@ BUTTON_PINS:	.type	object
 	.word	431
 	.byte	1,0,2,35,3,0,23
 	.byte	'Ifx_SCU_ACCEN00_Bits',0,11,102,3
-	.word	10734
+	.word	10742
 	.byte	10
 	.byte	'_Ifx_SCU_ACCEN01_Bits',0,11,105,16,4,11
 	.byte	'reserved_0',0,4
 	.word	408
 	.byte	32,0,2,35,0,0,23
 	.byte	'Ifx_SCU_ACCEN01_Bits',0,11,108,3
-	.word	11293
+	.word	11301
 	.byte	10
 	.byte	'_Ifx_SCU_ACCEN10_Bits',0,11,111,16,4,11
 	.byte	'EN0',0,1
@@ -2137,14 +2141,14 @@ BUTTON_PINS:	.type	object
 	.word	431
 	.byte	1,0,2,35,3,0,23
 	.byte	'Ifx_SCU_ACCEN10_Bits',0,11,145,1,3
-	.word	11372
+	.word	11380
 	.byte	10
 	.byte	'_Ifx_SCU_ACCEN11_Bits',0,11,148,1,16,4,11
 	.byte	'reserved_0',0,4
 	.word	408
 	.byte	32,0,2,35,0,0,23
 	.byte	'Ifx_SCU_ACCEN11_Bits',0,11,151,1,3
-	.word	11932
+	.word	11940
 	.byte	10
 	.byte	'_Ifx_SCU_ARSTDIS_Bits',0,11,154,1,16,4,11
 	.byte	'STM0DIS',0,1
@@ -2172,7 +2176,7 @@ BUTTON_PINS:	.type	object
 	.word	408
 	.byte	24,0,2,35,0,0,23
 	.byte	'Ifx_SCU_ARSTDIS_Bits',0,11,164,1,3
-	.word	12013
+	.word	12021
 	.byte	10
 	.byte	'_Ifx_SCU_CCUCON0_Bits',0,11,167,1,16,4,11
 	.byte	'STMDIV',0,1
@@ -2212,7 +2216,7 @@ BUTTON_PINS:	.type	object
 	.word	431
 	.byte	1,0,2,35,3,0,23
 	.byte	'Ifx_SCU_CCUCON0_Bits',0,11,181,1,3
-	.word	12239
+	.word	12247
 	.byte	10
 	.byte	'_Ifx_SCU_CCUCON1_Bits',0,11,184,1,16,4,11
 	.byte	'MCANDIV',0,1
@@ -2255,7 +2259,7 @@ BUTTON_PINS:	.type	object
 	.word	431
 	.byte	1,0,2,35,3,0,23
 	.byte	'Ifx_SCU_CCUCON1_Bits',0,11,199,1,3
-	.word	12512
+	.word	12520
 	.byte	10
 	.byte	'_Ifx_SCU_CCUCON2_Bits',0,11,202,1,16,4,11
 	.byte	'ASCLINFDIV',0,1
@@ -2289,7 +2293,7 @@ BUTTON_PINS:	.type	object
 	.word	431
 	.byte	1,0,2,35,3,0,23
 	.byte	'Ifx_SCU_CCUCON2_Bits',0,11,214,1,3
-	.word	12838
+	.word	12846
 	.byte	10
 	.byte	'_Ifx_SCU_CCUCON3_Bits',0,11,217,1,16,4,11
 	.byte	'PLL0MONEN',0,1
@@ -2338,7 +2342,7 @@ BUTTON_PINS:	.type	object
 	.word	431
 	.byte	1,0,2,35,3,0,23
 	.byte	'Ifx_SCU_CCUCON3_Bits',0,11,234,1,3
-	.word	13116
+	.word	13124
 	.byte	10
 	.byte	'_Ifx_SCU_CCUCON4_Bits',0,11,237,1,16,4,11
 	.byte	'LOTHR',0,2
@@ -2363,7 +2367,7 @@ BUTTON_PINS:	.type	object
 	.word	431
 	.byte	1,0,2,35,3,0,23
 	.byte	'Ifx_SCU_CCUCON4_Bits',0,11,246,1,3
-	.word	13485
+	.word	13493
 	.byte	10
 	.byte	'_Ifx_SCU_CCUCON5_Bits',0,11,249,1,16,4,11
 	.byte	'GETHDIV',0,1
@@ -2385,7 +2389,7 @@ BUTTON_PINS:	.type	object
 	.word	431
 	.byte	1,0,2,35,3,0,23
 	.byte	'Ifx_SCU_CCUCON5_Bits',0,11,129,2,3
-	.word	13665
+	.word	13673
 	.byte	10
 	.byte	'_Ifx_SCU_CCUCON6_Bits',0,11,132,2,16,4,11
 	.byte	'CPU0DIV',0,1
@@ -2395,7 +2399,7 @@ BUTTON_PINS:	.type	object
 	.word	408
 	.byte	26,0,2,35,0,0,23
 	.byte	'Ifx_SCU_CCUCON6_Bits',0,11,136,2,3
-	.word	13837
+	.word	13845
 	.byte	10
 	.byte	'_Ifx_SCU_CCUCON7_Bits',0,11,139,2,16,4,11
 	.byte	'CPU1DIV',0,1
@@ -2405,7 +2409,7 @@ BUTTON_PINS:	.type	object
 	.word	408
 	.byte	26,0,2,35,0,0,23
 	.byte	'Ifx_SCU_CCUCON7_Bits',0,11,143,2,3
-	.word	13937
+	.word	13945
 	.byte	10
 	.byte	'_Ifx_SCU_CCUCON8_Bits',0,11,146,2,16,4,11
 	.byte	'CPU2DIV',0,1
@@ -2415,7 +2419,7 @@ BUTTON_PINS:	.type	object
 	.word	408
 	.byte	26,0,2,35,0,0,23
 	.byte	'Ifx_SCU_CCUCON8_Bits',0,11,150,2,3
-	.word	14037
+	.word	14045
 	.byte	10
 	.byte	'_Ifx_SCU_CHIPID_Bits',0,11,153,2,16,4,11
 	.byte	'CHREV',0,1
@@ -2446,7 +2450,7 @@ BUTTON_PINS:	.type	object
 	.word	431
 	.byte	1,0,2,35,3,0,23
 	.byte	'Ifx_SCU_CHIPID_Bits',0,11,164,2,3
-	.word	14137
+	.word	14145
 	.byte	10
 	.byte	'_Ifx_SCU_DTSCLIM_Bits',0,11,167,2,16,4,11
 	.byte	'LOWER',0,2
@@ -2480,7 +2484,7 @@ BUTTON_PINS:	.type	object
 	.word	431
 	.byte	1,0,2,35,3,0,23
 	.byte	'Ifx_SCU_DTSCLIM_Bits',0,11,179,2,3
-	.word	14340
+	.word	14348
 	.byte	10
 	.byte	'_Ifx_SCU_DTSCSTAT_Bits',0,11,182,2,16,4,11
 	.byte	'RESULT',0,2
@@ -2490,24 +2494,24 @@ BUTTON_PINS:	.type	object
 	.word	408
 	.byte	20,0,2,35,0,0,23
 	.byte	'Ifx_SCU_DTSCSTAT_Bits',0,11,186,2,3
-	.word	14572
+	.word	14580
 	.byte	7
 	.byte	'unsigned int',0,4,7,10
 	.byte	'_Ifx_SCU_EICON0_Bits',0,11,189,2,16,4,11
 	.byte	'reserved_0',0,4
-	.word	14674
+	.word	14682
 	.byte	1,31,2,35,0,11
 	.byte	'ENDINIT',0,4
-	.word	14674
+	.word	14682
 	.byte	1,30,2,35,0,11
 	.byte	'EPW',0,4
-	.word	14674
+	.word	14682
 	.byte	14,16,2,35,0,11
 	.byte	'REL',0,4
-	.word	14674
+	.word	14682
 	.byte	16,0,2,35,0,0,23
 	.byte	'Ifx_SCU_EICON0_Bits',0,11,195,2,3
-	.word	14690
+	.word	14698
 	.byte	10
 	.byte	'_Ifx_SCU_EICON1_Bits',0,11,198,2,16,4,11
 	.byte	'reserved_0',0,1
@@ -2532,7 +2536,7 @@ BUTTON_PINS:	.type	object
 	.word	408
 	.byte	26,0,2,35,0,0,23
 	.byte	'Ifx_SCU_EICON1_Bits',0,11,207,2,3
-	.word	14818
+	.word	14826
 	.byte	10
 	.byte	'_Ifx_SCU_EICR_Bits',0,11,210,2,16,4,11
 	.byte	'reserved_0',0,1
@@ -2587,7 +2591,7 @@ BUTTON_PINS:	.type	object
 	.word	431
 	.byte	1,0,2,35,3,0,23
 	.byte	'Ifx_SCU_EICR_Bits',0,11,229,2,3
-	.word	15007
+	.word	15015
 	.byte	10
 	.byte	'_Ifx_SCU_EIFILT_Bits',0,11,232,2,16,4,11
 	.byte	'FILRQ0A',0,1
@@ -2651,7 +2655,7 @@ BUTTON_PINS:	.type	object
 	.word	431
 	.byte	4,0,2,35,3,0,23
 	.byte	'Ifx_SCU_EIFILT_Bits',0,11,254,2,3
-	.word	15371
+	.word	15379
 	.byte	10
 	.byte	'_Ifx_SCU_EIFR_Bits',0,11,129,3,16,4,11
 	.byte	'INTF0',0,1
@@ -2682,7 +2686,7 @@ BUTTON_PINS:	.type	object
 	.word	408
 	.byte	24,0,2,35,0,0,23
 	.byte	'Ifx_SCU_EIFR_Bits',0,11,140,3,3
-	.word	15810
+	.word	15818
 	.byte	10
 	.byte	'_Ifx_SCU_EISR_Bits',0,11,143,3,16,4,11
 	.byte	'AE',0,1
@@ -2710,7 +2714,7 @@ BUTTON_PINS:	.type	object
 	.word	448
 	.byte	16,0,2,35,2,0,23
 	.byte	'Ifx_SCU_EISR_Bits',0,11,153,3,3
-	.word	16021
+	.word	16029
 	.byte	10
 	.byte	'_Ifx_SCU_EMSR_Bits',0,11,156,3,16,4,11
 	.byte	'POL',0,1
@@ -2738,7 +2742,7 @@ BUTTON_PINS:	.type	object
 	.word	448
 	.byte	14,0,2,35,2,0,23
 	.byte	'Ifx_SCU_EMSR_Bits',0,11,166,3,3
-	.word	16197
+	.word	16205
 	.byte	10
 	.byte	'_Ifx_SCU_EMSSW_Bits',0,11,169,3,16,4,11
 	.byte	'reserved_0',0,4
@@ -2754,7 +2758,7 @@ BUTTON_PINS:	.type	object
 	.word	431
 	.byte	4,0,2,35,3,0,23
 	.byte	'Ifx_SCU_EMSSW_Bits',0,11,175,3,3
-	.word	16391
+	.word	16399
 	.byte	10
 	.byte	'_Ifx_SCU_ESRCFGX_ESRCFGX_Bits',0,11,178,3,16,4,11
 	.byte	'reserved_0',0,1
@@ -2767,7 +2771,7 @@ BUTTON_PINS:	.type	object
 	.word	408
 	.byte	23,0,2,35,0,0,23
 	.byte	'Ifx_SCU_ESRCFGX_ESRCFGX_Bits',0,11,183,3,3
-	.word	16526
+	.word	16534
 	.byte	10
 	.byte	'_Ifx_SCU_ESROCFG_Bits',0,11,186,3,16,4,11
 	.byte	'ARI',0,1
@@ -2780,7 +2784,7 @@ BUTTON_PINS:	.type	object
 	.word	408
 	.byte	30,0,2,35,0,0,23
 	.byte	'Ifx_SCU_ESROCFG_Bits',0,11,191,3,3
-	.word	16662
+	.word	16670
 	.byte	10
 	.byte	'_Ifx_SCU_EXTCON_Bits',0,11,194,3,16,4,11
 	.byte	'EN0',0,1
@@ -2811,7 +2815,7 @@ BUTTON_PINS:	.type	object
 	.word	431
 	.byte	8,0,2,35,3,0,23
 	.byte	'Ifx_SCU_EXTCON_Bits',0,11,205,3,3
-	.word	16773
+	.word	16781
 	.byte	10
 	.byte	'_Ifx_SCU_FDR_Bits',0,11,208,3,16,4,11
 	.byte	'STEP',0,2
@@ -2833,7 +2837,7 @@ BUTTON_PINS:	.type	object
 	.word	431
 	.byte	1,0,2,35,3,0,23
 	.byte	'Ifx_SCU_FDR_Bits',0,11,216,3,3
-	.word	16991
+	.word	16999
 	.byte	10
 	.byte	'_Ifx_SCU_FMR_Bits',0,11,219,3,16,4,11
 	.byte	'FS0',0,1
@@ -2891,7 +2895,7 @@ BUTTON_PINS:	.type	object
 	.word	431
 	.byte	8,0,2,35,3,0,23
 	.byte	'Ifx_SCU_FMR_Bits',0,11,239,3,3
-	.word	17154
+	.word	17162
 	.byte	10
 	.byte	'_Ifx_SCU_ID_Bits',0,11,242,3,16,4,11
 	.byte	'MODREV',0,1
@@ -2904,7 +2908,7 @@ BUTTON_PINS:	.type	object
 	.word	448
 	.byte	16,0,2,35,2,0,23
 	.byte	'Ifx_SCU_ID_Bits',0,11,247,3,3
-	.word	17490
+	.word	17498
 	.byte	10
 	.byte	'_Ifx_SCU_IGCR_Bits',0,11,250,3,16,4,11
 	.byte	'IPEN00',0,1
@@ -2974,7 +2978,7 @@ BUTTON_PINS:	.type	object
 	.word	431
 	.byte	2,0,2,35,3,0,23
 	.byte	'Ifx_SCU_IGCR_Bits',0,11,146,4,3
-	.word	17597
+	.word	17605
 	.byte	10
 	.byte	'_Ifx_SCU_IN_Bits',0,11,149,4,16,4,11
 	.byte	'P0',0,1
@@ -2987,7 +2991,7 @@ BUTTON_PINS:	.type	object
 	.word	408
 	.byte	30,0,2,35,0,0,23
 	.byte	'Ifx_SCU_IN_Bits',0,11,154,4,3
-	.word	18049
+	.word	18057
 	.byte	10
 	.byte	'_Ifx_SCU_IOCR_Bits',0,11,157,4,16,4,11
 	.byte	'reserved_0',0,1
@@ -3006,7 +3010,7 @@ BUTTON_PINS:	.type	object
 	.word	448
 	.byte	16,0,2,35,2,0,23
 	.byte	'Ifx_SCU_IOCR_Bits',0,11,164,4,3
-	.word	18148
+	.word	18156
 	.byte	10
 	.byte	'_Ifx_SCU_LBISTCTRL0_Bits',0,11,167,4,16,4,11
 	.byte	'LBISTREQ',0,1
@@ -3034,7 +3038,7 @@ BUTTON_PINS:	.type	object
 	.word	431
 	.byte	1,0,2,35,3,0,23
 	.byte	'Ifx_SCU_LBISTCTRL0_Bits',0,11,177,4,3
-	.word	18298
+	.word	18306
 	.byte	10
 	.byte	'_Ifx_SCU_LBISTCTRL1_Bits',0,11,180,4,16,4,11
 	.byte	'SEED',0,4
@@ -3053,7 +3057,7 @@ BUTTON_PINS:	.type	object
 	.word	431
 	.byte	4,0,2,35,3,0,23
 	.byte	'Ifx_SCU_LBISTCTRL1_Bits',0,11,187,4,3
-	.word	18536
+	.word	18544
 	.byte	10
 	.byte	'_Ifx_SCU_LBISTCTRL2_Bits',0,11,190,4,16,4,11
 	.byte	'LENGTH',0,2
@@ -3063,14 +3067,14 @@ BUTTON_PINS:	.type	object
 	.word	408
 	.byte	20,0,2,35,0,0,23
 	.byte	'Ifx_SCU_LBISTCTRL2_Bits',0,11,194,4,3
-	.word	18697
+	.word	18705
 	.byte	10
 	.byte	'_Ifx_SCU_LBISTCTRL3_Bits',0,11,197,4,16,4,11
 	.byte	'SIGNATURE',0,4
 	.word	408
 	.byte	32,0,2,35,0,0,23
 	.byte	'Ifx_SCU_LBISTCTRL3_Bits',0,11,200,4,3
-	.word	18803
+	.word	18811
 	.byte	10
 	.byte	'_Ifx_SCU_LCLCON0_Bits',0,11,203,4,16,4,11
 	.byte	'reserved_0',0,1
@@ -3092,7 +3096,7 @@ BUTTON_PINS:	.type	object
 	.word	431
 	.byte	1,0,2,35,3,0,23
 	.byte	'Ifx_SCU_LCLCON0_Bits',0,11,211,4,3
-	.word	18889
+	.word	18897
 	.byte	10
 	.byte	'_Ifx_SCU_LCLCON1_Bits',0,11,214,4,16,4,11
 	.byte	'reserved_0',0,1
@@ -3114,7 +3118,7 @@ BUTTON_PINS:	.type	object
 	.word	431
 	.byte	1,0,2,35,3,0,23
 	.byte	'Ifx_SCU_LCLCON1_Bits',0,11,222,4,3
-	.word	19070
+	.word	19078
 	.byte	10
 	.byte	'_Ifx_SCU_LCLTEST_Bits',0,11,225,4,16,4,11
 	.byte	'LCLT0',0,1
@@ -3160,7 +3164,7 @@ BUTTON_PINS:	.type	object
 	.word	448
 	.byte	10,0,2,35,2,0,23
 	.byte	'Ifx_SCU_LCLTEST_Bits',0,11,241,4,3
-	.word	19251
+	.word	19259
 	.byte	10
 	.byte	'_Ifx_SCU_MANID_Bits',0,11,244,4,16,4,11
 	.byte	'DEPT',0,1
@@ -3173,7 +3177,7 @@ BUTTON_PINS:	.type	object
 	.word	448
 	.byte	16,0,2,35,2,0,23
 	.byte	'Ifx_SCU_MANID_Bits',0,11,249,4,3
-	.word	19595
+	.word	19603
 	.byte	10
 	.byte	'_Ifx_SCU_OMR_Bits',0,11,252,4,16,4,11
 	.byte	'PS0',0,1
@@ -3195,7 +3199,7 @@ BUTTON_PINS:	.type	object
 	.word	448
 	.byte	14,0,2,35,2,0,23
 	.byte	'Ifx_SCU_OMR_Bits',0,11,132,5,3
-	.word	19706
+	.word	19714
 	.byte	10
 	.byte	'_Ifx_SCU_OSCCON_Bits',0,11,135,5,16,4,11
 	.byte	'reserved_0',0,1
@@ -3256,7 +3260,7 @@ BUTTON_PINS:	.type	object
 	.word	431
 	.byte	4,0,2,35,3,0,23
 	.byte	'Ifx_SCU_OSCCON_Bits',0,11,156,5,3
-	.word	19864
+	.word	19872
 	.byte	10
 	.byte	'_Ifx_SCU_OUT_Bits',0,11,159,5,16,4,11
 	.byte	'P0',0,1
@@ -3269,7 +3273,7 @@ BUTTON_PINS:	.type	object
 	.word	408
 	.byte	30,0,2,35,0,0,23
 	.byte	'Ifx_SCU_OUT_Bits',0,11,164,5,3
-	.word	20275
+	.word	20283
 	.byte	10
 	.byte	'_Ifx_SCU_OVCCON_Bits',0,11,167,5,16,4,11
 	.byte	'CSEL0',0,1
@@ -3315,7 +3319,7 @@ BUTTON_PINS:	.type	object
 	.word	431
 	.byte	6,0,2,35,3,0,23
 	.byte	'Ifx_SCU_OVCCON_Bits',0,11,183,5,3
-	.word	20376
+	.word	20384
 	.byte	10
 	.byte	'_Ifx_SCU_OVCENABLE_Bits',0,11,186,5,16,4,11
 	.byte	'OVEN0',0,1
@@ -3340,7 +3344,7 @@ BUTTON_PINS:	.type	object
 	.word	408
 	.byte	26,0,2,35,0,0,23
 	.byte	'Ifx_SCU_OVCENABLE_Bits',0,11,195,5,3
-	.word	20709
+	.word	20717
 	.byte	10
 	.byte	'_Ifx_SCU_PDISC_Bits',0,11,198,5,16,4,11
 	.byte	'PDIS0',0,1
@@ -3353,7 +3357,7 @@ BUTTON_PINS:	.type	object
 	.word	408
 	.byte	30,0,2,35,0,0,23
 	.byte	'Ifx_SCU_PDISC_Bits',0,11,203,5,3
-	.word	20911
+	.word	20919
 	.byte	10
 	.byte	'_Ifx_SCU_PDR_Bits',0,11,206,5,16,4,11
 	.byte	'PD0',0,1
@@ -3372,7 +3376,7 @@ BUTTON_PINS:	.type	object
 	.word	408
 	.byte	24,0,2,35,0,0,23
 	.byte	'Ifx_SCU_PDR_Bits',0,11,213,5,3
-	.word	21022
+	.word	21030
 	.byte	10
 	.byte	'_Ifx_SCU_PDRR_Bits',0,11,216,5,16,4,11
 	.byte	'PDR0',0,1
@@ -3403,7 +3407,7 @@ BUTTON_PINS:	.type	object
 	.word	408
 	.byte	24,0,2,35,0,0,23
 	.byte	'Ifx_SCU_PDRR_Bits',0,11,227,5,3
-	.word	21155
+	.word	21163
 	.byte	10
 	.byte	'_Ifx_SCU_PERPLLCON0_Bits',0,11,230,5,16,4,11
 	.byte	'DIVBY',0,1
@@ -3434,7 +3438,7 @@ BUTTON_PINS:	.type	object
 	.word	431
 	.byte	5,0,2,35,3,0,23
 	.byte	'Ifx_SCU_PERPLLCON0_Bits',0,11,241,5,3
-	.word	21358
+	.word	21366
 	.byte	10
 	.byte	'_Ifx_SCU_PERPLLCON1_Bits',0,11,244,5,16,4,11
 	.byte	'K2DIV',0,1
@@ -3450,7 +3454,7 @@ BUTTON_PINS:	.type	object
 	.word	408
 	.byte	21,0,2,35,0,0,23
 	.byte	'Ifx_SCU_PERPLLCON1_Bits',0,11,250,5,3
-	.word	21598
+	.word	21606
 	.byte	10
 	.byte	'_Ifx_SCU_PERPLLSTAT_Bits',0,11,253,5,16,4,11
 	.byte	'reserved_0',0,1
@@ -3478,7 +3482,7 @@ BUTTON_PINS:	.type	object
 	.word	408
 	.byte	25,0,2,35,0,0,23
 	.byte	'Ifx_SCU_PERPLLSTAT_Bits',0,11,135,6,3
-	.word	21742
+	.word	21750
 	.byte	10
 	.byte	'_Ifx_SCU_PMCSR0_Bits',0,11,138,6,16,4,11
 	.byte	'REQSLP',0,1
@@ -3494,7 +3498,7 @@ BUTTON_PINS:	.type	object
 	.word	408
 	.byte	21,0,2,35,0,0,23
 	.byte	'Ifx_SCU_PMCSR0_Bits',0,11,144,6,3
-	.word	21964
+	.word	21972
 	.byte	10
 	.byte	'_Ifx_SCU_PMCSR1_Bits',0,11,147,6,16,4,11
 	.byte	'REQSLP',0,1
@@ -3510,7 +3514,7 @@ BUTTON_PINS:	.type	object
 	.word	408
 	.byte	21,0,2,35,0,0,23
 	.byte	'Ifx_SCU_PMCSR1_Bits',0,11,153,6,3
-	.word	22100
+	.word	22108
 	.byte	10
 	.byte	'_Ifx_SCU_PMCSR2_Bits',0,11,156,6,16,4,11
 	.byte	'REQSLP',0,1
@@ -3526,7 +3530,7 @@ BUTTON_PINS:	.type	object
 	.word	408
 	.byte	21,0,2,35,0,0,23
 	.byte	'Ifx_SCU_PMCSR2_Bits',0,11,162,6,3
-	.word	22236
+	.word	22244
 	.byte	10
 	.byte	'_Ifx_SCU_PMCSR3_Bits',0,11,165,6,16,4,11
 	.byte	'REQSLP',0,1
@@ -3542,7 +3546,7 @@ BUTTON_PINS:	.type	object
 	.word	408
 	.byte	21,0,2,35,0,0,23
 	.byte	'Ifx_SCU_PMCSR3_Bits',0,11,171,6,3
-	.word	22372
+	.word	22380
 	.byte	10
 	.byte	'_Ifx_SCU_PMCSR4_Bits',0,11,174,6,16,4,11
 	.byte	'REQSLP',0,1
@@ -3558,7 +3562,7 @@ BUTTON_PINS:	.type	object
 	.word	408
 	.byte	21,0,2,35,0,0,23
 	.byte	'Ifx_SCU_PMCSR4_Bits',0,11,180,6,3
-	.word	22508
+	.word	22516
 	.byte	10
 	.byte	'_Ifx_SCU_PMCSR5_Bits',0,11,183,6,16,4,11
 	.byte	'REQSLP',0,1
@@ -3574,7 +3578,7 @@ BUTTON_PINS:	.type	object
 	.word	408
 	.byte	21,0,2,35,0,0,23
 	.byte	'Ifx_SCU_PMCSR5_Bits',0,11,189,6,3
-	.word	22644
+	.word	22652
 	.byte	10
 	.byte	'_Ifx_SCU_PMSTAT0_Bits',0,11,192,6,16,4,11
 	.byte	'CPU0',0,1
@@ -3614,7 +3618,7 @@ BUTTON_PINS:	.type	object
 	.word	448
 	.byte	12,0,2,35,2,0,23
 	.byte	'Ifx_SCU_PMSTAT0_Bits',0,11,206,6,3
-	.word	22780
+	.word	22788
 	.byte	10
 	.byte	'_Ifx_SCU_PMSWCR1_Bits',0,11,209,6,16,4,11
 	.byte	'reserved_0',0,1
@@ -3645,7 +3649,7 @@ BUTTON_PINS:	.type	object
 	.word	431
 	.byte	1,0,2,35,3,0,23
 	.byte	'Ifx_SCU_PMSWCR1_Bits',0,11,220,6,3
-	.word	23052
+	.word	23060
 	.byte	10
 	.byte	'_Ifx_SCU_PMTRCSR0_Bits',0,11,223,6,16,4,11
 	.byte	'LJTEN',0,1
@@ -3700,7 +3704,7 @@ BUTTON_PINS:	.type	object
 	.word	431
 	.byte	2,0,2,35,3,0,23
 	.byte	'Ifx_SCU_PMTRCSR0_Bits',0,11,242,6,3
-	.word	23297
+	.word	23305
 	.byte	10
 	.byte	'_Ifx_SCU_PMTRCSR1_Bits',0,11,245,6,16,4,11
 	.byte	'LJTCV',0,2
@@ -3713,7 +3717,7 @@ BUTTON_PINS:	.type	object
 	.word	431
 	.byte	6,0,2,35,3,0,23
 	.byte	'Ifx_SCU_PMTRCSR1_Bits',0,11,250,6,3
-	.word	23685
+	.word	23693
 	.byte	10
 	.byte	'_Ifx_SCU_PMTRCSR2_Bits',0,11,253,6,16,4,11
 	.byte	'LDJMPREQ',0,1
@@ -3744,7 +3748,7 @@ BUTTON_PINS:	.type	object
 	.word	448
 	.byte	16,0,2,35,2,0,23
 	.byte	'Ifx_SCU_PMTRCSR2_Bits',0,11,136,7,3
-	.word	23803
+	.word	23811
 	.byte	10
 	.byte	'_Ifx_SCU_PMTRCSR3_Bits',0,11,139,7,16,4,11
 	.byte	'VDROOPREQ',0,1
@@ -3778,7 +3782,7 @@ BUTTON_PINS:	.type	object
 	.word	431
 	.byte	6,0,2,35,3,0,23
 	.byte	'Ifx_SCU_PMTRCSR3_Bits',0,11,151,7,3
-	.word	24046
+	.word	24054
 	.byte	10
 	.byte	'_Ifx_SCU_RSTCON_Bits',0,11,154,7,16,4,11
 	.byte	'ESR0',0,1
@@ -3818,7 +3822,7 @@ BUTTON_PINS:	.type	object
 	.word	448
 	.byte	10,0,2,35,2,0,23
 	.byte	'Ifx_SCU_RSTCON_Bits',0,11,168,7,3
-	.word	24313
+	.word	24321
 	.byte	10
 	.byte	'_Ifx_SCU_RSTCON2_Bits',0,11,171,7,16,4,11
 	.byte	'FRTO',0,1
@@ -3858,14 +3862,14 @@ BUTTON_PINS:	.type	object
 	.word	448
 	.byte	16,0,2,35,2,0,23
 	.byte	'Ifx_SCU_RSTCON2_Bits',0,11,185,7,3
-	.word	24593
+	.word	24601
 	.byte	10
 	.byte	'_Ifx_SCU_RSTCON3_Bits',0,11,188,7,16,4,11
 	.byte	'reserved_0',0,4
 	.word	408
 	.byte	32,0,2,35,0,0,23
 	.byte	'Ifx_SCU_RSTCON3_Bits',0,11,191,7,3
-	.word	24898
+	.word	24906
 	.byte	10
 	.byte	'_Ifx_SCU_RSTSTAT_Bits',0,11,194,7,16,4,11
 	.byte	'ESR0',0,1
@@ -3953,23 +3957,23 @@ BUTTON_PINS:	.type	object
 	.word	431
 	.byte	1,0,2,35,3,0,23
 	.byte	'Ifx_SCU_RSTSTAT_Bits',0,11,224,7,3
-	.word	24979
+	.word	24987
 	.byte	10
 	.byte	'_Ifx_SCU_SEICON0_Bits',0,11,227,7,16,4,11
 	.byte	'reserved_0',0,4
-	.word	14674
+	.word	14682
 	.byte	1,31,2,35,0,11
 	.byte	'ENDINIT',0,4
-	.word	14674
+	.word	14682
 	.byte	1,30,2,35,0,11
 	.byte	'EPW',0,4
-	.word	14674
+	.word	14682
 	.byte	14,16,2,35,0,11
 	.byte	'REL',0,4
-	.word	14674
+	.word	14682
 	.byte	16,0,2,35,0,0,23
 	.byte	'Ifx_SCU_SEICON0_Bits',0,11,233,7,3
-	.word	25547
+	.word	25555
 	.byte	10
 	.byte	'_Ifx_SCU_SEICON1_Bits',0,11,236,7,16,4,11
 	.byte	'reserved_0',0,1
@@ -3994,7 +3998,7 @@ BUTTON_PINS:	.type	object
 	.word	408
 	.byte	26,0,2,35,0,0,23
 	.byte	'Ifx_SCU_SEICON1_Bits',0,11,245,7,3
-	.word	25677
+	.word	25685
 	.byte	10
 	.byte	'_Ifx_SCU_SEISR_Bits',0,11,248,7,16,4,11
 	.byte	'AE',0,1
@@ -4022,7 +4026,7 @@ BUTTON_PINS:	.type	object
 	.word	448
 	.byte	16,0,2,35,2,0,23
 	.byte	'Ifx_SCU_SEISR_Bits',0,11,130,8,3
-	.word	25868
+	.word	25876
 	.byte	10
 	.byte	'_Ifx_SCU_STCON_Bits',0,11,133,8,16,4,11
 	.byte	'reserved_0',0,2
@@ -4041,49 +4045,49 @@ BUTTON_PINS:	.type	object
 	.word	448
 	.byte	16,0,2,35,2,0,23
 	.byte	'Ifx_SCU_STCON_Bits',0,11,140,8,3
-	.word	26046
+	.word	26054
 	.byte	10
 	.byte	'_Ifx_SCU_STMEM1_Bits',0,11,143,8,16,4,11
 	.byte	'MEM',0,4
 	.word	408
 	.byte	32,0,2,35,0,0,23
 	.byte	'Ifx_SCU_STMEM1_Bits',0,11,146,8,3
-	.word	26197
+	.word	26205
 	.byte	10
 	.byte	'_Ifx_SCU_STMEM2_Bits',0,11,149,8,16,4,11
 	.byte	'MEM',0,4
 	.word	408
 	.byte	32,0,2,35,0,0,23
 	.byte	'Ifx_SCU_STMEM2_Bits',0,11,152,8,3
-	.word	26269
+	.word	26277
 	.byte	10
 	.byte	'_Ifx_SCU_STMEM3_Bits',0,11,155,8,16,4,11
 	.byte	'MEM',0,4
 	.word	408
 	.byte	32,0,2,35,0,0,23
 	.byte	'Ifx_SCU_STMEM3_Bits',0,11,158,8,3
-	.word	26341
+	.word	26349
 	.byte	10
 	.byte	'_Ifx_SCU_STMEM4_Bits',0,11,161,8,16,4,11
 	.byte	'MEM',0,4
 	.word	408
 	.byte	32,0,2,35,0,0,23
 	.byte	'Ifx_SCU_STMEM4_Bits',0,11,164,8,3
-	.word	26413
+	.word	26421
 	.byte	10
 	.byte	'_Ifx_SCU_STMEM5_Bits',0,11,167,8,16,4,11
 	.byte	'MEM',0,4
 	.word	408
 	.byte	32,0,2,35,0,0,23
 	.byte	'Ifx_SCU_STMEM5_Bits',0,11,170,8,3
-	.word	26485
+	.word	26493
 	.byte	10
 	.byte	'_Ifx_SCU_STMEM6_Bits',0,11,173,8,16,4,11
 	.byte	'MEM',0,4
 	.word	408
 	.byte	32,0,2,35,0,0,23
 	.byte	'Ifx_SCU_STMEM6_Bits',0,11,176,8,3
-	.word	26557
+	.word	26565
 	.byte	10
 	.byte	'_Ifx_SCU_STSTAT_Bits',0,11,179,8,16,4,11
 	.byte	'HWCFG',0,1
@@ -4129,7 +4133,7 @@ BUTTON_PINS:	.type	object
 	.word	431
 	.byte	4,0,2,35,3,0,23
 	.byte	'Ifx_SCU_STSTAT_Bits',0,11,195,8,3
-	.word	26629
+	.word	26637
 	.byte	10
 	.byte	'_Ifx_SCU_SWAPCTRL_Bits',0,11,198,8,16,4,11
 	.byte	'ADDRCFG',0,1
@@ -4142,7 +4146,7 @@ BUTTON_PINS:	.type	object
 	.word	448
 	.byte	16,0,2,35,2,0,23
 	.byte	'Ifx_SCU_SWAPCTRL_Bits',0,11,203,8,3
-	.word	26958
+	.word	26966
 	.byte	10
 	.byte	'_Ifx_SCU_SWRSTCON_Bits',0,11,206,8,16,4,11
 	.byte	'reserved_0',0,1
@@ -4161,7 +4165,7 @@ BUTTON_PINS:	.type	object
 	.word	448
 	.byte	16,0,2,35,2,0,23
 	.byte	'Ifx_SCU_SWRSTCON_Bits',0,11,213,8,3
-	.word	27078
+	.word	27086
 	.byte	10
 	.byte	'_Ifx_SCU_SYSCON_Bits',0,11,216,8,16,4,11
 	.byte	'CCTRIG0',0,1
@@ -4195,7 +4199,7 @@ BUTTON_PINS:	.type	object
 	.word	448
 	.byte	16,0,2,35,2,0,23
 	.byte	'Ifx_SCU_SYSCON_Bits',0,11,228,8,3
-	.word	27248
+	.word	27256
 	.byte	10
 	.byte	'_Ifx_SCU_SYSPLLCON0_Bits',0,11,231,8,16,4,11
 	.byte	'reserved_0',0,1
@@ -4232,7 +4236,7 @@ BUTTON_PINS:	.type	object
 	.word	431
 	.byte	2,0,2,35,3,0,23
 	.byte	'Ifx_SCU_SYSPLLCON0_Bits',0,11,244,8,3
-	.word	27511
+	.word	27519
 	.byte	10
 	.byte	'_Ifx_SCU_SYSPLLCON1_Bits',0,11,247,8,16,4,11
 	.byte	'K2DIV',0,1
@@ -4242,7 +4246,7 @@ BUTTON_PINS:	.type	object
 	.word	408
 	.byte	29,0,2,35,0,0,23
 	.byte	'Ifx_SCU_SYSPLLCON1_Bits',0,11,251,8,3
-	.word	27790
+	.word	27798
 	.byte	10
 	.byte	'_Ifx_SCU_SYSPLLCON2_Bits',0,11,254,8,16,4,11
 	.byte	'MODCFG',0,2
@@ -4252,7 +4256,7 @@ BUTTON_PINS:	.type	object
 	.word	448
 	.byte	16,0,2,35,2,0,23
 	.byte	'Ifx_SCU_SYSPLLCON2_Bits',0,11,130,9,3
-	.word	27894
+	.word	27902
 	.byte	10
 	.byte	'_Ifx_SCU_SYSPLLSTAT_Bits',0,11,133,9,16,4,11
 	.byte	'reserved_0',0,1
@@ -4280,7 +4284,7 @@ BUTTON_PINS:	.type	object
 	.word	408
 	.byte	24,0,2,35,0,0,23
 	.byte	'Ifx_SCU_SYSPLLSTAT_Bits',0,11,143,9,3
-	.word	28000
+	.word	28008
 	.byte	10
 	.byte	'_Ifx_SCU_TRAPCLR_Bits',0,11,146,9,16,4,11
 	.byte	'ESR0T',0,1
@@ -4299,7 +4303,7 @@ BUTTON_PINS:	.type	object
 	.word	408
 	.byte	28,0,2,35,0,0,23
 	.byte	'Ifx_SCU_TRAPCLR_Bits',0,11,153,9,3
-	.word	28223
+	.word	28231
 	.byte	10
 	.byte	'_Ifx_SCU_TRAPDIS0_Bits',0,11,156,9,16,4,11
 	.byte	'CPU0ESR0T',0,1
@@ -4354,7 +4358,7 @@ BUTTON_PINS:	.type	object
 	.word	431
 	.byte	4,0,2,35,3,0,23
 	.byte	'Ifx_SCU_TRAPDIS0_Bits',0,11,175,9,3
-	.word	28371
+	.word	28379
 	.byte	10
 	.byte	'_Ifx_SCU_TRAPDIS1_Bits',0,11,178,9,16,4,11
 	.byte	'reserved_0',0,1
@@ -4373,7 +4377,7 @@ BUTTON_PINS:	.type	object
 	.word	448
 	.byte	16,0,2,35,2,0,23
 	.byte	'Ifx_SCU_TRAPDIS1_Bits',0,11,185,9,3
-	.word	28798
+	.word	28806
 	.byte	10
 	.byte	'_Ifx_SCU_TRAPSET_Bits',0,11,188,9,16,4,11
 	.byte	'ESR0T',0,1
@@ -4392,7 +4396,7 @@ BUTTON_PINS:	.type	object
 	.word	408
 	.byte	28,0,2,35,0,0,23
 	.byte	'Ifx_SCU_TRAPSET_Bits',0,11,195,9,3
-	.word	28971
+	.word	28979
 	.byte	10
 	.byte	'_Ifx_SCU_TRAPSTAT_Bits',0,11,198,9,16,4,11
 	.byte	'ESR0T',0,1
@@ -4411,23 +4415,23 @@ BUTTON_PINS:	.type	object
 	.word	408
 	.byte	28,0,2,35,0,0,23
 	.byte	'Ifx_SCU_TRAPSTAT_Bits',0,11,205,9,3
-	.word	29119
+	.word	29127
 	.byte	10
 	.byte	'_Ifx_SCU_WDTCPU_CON0_Bits',0,11,208,9,16,4,11
 	.byte	'ENDINIT',0,4
-	.word	14674
+	.word	14682
 	.byte	1,31,2,35,0,11
 	.byte	'LCK',0,4
-	.word	14674
+	.word	14682
 	.byte	1,30,2,35,0,11
 	.byte	'PW',0,4
-	.word	14674
+	.word	14682
 	.byte	14,16,2,35,0,11
 	.byte	'REL',0,4
-	.word	14674
+	.word	14682
 	.byte	16,0,2,35,0,0,23
 	.byte	'Ifx_SCU_WDTCPU_CON0_Bits',0,11,214,9,3
-	.word	29269
+	.word	29277
 	.byte	10
 	.byte	'_Ifx_SCU_WDTCPU_CON1_Bits',0,11,217,9,16,4,11
 	.byte	'reserved_0',0,1
@@ -4464,7 +4468,7 @@ BUTTON_PINS:	.type	object
 	.word	448
 	.byte	16,0,2,35,2,0,23
 	.byte	'Ifx_SCU_WDTCPU_CON1_Bits',0,11,230,9,3
-	.word	29399
+	.word	29407
 	.byte	10
 	.byte	'_Ifx_SCU_WDTCPU_SR_Bits',0,11,233,9,16,4,11
 	.byte	'AE',0,1
@@ -4501,23 +4505,23 @@ BUTTON_PINS:	.type	object
 	.word	448
 	.byte	16,0,2,35,2,0,23
 	.byte	'Ifx_SCU_WDTCPU_SR_Bits',0,11,246,9,3
-	.word	29659
+	.word	29667
 	.byte	10
 	.byte	'_Ifx_SCU_WDTS_CON0_Bits',0,11,249,9,16,4,11
 	.byte	'ENDINIT',0,4
-	.word	14674
+	.word	14682
 	.byte	1,31,2,35,0,11
 	.byte	'LCK',0,4
-	.word	14674
+	.word	14682
 	.byte	1,30,2,35,0,11
 	.byte	'PW',0,4
-	.word	14674
+	.word	14682
 	.byte	14,16,2,35,0,11
 	.byte	'REL',0,4
-	.word	14674
+	.word	14682
 	.byte	16,0,2,35,0,0,23
 	.byte	'Ifx_SCU_WDTS_CON0_Bits',0,11,255,9,3
-	.word	29882
+	.word	29890
 	.byte	10
 	.byte	'_Ifx_SCU_WDTS_CON1_Bits',0,11,130,10,16,4,11
 	.byte	'CLRIRF',0,1
@@ -4554,7 +4558,7 @@ BUTTON_PINS:	.type	object
 	.word	448
 	.byte	16,0,2,35,2,0,23
 	.byte	'Ifx_SCU_WDTS_CON1_Bits',0,11,143,10,3
-	.word	30008
+	.word	30016
 	.byte	10
 	.byte	'_Ifx_SCU_WDTS_SR_Bits',0,11,146,10,16,4,11
 	.byte	'AE',0,1
@@ -4591,7 +4595,7 @@ BUTTON_PINS:	.type	object
 	.word	448
 	.byte	16,0,2,35,2,0,23
 	.byte	'Ifx_SCU_WDTS_SR_Bits',0,11,159,10,3
-	.word	30260
+	.word	30268
 	.byte	12,11,167,10,9,4,13
 	.byte	'U',0
 	.word	408
@@ -4600,10 +4604,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	10734
+	.word	10742
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_ACCEN00',0,11,172,10,3
-	.word	30479
+	.word	30487
 	.byte	12,11,175,10,9,4,13
 	.byte	'U',0
 	.word	408
@@ -4612,10 +4616,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	11293
+	.word	11301
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_ACCEN01',0,11,180,10,3
-	.word	30544
+	.word	30552
 	.byte	12,11,183,10,9,4,13
 	.byte	'U',0
 	.word	408
@@ -4624,10 +4628,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	11372
+	.word	11380
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_ACCEN10',0,11,188,10,3
-	.word	30609
+	.word	30617
 	.byte	12,11,191,10,9,4,13
 	.byte	'U',0
 	.word	408
@@ -4636,10 +4640,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	11932
+	.word	11940
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_ACCEN11',0,11,196,10,3
-	.word	30674
+	.word	30682
 	.byte	12,11,199,10,9,4,13
 	.byte	'U',0
 	.word	408
@@ -4648,10 +4652,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	12013
+	.word	12021
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_ARSTDIS',0,11,204,10,3
-	.word	30739
+	.word	30747
 	.byte	12,11,207,10,9,4,13
 	.byte	'U',0
 	.word	408
@@ -4660,10 +4664,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	12239
+	.word	12247
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_CCUCON0',0,11,212,10,3
-	.word	30804
+	.word	30812
 	.byte	12,11,215,10,9,4,13
 	.byte	'U',0
 	.word	408
@@ -4672,10 +4676,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	12512
+	.word	12520
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_CCUCON1',0,11,220,10,3
-	.word	30869
+	.word	30877
 	.byte	12,11,223,10,9,4,13
 	.byte	'U',0
 	.word	408
@@ -4684,10 +4688,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	12838
+	.word	12846
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_CCUCON2',0,11,228,10,3
-	.word	30934
+	.word	30942
 	.byte	12,11,231,10,9,4,13
 	.byte	'U',0
 	.word	408
@@ -4696,10 +4700,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	13116
+	.word	13124
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_CCUCON3',0,11,236,10,3
-	.word	30999
+	.word	31007
 	.byte	12,11,239,10,9,4,13
 	.byte	'U',0
 	.word	408
@@ -4708,10 +4712,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	13485
+	.word	13493
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_CCUCON4',0,11,244,10,3
-	.word	31064
+	.word	31072
 	.byte	12,11,247,10,9,4,13
 	.byte	'U',0
 	.word	408
@@ -4720,10 +4724,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	13665
+	.word	13673
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_CCUCON5',0,11,252,10,3
-	.word	31129
+	.word	31137
 	.byte	12,11,255,10,9,4,13
 	.byte	'U',0
 	.word	408
@@ -4732,10 +4736,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	13837
+	.word	13845
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_CCUCON6',0,11,132,11,3
-	.word	31194
+	.word	31202
 	.byte	12,11,135,11,9,4,13
 	.byte	'U',0
 	.word	408
@@ -4744,10 +4748,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	13937
+	.word	13945
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_CCUCON7',0,11,140,11,3
-	.word	31259
+	.word	31267
 	.byte	12,11,143,11,9,4,13
 	.byte	'U',0
 	.word	408
@@ -4756,10 +4760,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	14037
+	.word	14045
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_CCUCON8',0,11,148,11,3
-	.word	31324
+	.word	31332
 	.byte	12,11,151,11,9,4,13
 	.byte	'U',0
 	.word	408
@@ -4768,10 +4772,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	14137
+	.word	14145
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_CHIPID',0,11,156,11,3
-	.word	31389
+	.word	31397
 	.byte	12,11,159,11,9,4,13
 	.byte	'U',0
 	.word	408
@@ -4780,10 +4784,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	14340
+	.word	14348
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_DTSCLIM',0,11,164,11,3
-	.word	31453
+	.word	31461
 	.byte	12,11,167,11,9,4,13
 	.byte	'U',0
 	.word	408
@@ -4792,10 +4796,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	14572
+	.word	14580
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_DTSCSTAT',0,11,172,11,3
-	.word	31518
+	.word	31526
 	.byte	12,11,175,11,9,4,13
 	.byte	'U',0
 	.word	408
@@ -4804,10 +4808,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	14690
+	.word	14698
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_EICON0',0,11,180,11,3
-	.word	31584
+	.word	31592
 	.byte	12,11,183,11,9,4,13
 	.byte	'U',0
 	.word	408
@@ -4816,10 +4820,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	14818
+	.word	14826
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_EICON1',0,11,188,11,3
-	.word	31648
+	.word	31656
 	.byte	12,11,191,11,9,4,13
 	.byte	'U',0
 	.word	408
@@ -4828,10 +4832,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	15007
+	.word	15015
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_EICR',0,11,196,11,3
-	.word	31712
+	.word	31720
 	.byte	12,11,199,11,9,4,13
 	.byte	'U',0
 	.word	408
@@ -4840,10 +4844,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	15371
+	.word	15379
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_EIFILT',0,11,204,11,3
-	.word	31774
+	.word	31782
 	.byte	12,11,207,11,9,4,13
 	.byte	'U',0
 	.word	408
@@ -4852,10 +4856,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	15810
+	.word	15818
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_EIFR',0,11,212,11,3
-	.word	31838
+	.word	31846
 	.byte	12,11,215,11,9,4,13
 	.byte	'U',0
 	.word	408
@@ -4864,10 +4868,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	16021
+	.word	16029
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_EISR',0,11,220,11,3
-	.word	31900
+	.word	31908
 	.byte	12,11,223,11,9,4,13
 	.byte	'U',0
 	.word	408
@@ -4876,10 +4880,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	16197
+	.word	16205
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_EMSR',0,11,228,11,3
-	.word	31962
+	.word	31970
 	.byte	12,11,231,11,9,4,13
 	.byte	'U',0
 	.word	408
@@ -4888,10 +4892,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	16391
+	.word	16399
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_EMSSW',0,11,236,11,3
-	.word	32024
+	.word	32032
 	.byte	12,11,239,11,9,4,13
 	.byte	'U',0
 	.word	408
@@ -4900,10 +4904,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	16526
+	.word	16534
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_ESRCFGX_ESRCFGX',0,11,244,11,3
-	.word	32087
+	.word	32095
 	.byte	12,11,247,11,9,4,13
 	.byte	'U',0
 	.word	408
@@ -4912,10 +4916,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	16662
+	.word	16670
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_ESROCFG',0,11,252,11,3
-	.word	32160
+	.word	32168
 	.byte	12,11,255,11,9,4,13
 	.byte	'U',0
 	.word	408
@@ -4924,10 +4928,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	16773
+	.word	16781
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_EXTCON',0,11,132,12,3
-	.word	32225
+	.word	32233
 	.byte	12,11,135,12,9,4,13
 	.byte	'U',0
 	.word	408
@@ -4936,10 +4940,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	16991
+	.word	16999
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_FDR',0,11,140,12,3
-	.word	32289
+	.word	32297
 	.byte	12,11,143,12,9,4,13
 	.byte	'U',0
 	.word	408
@@ -4948,10 +4952,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	17154
+	.word	17162
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_FMR',0,11,148,12,3
-	.word	32350
+	.word	32358
 	.byte	12,11,151,12,9,4,13
 	.byte	'U',0
 	.word	408
@@ -4960,10 +4964,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	17490
+	.word	17498
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_ID',0,11,156,12,3
-	.word	32411
+	.word	32419
 	.byte	12,11,159,12,9,4,13
 	.byte	'U',0
 	.word	408
@@ -4972,10 +4976,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	17597
+	.word	17605
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_IGCR',0,11,164,12,3
-	.word	32471
+	.word	32479
 	.byte	12,11,167,12,9,4,13
 	.byte	'U',0
 	.word	408
@@ -4984,10 +4988,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	18049
+	.word	18057
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_IN',0,11,172,12,3
-	.word	32533
+	.word	32541
 	.byte	12,11,175,12,9,4,13
 	.byte	'U',0
 	.word	408
@@ -4996,10 +5000,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	18148
+	.word	18156
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_IOCR',0,11,180,12,3
-	.word	32593
+	.word	32601
 	.byte	12,11,183,12,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5008,10 +5012,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	18298
+	.word	18306
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_LBISTCTRL0',0,11,188,12,3
-	.word	32655
+	.word	32663
 	.byte	12,11,191,12,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5020,10 +5024,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	18536
+	.word	18544
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_LBISTCTRL1',0,11,196,12,3
-	.word	32723
+	.word	32731
 	.byte	12,11,199,12,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5032,10 +5036,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	18697
+	.word	18705
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_LBISTCTRL2',0,11,204,12,3
-	.word	32791
+	.word	32799
 	.byte	12,11,207,12,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5044,10 +5048,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	18803
+	.word	18811
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_LBISTCTRL3',0,11,212,12,3
-	.word	32859
+	.word	32867
 	.byte	12,11,215,12,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5056,10 +5060,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	18889
+	.word	18897
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_LCLCON0',0,11,220,12,3
-	.word	32927
+	.word	32935
 	.byte	12,11,223,12,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5068,10 +5072,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	19070
+	.word	19078
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_LCLCON1',0,11,228,12,3
-	.word	32992
+	.word	33000
 	.byte	12,11,231,12,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5080,10 +5084,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	19251
+	.word	19259
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_LCLTEST',0,11,236,12,3
-	.word	33057
+	.word	33065
 	.byte	12,11,239,12,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5092,10 +5096,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	19595
+	.word	19603
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_MANID',0,11,244,12,3
-	.word	33122
+	.word	33130
 	.byte	12,11,247,12,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5104,10 +5108,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	19706
+	.word	19714
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_OMR',0,11,252,12,3
-	.word	33185
+	.word	33193
 	.byte	12,11,255,12,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5116,10 +5120,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	19864
+	.word	19872
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_OSCCON',0,11,132,13,3
-	.word	33246
+	.word	33254
 	.byte	12,11,135,13,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5128,10 +5132,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	20275
+	.word	20283
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_OUT',0,11,140,13,3
-	.word	33310
+	.word	33318
 	.byte	12,11,143,13,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5140,10 +5144,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	20376
+	.word	20384
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_OVCCON',0,11,148,13,3
-	.word	33371
+	.word	33379
 	.byte	12,11,151,13,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5152,10 +5156,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	20709
+	.word	20717
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_OVCENABLE',0,11,156,13,3
-	.word	33435
+	.word	33443
 	.byte	12,11,159,13,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5164,10 +5168,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	20911
+	.word	20919
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_PDISC',0,11,164,13,3
-	.word	33502
+	.word	33510
 	.byte	12,11,167,13,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5176,10 +5180,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	21022
+	.word	21030
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_PDR',0,11,172,13,3
-	.word	33565
+	.word	33573
 	.byte	12,11,175,13,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5188,10 +5192,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	21155
+	.word	21163
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_PDRR',0,11,180,13,3
-	.word	33626
+	.word	33634
 	.byte	12,11,183,13,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5200,10 +5204,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	21358
+	.word	21366
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_PERPLLCON0',0,11,188,13,3
-	.word	33688
+	.word	33696
 	.byte	12,11,191,13,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5212,10 +5216,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	21598
+	.word	21606
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_PERPLLCON1',0,11,196,13,3
-	.word	33756
+	.word	33764
 	.byte	12,11,199,13,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5224,10 +5228,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	21742
+	.word	21750
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_PERPLLSTAT',0,11,204,13,3
-	.word	33824
+	.word	33832
 	.byte	12,11,207,13,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5236,10 +5240,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	21964
+	.word	21972
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_PMCSR0',0,11,212,13,3
-	.word	33892
+	.word	33900
 	.byte	12,11,215,13,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5248,10 +5252,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	22100
+	.word	22108
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_PMCSR1',0,11,220,13,3
-	.word	33956
+	.word	33964
 	.byte	12,11,223,13,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5260,10 +5264,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	22236
+	.word	22244
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_PMCSR2',0,11,228,13,3
-	.word	34020
+	.word	34028
 	.byte	12,11,231,13,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5272,10 +5276,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	22372
+	.word	22380
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_PMCSR3',0,11,236,13,3
-	.word	34084
+	.word	34092
 	.byte	12,11,239,13,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5284,10 +5288,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	22508
+	.word	22516
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_PMCSR4',0,11,244,13,3
-	.word	34148
+	.word	34156
 	.byte	12,11,247,13,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5296,10 +5300,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	22644
+	.word	22652
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_PMCSR5',0,11,252,13,3
-	.word	34212
+	.word	34220
 	.byte	12,11,255,13,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5308,10 +5312,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	22780
+	.word	22788
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_PMSTAT0',0,11,132,14,3
-	.word	34276
+	.word	34284
 	.byte	12,11,135,14,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5320,10 +5324,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	23052
+	.word	23060
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_PMSWCR1',0,11,140,14,3
-	.word	34341
+	.word	34349
 	.byte	12,11,143,14,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5332,10 +5336,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	23297
+	.word	23305
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_PMTRCSR0',0,11,148,14,3
-	.word	34406
+	.word	34414
 	.byte	12,11,151,14,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5344,10 +5348,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	23685
+	.word	23693
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_PMTRCSR1',0,11,156,14,3
-	.word	34472
+	.word	34480
 	.byte	12,11,159,14,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5356,10 +5360,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	23803
+	.word	23811
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_PMTRCSR2',0,11,164,14,3
-	.word	34538
+	.word	34546
 	.byte	12,11,167,14,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5368,10 +5372,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	24046
+	.word	24054
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_PMTRCSR3',0,11,172,14,3
-	.word	34604
+	.word	34612
 	.byte	12,11,175,14,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5380,10 +5384,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	24313
+	.word	24321
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_RSTCON',0,11,180,14,3
-	.word	34670
+	.word	34678
 	.byte	12,11,183,14,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5392,10 +5396,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	24593
+	.word	24601
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_RSTCON2',0,11,188,14,3
-	.word	34734
+	.word	34742
 	.byte	12,11,191,14,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5404,10 +5408,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	24898
+	.word	24906
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_RSTCON3',0,11,196,14,3
-	.word	34799
+	.word	34807
 	.byte	12,11,199,14,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5416,10 +5420,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	24979
+	.word	24987
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_RSTSTAT',0,11,204,14,3
-	.word	34864
+	.word	34872
 	.byte	12,11,207,14,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5428,10 +5432,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	25547
+	.word	25555
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_SEICON0',0,11,212,14,3
-	.word	34929
+	.word	34937
 	.byte	12,11,215,14,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5440,10 +5444,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	25677
+	.word	25685
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_SEICON1',0,11,220,14,3
-	.word	34994
+	.word	35002
 	.byte	12,11,223,14,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5452,10 +5456,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	25868
+	.word	25876
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_SEISR',0,11,228,14,3
-	.word	35059
+	.word	35067
 	.byte	12,11,231,14,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5464,10 +5468,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	26046
+	.word	26054
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_STCON',0,11,236,14,3
-	.word	35122
+	.word	35130
 	.byte	12,11,239,14,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5476,10 +5480,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	26197
+	.word	26205
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_STMEM1',0,11,244,14,3
-	.word	35185
+	.word	35193
 	.byte	12,11,247,14,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5488,10 +5492,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	26269
+	.word	26277
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_STMEM2',0,11,252,14,3
-	.word	35249
+	.word	35257
 	.byte	12,11,255,14,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5500,10 +5504,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	26341
+	.word	26349
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_STMEM3',0,11,132,15,3
-	.word	35313
+	.word	35321
 	.byte	12,11,135,15,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5512,10 +5516,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	26413
+	.word	26421
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_STMEM4',0,11,140,15,3
-	.word	35377
+	.word	35385
 	.byte	12,11,143,15,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5524,10 +5528,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	26485
+	.word	26493
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_STMEM5',0,11,148,15,3
-	.word	35441
+	.word	35449
 	.byte	12,11,151,15,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5536,10 +5540,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	26557
+	.word	26565
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_STMEM6',0,11,156,15,3
-	.word	35505
+	.word	35513
 	.byte	12,11,159,15,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5548,10 +5552,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	26629
+	.word	26637
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_STSTAT',0,11,164,15,3
-	.word	35569
+	.word	35577
 	.byte	12,11,167,15,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5560,10 +5564,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	26958
+	.word	26966
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_SWAPCTRL',0,11,172,15,3
-	.word	35633
+	.word	35641
 	.byte	12,11,175,15,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5572,10 +5576,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	27078
+	.word	27086
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_SWRSTCON',0,11,180,15,3
-	.word	35699
+	.word	35707
 	.byte	12,11,183,15,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5584,10 +5588,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	27248
+	.word	27256
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_SYSCON',0,11,188,15,3
-	.word	35765
+	.word	35773
 	.byte	12,11,191,15,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5596,10 +5600,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	27511
+	.word	27519
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_SYSPLLCON0',0,11,196,15,3
-	.word	35829
+	.word	35837
 	.byte	12,11,199,15,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5608,10 +5612,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	27790
+	.word	27798
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_SYSPLLCON1',0,11,204,15,3
-	.word	35897
+	.word	35905
 	.byte	12,11,207,15,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5620,10 +5624,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	27894
+	.word	27902
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_SYSPLLCON2',0,11,212,15,3
-	.word	35965
+	.word	35973
 	.byte	12,11,215,15,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5632,10 +5636,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	28000
+	.word	28008
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_SYSPLLSTAT',0,11,220,15,3
-	.word	36033
+	.word	36041
 	.byte	12,11,223,15,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5644,10 +5648,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	28223
+	.word	28231
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_TRAPCLR',0,11,228,15,3
-	.word	36101
+	.word	36109
 	.byte	12,11,231,15,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5656,10 +5660,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	28371
+	.word	28379
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_TRAPDIS0',0,11,236,15,3
-	.word	36166
+	.word	36174
 	.byte	12,11,239,15,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5668,10 +5672,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	28798
+	.word	28806
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_TRAPDIS1',0,11,244,15,3
-	.word	36232
+	.word	36240
 	.byte	12,11,247,15,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5680,10 +5684,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	28971
+	.word	28979
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_TRAPSET',0,11,252,15,3
-	.word	36298
+	.word	36306
 	.byte	12,11,255,15,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5692,10 +5696,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	29119
+	.word	29127
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_TRAPSTAT',0,11,132,16,3
-	.word	36363
+	.word	36371
 	.byte	12,11,135,16,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5704,10 +5708,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	29269
+	.word	29277
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_WDTCPU_CON0',0,11,140,16,3
-	.word	36429
+	.word	36437
 	.byte	12,11,143,16,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5716,10 +5720,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	29399
+	.word	29407
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_WDTCPU_CON1',0,11,148,16,3
-	.word	36498
+	.word	36506
 	.byte	12,11,151,16,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5728,10 +5732,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	29659
+	.word	29667
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_WDTCPU_SR',0,11,156,16,3
-	.word	36567
+	.word	36575
 	.byte	12,11,159,16,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5740,10 +5744,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	29882
+	.word	29890
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_WDTS_CON0',0,11,164,16,3
-	.word	36634
+	.word	36642
 	.byte	12,11,167,16,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5752,10 +5756,10 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	30008
+	.word	30016
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_WDTS_CON1',0,11,172,16,3
-	.word	36701
+	.word	36709
 	.byte	12,11,175,16,9,4,13
 	.byte	'U',0
 	.word	408
@@ -5764,66 +5768,66 @@ BUTTON_PINS:	.type	object
 	.word	424
 	.byte	4,2,35,0,13
 	.byte	'B',0
-	.word	30260
+	.word	30268
 	.byte	4,2,35,0,0,23
 	.byte	'Ifx_SCU_WDTS_SR',0,11,180,16,3
-	.word	36768
+	.word	36776
 	.byte	10
 	.byte	'_Ifx_SCU_ESRCFGX',0,11,192,16,25,4,13
 	.byte	'ESRCFGX',0
-	.word	32087
+	.word	32095
 	.byte	4,2,35,0,0,16
-	.word	36833
+	.word	36841
 	.byte	23
 	.byte	'Ifx_SCU_ESRCFGX',0,11,195,16,3
-	.word	36874
+	.word	36882
 	.byte	10
 	.byte	'_Ifx_SCU_WDTCPU',0,11,210,16,25,12,13
 	.byte	'CON0',0
-	.word	36429
+	.word	36437
 	.byte	4,2,35,0,13
 	.byte	'CON1',0
-	.word	36498
+	.word	36506
 	.byte	4,2,35,4,13
 	.byte	'SR',0
-	.word	36567
+	.word	36575
 	.byte	4,2,35,8,0,16
-	.word	36904
+	.word	36912
 	.byte	23
 	.byte	'Ifx_SCU_WDTCPU',0,11,215,16,3
-	.word	36967
+	.word	36975
 	.byte	10
 	.byte	'_Ifx_SCU_WDTS',0,11,230,16,25,12,13
 	.byte	'CON0',0
-	.word	36634
+	.word	36642
 	.byte	4,2,35,0,13
 	.byte	'CON1',0
-	.word	36701
+	.word	36709
 	.byte	4,2,35,4,13
 	.byte	'SR',0
-	.word	36768
+	.word	36776
 	.byte	4,2,35,8,0,16
-	.word	36996
+	.word	37004
 	.byte	23
 	.byte	'Ifx_SCU_WDTS',0,11,235,16,3
-	.word	37057
+	.word	37065
 	.byte	17,3,75,9,1,18
 	.byte	'IfxPort_ControlledBy_port',0,0,18
 	.byte	'IfxPort_ControlledBy_hsct',0,1,0,23
 	.byte	'IfxPort_ControlledBy',0,3,79,3
-	.word	37084
+	.word	37092
 	.byte	17,3,83,9,1,18
 	.byte	'IfxPort_InputMode_undefined',0,127,18
 	.byte	'IfxPort_InputMode_noPullDevice',0,0,18
 	.byte	'IfxPort_InputMode_pullDown',0,8,18
 	.byte	'IfxPort_InputMode_pullUp',0,16,0,23
 	.byte	'IfxPort_InputMode',0,3,89,3
-	.word	37175
+	.word	37183
 	.byte	17,3,93,9,1,18
 	.byte	'IfxPort_LvdsMode_high',0,0,18
 	.byte	'IfxPort_LvdsMode_medium',0,1,0,23
 	.byte	'IfxPort_LvdsMode',0,3,97,3
-	.word	37326
+	.word	37334
 	.byte	23
 	.byte	'IfxPort_Mode',0,3,124,3
 	.word	8228
@@ -5837,13 +5841,13 @@ BUTTON_PINS:	.type	object
 	.byte	'IfxPort_OutputIdx_alt6',0,176,1,18
 	.byte	'IfxPort_OutputIdx_alt7',0,184,1,0,23
 	.byte	'IfxPort_OutputIdx',0,3,138,1,3
-	.word	37428
+	.word	37436
 	.byte	17,3,142,1,9,1,18
 	.byte	'IfxPort_OutputMode_none',0,0,18
 	.byte	'IfxPort_OutputMode_pushPull',0,128,1,18
 	.byte	'IfxPort_OutputMode_openDrain',0,192,1,0,23
 	.byte	'IfxPort_OutputMode',0,3,147,1,3
-	.word	37673
+	.word	37681
 	.byte	17,3,153,1,9,1,18
 	.byte	'IfxPort_PadDriver_cmosAutomotiveSpeed1',0,0,18
 	.byte	'IfxPort_PadDriver_cmosAutomotiveSpeed2',0,1,18
@@ -5858,47 +5862,50 @@ BUTTON_PINS:	.type	object
 	.byte	'IfxPort_PadDriver_ttl3v3Speed3',0,14,18
 	.byte	'IfxPort_PadDriver_ttl3v3Speed4',0,15,0,23
 	.byte	'IfxPort_PadDriver',0,3,167,1,3
-	.word	37797
+	.word	37805
 	.byte	17,3,171,1,9,1,18
 	.byte	'IfxPort_PadSupply_3v',0,0,18
 	.byte	'IfxPort_PadSupply_5v',0,1,0,23
 	.byte	'IfxPort_PadSupply',0,3,175,1,3
-	.word	38247
+	.word	38255
 	.byte	17,3,179,1,9,1,18
 	.byte	'IfxPort_PinFunctionMode_digital',0,0,18
 	.byte	'IfxPort_PinFunctionMode_analog',0,1,0,23
 	.byte	'IfxPort_PinFunctionMode',0,3,183,1,3
-	.word	38327
+	.word	38335
 	.byte	23
 	.byte	'IfxPort_State',0,3,195,1,3
 	.word	7972
-	.byte	25,5,9,9,8,13
+	.byte	25,5,12,9,8,13
 	.byte	'port',0
 	.word	7967
 	.byte	4,2,35,0,13
 	.byte	'pinIndex',0
 	.word	431
 	.byte	1,2,35,4,0,23
-	.byte	'GpioPin',0,5,13,3
-	.word	38457
+	.byte	'GpioPin',0,5,16,3
+	.word	38465
 	.byte	23
-	.byte	'LedPins',0,5,17,3
+	.byte	'LedPins',0,5,20,3
 	.word	8972
-	.byte	14,16
-	.word	38457
-	.byte	15,1,0
+	.byte	14,24
+	.word	38465
+	.byte	15,2,0
 .L71:
 	.byte	26
-	.word	38527
+	.word	38535
+	.byte	14,16
+	.word	38465
+	.byte	15,1,0
 .L72:
 	.byte	26
-	.word	38527
+	.word	38549
 	.byte	14,8
-	.word	38457
+	.word	38465
 	.byte	15,0,0
 .L73:
 	.byte	26
-	.word	38546
+	.word	38563
 	.byte	0
 	.sdecl	'.debug_abbrev',debug
 	.sect	'.debug_abbrev'
@@ -5944,7 +5951,7 @@ BUTTON_PINS:	.type	object
 	.sdecl	'.debug_info',debug,cluster('portInit')
 	.sect	'.debug_info'
 .L20:
-	.word	292
+	.word	293
 	.half	3
 	.word	.L21
 	.byte	4,1
@@ -5955,31 +5962,31 @@ BUTTON_PINS:	.type	object
 	.byte	2
 	.word	.L16
 	.byte	3
-	.byte	'portInit',0,1,17,6,1,1
+	.byte	'portInit',0,1,18,6,1,1,1
 	.word	.L11,.L41,.L10
 	.byte	4
 	.word	.L11,.L41
 	.byte	4
 	.word	.L11,.L42
 	.byte	5
-	.byte	'i',0,1,19,14
+	.byte	'i',0,1,20,14
 	.word	.L43,.L44
 	.byte	0,4
 	.word	.L42,.L45
 	.byte	5
-	.byte	'i',0,1,24,14
+	.byte	'i',0,1,25,14
 	.word	.L43,.L46
 	.byte	0,4
 	.word	.L45,.L47
 	.byte	5
-	.byte	'i',0,1,29,14
+	.byte	'i',0,1,30,14
 	.word	.L43,.L48
 	.byte	0,0,0,0
 	.sdecl	'.debug_abbrev',debug,cluster('portInit')
 	.sect	'.debug_abbrev'
 .L21:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
-	.byte	63,12,17,1,18,1,64,6,0,0,4,11,1,17,1,18,1,0,0,5,52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,1,17,1,18,1,0,0,5,52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
 	.sdecl	'.debug_line',debug,cluster('portInit')
 	.sect	'.debug_line'
 .L22:
@@ -5993,7 +6000,7 @@ BUTTON_PINS:	.type	object
 .L84:
 	.byte	5,16,7,0,5,2
 	.word	.L11
-	.byte	3,18,1,5,32,9
+	.byte	3,19,1,5,32,9
 	.half	.L74-.L11
 	.byte	1,5,36,9
 	.half	.L3-.L74
@@ -6093,13 +6100,13 @@ BUTTON_PINS:	.type	object
 	.byte	2
 	.word	.L16
 	.byte	3
-	.byte	'controlLed',0,1,34,6,1,1,1
+	.byte	'controlLed',0,1,35,6,1,1,1
 	.word	.L13,.L49,.L12
 	.byte	4
-	.byte	'led',0,1,34,25
+	.byte	'led',0,1,35,25
 	.word	.L50,.L51
 	.byte	4
-	.byte	'on',0,1,34,34
+	.byte	'on',0,1,35,34
 	.word	.L43,.L52
 	.byte	5
 	.word	.L13,.L49
@@ -6146,7 +6153,7 @@ BUTTON_PINS:	.type	object
 .L115:
 	.byte	5,5,7,0,5,2
 	.word	.L13
-	.byte	3,34,1,5,40,7,9
+	.byte	3,35,1,5,40,7,9
 	.half	.L116-.L13
 	.byte	1,5,32,9
 	.half	.L117-.L116
@@ -6166,11 +6173,11 @@ BUTTON_PINS:	.type	object
 	.half	.L124-.L123
 	.byte	1,4,2,5,26,9
 	.half	.L54-.L124
-	.byte	3,141,5,1,5,17,9
+	.byte	3,140,5,1,5,17,9
 	.half	.L125-.L54
 	.byte	1,4,1,5,95,9
 	.half	.L55-.L125
-	.byte	3,243,122,1,5,38,9
+	.byte	3,244,122,1,5,38,9
 	.half	.L8-.L55
 	.byte	3,1,1,5,30,9
 	.half	.L126-.L8
@@ -6190,11 +6197,11 @@ BUTTON_PINS:	.type	object
 	.half	.L133-.L132
 	.byte	1,4,2,5,26,9
 	.half	.L63-.L133
-	.byte	3,140,5,1,5,17,9
+	.byte	3,139,5,1,5,17,9
 	.half	.L134-.L63
 	.byte	1,4,1,5,1,9
 	.half	.L9-.L134
-	.byte	3,245,122,1,7,9
+	.byte	3,246,122,1,7,9
 	.half	.L29-.L9
 	.byte	0,1,1
 .L113:
@@ -6216,10 +6223,10 @@ BUTTON_PINS:	.type	object
 	.byte	2
 	.word	.L16
 	.byte	3
-	.byte	'toggleLed',0,1,39,6,1,1,1
+	.byte	'toggleLed',0,1,40,6,1,1,1
 	.word	.L15,.L64,.L14
 	.byte	4
-	.byte	'led',0,1,39,24
+	.byte	'led',0,1,40,24
 	.word	.L50,.L65
 	.byte	5
 	.word	.L15,.L64
@@ -6256,7 +6263,7 @@ BUTTON_PINS:	.type	object
 .L138:
 	.byte	5,33,7,0,5,2
 	.word	.L15
-	.byte	3,39,1,5,25,9
+	.byte	3,40,1,5,25,9
 	.half	.L139-.L15
 	.byte	1,5,33,9
 	.half	.L140-.L139
@@ -6274,11 +6281,11 @@ BUTTON_PINS:	.type	object
 	.half	.L146-.L145
 	.byte	1,4,2,5,26,9
 	.half	.L66-.L146
-	.byte	3,136,5,1,5,17,9
+	.byte	3,135,5,1,5,17,9
 	.half	.L147-.L66
 	.byte	1,4,1,5,1,9
 	.half	.L67-.L147
-	.byte	3,249,122,1,7,9
+	.byte	3,250,122,1,7,9
 	.half	.L34-.L67
 	.byte	0,1,1
 .L136:
@@ -6320,7 +6327,7 @@ BUTTON_PINS:	.type	object
 	.byte	'C:\\Users\\USER\\PROJECT\\projectWon\\src\\TriCore Debug (TASKING)\\',0,12,1,2
 	.word	.L16
 	.byte	3
-	.byte	'BUZZER_PINS',0,6,8,15
+	.byte	'BUZZER_PINS',0,6,9,15
 	.word	.L72
 	.byte	1,5,3
 	.word	BUZZER_PINS
@@ -6342,7 +6349,7 @@ BUTTON_PINS:	.type	object
 	.byte	'C:\\Users\\USER\\PROJECT\\projectWon\\src\\TriCore Debug (TASKING)\\',0,12,1,2
 	.word	.L16
 	.byte	3
-	.byte	'BUTTON_PINS',0,6,13,15
+	.byte	'BUTTON_PINS',0,6,14,15
 	.word	.L73
 	.byte	1,5,3
 	.word	BUTTON_PINS

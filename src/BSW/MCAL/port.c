@@ -1,12 +1,13 @@
 #include "port.h"
 
 const GpioPin LED_PINS[LED_NUM] = {
-        [LED_1] = {&MODULE_P00, 5},
-        [LED_2] = {&MODULE_P00, 6}
+        [LED_R] = {&MODULE_P40, 7},
+        [LED_G] = {&MODULE_P40, 8},
+        [LED_B] = {&MODULE_P40, 9}
 };
 
 const GpioPin BUZZER_PINS[BUZZER_NUM] = {
-        [BUZZER_1] = {&MODULE_P00, 5},
+        [BUZZER_1] = {&MODULE_P10, 4},
         [BUZZER_2] = {&MODULE_P00, 6}
 };
 
@@ -14,7 +15,7 @@ const GpioPin BUTTON_PINS[BUTTON_NUM] = {
         [BUTTON_1] = {&MODULE_P00, 7}
 };
 
-void portInit ()
+void portInit(void)
 {
     for (int i = 0; i < LED_NUM; i++)
     {
@@ -39,3 +40,5 @@ void controlLed(LedPins led, int on){
 void toggleLed(LedPins led){
     IfxPort_setPinState(LED_PINS[led].port, LED_PINS[led].pinIndex, IfxPort_State_toggled);
 }
+
+

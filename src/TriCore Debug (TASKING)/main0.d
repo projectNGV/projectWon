@@ -240,6 +240,8 @@ main0.o :	"C:\\Users\\USER\\PROJECT\\projectWon\\src\\BSW\\Service\util.h"
 "C:\\Users\\USER\\PROJECT\\projectWon\\src\\BSW\\Service\util.h" :
 main0.o :	"C:\\Users\\USER\\PROJECT\\projectWon\\src\\BSW\\MCAL\asclin.h"
 "C:\\Users\\USER\\PROJECT\\projectWon\\src\\BSW\\MCAL\asclin.h" :
+main0.o :	"C:\\Users\\USER\\PROJECT\\projectWon\\src\\BSW\\MCAL\port.h"
+"C:\\Users\\USER\\PROJECT\\projectWon\\src\\BSW\\MCAL\port.h" :
 main0.o :	"C:\\Users\\USER\\PROJECT\\projectWon\\src\\BSW\\Service\ultrasonic.h"
 "C:\\Users\\USER\\PROJECT\\projectWon\\src\\BSW\\Service\ultrasonic.h" :
 main0.o :	"C:\\Users\\USER\\PROJECT\\projectWon\\src\\ASW\\autopark\level.h"

@@ -1,6 +1,6 @@
 #include "control.h"
 
-//extern volatile int aebFlag;
+extern volatile int AEBFlag;
 
 // 전진
 void moveForward(int duty)
@@ -83,10 +83,11 @@ void handleDutyCommand(char cmd, MotorState* state)
 }
 
 // 키 뗴면 감속
-void handleBrakeCommand(char cmd, MotorState* state)
+void handleBrakeCommand(MotorState* state)
 {
-    if (state->currentDuty > 0) {
-        state->currentDuty = (state->currentDuty >= 100) ? state->currentDuty - 100 : 0;
+    while (state->currentDuty > 0) {
+        state->currentDuty = (state->currentDuty >= 100) ? (state->currentDuty - 100) : 0;
+        motorSoftBraking(state->currentDuty);
     }
 }
 
@@ -99,14 +100,14 @@ void motorUpdateState(MotorState* state)
     if (cmd >= '1' && cmd <= '9' && cmd != 'B') {
         handleDirectionCommand(cmd, state);
     }
-    // 알파벳 키(asdfghjkl) 입력에 따라 목표 듀티(baseDuty) 업데이트
+    // 알파벳 키(a,s,d,f,g,h,j,k,l) 입력에 따라 목표 듀티(baseDuty) 업데이트
     else if (cmd == 'a' || cmd == 's' || cmd == 'd' || cmd == 'f' ||
         cmd == 'g' || cmd == 'h' || cmd == 'j' || cmd == 'k' || cmd == 'l') {
         handleDutyCommand(cmd, state);
     }
     // 키 떼면 감속
     else if (cmd == 'B') {
-        handleBrakeCommand(cmd, state);
+        handleBrakeCommand(state);
     }
     // 자동 주차 모드 (예정)
     else if (cmd == 'p') {
@@ -119,6 +120,7 @@ void motorRunCommand (MotorState* state)
 {
     char cmd = state->lastKeyInput;
     int duty = state->currentDuty;
+
 
     // 방향키가 들어올 때만 lastDir 업데이트
     if (cmd != 'B' && cmd != '5')
