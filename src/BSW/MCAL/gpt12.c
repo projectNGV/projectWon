@@ -24,7 +24,7 @@ void IsrGpt1T3Handler (void)
 //}
 
 
-IFX_INTERRUPT(IsrGpt2T6Handler, 1, ISR_PRIORITY_GPT2T6_TIMER);
+IFX_INTERRUPT(IsrGpt2T6Handler, 0, ISR_PRIORITY_GPT2T6_TIMER);
 void IsrGpt2T6Handler (void)
 {
     ledtogglefunction();
@@ -74,7 +74,7 @@ void gpt2_init (void)
 
     Ifx_SRC_SRCR_Bits *src = (Ifx_SRC_SRCR_Bits*) &MODULE_SRC.GPT12.GPT12[0].T6.B;
     src->SRPN = ISR_PRIORITY_GPT2T6_TIMER;
-    src->TOS = 1;
+    src->TOS = 0;
     src->CLRR = 1;
     src->SRE = 1;
 
