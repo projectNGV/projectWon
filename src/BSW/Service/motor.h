@@ -29,8 +29,9 @@ void motorStopChB(void);
 void motorMovChBPwm(int duty, int dir);
 void motorKeypadPwm(char c, int duty);
 
+void motorSoftBraking(int duty);
 void motorMoveForward(int duty);
-
+void motorMoveReverse (int duty);
 void motorStop(void);
 
 #endif /* BSW_DRIVER_MOTOR_H_ */

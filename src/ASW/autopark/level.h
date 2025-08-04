@@ -14,6 +14,5 @@ void levelInit (LevelDir dir);
 void setGain(int n, float i);
 int getMv (LevelDir dir);
 void printState(void);
-void auto_park ();
 
 #endif /* ASW_AUTOPARK_LEVEL_H_ */
