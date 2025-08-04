@@ -11,8 +11,8 @@ TriCore Debug (TASKING)
 *.d
 
 
-.metadata/      # Eclipse 워크스페이스 설정 (매우 중요!)
-.settings/      # 일부 로컬 설정이 포함될 수 있으나, 보통 핵심 설정을 포함하므로 아래에 예외 처리
+.metadata/
+.settings/
 *.user
 *.useros
 *.launch
@@ -30,3 +30,55 @@ Configurations/Ifx_Cfg_Ssw.c
 Configurations/Ifx_Cfg_Ssw.h
 Configurations/Ifx_Cfg_SswBmhd.c
 Configurations/Ifx_Cfg.h
+
+.ads/
+
+
+venv/
+.venv/
+
+__pycache__/
+*.py[cod]
+*$py.class
+
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+MANIFEST
+
+*.spec
+
+
+.vscode/
+
+.idea/
+
+*.sublime-project
+*.sublime-workspace
+
+
+.DS_Store
+.AppleDouble
+.LSOverride
+
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+*.csv
+*.png
+
