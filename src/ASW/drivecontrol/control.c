@@ -1,7 +1,5 @@
 #include "control.h"
 
-extern volatile int AEBFlag;
-
 // 전진
 void moveForward(int duty)
 {
@@ -74,13 +72,9 @@ void handleDutyCommand(char cmd, MotorState* state)
         case 'd': state->baseDuty = 500; break;
         case 'f': state->baseDuty = 600; break;
         case 'g': state->baseDuty = 700; break;
-        case 'h': state->baseDuty = 700; break;
-        case 'j': state->baseDuty = 750; break;
-        case 'k': state->baseDuty = 800; break;
-        case 'l': state->baseDuty = 850; break;
-        case 'z': state->baseDuty = 900; break;
-        case 'x': state->baseDuty = 950; break;
-        case 'c': state->baseDuty = 1000; break;
+        case 'h': state->baseDuty = 800; break;
+        case 'j': state->baseDuty = 900; break;
+        case 'k': state->baseDuty = 1000; break;
         default: break;  // 예외 처리 (필요하면 로그 추가)
     }
 }

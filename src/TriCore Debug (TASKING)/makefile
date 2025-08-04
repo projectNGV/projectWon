@@ -31,6 +31,7 @@ RM := rm -rf
 -include Configurations/subdir.mk
 -include BSW/Service/subdir.mk
 -include BSW/MCAL/subdir.mk
+-include ASW/emergencystop/subdir.mk
 -include ASW/drivecontrol/subdir.mk
 -include ASW/autopark/subdir.mk
 -include ASW/app/subdir.mk

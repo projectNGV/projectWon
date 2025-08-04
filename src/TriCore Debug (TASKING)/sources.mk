@@ -27,6 +27,7 @@ SUBDIRS := \
 ASW/app \
 ASW/autopark \
 ASW/drivecontrol \
+ASW/emergencystop \
 BSW/MCAL \
 BSW/Service \
 Configurations/Debug \

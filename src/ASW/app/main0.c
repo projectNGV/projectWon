@@ -4,6 +4,7 @@
 #include "tof.h"
 #include "level.h"
 #include "control.h"
+#include "aeb.h"
 
 extern volatile bool aebFlag;
 
@@ -37,22 +38,10 @@ void main0 (void)
         // 긴급제동
         else if(aebFlag == true)
         {
-            MODULE_P10.OUT.B.P1 = 0;
-            MODULE_P10.OUT.B.P2 = 0;
-
-            int duty = motorState.currentDuty;
-
-            gtmAtomPwmASetDutyCycle(duty);
-            gtmAtomPwmBSetDutyCycle(duty);
-
-            delayMs(150);
-
-            motorState.currentDuty = 0;
-
-            motorStop();
+            performEmergencyStop();
         }
 
 //        myPrintf("distance : %d mm,   flag : %d,    duty : %d\n", tofGetValue(), aebFlag, motorState.currentDuty);
-        //delayMs(500);
+//        delayMs(500);
     }
 }
