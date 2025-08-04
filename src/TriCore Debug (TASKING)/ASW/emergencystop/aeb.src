@@ -1,6 +1,6 @@
 	; Module start
 	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
-	.compiler_invocation	"ctc -f cc14256a --dep-file=aeb.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc37x -D__CPU_TC37X__ --core=tc1.6.2 --fp-model=+float -D__CPU__=tc37x -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\ASW -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\ASW\\\\app -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\ASW\\\\autopark -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\ASW\\\\drivecontrol -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\ASW\\\\emergencystop -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\BSW -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\BSW\\\\MCAL -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\BSW\\\\Service -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Configurations -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Platform -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Sfr -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Ssw -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Service -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Can -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Irq -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Trap -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12 -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_Impl -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_PinMap -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2004 -o ASW/emergencystop/aeb.src ../ASW/emergencystop/aeb.c"
+	.compiler_invocation	"ctc -f cc23496a --dep-file=aeb.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc37x -D__CPU_TC37X__ --core=tc1.6.2 --fp-model=+float -D__CPU__=tc37x -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\ASW -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\ASW\\\\app -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\ASW\\\\autopark -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\ASW\\\\drivecontrol -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\ASW\\\\emergencystop -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\BSW -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\BSW\\\\MCAL -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\BSW\\\\Service -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Configurations -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Platform -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Sfr -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Ssw -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Service -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Can -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Irq -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Trap -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12 -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm\\\\Std -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_Impl -IC:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_PinMap -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2004 -o ASW/emergencystop/aeb.src ../ASW/emergencystop/aeb.c"
 	.compiler_name		"ctc"
 	;source	'../ASW/emergencystop/aeb.c'
 
@@ -13,32 +13,32 @@ $TC162
 	
 	.global	performEmergencyStop
 ; Function performEmergencyStop
-.L8:
+.L10:
 performEmergencyStop:	.type	func
 	movh.a	a15,#@his(motorState)
 	lea	a15,[a15]@los(motorState)
-.L40:
+.L42:
 	ld.w	d4,[a15]4
 	call	motorMoveReverse
-.L41:
+.L43:
 	mov	d4,#150
 	call	delayMs
-.L42:
+.L44:
 	movh.a	a15,#@his(motorState)
 	lea	a15,[a15]@los(motorState)
-.L43:
-	mov	d15,#0
-.L44:
-	st.w	[a15]4,d15
 .L45:
-	call	motorStop
+	mov	d15,#0
 .L46:
+	st.w	[a15]4,d15
+.L47:
+	call	motorStop
+.L48:
 	ret
-.L27:
+.L29:
 	
 __performEmergencyStop_function_end:
 	.size	performEmergencyStop,__performEmergencyStop_function_end-performEmergencyStop
-.L19:
+.L21:
 	; End of function
 	
 	.sdecl	'.text.aeb.updateAebFlagByTof',code,cluster('updateAebFlagByTof')
@@ -47,55 +47,71 @@ __performEmergencyStop_function_end:
 	
 	.global	updateAebFlagByTof
 ; Function updateAebFlagByTof
-.L10:
+.L12:
 updateAebFlagByTof:	.type	func
+	movh.a	a15,#@his(tofFlag)
+	lea	a15,[a15]@los(tofFlag)
+	ld.bu	d15,[a15]
+.L53:
+	jne	d15,#0,.L2
+.L54:
+	movh.a	a15,#@his(aebFlag)
+	lea	a15,[a15]@los(aebFlag)
+.L55:
+	mov	d15,#0
+.L56:
+	st.b	[a15],d15
+.L57:
+	j	.L3
+.L2:
 	movh.a	a15,#@his(aebFlag)
 	lea	a15,[a15]@los(aebFlag)
 	ld.bu	d15,[a15]
-	jne	d15,#0,.L2
-.L51:
+	jne	d15,#0,.L4
+.L58:
 	mov	d15,#800
-.L52:
-	jlt.u	d15,d4,.L3
-.L53:
+.L59:
+	jlt.u	d15,d4,.L5
+.L60:
 	movh.a	a15,#@his(motorState)
 	lea	a15,[a15]@los(motorState)
-.L54:
-	mov	d15,#500
-.L55:
-	st.w	[a15],d15
-.L3:
-	mov	d15,#350
-.L56:
-	jge.u	d4,d15,.L4
-.L57:
-	movh.a	a15,#@his(aebFlag)
-	lea	a15,[a15]@los(aebFlag)
-.L58:
-	mov	d15,#1
-.L59:
-	st.b	[a15],d15
-.L4:
-	j	.L5
-.L2:
-	mov	d15,#500
-.L60:
-	jlt.u	d4,d15,.L6
 .L61:
+	mov	d15,#500
+.L62:
+	st.w	[a15],d15
+.L5:
+	mov	d15,#350
+.L63:
+	jge.u	d4,d15,.L6
+.L64:
 	movh.a	a15,#@his(aebFlag)
 	lea	a15,[a15]@los(aebFlag)
-.L62:
-	mov	d15,#0
-.L63:
+.L65:
+	mov	d15,#1
+.L66:
 	st.b	[a15],d15
 .L6:
-.L5:
+	j	.L7
+.L4:
+	mov	d15,#500
+.L67:
+	jlt.u	d4,d15,.L8
+.L68:
+	movh.a	a15,#@his(aebFlag)
+	lea	a15,[a15]@los(aebFlag)
+.L69:
+	mov	d15,#0
+.L70:
+	st.b	[a15],d15
+.L8:
+.L7:
+.L3:
 	ret
-.L28:
+.L30:
 	
 __updateAebFlagByTof_function_end:
 	.size	updateAebFlagByTof,__updateAebFlagByTof_function_end-updateAebFlagByTof
-.L24:
+.L26:
 	; End of function
 	
 	.sdecl	'.data.aeb.aebFlag',data,cluster('aebFlag')
@@ -111,22 +127,23 @@ aebFlag:	.type	object
 	.extern	delayMs
 	.extern	motorMoveReverse
 	.extern	motorStop
+	.extern	tofFlag
 	.extern	motorState
 	.calls	'updateAebFlagByTof','',0
 	.sdecl	'.debug_info',debug
 	.sect	'.debug_info'
-.L12:
-	.word	359253
+.L14:
+	.word	359276
 	.half	3
-	.word	.L13
+	.word	.L15
 	.byte	4
-.L11:
+.L13:
 	.byte	1
 	.byte	'../ASW/emergencystop/aeb.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\TriCore Debug (TASKING)\\',0,12
 	.byte	1
-	.word	.L14
+	.word	.L16
 	.byte	2,1,1,3
 	.word	209
 	.byte	4
@@ -159,7 +176,7 @@ aebFlag:	.type	object
 	.word	372
 	.byte	6,0,4
 	.byte	'Ifx__stopPerfCounters',0,3,1,169,2,17,1,1,6,0
-.L29:
+.L31:
 	.byte	9
 	.byte	'unsigned int',0,4,7,4
 	.byte	'__ldmst_c',0,3,2,111,17,1,1,5
@@ -49214,16 +49231,21 @@ aebFlag:	.type	object
 	.word	359098
 	.byte	9
 	.byte	'_Bool',0,1,2
-.L31:
+.L33:
+	.byte	8
+	.word	359221
 	.byte	8
 	.word	359221
 	.byte	32
-	.byte	'motorState',0,26,5,19
+	.byte	'tofFlag',0,26,5,22
+	.word	359235
+	.byte	1,1,32
+	.byte	'motorState',0,26,6,19
 	.word	359098
 	.byte	1,1,0
 	.sdecl	'.debug_abbrev',debug
 	.sect	'.debug_abbrev'
-.L13:
+.L15:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,16,6,0,0,2,21,0,54,15,39,12,0,0,3,15,0,73,19,0,0,4,46,1,3,8,32,13
 	.byte	58,15,59,15,57,15,54,15,39,12,0,0,5,5,0,3,8,58,15,59,15,57,15,73,19,0,0,6,11,0,0,0,7,59,0,3,8,0,0,8,53
 	.byte	0,73,19,0,0,9,36,0,3,8,11,15,62,15,0,0,10,46,1,3,8,32,13,58,15,59,15,57,15,73,19,54,15,39,12,0,0,11,19
@@ -49236,12 +49258,12 @@ aebFlag:	.type	object
 	.byte	15,59,15,57,15,73,19,63,12,60,12,0,0,0
 	.sdecl	'.debug_line',debug
 	.sect	'.debug_line'
-.L14:
-	.word	.L33-.L32
-.L32:
-	.half	3
+.L16:
 	.word	.L35-.L34
 .L34:
+	.half	3
+	.word	.L37-.L36
+.L36:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
 	.byte	'C:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg',0
 	.byte	'C:\\\\Users\\\\USER\\\\AURIX-v1.10.2-workspace\\\\junhyeok\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin\\\\Std',0
@@ -49328,196 +49350,208 @@ aebFlag:	.type	object
 	.byte	0,0,0
 	.byte	'IfxCan_Can.h',0,9,0,0
 	.byte	'control.h',0,10,0,0,0
+.L37:
 .L35:
-.L33:
 	.sdecl	'.debug_info',debug,cluster('performEmergencyStop')
 	.sect	'.debug_info'
-.L15:
+.L17:
 	.word	265
 	.half	3
-	.word	.L16
+	.word	.L18
 	.byte	4,1
 	.byte	'../ASW/emergencystop/aeb.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\TriCore Debug (TASKING)\\',0,12
 	.byte	1
-	.word	.L18,.L17
+	.word	.L20,.L19
 	.byte	2
-	.word	.L11
+	.word	.L13
 	.byte	3
-	.byte	'performEmergencyStop',0,1,7,6,1,1,1
-	.word	.L8,.L27,.L7
+	.byte	'performEmergencyStop',0,1,8,6,1,1,1
+	.word	.L10,.L29,.L9
 	.byte	4
-	.word	.L8,.L27
+	.word	.L10,.L29
 	.byte	0,0
 	.sdecl	'.debug_abbrev',debug,cluster('performEmergencyStop')
 	.sect	'.debug_abbrev'
-.L16:
+.L18:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
 	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,0,17,1,18,1,0,0,0
 	.sdecl	'.debug_line',debug,cluster('performEmergencyStop')
 	.sect	'.debug_line'
-.L17:
-	.word	.L37-.L36
-.L36:
-	.half	3
+.L19:
 	.word	.L39-.L38
 .L38:
+	.half	3
+	.word	.L41-.L40
+.L40:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../ASW/emergencystop/aeb.c',0,0,0,0,0
-.L39:
+.L41:
 	.byte	5,22,7,0,5,2
-	.word	.L8
-	.byte	3,8,1,5,32,9
-	.half	.L40-.L8
+	.word	.L10
+	.byte	3,9,1,5,32,9
+	.half	.L42-.L10
 	.byte	1,5,13,9
-	.half	.L41-.L40
-	.byte	3,2,1,5,5,9
-	.half	.L42-.L41
-	.byte	3,2,1,5,30,9
 	.half	.L43-.L42
-	.byte	1,5,28,9
+	.byte	3,2,1,5,5,9
 	.half	.L44-.L43
-	.byte	1,5,14,9
+	.byte	3,2,1,5,30,9
 	.half	.L45-.L44
-	.byte	3,1,1,5,1,9
+	.byte	1,5,28,9
 	.half	.L46-.L45
+	.byte	1,5,14,9
+	.half	.L47-.L46
+	.byte	3,1,1,5,1,9
+	.half	.L48-.L47
 	.byte	3,1,1,7,9
-	.half	.L19-.L46
+	.half	.L21-.L48
 	.byte	0,1,1
-.L37:
+.L39:
 	.sdecl	'.debug_ranges',debug,cluster('performEmergencyStop')
 	.sect	'.debug_ranges'
-.L18:
-	.word	-1,.L8,0,.L19-.L8,0,0
+.L20:
+	.word	-1,.L10,0,.L21-.L10,0,0
 	.sdecl	'.debug_info',debug,cluster('updateAebFlagByTof')
 	.sect	'.debug_info'
-.L20:
+.L22:
 	.word	286
 	.half	3
-	.word	.L21
+	.word	.L23
 	.byte	4,1
 	.byte	'../ASW/emergencystop/aeb.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\TriCore Debug (TASKING)\\',0,12
 	.byte	1
-	.word	.L23,.L22
+	.word	.L25,.L24
 	.byte	2
-	.word	.L11
+	.word	.L13
 	.byte	3
-	.byte	'updateAebFlagByTof',0,1,17,6,1,1,1
-	.word	.L10,.L28,.L9
+	.byte	'updateAebFlagByTof',0,1,18,6,1,1,1
+	.word	.L12,.L30,.L11
 	.byte	4
-	.byte	'g_TofValue',0,1,17,39
-	.word	.L29,.L30
+	.byte	'g_TofValue',0,1,18,39
+	.word	.L31,.L32
 	.byte	5
-	.word	.L10,.L28
+	.word	.L12,.L30
 	.byte	0,0
 	.sdecl	'.debug_abbrev',debug,cluster('updateAebFlagByTof')
 	.sect	'.debug_abbrev'
-.L21:
+.L23:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
 	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
 	.sdecl	'.debug_line',debug,cluster('updateAebFlagByTof')
 	.sect	'.debug_line'
-.L22:
-	.word	.L48-.L47
-.L47:
-	.half	3
+.L24:
 	.word	.L50-.L49
 .L49:
+	.half	3
+	.word	.L52-.L51
+.L51:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../ASW/emergencystop/aeb.c',0,0,0,0,0
-.L50:
-	.byte	5,10,7,0,5,2
-	.word	.L10
-	.byte	3,18,1,5,27,9
-	.half	.L51-.L10
-	.byte	3,2,1,5,9,9
-	.half	.L52-.L51
-	.byte	1,5,13,7,9
-	.half	.L53-.L52
-	.byte	3,2,1,5,35,9
+.L52:
+	.byte	5,8,7,0,5,2
+	.word	.L12
+	.byte	3,19,1,5,5,9
+	.half	.L53-.L12
+	.byte	1,5,9,7,9
 	.half	.L54-.L53
-	.byte	1,5,33,9
+	.byte	3,2,1,5,19,9
 	.half	.L55-.L54
-	.byte	1,5,26,9
-	.half	.L3-.L55
-	.byte	3,3,1,5,9,9
-	.half	.L56-.L3
-	.byte	1,5,13,7,9
+	.byte	1,5,17,9
+	.half	.L56-.L55
+	.byte	1,5,24,9
 	.half	.L57-.L56
-	.byte	3,2,1,5,23,9
-	.half	.L58-.L57
-	.byte	1,5,21,9
+	.byte	1,5,14,9
+	.half	.L2-.L57
+	.byte	3,5,1,5,31,9
+	.half	.L58-.L2
+	.byte	3,2,1,5,13,9
 	.half	.L59-.L58
-	.byte	1,5,9,9
-	.half	.L4-.L59
-	.byte	3,126,1,5,27,9
-	.half	.L2-.L4
-	.byte	3,7,1,5,9,9
-	.half	.L60-.L2
-	.byte	1,5,13,7,9
+	.byte	1,5,17,7,9
+	.half	.L60-.L59
+	.byte	3,2,1,5,39,9
 	.half	.L61-.L60
-	.byte	3,2,1,5,23,9
+	.byte	1,5,37,9
 	.half	.L62-.L61
-	.byte	1,5,21,9
-	.half	.L63-.L62
+	.byte	1,5,30,9
+	.half	.L5-.L62
+	.byte	3,3,1,5,13,9
+	.half	.L63-.L5
+	.byte	1,5,17,7,9
+	.half	.L64-.L63
+	.byte	3,2,1,5,27,9
+	.half	.L65-.L64
+	.byte	1,5,25,9
+	.half	.L66-.L65
+	.byte	1,5,13,9
+	.half	.L6-.L66
+	.byte	3,126,1,5,31,9
+	.half	.L4-.L6
+	.byte	3,7,1,5,13,9
+	.half	.L67-.L4
+	.byte	1,5,17,7,9
+	.half	.L68-.L67
+	.byte	3,2,1,5,27,9
+	.half	.L69-.L68
+	.byte	1,5,25,9
+	.half	.L70-.L69
 	.byte	1,5,1,9
-	.half	.L5-.L63
-	.byte	3,3,1,7,9
-	.half	.L24-.L5
+	.half	.L3-.L70
+	.byte	3,4,1,7,9
+	.half	.L26-.L3
 	.byte	0,1,1
-.L48:
+.L50:
 	.sdecl	'.debug_ranges',debug,cluster('updateAebFlagByTof')
 	.sect	'.debug_ranges'
-.L23:
-	.word	-1,.L10,0,.L24-.L10,0,0
+.L25:
+	.word	-1,.L12,0,.L26-.L12,0,0
 	.sdecl	'.debug_info',debug,cluster('aebFlag')
 	.sect	'.debug_info'
-.L25:
+.L27:
 	.word	230
 	.half	3
-	.word	.L26
+	.word	.L28
 	.byte	4,1
 	.byte	'../ASW/emergencystop/aeb.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\TriCore Debug (TASKING)\\',0,12
 	.byte	1,2
-	.word	.L11
+	.word	.L13
 	.byte	3
 	.byte	'aebFlag',0,26,3,15
-	.word	.L31
+	.word	.L33
 	.byte	1,5,3
 	.word	aebFlag
 	.byte	0
 	.sdecl	'.debug_abbrev',debug,cluster('aebFlag')
 	.sect	'.debug_abbrev'
-.L26:
+.L28:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,63,12,2,9
 	.byte	0,0,0
 	.sdecl	'.debug_loc',debug,cluster('performEmergencyStop')
 	.sect	'.debug_loc'
-.L7:
-	.word	-1,.L8,0,.L27-.L8
+.L9:
+	.word	-1,.L10,0,.L29-.L10
 	.half	2
 	.byte	138,0
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('updateAebFlagByTof')
 	.sect	'.debug_loc'
-.L30:
-	.word	-1,.L10,0,.L28-.L10
+.L32:
+	.word	-1,.L12,0,.L30-.L12
 	.half	1
 	.byte	84
 	.word	0,0
-.L9:
-	.word	-1,.L10,0,.L28-.L10
+.L11:
+	.word	-1,.L12,0,.L30-.L12
 	.half	2
 	.byte	138,0
 	.word	0,0
 	.sdecl	'.debug_frame',debug
 	.sect	'.debug_frame'
-.L64:
+.L71:
 	.word	48
 	.word	-1
 	.byte	3,0,2,1,27,12,26,0,8,26,8,27,8,30,8,29,8,28,8,16,8,17,8,24,8,25,8,31,8,32,8,33,8,34,8,35,8,36,8,37,8,38
@@ -49525,10 +49559,10 @@ aebFlag:	.type	object
 	.sdecl	'.debug_frame',debug,cluster('performEmergencyStop')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L64,.L8,.L27-.L8
+	.word	.L71,.L10,.L29-.L10
 	.sdecl	'.debug_frame',debug,cluster('updateAebFlagByTof')
 	.sect	'.debug_frame'
 	.word	24
-	.word	.L64,.L10,.L28-.L10
+	.word	.L71,.L12,.L30-.L12
 	.byte	8,18,8,19,8,20,8,21,8,22,8,23
 	; Module end

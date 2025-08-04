@@ -35,6 +35,7 @@ RM := rm -rf
 -include ASW/drivecontrol/subdir.mk
 -include ASW/autopark/subdir.mk
 -include ASW/app/subdir.mk
+-include ASW/subdir.mk
 -include subdir.mk
 ifneq ($(MAKECMDGOALS),clean)
 ifneq ($(strip $(C++_DEPS)),)

@@ -28,6 +28,7 @@ ASW/app \
 ASW/autopark \
 ASW/drivecontrol \
 ASW/emergencystop \
+ASW \
 BSW/MCAL \
 BSW/Service \
 Configurations/Debug \

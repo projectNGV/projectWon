@@ -6,6 +6,7 @@
 #include "util.h"
 #include "stdbool.h"
 #include "IfxSrc_reg.h"
+#include "aeb.h"
 
 #define TOF_DEFAULT_VALUE_MM   5000
 

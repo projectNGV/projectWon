@@ -2,6 +2,7 @@
 
 volatile bool aebFlag = false;
 
+extern volatile bool tofFlag;
 extern MotorState motorState;
 
 void performEmergencyStop(void)
@@ -16,23 +17,31 @@ void performEmergencyStop(void)
 
 void updateAebFlagByTof (unsigned int g_TofValue)
 {
-    if (!aebFlag)  // 아직 AEB가 작동하지 않은 상태
+    if(tofFlag == false)
     {
-        if (g_TofValue <= DUTY_LIMIT_DISTANCE_MM)
-        {
-            motorState.baseDuty = 500;  // 제한 거리 이내면 듀티 제한
-        }
-
-        if (g_TofValue < AEB_DISTANCE_MM)
-        {
-            aebFlag = true;  // AEB 작동 조건 충족 → 플래그 ON
-        }
+        aebFlag = false;
+        g_TofValue = 5000;
     }
-    else  // AEB 작동 중일 때
+    else
     {
-        if (g_TofValue >= SAFETY_DISTANCE_MM)
+        if (!aebFlag)  // 아직 AEB가 작동하지 않은 상태
         {
-            aebFlag = false;  // 안전거리 확보 시 AEB 해제
+            if (g_TofValue <= DUTY_LIMIT_DISTANCE_MM)
+            {
+                motorState.baseDuty = 500;  // 제한 거리 이내면 듀티 제한
+            }
+
+            if (g_TofValue < AEB_DISTANCE_MM)
+            {
+                aebFlag = true;  // AEB 작동 조건 충족 → 플래그 ON
+            }
+        }
+        else  // AEB 작동 중일 때
+        {
+            if (g_TofValue >= SAFETY_DISTANCE_MM)
+            {
+                aebFlag = false;  // 안전거리 확보 시 AEB 해제
+            }
         }
     }
 }

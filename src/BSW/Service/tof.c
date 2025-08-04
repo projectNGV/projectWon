@@ -3,7 +3,6 @@
 static unsigned int g_TofValue;
 volatile bool tofFlag = false;
 
-extern MotorState motorState;
 extern McmcanType g_mcmcan;
 
 void tofInit (void)
@@ -19,12 +18,12 @@ void tofOnOff(void)
     if (tofFlag)
     {
         tofFlag = false;
-        IfxCan_Node_disableInterrupt(&g_mcmcan.canDstNode.node, IfxCan_Interrupt_rxFifo0NewMessage);
+//        g_mcmcan.canNodeConfig.interruptConfig.rxFifo0NewMessageEnabled = FALSE;
     }
     else
     {
         tofFlag = true;
-        IfxCan_Node_enableInterrupt(&g_mcmcan.canDstNode.node, IfxCan_Interrupt_rxFifo0NewMessage);
+//        g_mcmcan.canNodeConfig.interruptConfig.rxFifo0NewMessageEnabled = TRUE;
     }
 }
 
