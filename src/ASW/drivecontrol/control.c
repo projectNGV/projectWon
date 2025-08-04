@@ -88,14 +88,7 @@ void handleDutyCommand(char cmd, MotorState* state)
 // 키 뗴면 감속
 void handleBrakeCommand(MotorState* state)
 {
-<<<<<<< HEAD
-    while (state->currentDuty > 0) {
-        state->currentDuty = (state->currentDuty >= 100) ? (state->currentDuty - 100) : 0;
-        motorSoftBraking(state->currentDuty);
-    }
-=======
     motorSoftBraking(state->currentDuty);
->>>>>>> origin/jh
 }
 
 // 키 입력 별로 모드 설정

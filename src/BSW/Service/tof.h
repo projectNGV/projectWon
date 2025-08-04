@@ -3,11 +3,6 @@
 
 #include "can.h"
 #include "motor.h"
-<<<<<<< HEAD
-
-#define aebDistanceMM 300
-#define safetyDistanceMM 500
-=======
 #include "util.h"
 #include "stdbool.h"
 #include "IfxSrc_reg.h"
@@ -16,7 +11,6 @@
 
 #define aebDistanceMM 830
 #define safetyDistanceMM 1000
->>>>>>> origin/jh
 
 void tofInit (void);
 void tofUpdateFromCAN (unsigned char *rxData);

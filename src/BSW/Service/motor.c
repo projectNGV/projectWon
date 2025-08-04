@@ -58,10 +58,6 @@ void motorMovChBPwm(int duty, int dir)
 
 void motorSoftBraking(int duty)
 {
-<<<<<<< HEAD
-    gtmAtomPwmASetDutyCycle(duty);
-    gtmAtomPwmBSetDutyCycle(duty);
-=======
     while (duty > 0)
     {
         duty = (duty >= 100) ? duty - 100 : 0;
@@ -84,7 +80,6 @@ void motorHardBraking(int duty)
     delayMs(200);
 
     motorStop();  // 마지막에 완전 정지
->>>>>>> origin/jh
 }
 
 void motorMoveForward(int duty)
