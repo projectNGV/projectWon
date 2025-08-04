@@ -2,7 +2,7 @@
 
 static unsigned int g_TofValue;
 volatile bool aebFlag = false;
-volatile bool TofFlag = false;
+volatile bool tofFlag = false;
 
 extern MotorState motorState;
 extern McmcanType g_mcmcan;
@@ -13,19 +13,24 @@ void tofInit (void)
     canRegisterTofCallback(tofUpdateFromCAN);
     g_TofValue = 5000;
     aebFlag = false;
-    TofFlag = false;
+    tofFlag = false;
 }
 
-void tofOnOff (void)
+void tofOnOff(void)
 {
-    if(TofFlag)
+    if (tofFlag)
     {
-        TofFlag = false;
-
+        tofFlag = false;
+        //SRC_CAN0_RX->B.SRE = 0;  // 인터럽트 Disable
+        //g_mcmcan.canNodeConfig.interruptConfig.rxFifo0NewMessageEnabled = FALSE;
+        IfxCan_Node_enableInterrupt(&g_mcmcan.canDstNode.node, IfxCan_Interrupt_rxFifo0NewMessage);
     }
     else
     {
-        TofFlag = true;
+        tofFlag = true;
+        //SRC_CAN0_RX->B.SRE = 1;  // 인터럽트 Enable
+        //g_mcmcan.canNodeConfig.interruptConfig.rxFifo0NewMessageEnabled = TRUE;
+        IfxCan_Node_disableInterrupt(&g_mcmcan.canDstNode.node, IfxCan_Interrupt_rxFifo0NewMessage);
     }
 }
 
@@ -35,7 +40,7 @@ void tofUpdateFromCAN (unsigned char *rxData)
 
     if (signal_strength != 0)
     {
-        if(TofFlag == false){
+        if(tofFlag == false){
             aebFlag = false;
             g_TofValue = 5000;
         }

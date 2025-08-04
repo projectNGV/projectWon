@@ -26,8 +26,9 @@ void main0 (void)
         {
             myPrintf("TOF toggle\n");
             tofOnOff();
-            delayMs(1000);
+            delayMs(250);
         }
+
         if (aebFlag == false || ((motorState.lastKeyInput == '1' || motorState.lastKeyInput == '2' || motorState.lastKeyInput == '3') && aebFlag == true))
         {
             motorUpdateState(&motorState);

@@ -5,8 +5,11 @@
 #include "motor.h"
 #include "util.h"
 #include "stdbool.h"
+#include "IfxSrc_reg.h"
 
-#define aebDistanceMM 800
+#define SRC_CAN0_RX   ((Ifx_SRC_SRCR *)0xF0038504)
+
+#define aebDistanceMM 830
 #define safetyDistanceMM 1000
 
 void tofInit (void);
