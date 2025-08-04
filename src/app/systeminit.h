@@ -10,6 +10,8 @@
 #include "tof.h"
 #include "uart.h"
 #include "ultrasonic.h"
+#include "gpt12.h"
+#include "led.h"
 
 void systemInit(void);
 

@@ -8,4 +8,7 @@ void systemInit(){
     tofInit();
     uartInit();
     ultrasonicInit();
+    ledInit();
+    gpt12Init();
+
 }

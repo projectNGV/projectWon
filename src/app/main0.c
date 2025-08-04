@@ -11,7 +11,6 @@
 int logging = 0;
 boolean start = FALSE;
 
-
 void main0 ()
 {
     systemInit();
@@ -27,19 +26,36 @@ void main0 ()
             bluetoothPrintf("COMMAND: %c\n", command);
         }
 
-        if (command == 'g'){
+        if (command == 'g')
+        {
             int speed, round;
             bluetoothPrintf("Speed(0 ~ 1000): ");
             bluetoothScanf("%d", &speed);
             bluetoothPrintf("Round: ");
             bluetoothScanf("%d", &round);
 
-            while(round--){
+            while (round--)
+            {
                 motorMoveForward(speed);
                 delayMs(25);
                 motorStop();
                 delayMs(25);
             }
+        }
+        if (command == 'z')
+        {
+            auto_park();
+        }
+
+        if (command == 'l')
+        {
+            ledToggle(LED_RIGHT);
+
+        }
+        if (command == 'b')
+        {
+            ledToggle(EMPTY);
+
         }
 
         if (command == 'c')
