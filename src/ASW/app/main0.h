@@ -2,8 +2,8 @@
 #define ASW_APP_MAIN0_H_
 
 #include "can.h"
-#include "asclin.h"
 #include "systeminit.h"
+#include "asclin.h"
 
 void main0();
 

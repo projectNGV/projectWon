@@ -2,50 +2,112 @@
 
 
 
-void motorStop_test(void){
+// 주차 공간 감지 시작 시각 저장 변수 (밀리초 기준)
+static uint64 emptySlotStartTime = 0;
 
-    myPrintf("Motor STOP!!!\n");
+// 벽 정렬 완료 여부 → true 정렬이 완료된 상태
+static bool alignDone = false;
 
+// 자율 주차 신호가 오기전의 상태
+static ParkingState_test currentState = PARKING_IDLE_test;
+
+
+
+// 초기화 함수: FSM 초기 상태와 변수들을 초기화
+void parkingAutonomousInit_test(void)
+{
+    emptySlotStartTime = 0; // 탐색 타이머 초기화
+    alignDone = false;      // 정렬 초기화
+    motorStop_test();       // 모터 정지
 }
 
-void motorMoveForward_test(int duty){
 
-    myPrintf("Motor Mover %d !\n", duty);
-}
 
-void parkReverse(){
-    myPrintf("후진 주차 완료!!!\n");
-}
 
-void steer_test(LevelDir dir){
+// FSM 메인 프로세스: 주기적으로 호출되어 상태에 따라 행동 수행
+void parkingAutonomousProcess_test(void)
+{
+    while (1)
+    {
+        switch (currentState)
+        {
+        // [0] 초기 대기 상태: 'p' 키 입력이 들어오면 주차 시작
+        case PARKING_IDLE_test:
+        {
+            while (asclin0InUart() != 'p') // 'p' 키 입력 감지
+            parkingAutonomousInit_test();     // FSM 초기화
+            myPrintf("RED LED ON\n"); //ledOn(RED);// LED 1로 주차 진행 표시
+            currentState = ALIGN_AND_SEARCH_test; // 정렬과 주차 공간 탐색을 동시에 수행으로 상태 전이
+            break;
+        }
+        // [1] 정렬과 주차 공간 탐색을 동시에 수행
+        case ALIGN_AND_SEARCH_test:
+        {
 
-    static int callCount_1 = 0;
-    callCount_1++;
+            myPrintf("자동 주차 시작!\n");
+            // 1. 전진
+            motorMoveForward_test(30);
+            while (1)
+            {
 
-    if(callCount_1 > 10000){
-        callCount_1 = 0;
-        myPrintf("정렬 완료! \n");
+                // 2. 초음파 센서로 왼쪽 벽과 정렬 유지
+                steer_test(ULT_LEFT);
+
+                // 3. 왼쪽 벽 탐색 (주차 공간 판단)
+                uint32 leftDist = getFilteredDistance_test(ULT_LEFT); // 왼쪼 초음파로 측정
+
+                if (leftDist > EMPTY_SLOT_DISTANCE_CM)
+                {
+                    myPrintf("주차공간 확보되려나??\n");
+                    if (emptySlotStartTime == 0)
+                        emptySlotStartTime = getTime10Ns();
+                    else if (getTime10Ns() - emptySlotStartTime > EMPTY_SLOT_TIME_MS * 100000)
+                    {
+                        motorStop_test();
+                        myPrintf("주차공간 확보성공\n");
+                        currentState = CONFIRM_SLOT_test;
+                        break;
+                    }
+                }
+                else
+                {
+                    if(emptySlotStartTime != 0)
+                        myPrintf("주차공간 확보실패랑 초기화!!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n");
+
+                    myPrintf("주차공간 확보실패\n");
+                    emptySlotStartTime = 0;
+                }
+            }
+            break;
+        }
+
+        // [2] 주차 진입 위치 확보: 약간 더 전진해서 후진 준비
+        case CONFIRM_SLOT_test:
+            myPrintf("주차 진입 위치 학보! \n");
+            motorMoveForward_test(25);           // 전진
+            delayMs(1000);                  // 1초 정도 이동 (고정값이므로 조정 가능)
+            motorStop_test();                    // 정지
+            currentState = PARKING_REVERSE_test; // 후진 시작
+            break;
+
+        // [3] 후진 주차 수행: 초음파 센서를 기반으로 방향 조정
+        case PARKING_REVERSE_test:
+        {
+            myPrintf("후진 주차 수행! \n");
+            //후진 시스템 시작
+
+            parkReverse();
+            currentState = PARKING_DONE_test;
+
+            break;
+        }
+
+        // [4] 주차 완료 상태: LED 및 부저로 알림
+        case PARKING_DONE_test:
+            myPrintf("자동주차 완료! \n");
+            //            LED_set_state(2);            // LED2 점등
+            //            buzzer_beep_success();               // 성공 알림음
+            return;
+        }
     }
-
 }
-
-uint32 getFilteredDistance_test(UltraDir dir){
-
-    static int callCount_2 = 0;
-    callCount_2++;
-    if(callCount_2 < 300){
-        return 50;
-    }
-    else if(callCount_2 < 320){
-        return 200;
-    }
-    else if(callCount_2 < 500){
-        return 50;
-    }
-    else
-        return 200;
-}
-
-
-
-

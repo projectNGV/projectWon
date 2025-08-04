@@ -11,8 +11,9 @@ typedef enum leveldir{
 } LevelDir;
 
 void levelInit (LevelDir dir);
-int steer(LevelDir dir);
-
-void upKp(int n, float i);
+void setGain(int n, float i);
+int getMv (LevelDir dir);
+void printState(void);
+void auto_park ();
 
 #endif /* ASW_AUTOPARK_LEVEL_H_ */
