@@ -25,23 +25,23 @@ static void sendTrigger(UltraDir dir)
 
 int getDistanceByUltra(UltraDir dir)
 {
-    uint32 start, end, timeOut;
+    uint64 start, timeOut;
     sendTrigger(dir);
 
     timeOut = getTime10Ns();
     timeOut += 10000000; // 100ms
 
     while(!IfxPort_getPinState(ULT_PINS[dir].echo.port, ULT_PINS[dir].echo.pinIndex)){
-        if(MODULE_STM0.TIM0.U > timeOut) return -1;
+        if(getTime10Ns() > timeOut) return -1;
     }
-    start = MODULE_STM0.TIM0.U;
+    start = getTime10Ns();
     timeOut = start + 10000000;
 
     while(IfxPort_getPinState(ULT_PINS[dir].echo.port, ULT_PINS[dir].echo.pinIndex)){
-        if(MODULE_STM0.TIM0.U > timeOut) return -1;
+        if(getTime10Ns() > timeOut) return -1;
     }
 
-    int res = MODULE_STM0.TIM0.U - start;
+    int res = (int) (getTime10Ns() - start);
     if(res < 0) return -1;
     return res;
 }
