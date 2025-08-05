@@ -280,7 +280,5 @@ bluetooth.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\s
 "C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\ASW\\drivecontrol\control.h" :
 bluetooth.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\BSW\\Service\led.h"
 "C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\BSW\\Service\led.h" :
-bluetooth.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\Libraries\\iLLD\\TC37A\\Tricore\\Cpu\\Std\IfxCpu.h"
-"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\Libraries\\iLLD\\TC37A\\Tricore\\Cpu\\Std\IfxCpu.h" :
-bluetooth.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\Libraries\\iLLD\\TC37A\\Tricore\\Scu\\Std\IfxScuWdt.h"
-"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\Libraries\\iLLD\\TC37A\\Tricore\\Scu\\Std\IfxScuWdt.h" :
+bluetooth.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\BSW\\MCAL\ledport.h"
+"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\BSW\\MCAL\ledport.h" :

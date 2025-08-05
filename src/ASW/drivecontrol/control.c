@@ -103,7 +103,7 @@ void motorUpdateState(MotorState* state)
     // 키 떼면 감속
     else if (cmd == 'B') {
         handleBrakeCommand(state);
-        ledToggle(EMPTY);
+        ledStartBlinking(LED_NONE);
     }
     // 자동 주차 모드 (예정)
     else if (cmd == 'p') {
@@ -128,12 +128,12 @@ void motorRunCommand (MotorState* state)
     switch (cmd)
     {
         case '8' : moveForward(duty); break;
-        case '2' : moveBackward(duty); ledToggle(LED_REAR); break;
+        case '2' : moveBackward(duty); ledStartBlinking(LED_REAR); break;
         case '4' : turnLeftInPlace(duty); break;
         case '6' : turnRightInPlace(duty); break;
         case '5' : motorStop(); break;
-        case '7' : moveForwardLeft(duty); ledToggle(LED_LEFT); break;
-        case '9' : moveForwardRight(duty); ledToggle(LED_RIGHT); break;
+        case '7' : moveForwardLeft(duty); ledStartBlinking(LED_LEFT); break;
+        case '9' : moveForwardRight(duty); ledStartBlinking(LED_RIGHT); break;
         case '1' : moveBackwardkLeft(duty); break;
         case '3' : moveBackwardRight(duty); break;
     }

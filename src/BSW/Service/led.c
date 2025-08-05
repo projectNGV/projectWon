@@ -1,45 +1,46 @@
 #include "led.h"
 
-LedNum num = EMPTY;
+// 현재 토글 대상 LED를 저장하는 전역 변수
+static LedPosition activeLed = LED_NONE;
 
-void ledInit (void)
+// LED 초기화 함수: 각 포트를 출력으로 설정하고 초기 상태를 OFF로 설정
+void ledInit(void)
 {
-    // p13.2 right
-    MODULE_P13.IOCR0.B.PC2 = 0x10;
-    // p13.1 left
-    MODULE_P13.IOCR0.B.PC1 = 0x10;
-    // p13.1 left
-    MODULE_P02.IOCR0.B.PC0 = 0x10;
-
-    MODULE_P13.OUT.B.P2 = 0;
-    MODULE_P13.OUT.B.P1 = 0;
-    MODULE_P02.OUT.B.P0 = 0;
+    ledPortInit();
+    activeLed = LED_NONE;
 }
 
-void ledToggle (LedNum num_LED)
+// 토글할 LED 지정 함수
+void ledStartBlinking(LedPosition pos)
 {
-    num = num_LED;
+    activeLed = pos;
 }
 
-void ledtogglefunction (void)
+void ledStopAll(void)
 {
-    if (num == LED_RIGHT)
-    {
-        MODULE_P13.OUT.B.P2 ^= 1;
-    }
-    else if (num == LED_LEFT)
-    {
-        MODULE_P13.OUT.B.P1 ^= 1;
-    }
-    else if (num == LED_REAR)
-    {
-        MODULE_P02.OUT.B.P0 ^= 1;
-    }
-    else if (num == EMPTY)
-    {
-        MODULE_P13.OUT.B.P2 = 0;
-        MODULE_P13.OUT.B.P1 = 0;
-        MODULE_P02.OUT.B.P0 = 0;
-    }
+    activeLed = LED_NONE;
+    ledSetRight(0);
+    ledSetLeft(0);
+    ledSetRear(0);
+}
 
+// 주기적으로 호출되어 LED 상태를 토글하는 함수
+void ledUpdateBlinking(void)
+{
+    switch (activeLed)
+    {
+        case LED_RIGHT :
+            ledToggleRight();
+            break;
+        case LED_LEFT :
+            ledToggleLeft();
+            break;
+        case LED_REAR :
+            ledToggleRear();
+            break;
+        case LED_NONE :
+        default :
+            ledStopAll();
+            break;
+    }
 }

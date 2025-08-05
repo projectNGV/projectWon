@@ -204,10 +204,8 @@ main0.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\
 "C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\BSW\\Service\tof.h" :
 main0.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\BSW\\Service\led.h"
 "C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\BSW\\Service\led.h" :
-main0.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\Libraries\\iLLD\\TC37A\\Tricore\\Cpu\\Std\IfxCpu.h"
-"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\Libraries\\iLLD\\TC37A\\Tricore\\Cpu\\Std\IfxCpu.h" :
-main0.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\Libraries\\iLLD\\TC37A\\Tricore\\Scu\\Std\IfxScuWdt.h"
-"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\Libraries\\iLLD\\TC37A\\Tricore\\Scu\\Std\IfxScuWdt.h" :
+main0.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\BSW\\MCAL\ledport.h"
+"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\BSW\\MCAL\ledport.h" :
 main0.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\BSW\\MCAL\gtm_atom_pwm.h"
 "C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\BSW\\MCAL\gtm_atom_pwm.h" :
 main0.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\Libraries\\iLLD\\TC37A\\Tricore\\Gtm\\Atom\\Pwm\IfxGtm_Atom_Pwm.h"
@@ -304,6 +302,10 @@ main0.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\
 "C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\BSW\\Service\util.h" :
 main0.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\BSW\\MCAL\gpt12.h"
 "C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\BSW\\MCAL\gpt12.h" :
+main0.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\Libraries\\iLLD\\TC37A\\Tricore\\Cpu\\Std\IfxCpu.h"
+"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\Libraries\\iLLD\\TC37A\\Tricore\\Cpu\\Std\IfxCpu.h" :
+main0.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\Libraries\\iLLD\\TC37A\\Tricore\\Scu\\Std\IfxScuWdt.h"
+"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\Libraries\\iLLD\\TC37A\\Tricore\\Scu\\Std\IfxScuWdt.h" :
 main0.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\Libraries\\iLLD\\TC37A\\Tricore\\Gpt12\\Std\IfxGpt12.h"
 "C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\Libraries\\iLLD\\TC37A\\Tricore\\Gpt12\\Std\IfxGpt12.h" :
 main0.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\BSW\\Service\ultrasonic.h"

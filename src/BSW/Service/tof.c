@@ -3,8 +3,6 @@
 static unsigned int g_TofValue;
 volatile bool tofFlag = false;
 
-extern McmcanType g_mcmcan;
-
 void tofInit (void)
 {
     canInit(BD_500K, CAN_NODE0);
@@ -18,12 +16,10 @@ void tofOnOff(void)
     if (tofFlag)
     {
         tofFlag = false;
-//        g_mcmcan.canNodeConfig.interruptConfig.rxFifo0NewMessageEnabled = FALSE;
     }
     else
     {
         tofFlag = true;
-//        g_mcmcan.canNodeConfig.interruptConfig.rxFifo0NewMessageEnabled = TRUE;
     }
 }
 

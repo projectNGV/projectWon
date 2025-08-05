@@ -192,10 +192,10 @@ tof.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\BS
 "C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\BSW\\Service\motor.h" :
 tof.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\BSW\\Service\led.h"
 "C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\BSW\\Service\led.h" :
-tof.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\Libraries\\iLLD\\TC37A\\Tricore\\Cpu\\Std\IfxCpu.h"
-"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\Libraries\\iLLD\\TC37A\\Tricore\\Cpu\\Std\IfxCpu.h" :
-tof.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\Libraries\\iLLD\\TC37A\\Tricore\\Scu\\Std\IfxScuWdt.h"
-"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\Libraries\\iLLD\\TC37A\\Tricore\\Scu\\Std\IfxScuWdt.h" :
+tof.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\BSW\\MCAL\ledport.h"
+"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\BSW\\MCAL\ledport.h" :
+tof.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\Libraries\\iLLD\\TC37A\\Tricore\\Port\\Std\IfxPort.h"
+"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\Libraries\\iLLD\\TC37A\\Tricore\\Port\\Std\IfxPort.h" :
 tof.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\BSW\\MCAL\gtm_atom_pwm.h"
 "C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\BSW\\MCAL\gtm_atom_pwm.h" :
 tof.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\Libraries\\iLLD\\TC37A\\Tricore\\Gtm\\Atom\\Pwm\IfxGtm_Atom_Pwm.h"
@@ -234,3 +234,5 @@ tof.o :	"C:\Infineon\AURIX-Studio-1.10.2\tools\Compilers\Tasking_1.1r8\ctc\inclu
 "C:\Infineon\AURIX-Studio-1.10.2\tools\Compilers\Tasking_1.1r8\ctc\include\stdbool.h" :
 tof.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\ASW\\emergencystop\aeb.h"
 "C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\ASW\\emergencystop\aeb.h" :
+tof.o :	"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\ASW\\drivecontrol\control.h"
+"C:\\Users\\USER\\AURIX-v1.10.2-workspace\\junhyeok\\projectWon\\src\\ASW\\drivecontrol\control.h" :
