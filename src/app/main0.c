@@ -8,6 +8,7 @@
 #include "fsm.h"
 #include "led.h"
 #include "buzzerport.h"
+#include "buzzer.h"
 
 MotorState motorState = {.baseDuty = 50,      // 사용자 설정 Duty
         .currentDuty = 0,   // 현재 Duty
@@ -23,12 +24,14 @@ void main0 (void)
 
     while (1)
     {
-        buzzerParkingWarning(450);
-        delayMs(500);
-        buzzerParkingWarning(300);
-        delayMs(500);
-        buzzerParkingWarning(100);
-        delayMs(500);
+        buzzerParkingWarning(550); // 무음
+        delayMs(1000);
+        buzzerParkingWarning(450); // 느리게
+        delayMs(2000);
+        buzzerParkingWarning(250); // 빠르게
+        delayMs(2000);
+        buzzerParkingWarning(100); // 지속 울림
+        delayMs(2000);
 
         if (motorState.lastKeyInput == 't')
         {
