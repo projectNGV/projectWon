@@ -6,6 +6,8 @@
 #include "priority.h"
 #include "control.h"
 
+#define RX_BUFFER_SIZE 32
+
 void asclin1InitUart(void);
 void asclin1OutUart(const unsigned char chr);
 unsigned char asclin1InUart(void);
