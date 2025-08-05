@@ -13,7 +13,9 @@ volatile int g_rx_idx = 0;
 IFX_INTERRUPT(asclin1RxIsrHandler, 0, ISR_PRIORITY_ASCLIN1_RX);
 void asclin1RxIsrHandler (void)
 {
-    char key = asclin1InUart();
+    int keyVal = 7; // 파이썬과 동일한 키
+    char key = xor_cipher(asclin1InUart(), keyVal);
+
     if (!g_isLogin)
     {
         if(key == '\n' || key == '\r'){
@@ -33,6 +35,11 @@ void asclin1RxIsrHandler (void)
 
     //bluetoothIsr(key);
 }
+
+char xor_cipher(char ch, int key) {
+    return ch ^ key;
+}
+
 
 /* Initialise asynchronous interface to operate at baudrate,8,n,1 */
 /* ASCLIN1 for mikroBUS */

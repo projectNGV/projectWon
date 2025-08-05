@@ -18,10 +18,18 @@ CONFIG_KEYS = {'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'p'}
 # ─── 상태 변수 ───
 current_direction = None
 
+# ─── XOR 암호화/복호화 함수 ───
+def xor_cipher(text, key):
+    return ''.join(chr(ord(c) ^ key) for c in text)
+
 # ─── 방향 전송 함수 ───
 def send(char):
-    ser.write(char.encode())
-    print(f"[SEND] {char}")
+    key = 7  # 암호화 키
+    encrypted_char = xor_cipher(char, key)
+    ser.write(encrypted_char.encode())
+    print(f"[SEND] {char} → 암호문: {encrypted_char.encode()}")
+
+
 # ─── 키 누름 핸들러 ───
 def on_press(key):
     global current_direction
@@ -80,23 +88,25 @@ def on_release(key):
 
 # ─── 메인 실행 ───
 if __name__ == "__main__":
-    while(1):
+    key_val = 7
+    while True:
         print("비밀번호 입력: ")
         send_data = input()
-        
-        for char in send_data:
+
+        encrypted_pw = xor_cipher(send_data, key_val)
+        for char in encrypted_pw:
             ser.write(char.encode('utf-8'))
             time.sleep(0.01)
-        ser.write(b'\n') 
+        ser.write(xor_cipher('\n', key_val).encode())
 
-        res = ser.readline().decode().strip()
-        if(res == "OK"):
+        res = ser.readline().decode().strip()  # 복호화 안 함
+        if res == "OK":
             print("비밀번호 일치")
             break
-        elif(res == "FAILED"):
+        elif res == "FAILED":
             print("비밀번호가 일치하지 않습니다.")
         else:
-            if(res == ''):
+            if res == '':
                 print(f">> 응답 없음 또는 알 수 없는 응답: '{res}'")
 
     print("RC카 키보드 제어 시작 (ESC 종료)")
