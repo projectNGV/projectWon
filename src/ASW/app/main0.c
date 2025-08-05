@@ -7,9 +7,9 @@
 #include "control.h"
 #include "fsm.h"
 #include "led.h"
+#include "buzzerport.h"
 
-MotorState motorState = {
-        .baseDuty = 50,      // 사용자 설정 Duty
+MotorState motorState = {.baseDuty = 50,      // 사용자 설정 Duty
         .currentDuty = 0,   // 현재 Duty
         .currentDir = '5',  // 현재 주행 방향
         .prevDir = '5',     // 이전 주행 방향
@@ -23,7 +23,14 @@ void main0 (void)
 
     while (1)
     {
-        if(motorState.lastKeyInput == 't')
+        buzzerParkingWarning(450);
+        delayMs(500);
+        buzzerParkingWarning(300);
+        delayMs(500);
+        buzzerParkingWarning(100);
+        delayMs(500);
+
+        if (motorState.lastKeyInput == 't')
         {
             tofOnOff();
             motorState.lastKeyInput = ' ';

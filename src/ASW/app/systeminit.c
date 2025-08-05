@@ -8,5 +8,6 @@ void systemInit(){
     tofInit();
     gpt12Init();
     ledInit();
+    buzzerInit();
     //ultrasonicInit();
 }
