@@ -1,17 +1,18 @@
 #ifndef BSW_SERVICE_LEDH
 #define BSW_SERVICE_LEDH
 
-#include "Ifx_Types.h"
-#include "IfxCpu.h"
-#include "IfxScuWdt.h"
+#include "ledport.h"
 
-typedef enum lednum
-{
-    LED_RIGHT, LED_LEFT, LED_REAR, EMPTY
-} LedNum;
+typedef enum {
+    LED_RIGHT,
+    LED_LEFT,
+    LED_REAR,
+    LED_NONE
+} LedPosition;
 
-void ledInit (void);
-void ledToggle (LedNum num_LED);
-void ledtogglefunction();
+void ledInit(void);                            // 전체 초기화
+void ledStartBlinking(LedPosition pos);        // 지정 LED 깜빡이기 시작
+void ledStopAll(void);                         // 모든 LED OFF
+void ledUpdateBlinking(void);                  // 주기 호출
 
 #endif /* BSW_SERVICE_LEDH */

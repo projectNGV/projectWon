@@ -1,6 +1,7 @@
 #include "main0.h"
 
 #include "ultrasonic.h"
+#include "aeb.h"
 #include "tof.h"
 #include "level.h"
 #include "control.h"
@@ -13,6 +14,8 @@
 
 
 extern volatile bool aebFlag;
+#include "fsm.h"
+#include "led.h"
 
 MotorState motorState = {.baseDuty = 50,      // 사용자 설정 Duty
         .currentDuty = 0,   // 현재 Duty
@@ -33,7 +36,7 @@ void main0 (void)
         if (motorState.lastKeyInput == 't')
         {
             tofOnOff();
-            delayMs(250);
+            motorState.lastKeyInput = ' ';
         }
 
         // 평상시 주행
@@ -49,6 +52,7 @@ void main0 (void)
         {
             performEmergencyStop();
         }
+        handleStateMachine(&motorState);
 
 //        myPrintf("distance : %d mm,   flag : %d,    duty : %d\n", tofGetValue(), aebFlag, motorState.currentDuty);
 //        delayMs(500);

@@ -8,6 +8,10 @@
 #ifndef BSW_DRIVER_GPT12_H_
 #define BSW_DRIVER_GPT12_H_
 
+#include "Ifx_Types.h"
+#include "IfxCpu.h"
+#include "IfxScuWdt.h"
+
 #include "IfxGpt12.h"
 #include "priority.h"
 #include "led.h"

@@ -12,6 +12,7 @@
 #include "ultrasonic.h"
 #include "gpt12.h"
 #include "led.h"
+#include "ledport.h"
 
 void systemInit(void);
 
