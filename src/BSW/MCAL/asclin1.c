@@ -1,15 +1,33 @@
 #include "asclin1.h"
+#include "main0.h"
+
+#define RX_BUFFER_SIZE 32
 
 extern MotorState motorState;
 
-extern boolean g_isLogin;
+volatile boolean g_isLogin = FALSE;
+volatile boolean g_getLine;
+volatile char g_rx_buffer[RX_BUFFER_SIZE];
+volatile int g_rx_idx = 0;
 
 IFX_INTERRUPT(asclin1RxIsrHandler, 0, ISR_PRIORITY_ASCLIN1_RX);
 void asclin1RxIsrHandler (void)
 {
+    char key = asclin1InUart();
     if (!g_isLogin)
     {
-        char key = asclin1InUart();
+        if(key == '\n' || key == '\r'){
+            g_rx_buffer[g_rx_idx] = '\0';
+            g_getLine = TRUE;
+        } else {
+            if (g_rx_idx < (RX_BUFFER_SIZE - 1)){
+                g_rx_buffer[g_rx_idx++] = key;
+
+            }
+        }
+    }
+    else
+    {
         motorState.lastKeyInput = key;
     }
 

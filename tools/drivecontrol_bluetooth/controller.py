@@ -1,8 +1,9 @@
 from pynput import keyboard
 import serial
+import time
 
 # ─── 시리얼 포트 설정 ───
-ser = serial.Serial('COM4', 115200)
+ser = serial.Serial('COM4', 115200, timeout=2)
 
 # ─── NumPad VK → 문자 매핑 ───
 NUMPAD_VK = {
@@ -79,6 +80,25 @@ def on_release(key):
 
 # ─── 메인 실행 ───
 if __name__ == "__main__":
+    while(1):
+        print("비밀번호 입력: ")
+        send_data = input()
+        
+        for char in send_data:
+            ser.write(char.encode('utf-8'))
+            time.sleep(0.01)
+        ser.write(b'\n') 
+
+        res = ser.readline().decode().strip()
+        if(res == "OK"):
+            print("비밀번호 일치")
+            break
+        elif(res == "FAILED"):
+            print("비밀번호가 일치하지 않습니다.")
+        else:
+            if(res == ''):
+                print(f">> 응답 없음 또는 알 수 없는 응답: '{res}'")
+
     print("RC카 키보드 제어 시작 (ESC 종료)")
     with keyboard.Listener(on_press=on_press, on_release=on_release) as listener:
         listener.join()

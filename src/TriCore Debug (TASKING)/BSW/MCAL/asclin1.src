@@ -1,6 +1,6 @@
 	; Module start
 	.compiler_version	"TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler v1.1r8 Build 22011964"
-	.compiler_invocation	"ctc -f cc6156a --dep-file=asclin1.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc37x -D__CPU_TC37X__ --core=tc1.6.2 --fp-model=+float -D__CPU__=tc37x -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\ASW -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\ASW\\\\app -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\ASW\\\\autopark -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\ASW\\\\drivecontrol -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\ASW\\\\emergencystop -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\BSW -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\BSW\\\\MCAL -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\BSW\\\\Service -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Configurations -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\Infra -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Platform -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Sfr -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Ssw -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\Service -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Can -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Irq -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Trap -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12 -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_Impl -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_PinMap -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2004 -o BSW/MCAL/asclin1.src ../BSW/MCAL/asclin1.c"
+	.compiler_invocation	"ctc -f cc37460a --dep-file=asclin1.d -c99 --fp-model=3cflnrSTz -D__CPU__=tc37x -D__CPU_TC37X__ --core=tc1.6.2 --fp-model=+float -D__CPU__=tc37x -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\ASW -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\ASW\\\\app -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\ASW\\\\autopark -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\ASW\\\\drivecontrol -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\ASW\\\\emergencystop -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\BSW -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\BSW\\\\MCAL -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\BSW\\\\Service -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Configurations -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\Infra -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Platform -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Platform\\\\Tricore\\\\Compilers -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Sfr -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Ssw -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Ssw\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\Service -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\Service\\\\CpuGeneric\\\\_Utilities -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Can -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Irq -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Cpu\\\\Trap -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12 -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gpt12\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Mtu\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Pms\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Port\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Scu\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Src\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Stm\\\\Std -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_Impl -IC:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\_PinMap -g2 -w544 -w557 -t4 --language=+volatile -N0 -O0 -Y0 -Z0 --compact-max-size=200 --misrac-version=2004 -o BSW/MCAL/asclin1.src ../BSW/MCAL/asclin1.c"
 	.compiler_name		"ctc"
 	;source	'../BSW/MCAL/asclin1.c'
 
@@ -18,30 +18,91 @@ $TC162
 	
 	.global	asclin1RxIsrHandler
 ; Function asclin1RxIsrHandler
-.L13:
+.L18:
 asclin1RxIsrHandler:	.type	func
 	svlcx
-.L169:
+.L185:
+	call	asclin1InUart
+	extr	d8,d2,#0,#8
+.L90:
 	movh.a	a15,#@his(g_isLogin)
 	lea	a15,[a15]@los(g_isLogin)
 	ld.bu	d15,[a15]
 	jne	d15,#0,.L2
-.L71:
-	call	asclin1InUart
-	extr	d15,d2,#0,#8
-.L74:
+.L186:
+	mov	d15,#10
+.L187:
+	jeq	d15,d8,.L3
+.L188:
+	mov	d15,#13
+.L189:
+	jne	d15,d8,.L4
+.L3:
+	movh.a	a15,#@his(g_rx_idx)
+	lea	a15,[a15]@los(g_rx_idx)
+	ld.w	d15,[a15]
+.L190:
+	movh.a	a15,#@his(g_rx_buffer)
+	lea	a15,[a15]@los(g_rx_buffer)
+.L191:
+	addsc.a	a15,a15,d15,#0
+.L192:
+	mov	d15,#0
+.L193:
+	st.b	[a15],d15
+.L194:
+	movh.a	a15,#@his(g_getLine)
+	lea	a15,[a15]@los(g_getLine)
+.L195:
+	mov	d15,#1
+.L196:
+	st.b	[a15],d15
+.L197:
+	j	.L5
+.L4:
+	movh.a	a15,#@his(g_rx_idx)
+	lea	a15,[a15]@los(g_rx_idx)
+	ld.w	d9,[a15]
+.L198:
+	mov	d15,#31
+.L199:
+	jge	d9,d15,.L6
+.L200:
+	movh.a	a15,#@his(g_rx_idx)
+	lea	a15,[a15]@los(g_rx_idx)
+	ld.w	d15,[a15]
+.L201:
+	movh.a	a15,#@his(g_rx_buffer)
+	lea	a15,[a15]@los(g_rx_buffer)
+.L202:
+	addsc.a	a15,a15,d15,#0
+.L203:
+	st.b	[a15],d8
+.L204:
+	movh.a	a15,#@his(g_rx_idx)
+	lea	a15,[a15]@los(g_rx_idx)
+	movh.a	a12,#@his(g_rx_idx)
+	lea	a12,[a12]@los(g_rx_idx)
+	ld.w	d15,[a12]
+.L205:
+	add	d15,#1
+	st.w	[a15],d15
+.L6:
+.L5:
+	j	.L7
+.L2:
 	movh.a	a15,#@his(motorState)
 	lea	a15,[a15]@los(motorState)
-.L170:
-	st.b	[a15]10,d15
-.L2:
+.L206:
+	st.b	[a15]10,d8
+.L7:
 	rslcx
 	rfe
-.L70:
+.L83:
 	
 __asclin1RxIsrHandler_function_end:
 	.size	asclin1RxIsrHandler,__asclin1RxIsrHandler_function_end-asclin1RxIsrHandler
-.L50:
+.L55:
 	; End of function
 	
 	.sdecl	'.text.asclin1.asclin1InitUart',code,cluster('asclin1InitUart')
@@ -50,129 +111,129 @@ __asclin1RxIsrHandler_function_end:
 	
 	.global	asclin1InitUart
 ; Function asclin1InitUart
-.L15:
+.L20:
 asclin1InitUart:	.type	func
 	mov	d9,#576
-.L75:
+.L91:
 	mov	d8,#3125
-.L76:
+.L92:
 	movh.a	a15,#61444
 	ld.bu	d0,[a15]@los(0xf003af10)
-.L91:
+.L107:
 	mov	d15,#18
-.L92:
+.L108:
 	insert	d15,d0,d15,#3,#5
 	movh.a	a15,#61444
 	st.b	[a15]@los(0xf003af10),d15
-.L93:
+.L109:
 	movh.a	a15,#61444
 	ld.bu	d15,[a15]@los(0xf003af00)
-.L94:
+.L110:
 	or	d15,#1
 	movh.a	a15,#61444
 	st.b	[a15]@los(0xf003af00),d15
-.L95:
+.L111:
 	call	IfxScuWdt_getGlobalEndinitPassword
 	mov	d4,d2
 	call	IfxScuWdt_clearCpuEndinit
-.L96:
+.L112:
 	mov	d15,#0
-.L97:
+.L113:
 	st.w	0xf0000700,d15
-.L98:
+.L114:
 	call	IfxScuWdt_getGlobalEndinitPassword
 	mov	d4,d2
 	call	IfxScuWdt_setCpuEndinit
-.L99:
+.L115:
 	ld.w	d15,0xf0000700
-.L100:
+.L116:
 	ld.bu	d15,0xf0000704
-.L101:
+.L117:
 	insert	d15,d15,#0,#0,#3
 	st.b	0xf0000704,d15
-.L102:
-	mov	d15,#0
-.L103:
-	st.w	0xf000074c,d15
-.L104:
-	mov	d15,#67
-.L105:
-	st.w	0xf000070c,d15
-.L106:
-	mov	d15,#67
-	addih	d15,d15,#32768
-.L107:
-	st.w	0xf0000710,d15
-.L108:
-	mov	d15,#9
-	addih	d15,d15,#35087
-.L109:
-	st.w	0xf0000714,d15
-.L110:
-	mov	d15,#512
-.L111:
-	st.w	0xf0000718,d15
-.L112:
-	mov	d15,#7
-.L113:
-	st.w	0xf000071c,d15
-.L114:
-	sh	d15,d9,#16
-.L115:
-	or	d8,d15
-.L77:
-	st.w	0xf0000720,d8
-.L116:
-	ld.bu	d15,0xf000071a
-.L117:
-	insert	d15,d15,#1,#0,#2
-	st.b	0xf000071a,d15
 .L118:
-	mov	d15,#1
+	mov	d15,#0
 .L119:
 	st.w	0xf000074c,d15
 .L120:
-	movh	d15,#32768
+	mov	d15,#67
 .L121:
-	st.w	0xf0000738,d15
-.L55:
-	movh.a	a15,#61444
-.L78:
-	lea	a15,[a15]@los(0xf0038060)
+	st.w	0xf000070c,d15
 .L122:
-	ld.bu	d0,[a15]
+	mov	d15,#67
+	addih	d15,d15,#32768
 .L123:
-	mov	d15,#25
+	st.w	0xf0000710,d15
 .L124:
+	mov	d15,#9
+	addih	d15,d15,#35087
+.L125:
+	st.w	0xf0000714,d15
+.L126:
+	mov	d15,#512
+.L127:
+	st.w	0xf0000718,d15
+.L128:
+	mov	d15,#7
+.L129:
+	st.w	0xf000071c,d15
+.L130:
+	sh	d15,d9,#16
+.L131:
+	or	d8,d15
+.L93:
+	st.w	0xf0000720,d8
+.L132:
+	ld.bu	d15,0xf000071a
+.L133:
+	insert	d15,d15,#1,#0,#2
+	st.b	0xf000071a,d15
+.L134:
+	mov	d15,#1
+.L135:
+	st.w	0xf000074c,d15
+.L136:
+	movh	d15,#32768
+.L137:
+	st.w	0xf0000738,d15
+.L68:
+	movh.a	a15,#61444
+.L94:
+	lea	a15,[a15]@los(0xf0038060)
+.L138:
+	ld.bu	d0,[a15]
+.L139:
+	mov	d15,#25
+.L140:
 	insert	d15,d0,d15,#0,#8
 	st.b	[a15],d15
-.L125:
+.L141:
 	ld.bu	d15,[a15]1
-.L126:
+.L142:
 	insert	d15,d15,#0,#3,#3
 	st.b	[a15]1,d15
-.L127:
+.L143:
 	ld.bu	d15,[a15]3
-.L128:
+.L144:
 	or	d15,#2
 	st.b	[a15]3,d15
-.L129:
+.L145:
 	ld.bu	d15,0xf0000743
-.L130:
+.L146:
 	or	d15,#16
 	st.b	0xf0000743,d15
-.L131:
+.L147:
 	ld.bu	d15,[a15]1
-.L132:
+.L148:
 	or	d15,#4
 	st.b	[a15]1,d15
-.L133:
+.L149:
 	ret
-.L51:
+.L64:
 	
 __asclin1InitUart_function_end:
 	.size	asclin1InitUart,__asclin1InitUart_function_end-asclin1InitUart
-.L30:
+.L35:
 	; End of function
 	
 	.sdecl	'.text.asclin1.asclin1OutUart',code,cluster('asclin1OutUart')
@@ -181,27 +242,27 @@ __asclin1InitUart_function_end:
 	
 	.global	asclin1OutUart
 ; Function asclin1OutUart
-.L17:
+.L22:
 asclin1OutUart:	.type	func
-	j	.L3
-.L4:
-.L3:
+	j	.L8
+.L9:
+.L8:
 	ld.bu	d15,0xf0000737
-.L138:
-	jz.t	d15:7,.L4
-.L139:
+.L154:
+	jz.t	d15:7,.L9
+.L155:
 	movh	d15,#32768
-.L140:
+.L156:
 	st.w	0xf000073c,d15
-.L141:
+.L157:
 	st.w	0xf0000744,d4
-.L142:
+.L158:
 	ret
-.L58:
+.L71:
 	
 __asclin1OutUart_function_end:
 	.size	asclin1OutUart,__asclin1OutUart_function_end-asclin1OutUart
-.L35:
+.L40:
 	; End of function
 	
 	.sdecl	'.text.asclin1.asclin1InUart',code,cluster('asclin1InUart')
@@ -210,28 +271,28 @@ __asclin1OutUart_function_end:
 	
 	.global	asclin1InUart
 ; Function asclin1InUart
-.L19:
+.L24:
 asclin1InUart:	.type	func
 	sub.a	a10,#8
-.L79:
-	j	.L5
-.L6:
-.L5:
+.L95:
+	j	.L10
+.L11:
+.L10:
 	lea	a4,[a10]0
 	call	asclin1PollUart
-.L147:
-	jeq	d2,#0,.L6
-.L148:
+.L163:
+	jeq	d2,#0,.L11
+.L164:
 	ld.bu	d2,[a10]
-.L149:
-	j	.L7
-.L7:
+.L165:
+	j	.L12
+.L12:
 	ret
-.L62:
+.L75:
 	
 __asclin1InUart_function_end:
 	.size	asclin1InUart,__asclin1InUart_function_end-asclin1InUart
-.L40:
+.L45:
 	; End of function
 	
 	.sdecl	'.text.asclin1.asclin1PollUart',code,cluster('asclin1PollUart')
@@ -240,51 +301,76 @@ __asclin1InUart_function_end:
 	
 	.global	asclin1PollUart
 ; Function asclin1PollUart
-.L21:
+.L26:
 asclin1PollUart:	.type	func
 	mov	d2,#0
-.L80:
+.L96:
 	ld.bu	d15,0xf0000737
-.L154:
-	jz.t	d15:4,.L8
-.L155:
+.L170:
+	jz.t	d15:4,.L13
+.L171:
 	ld.w	d15,0xf0000748
-.L156:
+.L172:
 	extr.u	d15,d15,#0,#8
-.L81:
+.L97:
 	movh	d0,#4096
-.L157:
+.L173:
 	st.w	0xf000073c,d0
-.L158:
+.L174:
 	ld.w	d0,0xf0000734
-.L159:
+.L175:
 	movh	d1,#1029
-.L160:
+.L176:
 	and	d0,d1
-.L161:
-	jeq	d0,#0,.L9
-.L162:
+.L177:
+	jeq	d0,#0,.L14
+.L178:
 	movh	d15,#1029
-.L82:
+.L98:
 	st.w	0xf000073c,d15
-.L163:
-	j	.L10
-.L9:
+.L179:
+	j	.L15
+.L14:
 	st.b	[a4],d15
-.L164:
+.L180:
 	mov	d2,#1
-.L10:
-.L8:
-	j	.L11
-.L11:
+.L15:
+.L13:
+	j	.L16
+.L16:
 	ret
-.L65:
+.L78:
 	
 __asclin1PollUart_function_end:
 	.size	asclin1PollUart,__asclin1PollUart_function_end-asclin1PollUart
-.L45:
+.L50:
 	; End of function
 	
+	.sdecl	'.data.asclin1.g_isLogin',data,cluster('g_isLogin')
+	.sect	'.data.asclin1.g_isLogin'
+	.global	g_isLogin
+g_isLogin:	.type	object
+	.size	g_isLogin,1
+	.space	1
+	.sdecl	'.bss.asclin1.g_getLine',data,cluster('g_getLine')
+	.sect	'.bss.asclin1.g_getLine'
+	.global	g_getLine
+g_getLine:	.type	object
+	.size	g_getLine,1
+	.space	1
+	.sdecl	'.bss.asclin1.g_rx_buffer',data,cluster('g_rx_buffer')
+	.sect	'.bss.asclin1.g_rx_buffer'
+	.global	g_rx_buffer
+g_rx_buffer:	.type	object
+	.size	g_rx_buffer,32
+	.space	32
+	.sdecl	'.data.asclin1.g_rx_idx',data,cluster('g_rx_idx')
+	.sect	'.data.asclin1.g_rx_idx'
+	.global	g_rx_idx
+	.align	2
+g_rx_idx:	.type	object
+	.size	g_rx_idx,4
+	.space	4
 	.calls	'asclin1RxIsrHandler','asclin1InUart'
 	.calls	'asclin1InitUart','IfxScuWdt_getGlobalEndinitPassword'
 	.calls	'asclin1InitUart','IfxScuWdt_clearCpuEndinit'
@@ -298,21 +384,20 @@ __asclin1PollUart_function_end:
 	.extern	IfxScuWdt_setCpuEndinit
 	.extern	IfxScuWdt_getGlobalEndinitPassword
 	.extern	motorState
-	.extern	g_isLogin
 	.calls	'asclin1PollUart','',0
 	.sdecl	'.debug_info',debug
 	.sect	'.debug_info'
-.L23:
-	.word	359320
+.L28:
+	.word	359383
 	.half	3
-	.word	.L24
+	.word	.L29
 	.byte	4
-.L22:
+.L27:
 	.byte	1
 	.byte	'../BSW/MCAL/asclin1.c',0
 	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
 	.byte	'C:\\Users\\USER\\Documents\\repos\\tc375\\projectWon\\src\\TriCore Debug (TASKING)\\',0,12,1
-	.word	.L25
+	.word	.L30
 	.byte	2,1,1,3
 	.word	193
 	.byte	4
@@ -345,7 +430,7 @@ __asclin1PollUart_function_end:
 	.word	356
 	.byte	6,0,4
 	.byte	'Ifx__stopPerfCounters',0,3,1,169,2,17,1,1,6,0
-.L52:
+.L65:
 	.byte	9
 	.byte	'unsigned int',0,4,7,4
 	.byte	'__ldmst_c',0,3,2,111,17,1,1,5
@@ -374,7 +459,7 @@ __asclin1PollUart_function_end:
 	.byte	'value',0,2,143,1,43
 	.word	520
 	.byte	6,0
-.L64:
+.L77:
 	.byte	9
 	.byte	'int',0,4,5,9
 	.byte	'unsigned int',0,4,7,11
@@ -400,7 +485,7 @@ __asclin1PollUart_function_end:
 	.byte	'B',0
 	.word	655
 	.byte	4,2,35,0,0
-.L61:
+.L74:
 	.byte	9
 	.byte	'unsigned char',0,1,8,9
 	.byte	'unsigned short int',0,2,7,11
@@ -2001,7 +2086,7 @@ __asclin1PollUart_function_end:
 	.word	10668
 	.byte	4,2,35,0,0,8
 	.word	10958
-.L56:
+.L69:
 	.byte	3
 	.word	10997
 	.byte	4
@@ -10172,13 +10257,13 @@ __asclin1PollUart_function_end:
 	.byte	22
 	.word	61300
 	.byte	6,0
-.L59:
+.L72:
 	.byte	28
 	.word	791
-.L66:
+.L79:
 	.byte	3
 	.word	791
-.L72:
+.L84:
 	.byte	9
 	.byte	'char',0,1,6,9
 	.byte	'short int',0,2,5,29
@@ -49413,16 +49498,38 @@ __asclin1PollUart_function_end:
 	.byte	1,2,35,10,0,29
 	.byte	'MotorState',0,47,18,3
 	.word	359159
-	.byte	32
-	.byte	'motorState',0,24,3,19
-	.word	359159
-	.byte	1,1,32
-	.byte	'g_isLogin',0,24,5,16
+	.byte	31,48,9,9,8,14
+	.byte	'port',0
+	.word	9783
+	.byte	4,2,35,0,14
+	.byte	'pinIndex',0
 	.word	791
-	.byte	1,1,0
+	.byte	1,2,35,4,0,29
+	.byte	'GpioPin',0,48,13,3
+	.word	359282
+	.byte	32
+	.byte	'motorState',0,24,6,19
+	.word	359159
+	.byte	1,1
+.L86:
+	.byte	8
+	.word	791
+.L87:
+	.byte	8
+	.word	791
+	.byte	18,32
+	.word	62396
+	.byte	19,31,0
+.L88:
+	.byte	8
+	.word	359367
+.L89:
+	.byte	8
+	.word	632
+	.byte	0
 	.sdecl	'.debug_abbrev',debug
 	.sect	'.debug_abbrev'
-.L24:
+.L29:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,16,6,0,0,2,21,0,54,15,39,12,0,0,3,15,0,73,19,0,0,4,46,1,3,8,32,13
 	.byte	58,15,59,15,57,15,54,15,39,12,0,0,5,5,0,3,8,58,15,59,15,57,15,73,19,0,0,6,11,0,0,0,7,59,0,3,8,0,0,8,53
 	.byte	0,73,19,0,0,9,36,0,3,8,11,15,62,15,0,0,10,46,1,3,8,32,13,58,15,59,15,57,15,73,19,54,15,39,12,0,0,11,19
@@ -49435,12 +49542,12 @@ __asclin1PollUart_function_end:
 	.byte	0,3,8,58,15,59,15,57,15,73,19,63,12,60,12,0,0,0
 	.sdecl	'.debug_line',debug
 	.sect	'.debug_line'
-.L25:
-	.word	.L84-.L83
-.L83:
+.L30:
+	.word	.L100-.L99
+.L99:
 	.half	3
-	.word	.L86-.L85
-.L85:
+	.word	.L102-.L101
+.L101:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1
 	.byte	'C:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\Infra\\\\Sfr\\\\TC37A\\\\_Reg',0
 	.byte	'C:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Asclin\\\\Std',0
@@ -49450,7 +49557,8 @@ __asclin1PollUart_function_end:
 	.byte	'C:\\Infineon\\AURIX-Studio-1.10.2\\tools\\Compilers\\Tasking_1.1r8\\ctc\\include\\',0
 	.byte	'C:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Gtm\\\\Atom\\\\Pwm',0
 	.byte	'C:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\\\Can\\\\Can',0
-	.byte	'C:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\ASW\\\\drivecontrol',0,0
+	.byte	'C:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\ASW\\\\drivecontrol',0
+	.byte	'C:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\BSW\\\\MCAL',0,0
 	.byte	'C:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\Cpu\\Std\\IfxCpu_IntrinsicsTasking.h',0
 	.byte	0,0,0
 	.byte	'C:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\Cpu\\Std\\IfxCpu_Intrinsics.h',0
@@ -49522,163 +49630,14 @@ __asclin1PollUart_function_end:
 	.byte	'C:\\\\Users\\\\USER\\\\Documents\\\\repos\\\\tc375\\\\projectWon\\\\src\\\\Libraries\\\\iLLD\\\\TC37A\\\\Tricore\\_PinMap\\IfxCan_PinMap.h',0
 	.byte	0,0,0
 	.byte	'IfxCan_Can.h',0,8,0,0
-	.byte	'control.h',0,9,0,0,0
-.L86:
-.L84:
+	.byte	'control.h',0,9,0,0
+	.byte	'port.h',0,10,0,0,0
+.L102:
+.L100:
 	.sdecl	'.debug_info',debug,cluster('asclin1InitUart')
 	.sect	'.debug_info'
-.L26:
-	.word	317
-	.half	3
-	.word	.L27
-	.byte	4,1
-	.byte	'../BSW/MCAL/asclin1.c',0
-	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Users\\USER\\Documents\\repos\\tc375\\projectWon\\src\\TriCore Debug (TASKING)\\',0,12,1
-	.word	.L29,.L28
-	.byte	2
-	.word	.L22
-	.byte	3
-	.byte	'asclin1InitUart',0,1,21,6,1,1,1
-	.word	.L15,.L51,.L14
-	.byte	4
-	.word	.L15,.L51
-	.byte	5
-	.byte	'numerator',0,1,25,18
-	.word	.L52,.L53
-	.byte	5
-	.byte	'denominator',0,1,27,18
-	.word	.L52,.L54
-	.byte	4
-	.word	.L55,.L51
-	.byte	5
-	.byte	'src',0,1,76,28
-	.word	.L56,.L57
-	.byte	0,0,0,0
-	.sdecl	'.debug_abbrev',debug,cluster('asclin1InitUart')
-	.sect	'.debug_abbrev'
-.L27:
-	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
-	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,1,17,1,18,1,0,0,5,52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
-	.sdecl	'.debug_line',debug,cluster('asclin1InitUart')
-	.sect	'.debug_line'
-.L28:
-	.word	.L88-.L87
-.L87:
-	.half	3
-	.word	.L90-.L89
-.L89:
-	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
-	.byte	'../BSW/MCAL/asclin1.c',0,0,0,0,0
-.L90:
-	.byte	5,28,7,0,5,2
-	.word	.L15
-	.byte	3,24,1,5,30,9
-	.half	.L75-.L15
-	.byte	3,2,1,5,23,9
-	.half	.L76-.L75
-	.byte	3,4,1,5,30,9
-	.half	.L91-.L76
-	.byte	1,5,28,9
-	.half	.L92-.L91
-	.byte	1,5,21,9
-	.half	.L93-.L92
-	.byte	3,1,1,5,25,9
-	.half	.L94-.L93
-	.byte	1,5,65,9
-	.half	.L95-.L94
-	.byte	3,3,1,5,28,9
-	.half	.L96-.L95
-	.byte	3,1,1,5,26,9
-	.half	.L97-.L96
-	.byte	1,5,63,9
-	.half	.L98-.L97
-	.byte	3,1,1,5,30,9
-	.half	.L99-.L98
-	.byte	3,2,1,5,26,9
-	.half	.L100-.L99
-	.byte	3,3,1,5,32,9
-	.half	.L101-.L100
-	.byte	1,5,28,9
-	.half	.L102-.L101
-	.byte	3,3,1,5,26,9
-	.half	.L103-.L102
-	.byte	1,5,5,9
-	.half	.L104-.L103
-	.byte	3,5,1,5,32,9
-	.half	.L105-.L104
-	.byte	3,126,1,5,5,9
-	.half	.L106-.L105
-	.byte	3,6,1,5,32,9
-	.half	.L107-.L106
-	.byte	3,125,1,5,5,9
-	.half	.L108-.L107
-	.byte	3,8,1,5,29,9
-	.half	.L109-.L108
-	.byte	3,125,1,5,5,9
-	.half	.L110-.L109
-	.byte	3,7,1,5,31,9
-	.half	.L111-.L110
-	.byte	3,126,1,5,34,9
-	.half	.L112-.L111
-	.byte	3,3,1,5,29,9
-	.half	.L113-.L112
-	.byte	1,5,18,9
-	.half	.L114-.L113
-	.byte	3,4,1,5,5,9
-	.half	.L115-.L114
-	.byte	1,5,26,9
-	.half	.L77-.L115
-	.byte	3,127,1,5,30,9
-	.half	.L116-.L77
-	.byte	3,3,1,5,36,9
-	.half	.L117-.L116
-	.byte	1,5,28,9
-	.half	.L118-.L117
-	.byte	3,1,1,5,26,9
-	.half	.L119-.L118
-	.byte	1,5,63,9
-	.half	.L120-.L119
-	.byte	3,2,1,5,31,9
-	.half	.L121-.L120
-	.byte	1,5,65,9
-	.half	.L55-.L121
-	.byte	3,4,1,5,11,9
-	.half	.L122-.L55
-	.byte	3,1,1,5,19,9
-	.half	.L123-.L122
-	.byte	1,5,17,9
-	.half	.L124-.L123
-	.byte	1,5,11,9
-	.half	.L125-.L124
-	.byte	3,1,1,5,16,9
-	.half	.L126-.L125
-	.byte	1,5,11,9
-	.half	.L127-.L126
-	.byte	3,1,1,5,17,9
-	.half	.L128-.L127
-	.byte	1,5,33,9
-	.half	.L129-.L128
-	.byte	3,1,1,5,39,9
-	.half	.L130-.L129
-	.byte	1,5,11,9
-	.half	.L131-.L130
-	.byte	3,1,1,5,16,9
-	.half	.L132-.L131
-	.byte	1,5,1,9
-	.half	.L133-.L132
-	.byte	3,1,1,7,9
-	.half	.L30-.L133
-	.byte	0,1,1
-.L88:
-	.sdecl	'.debug_ranges',debug,cluster('asclin1InitUart')
-	.sect	'.debug_ranges'
-.L29:
-	.word	-1,.L15,0,.L30-.L15,0,0
-	.sdecl	'.debug_info',debug,cluster('asclin1OutUart')
-	.sect	'.debug_info'
 .L31:
-	.word	259
+	.word	317
 	.half	3
 	.word	.L32
 	.byte	4,1
@@ -49687,58 +49646,148 @@ __asclin1PollUart_function_end:
 	.byte	'C:\\Users\\USER\\Documents\\repos\\tc375\\projectWon\\src\\TriCore Debug (TASKING)\\',0,12,1
 	.word	.L34,.L33
 	.byte	2
-	.word	.L22
+	.word	.L27
 	.byte	3
-	.byte	'asclin1OutUart',0,1,86,6,1,1,1
-	.word	.L17,.L58,.L16
+	.byte	'asclin1InitUart',0,1,39,6,1,1,1
+	.word	.L20,.L64,.L19
 	.byte	4
-	.byte	'chr',0,1,86,42
-	.word	.L59,.L60
+	.word	.L20,.L64
 	.byte	5
-	.word	.L17,.L58
-	.byte	0,0
-	.sdecl	'.debug_abbrev',debug,cluster('asclin1OutUart')
+	.byte	'numerator',0,1,43,18
+	.word	.L65,.L66
+	.byte	5
+	.byte	'denominator',0,1,45,18
+	.word	.L65,.L67
+	.byte	4
+	.word	.L68,.L64
+	.byte	5
+	.byte	'src',0,1,94,28
+	.word	.L69,.L70
+	.byte	0,0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('asclin1InitUart')
 	.sect	'.debug_abbrev'
 .L32:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
-	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
-	.sdecl	'.debug_line',debug,cluster('asclin1OutUart')
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,1,17,1,18,1,0,0,5,52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('asclin1InitUart')
 	.sect	'.debug_line'
 .L33:
-	.word	.L135-.L134
-.L134:
+	.word	.L104-.L103
+.L103:
 	.half	3
-	.word	.L137-.L136
-.L136:
+	.word	.L106-.L105
+.L105:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../BSW/MCAL/asclin1.c',0,0,0,0,0
-.L137:
-	.byte	5,46,7,0,5,2
-	.word	.L17
-	.byte	3,216,0,1,5,36,9
-	.half	.L3-.L17
-	.byte	1,5,13,9
-	.half	.L138-.L3
-	.byte	1,5,67,7,9
+.L106:
+	.byte	5,28,7,0,5,2
+	.word	.L20
+	.byte	3,42,1,5,30,9
+	.half	.L91-.L20
+	.byte	3,2,1,5,23,9
+	.half	.L92-.L91
+	.byte	3,4,1,5,30,9
+	.half	.L107-.L92
+	.byte	1,5,28,9
+	.half	.L108-.L107
+	.byte	1,5,21,9
+	.half	.L109-.L108
+	.byte	3,1,1,5,25,9
+	.half	.L110-.L109
+	.byte	1,5,65,9
+	.half	.L111-.L110
+	.byte	3,3,1,5,28,9
+	.half	.L112-.L111
+	.byte	3,1,1,5,26,9
+	.half	.L113-.L112
+	.byte	1,5,63,9
+	.half	.L114-.L113
+	.byte	3,1,1,5,30,9
+	.half	.L115-.L114
+	.byte	3,2,1,5,26,9
+	.half	.L116-.L115
+	.byte	3,3,1,5,32,9
+	.half	.L117-.L116
+	.byte	1,5,28,9
+	.half	.L118-.L117
+	.byte	3,3,1,5,26,9
+	.half	.L119-.L118
+	.byte	1,5,5,9
+	.half	.L120-.L119
+	.byte	3,5,1,5,32,9
+	.half	.L121-.L120
+	.byte	3,126,1,5,5,9
+	.half	.L122-.L121
+	.byte	3,6,1,5,32,9
+	.half	.L123-.L122
+	.byte	3,125,1,5,5,9
+	.half	.L124-.L123
+	.byte	3,8,1,5,29,9
+	.half	.L125-.L124
+	.byte	3,125,1,5,5,9
+	.half	.L126-.L125
+	.byte	3,7,1,5,31,9
+	.half	.L127-.L126
+	.byte	3,126,1,5,34,9
+	.half	.L128-.L127
+	.byte	3,3,1,5,29,9
+	.half	.L129-.L128
+	.byte	1,5,18,9
+	.half	.L130-.L129
+	.byte	3,4,1,5,5,9
+	.half	.L131-.L130
+	.byte	1,5,26,9
+	.half	.L93-.L131
+	.byte	3,127,1,5,30,9
+	.half	.L132-.L93
+	.byte	3,3,1,5,36,9
+	.half	.L133-.L132
+	.byte	1,5,28,9
+	.half	.L134-.L133
+	.byte	3,1,1,5,26,9
+	.half	.L135-.L134
+	.byte	1,5,63,9
+	.half	.L136-.L135
+	.byte	3,2,1,5,31,9
+	.half	.L137-.L136
+	.byte	1,5,65,9
+	.half	.L68-.L137
+	.byte	3,4,1,5,11,9
+	.half	.L138-.L68
+	.byte	3,1,1,5,19,9
 	.half	.L139-.L138
-	.byte	3,4,1,5,33,9
+	.byte	1,5,17,9
 	.half	.L140-.L139
-	.byte	1,5,29,9
+	.byte	1,5,11,9
 	.half	.L141-.L140
-	.byte	3,3,1,5,1,9
+	.byte	3,1,1,5,16,9
 	.half	.L142-.L141
+	.byte	1,5,11,9
+	.half	.L143-.L142
+	.byte	3,1,1,5,17,9
+	.half	.L144-.L143
+	.byte	1,5,33,9
+	.half	.L145-.L144
+	.byte	3,1,1,5,39,9
+	.half	.L146-.L145
+	.byte	1,5,11,9
+	.half	.L147-.L146
+	.byte	3,1,1,5,16,9
+	.half	.L148-.L147
+	.byte	1,5,1,9
+	.half	.L149-.L148
 	.byte	3,1,1,7,9
-	.half	.L35-.L142
+	.half	.L35-.L149
 	.byte	0,1,1
-.L135:
-	.sdecl	'.debug_ranges',debug,cluster('asclin1OutUart')
+.L104:
+	.sdecl	'.debug_ranges',debug,cluster('asclin1InitUart')
 	.sect	'.debug_ranges'
 .L34:
-	.word	-1,.L17,0,.L35-.L17,0,0
-	.sdecl	'.debug_info',debug,cluster('asclin1InUart')
+	.word	-1,.L20,0,.L35-.L20,0,0
+	.sdecl	'.debug_info',debug,cluster('asclin1OutUart')
 	.sect	'.debug_info'
 .L36:
-	.word	262
+	.word	259
 	.half	3
 	.word	.L37
 	.byte	4,1
@@ -49747,95 +49796,24 @@ __asclin1PollUart_function_end:
 	.byte	'C:\\Users\\USER\\Documents\\repos\\tc375\\projectWon\\src\\TriCore Debug (TASKING)\\',0,12,1
 	.word	.L39,.L38
 	.byte	2
-	.word	.L22
+	.word	.L27
 	.byte	3
-	.byte	'asclin1InUart',0,1,100,15
-	.word	.L61
-	.byte	1,1,1
-	.word	.L19,.L62,.L18
+	.byte	'asclin1OutUart',0,1,104,6,1,1,1
+	.word	.L22,.L71,.L21
 	.byte	4
-	.word	.L19,.L62
+	.byte	'chr',0,1,104,42
+	.word	.L72,.L73
 	.byte	5
-	.byte	'ch',0,1,102,19
-	.word	.L61,.L63
-	.byte	0,0,0
-	.sdecl	'.debug_abbrev',debug,cluster('asclin1InUart')
+	.word	.L22,.L71
+	.byte	0,0
+	.sdecl	'.debug_abbrev',debug,cluster('asclin1OutUart')
 	.sect	'.debug_abbrev'
 .L37:
-	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
-	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,11,1,17,1,18,1,0,0,5,52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
-	.sdecl	'.debug_line',debug,cluster('asclin1InUart')
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
+	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,0,17,1,18,1,0,0,0
+	.sdecl	'.debug_line',debug,cluster('asclin1OutUart')
 	.sect	'.debug_line'
 .L38:
-	.word	.L144-.L143
-.L143:
-	.half	3
-	.word	.L146-.L145
-.L145:
-	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
-	.byte	'../BSW/MCAL/asclin1.c',0,0,0,0,0
-.L146:
-	.byte	5,15,7,0,5,2
-	.word	.L19
-	.byte	3,227,0,1,5,37,9
-	.half	.L79-.L19
-	.byte	3,5,1,5,29,9
-	.half	.L5-.L79
-	.byte	1,5,37,9
-	.half	.L147-.L5
-	.byte	1,5,12,7,9
-	.half	.L148-.L147
-	.byte	3,3,1,5,5,9
-	.half	.L149-.L148
-	.byte	1,5,1,9
-	.half	.L7-.L149
-	.byte	3,1,1,7,9
-	.half	.L40-.L7
-	.byte	0,1,1
-.L144:
-	.sdecl	'.debug_ranges',debug,cluster('asclin1InUart')
-	.sect	'.debug_ranges'
-.L39:
-	.word	-1,.L19,0,.L40-.L19,0,0
-	.sdecl	'.debug_info',debug,cluster('asclin1PollUart')
-	.sect	'.debug_info'
-.L41:
-	.word	297
-	.half	3
-	.word	.L42
-	.byte	4,1
-	.byte	'../BSW/MCAL/asclin1.c',0
-	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
-	.byte	'C:\\Users\\USER\\Documents\\repos\\tc375\\projectWon\\src\\TriCore Debug (TASKING)\\',0,12,1
-	.word	.L44,.L43
-	.byte	2
-	.word	.L22
-	.byte	3
-	.byte	'asclin1PollUart',0,1,115,5
-	.word	.L64
-	.byte	1,1,1
-	.word	.L21,.L65,.L20
-	.byte	4
-	.byte	'chr',0,1,115,37
-	.word	.L66,.L67
-	.byte	5
-	.word	.L21,.L65
-	.byte	6
-	.byte	'ret',0,1,117,19
-	.word	.L61,.L68
-	.byte	6
-	.byte	'res',0,1,118,9
-	.word	.L64,.L69
-	.byte	0,0,0
-	.sdecl	'.debug_abbrev',debug,cluster('asclin1PollUart')
-	.sect	'.debug_abbrev'
-.L42:
-	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
-	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6
-	.byte	52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
-	.sdecl	'.debug_line',debug,cluster('asclin1PollUart')
-	.sect	'.debug_line'
-.L43:
 	.word	.L151-.L150
 .L150:
 	.half	3
@@ -49844,54 +49822,94 @@ __asclin1PollUart_function_end:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../BSW/MCAL/asclin1.c',0,0,0,0,0
 .L153:
-	.byte	5,13,7,0,5,2
-	.word	.L21
-	.byte	3,245,0,1,5,31,9
-	.half	.L80-.L21
-	.byte	3,2,1,5,5,9
-	.half	.L154-.L80
-	.byte	1,5,52,7,9
+	.byte	5,46,7,0,5,2
+	.word	.L22
+	.byte	3,234,0,1,5,36,9
+	.half	.L8-.L22
+	.byte	1,5,13,9
+	.half	.L154-.L8
+	.byte	1,5,67,7,9
 	.half	.L155-.L154
-	.byte	3,2,1,5,15,9
+	.byte	3,4,1,5,33,9
 	.half	.L156-.L155
-	.byte	1,5,71,9
-	.half	.L81-.L156
-	.byte	3,2,1,5,37,9
-	.half	.L157-.L81
-	.byte	1,5,34,9
+	.byte	1,5,29,9
+	.half	.L157-.L156
+	.byte	3,3,1,5,1,9
 	.half	.L158-.L157
-	.byte	3,2,1,5,25,9
-	.half	.L159-.L158
-	.byte	3,3,1,5,17,9
-	.half	.L160-.L159
-	.byte	3,126,1,5,9,9
-	.half	.L161-.L160
-	.byte	3,127,1,5,21,7,9
-	.half	.L162-.L161
-	.byte	3,8,1,5,41,9
-	.half	.L82-.L162
-	.byte	3,126,1,5,90,9
-	.half	.L163-.L82
-	.byte	3,2,1,5,18,9
-	.half	.L9-.L163
-	.byte	3,6,1,5,17,9
-	.half	.L164-.L9
-	.byte	3,1,1,5,5,9
-	.half	.L8-.L164
-	.byte	3,4,1,5,1,9
-	.half	.L11-.L8
 	.byte	3,1,1,7,9
-	.half	.L45-.L11
+	.half	.L40-.L158
 	.byte	0,1,1
 .L151:
-	.sdecl	'.debug_ranges',debug,cluster('asclin1PollUart')
+	.sdecl	'.debug_ranges',debug,cluster('asclin1OutUart')
+	.sect	'.debug_ranges'
+.L39:
+	.word	-1,.L22,0,.L40-.L22,0,0
+	.sdecl	'.debug_info',debug,cluster('asclin1InUart')
+	.sect	'.debug_info'
+.L41:
+	.word	262
+	.half	3
+	.word	.L42
+	.byte	4,1
+	.byte	'../BSW/MCAL/asclin1.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\USER\\Documents\\repos\\tc375\\projectWon\\src\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L44,.L43
+	.byte	2
+	.word	.L27
+	.byte	3
+	.byte	'asclin1InUart',0,1,118,15
+	.word	.L74
+	.byte	1,1,1
+	.word	.L24,.L75,.L23
+	.byte	4
+	.word	.L24,.L75
+	.byte	5
+	.byte	'ch',0,1,120,19
+	.word	.L74,.L76
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('asclin1InUart')
+	.sect	'.debug_abbrev'
+.L42:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,11,1,17,1,18,1,0,0,5,52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('asclin1InUart')
+	.sect	'.debug_line'
+.L43:
+	.word	.L160-.L159
+.L159:
+	.half	3
+	.word	.L162-.L161
+.L161:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../BSW/MCAL/asclin1.c',0,0,0,0,0
+.L162:
+	.byte	5,15,7,0,5,2
+	.word	.L24
+	.byte	3,245,0,1,5,37,9
+	.half	.L95-.L24
+	.byte	3,5,1,5,29,9
+	.half	.L10-.L95
+	.byte	1,5,37,9
+	.half	.L163-.L10
+	.byte	1,5,12,7,9
+	.half	.L164-.L163
+	.byte	3,3,1,5,5,9
+	.half	.L165-.L164
+	.byte	1,5,1,9
+	.half	.L12-.L165
+	.byte	3,1,1,7,9
+	.half	.L45-.L12
+	.byte	0,1,1
+.L160:
+	.sdecl	'.debug_ranges',debug,cluster('asclin1InUart')
 	.sect	'.debug_ranges'
 .L44:
-	.word	-1,.L21,0,.L45-.L21,0,0
-	.sdecl	'.debug_info',debug,cluster('asclin1RxIsrHandler')
+	.word	-1,.L24,0,.L45-.L24,0,0
+	.sdecl	'.debug_info',debug,cluster('asclin1PollUart')
 	.sect	'.debug_info'
 .L46:
-	.word	275
+	.word	301
 	.half	3
 	.word	.L47
 	.byte	4,1
@@ -49900,146 +49918,369 @@ __asclin1PollUart_function_end:
 	.byte	'C:\\Users\\USER\\Documents\\repos\\tc375\\projectWon\\src\\TriCore Debug (TASKING)\\',0,12,1
 	.word	.L49,.L48
 	.byte	2
-	.word	.L22
+	.word	.L27
 	.byte	3
-	.byte	'asclin1RxIsrHandler',0,1,8,6,1,1,1
-	.word	.L13,.L70,.L12
+	.byte	'asclin1PollUart',0,1,133,1,5
+	.word	.L77
+	.byte	1,1,1
+	.word	.L26,.L78,.L25
 	.byte	4
-	.word	.L13,.L70
-	.byte	4
-	.word	.L71,.L2
+	.byte	'chr',0,1,133,1,37
+	.word	.L79,.L80
 	.byte	5
-	.byte	'key',0,1,12,14
-	.word	.L72,.L73
-	.byte	0,0,0,0
-	.sdecl	'.debug_abbrev',debug,cluster('asclin1RxIsrHandler')
+	.word	.L26,.L78
+	.byte	6
+	.byte	'ret',0,1,135,1,19
+	.word	.L74,.L81
+	.byte	6
+	.byte	'res',0,1,136,1,9
+	.word	.L77,.L82
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('asclin1PollUart')
 	.sect	'.debug_abbrev'
 .L47:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,73,16
+	.byte	54,15,39,12,63,12,17,1,18,1,64,6,0,0,4,5,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,5,11,1,17,1,18,1,0,0,6
+	.byte	52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
+	.sdecl	'.debug_line',debug,cluster('asclin1PollUart')
+	.sect	'.debug_line'
+.L48:
+	.word	.L167-.L166
+.L166:
+	.half	3
+	.word	.L169-.L168
+.L168:
+	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
+	.byte	'../BSW/MCAL/asclin1.c',0,0,0,0,0
+.L169:
+	.byte	5,13,7,0,5,2
+	.word	.L26
+	.byte	3,135,1,1,5,31,9
+	.half	.L96-.L26
+	.byte	3,2,1,5,5,9
+	.half	.L170-.L96
+	.byte	1,5,52,7,9
+	.half	.L171-.L170
+	.byte	3,2,1,5,15,9
+	.half	.L172-.L171
+	.byte	1,5,71,9
+	.half	.L97-.L172
+	.byte	3,2,1,5,37,9
+	.half	.L173-.L97
+	.byte	1,5,34,9
+	.half	.L174-.L173
+	.byte	3,2,1,5,25,9
+	.half	.L175-.L174
+	.byte	3,3,1,5,17,9
+	.half	.L176-.L175
+	.byte	3,126,1,5,9,9
+	.half	.L177-.L176
+	.byte	3,127,1,5,21,7,9
+	.half	.L178-.L177
+	.byte	3,8,1,5,41,9
+	.half	.L98-.L178
+	.byte	3,126,1,5,90,9
+	.half	.L179-.L98
+	.byte	3,2,1,5,18,9
+	.half	.L14-.L179
+	.byte	3,6,1,5,17,9
+	.half	.L180-.L14
+	.byte	3,1,1,5,5,9
+	.half	.L13-.L180
+	.byte	3,4,1,5,1,9
+	.half	.L16-.L13
+	.byte	3,1,1,7,9
+	.half	.L50-.L16
+	.byte	0,1,1
+.L167:
+	.sdecl	'.debug_ranges',debug,cluster('asclin1PollUart')
+	.sect	'.debug_ranges'
+.L49:
+	.word	-1,.L26,0,.L50-.L26,0,0
+	.sdecl	'.debug_info',debug,cluster('asclin1RxIsrHandler')
+	.sect	'.debug_info'
+.L51:
+	.word	265
+	.half	3
+	.word	.L52
+	.byte	4,1
+	.byte	'../BSW/MCAL/asclin1.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\USER\\Documents\\repos\\tc375\\projectWon\\src\\TriCore Debug (TASKING)\\',0,12,1
+	.word	.L54,.L53
+	.byte	2
+	.word	.L27
+	.byte	3
+	.byte	'asclin1RxIsrHandler',0,1,14,6,1,1,1
+	.word	.L18,.L83,.L17
+	.byte	4
+	.word	.L18,.L83
+	.byte	5
+	.byte	'key',0,1,16,10
+	.word	.L84,.L85
+	.byte	0,0,0
+	.sdecl	'.debug_abbrev',debug,cluster('asclin1RxIsrHandler')
+	.sect	'.debug_abbrev'
+.L52:
 	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,85,6,16,6,0,0,2,61,0,24,16,0,0,3,46,1,3,8,58,15,59,15,57,15,54,15
 	.byte	39,12,63,12,17,1,18,1,64,6,0,0,4,11,1,17,1,18,1,0,0,5,52,0,3,8,58,15,59,15,57,15,73,16,2,6,0,0,0
 	.sdecl	'.debug_line',debug,cluster('asclin1RxIsrHandler')
 	.sect	'.debug_line'
-.L48:
-	.word	.L166-.L165
-.L165:
+.L53:
+	.word	.L182-.L181
+.L181:
 	.half	3
-	.word	.L168-.L167
-.L167:
+	.word	.L184-.L183
+.L183:
 	.byte	2,1,-4,9,10,0,1,1,1,1,0,0,0,1,0
 	.byte	'../BSW/MCAL/asclin1.c',0,0,0,0,0
-.L168:
+.L184:
 	.byte	5,6,7,0,5,2
-	.word	.L13
-	.byte	3,7,1,5,10,9
-	.half	.L169-.L13
-	.byte	3,2,1,5,33,9
-	.half	.L71-.L169
-	.byte	3,2,1,5,9,9
-	.half	.L74-.L71
-	.byte	3,1,1,5,33,9
-	.half	.L170-.L74
+	.word	.L18
+	.byte	3,13,1,5,29,9
+	.half	.L185-.L18
+	.byte	3,2,1,5,10,9
+	.half	.L90-.L185
+	.byte	3,1,1,5,19,9
+	.half	.L186-.L90
+	.byte	3,2,1,5,12,9
+	.half	.L187-.L186
+	.byte	1,5,34,7,9
+	.half	.L188-.L187
+	.byte	1,5,31,9
+	.half	.L189-.L188
+	.byte	1,5,25,7,9
+	.half	.L3-.L189
+	.byte	3,1,1,5,13,9
+	.half	.L190-.L3
+	.byte	1,5,24,9
+	.half	.L191-.L190
+	.byte	1,5,37,9
+	.half	.L192-.L191
+	.byte	1,5,35,9
+	.half	.L193-.L192
+	.byte	1,5,13,9
+	.half	.L194-.L193
+	.byte	3,1,1,5,25,9
+	.half	.L195-.L194
+	.byte	1,5,23,9
+	.half	.L196-.L195
+	.byte	1,5,35,9
+	.half	.L197-.L196
+	.byte	3,127,1,5,17,9
+	.half	.L4-.L197
+	.byte	3,3,1,5,44,9
+	.half	.L198-.L4
+	.byte	1,5,13,9
+	.half	.L199-.L198
+	.byte	1,5,29,7,9
+	.half	.L200-.L199
+	.byte	3,1,1,5,17,9
+	.half	.L201-.L200
+	.byte	1,5,28,9
+	.half	.L202-.L201
+	.byte	1,5,41,9
+	.half	.L203-.L202
+	.byte	1,5,29,9
+	.half	.L204-.L203
+	.byte	1,5,37,9
+	.half	.L205-.L204
+	.byte	1,5,11,9
+	.half	.L5-.L205
+	.byte	3,126,1,5,9,9
+	.half	.L2-.L5
+	.byte	3,9,1,5,33,9
+	.half	.L206-.L2
 	.byte	1,5,1,9
-	.half	.L2-.L170
+	.half	.L7-.L206
 	.byte	3,4,1,9
-	.half	.L50-.L2
+	.half	.L55-.L7
 	.byte	0,1,1
-.L166:
+.L182:
 	.sdecl	'.debug_ranges',debug,cluster('asclin1RxIsrHandler')
 	.sect	'.debug_ranges'
-.L49:
-	.word	-1,.L13,0,.L50-.L13,0,0
+.L54:
+	.word	-1,.L18,0,.L55-.L18,0,0
+	.sdecl	'.debug_info',debug,cluster('g_isLogin')
+	.sect	'.debug_info'
+.L56:
+	.word	216
+	.half	3
+	.word	.L57
+	.byte	4,1
+	.byte	'../BSW/MCAL/asclin1.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\USER\\Documents\\repos\\tc375\\projectWon\\src\\TriCore Debug (TASKING)\\',0,12,1,2
+	.word	.L27
+	.byte	3
+	.byte	'g_isLogin',0,24,8,18
+	.word	.L86
+	.byte	1,5,3
+	.word	g_isLogin
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('g_isLogin')
+	.sect	'.debug_abbrev'
+.L57:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,63,12,2,9
+	.byte	0,0,0
+	.sdecl	'.debug_info',debug,cluster('g_getLine')
+	.sect	'.debug_info'
+.L58:
+	.word	216
+	.half	3
+	.word	.L59
+	.byte	4,1
+	.byte	'../BSW/MCAL/asclin1.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\USER\\Documents\\repos\\tc375\\projectWon\\src\\TriCore Debug (TASKING)\\',0,12,1,2
+	.word	.L27
+	.byte	3
+	.byte	'g_getLine',0,24,9,18
+	.word	.L87
+	.byte	1,5,3
+	.word	g_getLine
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('g_getLine')
+	.sect	'.debug_abbrev'
+.L59:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,63,12,2,9
+	.byte	0,0,0
+	.sdecl	'.debug_info',debug,cluster('g_rx_buffer')
+	.sect	'.debug_info'
+.L60:
+	.word	218
+	.half	3
+	.word	.L61
+	.byte	4,1
+	.byte	'../BSW/MCAL/asclin1.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\USER\\Documents\\repos\\tc375\\projectWon\\src\\TriCore Debug (TASKING)\\',0,12,1,2
+	.word	.L27
+	.byte	3
+	.byte	'g_rx_buffer',0,24,10,15
+	.word	.L88
+	.byte	1,5,3
+	.word	g_rx_buffer
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('g_rx_buffer')
+	.sect	'.debug_abbrev'
+.L61:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,63,12,2,9
+	.byte	0,0,0
+	.sdecl	'.debug_info',debug,cluster('g_rx_idx')
+	.sect	'.debug_info'
+.L62:
+	.word	215
+	.half	3
+	.word	.L63
+	.byte	4,1
+	.byte	'../BSW/MCAL/asclin1.c',0
+	.byte	'TASKING VX-toolset for AURIX Development Studio (non-commercial): C compiler',0
+	.byte	'C:\\Users\\USER\\Documents\\repos\\tc375\\projectWon\\src\\TriCore Debug (TASKING)\\',0,12,1,2
+	.word	.L27
+	.byte	3
+	.byte	'g_rx_idx',0,24,11,14
+	.word	.L89
+	.byte	1,5,3
+	.word	g_rx_idx
+	.byte	0
+	.sdecl	'.debug_abbrev',debug,cluster('g_rx_idx')
+	.sect	'.debug_abbrev'
+.L63:
+	.byte	1,17,1,3,8,37,8,27,8,19,15,128,70,12,0,0,2,61,0,24,16,0,0,3,52,0,3,8,58,15,59,15,57,15,73,16,63,12,2,9
+	.byte	0,0,0
 	.sdecl	'.debug_loc',debug,cluster('asclin1InUart')
 	.sect	'.debug_loc'
-.L18:
-	.word	-1,.L19,0,.L79-.L19
+.L23:
+	.word	-1,.L24,0,.L95-.L24
 	.half	2
 	.byte	138,0
-	.word	.L79-.L19,.L62-.L19
+	.word	.L95-.L24,.L75-.L24
 	.half	2
 	.byte	138,8
-	.word	.L62-.L19,.L62-.L19
+	.word	.L75-.L24,.L75-.L24
 	.half	2
 	.byte	138,0
 	.word	0,0
-.L63:
-	.word	-1,.L19,0,.L62-.L19
+.L76:
+	.word	-1,.L24,0,.L75-.L24
 	.half	2
 	.byte	145,120
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('asclin1InitUart')
 	.sect	'.debug_loc'
-.L14:
-	.word	-1,.L15,0,.L51-.L15
+.L19:
+	.word	-1,.L20,0,.L64-.L20
 	.half	2
 	.byte	138,0
 	.word	0,0
-.L54:
-	.word	-1,.L15,.L76-.L15,.L77-.L15
+.L67:
+	.word	-1,.L20,.L92-.L20,.L93-.L20
 	.half	1
 	.byte	88
 	.word	0,0
-.L53:
-	.word	-1,.L15,.L75-.L15,.L51-.L15
+.L66:
+	.word	-1,.L20,.L91-.L20,.L64-.L20
 	.half	1
 	.byte	89
 	.word	0,0
-.L57:
-	.word	-1,.L15,.L78-.L15,.L51-.L15
+.L70:
+	.word	-1,.L20,.L94-.L20,.L64-.L20
 	.half	1
 	.byte	111
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('asclin1OutUart')
 	.sect	'.debug_loc'
-.L16:
-	.word	-1,.L17,0,.L58-.L17
+.L21:
+	.word	-1,.L22,0,.L71-.L22
 	.half	2
 	.byte	138,0
 	.word	0,0
-.L60:
-	.word	-1,.L17,0,.L58-.L17
+.L73:
+	.word	-1,.L22,0,.L71-.L22
 	.half	1
 	.byte	84
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('asclin1PollUart')
 	.sect	'.debug_loc'
-.L20:
-	.word	-1,.L21,0,.L65-.L21
+.L25:
+	.word	-1,.L26,0,.L78-.L26
 	.half	2
 	.byte	138,0
 	.word	0,0
-.L67:
-	.word	-1,.L21,0,.L65-.L21
+.L80:
+	.word	-1,.L26,0,.L78-.L26
 	.half	1
 	.byte	100
 	.word	0,0
-.L69:
-	.word	-1,.L21,.L80-.L21,.L65-.L21
+.L82:
+	.word	-1,.L26,.L96-.L26,.L78-.L26
 	.half	1
 	.byte	82
 	.word	0,0
-.L68:
-	.word	-1,.L21,.L81-.L21,.L82-.L21
+.L81:
+	.word	-1,.L26,.L97-.L26,.L98-.L26
 	.half	1
 	.byte	95
-	.word	.L9-.L21,.L8-.L21
+	.word	.L14-.L26,.L13-.L26
 	.half	1
 	.byte	95
 	.word	0,0
 	.sdecl	'.debug_loc',debug,cluster('asclin1RxIsrHandler')
 	.sect	'.debug_loc'
-.L12:
-	.word	-1,.L13,0,.L70-.L13
+.L17:
+	.word	-1,.L18,0,.L83-.L18
 	.half	2
 	.byte	138,0
 	.word	0,0
-.L73:
-	.word	-1,.L13,.L74-.L13,.L2-.L13
+.L85:
+	.word	-1,.L18,.L90-.L18,.L83-.L18
 	.half	1
-	.byte	95
+	.byte	88
 	.word	0,0
 	.sdecl	'.debug_frame',debug
 	.sect	'.debug_frame'
-.L171:
+.L207:
 	.word	48
 	.word	-1
 	.byte	3,0,2,1,27,12,26,0,8,26,8,27,8,30,8,29,8,28,8,16,8,17,8,24,8,25,8,31,8,32,8,33,8,34,8,35,8,36,8,37,8,38
@@ -50047,28 +50288,28 @@ __asclin1PollUart_function_end:
 	.sdecl	'.debug_frame',debug,cluster('asclin1RxIsrHandler')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L171,.L13,.L70-.L13
+	.word	.L207,.L18,.L83-.L18
 	.sdecl	'.debug_frame',debug,cluster('asclin1InitUart')
 	.sect	'.debug_frame'
 	.word	12
-	.word	.L171,.L15,.L51-.L15
+	.word	.L207,.L20,.L64-.L20
 	.sdecl	'.debug_frame',debug,cluster('asclin1OutUart')
 	.sect	'.debug_frame'
 	.word	24
-	.word	.L171,.L17,.L58-.L17
+	.word	.L207,.L22,.L71-.L22
 	.byte	8,18,8,19,8,20,8,21,8,22,8,23
 	.sdecl	'.debug_frame',debug,cluster('asclin1InUart')
 	.sect	'.debug_frame'
 	.word	36
-	.word	.L171,.L19,.L62-.L19
+	.word	.L207,.L24,.L75-.L24
 	.byte	4
-	.word	(.L79-.L19)/2
+	.word	(.L95-.L24)/2
 	.byte	19,8,22,26,3,19,138,8,4
-	.word	(.L62-.L79)/2
+	.word	(.L75-.L95)/2
 	.byte	19,0,8,26,0,0
 	.sdecl	'.debug_frame',debug,cluster('asclin1PollUart')
 	.sect	'.debug_frame'
 	.word	24
-	.word	.L171,.L21,.L65-.L21
+	.word	.L207,.L26,.L78-.L26
 	.byte	8,18,8,19,8,21,8,22,8,23,0,0
 	; Module end
