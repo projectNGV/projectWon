@@ -5,6 +5,8 @@
 #include "level.h"
 #include "bluetooth.h"
 #include "motor.h"
+#include "buzzer.h"
+#include "gpt12.h"
 
 #define MAX_STEERING 200
 
@@ -19,11 +21,11 @@ void main0 ()
     float val;
     while (1)
     {
-        char command = bluetoothRecvByteNonBlocked();
+        char command = asclin0InUartNonBlock();
 
         if (command != -1)
         {
-            bluetoothPrintf("COMMAND: %c\n", command);
+            myPrintf("COMMAND: %c\n", command);
         }
 
         if (command == 'g')
@@ -45,6 +47,16 @@ void main0 ()
         if (command == 'z')
         {
             auto_park();
+        }
+
+        if (command == 'm')
+        {
+            buzzerToggleOn();
+        }
+        if (command == 'n')
+        {
+
+            buzzerToggleOff();
         }
 
         if (command == 'l')

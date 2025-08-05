@@ -14,10 +14,10 @@
 
 unsigned int getCnt();
 void gpt12Init();
+void gpt1_init (void);
+void gpt2_init (void);
 void runGpt12T6();
 void setBeepCycle(int cycle);
-void Gpt2_Interrupt_Enable();
-void Gpt2_Interrupt_Disable();
 
 
 #endif /* BSW_DRIVER_GPT12_H_ */

@@ -10,5 +10,5 @@ void systemInit(){
     ultrasonicInit();
     ledInit();
     gpt12Init();
-
+    buzzerInit();
 }

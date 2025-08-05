@@ -4,54 +4,67 @@
 #include "IfxCpu.h"
 #include "IfxScuWdt.h"
 
-volatile int cntDelay = 0;
+#define BEEP_INITIAL_INTERVAL 8000     // 초기 주기 (느리게 시작)
+#define BEEP_MIN_INTERVAL     3000      // 최소 주기 (0.1초 정도)
+#define BEEP_INTERVAL_STEP    1000      // 인터럽트마다 줄이는 양
+
+volatile uint16 g_beepInterval = BEEP_INITIAL_INTERVAL;
 
 IFX_INTERRUPT(IsrGpt1T3Handler, 0, ISR_PRIORITY_GPT1T3_TIMER);
 void IsrGpt1T3Handler (void)
 {
-//    my_printf("1s from gpt1\n");
-    MODULE_GPT120.T3.B.T3 = 25000000;
+    // 부저 토글
+    MODULE_P10.OUT.B.P4 ^= 1;
+
+    // 주기 감소 (더 이상 줄이지 않도록 최소 한계 체크)
+    if (g_beepInterval > BEEP_MIN_INTERVAL)
+    {
+        g_beepInterval -= BEEP_INTERVAL_STEP;
+        if (g_beepInterval < BEEP_MIN_INTERVAL) {
+            g_beepInterval = BEEP_MIN_INTERVAL;
+        }
+    }
+
+    // 새로운 주기로 타이머 설정
+    MODULE_GPT120.T3.B.T3 = g_beepInterval;
 }
 
-//IFX_INTERRUPT(IsrGpt2T6Handler, 0, ISR_PRIORITY_GPT2T6_TIMER);
-//void IsrGpt2T6Handler (void)
-//{
-//    cntDelay++;
-//        if (cntDelay == 100000) {
-//            ledtogglefunction();
-//            cntDelay = 0;
-//        }
-//}
+void gpt1_enable(void)
+{
+    MODULE_SRC.GPT12.GPT12[0].T3.B.SRE = 1;
+}
+
+void gpt1_disable(void)
+{
+    MODULE_SRC.GPT12.GPT12[0].T3.B.SRE = 0;
+}
+
+void gpt1_init(void)
+{
+    Ifx_GPT12_T3CON_Bits *t3con = (Ifx_GPT12_T3CON_Bits*) &MODULE_GPT120.T3CON.B;
+
+    t3con->BPS1 = 2;     // GPT 클럭: 25MHz
+    t3con->T3I  = 7;     // 분주비: 2^7 = 128 → 6.25MHz / 128 ≈ 48.8kHz
+    t3con->T3M  = 0;     // Timer mode
+    t3con->T3UD = 1;     // Down count
+
+    g_beepInterval = BEEP_INITIAL_INTERVAL;
+    MODULE_GPT120.T3.B.T3 = g_beepInterval;
+
+    Ifx_SRC_SRCR_Bits *src = (Ifx_SRC_SRCR_Bits*) &MODULE_SRC.GPT12.GPT12[0].T3.B;
+    src->SRPN = ISR_PRIORITY_GPT1T3_TIMER;
+    src->TOS = 0;
+    src->CLRR = 1;
+    src->SRE = 0;
+
+    t3con->T3R = 1;  // 타이머 시작
+}
 
 
 IFX_INTERRUPT(IsrGpt2T6Handler, 0, ISR_PRIORITY_GPT2T6_TIMER);
 void IsrGpt2T6Handler (void)
 {
     ledtogglefunction();
-}
-
-void gpt1_init ()
-{
-    Ifx_GPT12_T3CON_Bits *t3con = (Ifx_GPT12_T3CON_Bits*) &MODULE_GPT120.T3CON.B;
-
-    // GPT Clock 25mhz
-    t3con->BPS1 = 2;
-    t3con->T3I = 7;
-    // 1s
-    MODULE_GPT120.T3.B.T3 = 24414;
-
-    t3con->T3M = 0; // Timer Mode
-    t3con->T3UD = 1; // Counts down
-
-//    Ifx_SRC_SRCR_Bits* src = (Ifx_SRC_SRCR_Bits*) &MODULE_SRC.GPT12.GPT12[0].T3.B;
-//    src->SRPN = ISR_PRIORITY_GPT1T3_TIMER;
-//    src->TOS = 0;
-//    src->CLRR = 1;
-//    src->SRE = 1;
-//
-//
-//    t3con->T3R = 1;
-
 }
 
 // 0.5s blue led toggle
@@ -81,15 +94,6 @@ void gpt2_init (void)
     t6con->T6R = 1;
 }
 
-void Gpt2_Interrupt_Enable (void)
-{
-    MODULE_SRC.GPT12.GPT12[0].T6.B.SRE = 1;
-}
-
-void Gpt2_Interrupt_Disable (void)
-{
-    MODULE_SRC.GPT12.GPT12[0].T6.B.SRE = 0;
-}
 
 void gpt12Init ()
 {
@@ -97,6 +101,6 @@ void gpt12Init ()
     MODULE_GPT120.CLC.U = 0;
     IfxScuWdt_setCpuEndinit(IfxScuWdt_getGlobalEndinitPassword());
 
-//    gpt1_init();
+    gpt1_init();
     gpt2_init();
 }

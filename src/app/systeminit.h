@@ -3,6 +3,7 @@
 
 
 #include <asclin0.h>
+#include <buzzer.h>
 #include "asclin1.h"
 #include "bluetooth.h"
 #include "motor.h"
@@ -12,6 +13,7 @@
 #include "ultrasonic.h"
 #include "gpt12.h"
 #include "led.h"
+#include "buzzer.h"
 
 void systemInit(void);
 
