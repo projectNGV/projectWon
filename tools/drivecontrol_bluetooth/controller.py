@@ -78,26 +78,36 @@ def on_release(key):
         send('B')  # 감속 명령
         print("[BRAKE] 감속 모드 진입")
 
+def read_from_serial():
+    while True:
+        try:
+            incoming_line = ser.readline().decode('utf-8', errors='ignore')
+
+            if incoming_line:
+                if incoming_line.startswith('?'):
+                    prompt_message = incoming_line[1:].strip()
+                    send_data = input(f"{prompt_message}: ")
+                    print(f"send data: {send_data}")
+                    for char in send_data:
+                        ser.write(char.encode('utf-8'))
+                        time.sleep(0.01)
+                    ser.write(b'\n') 
+                elif incoming_line.startswith('!'):
+                    print("Login")
+                    break
+                else:
+                    print(incoming_line, end='')
+
+        except serial.SerialException:
+            print("시리얼 포트 에러. 수신 스레드를 종료합니다.")
+            break
+        except Exception:
+            break
+
+
 # ─── 메인 실행 ───
 if __name__ == "__main__":
-    while(1):
-        print("비밀번호 입력: ")
-        send_data = input()
-        
-        for char in send_data:
-            ser.write(char.encode('utf-8'))
-            time.sleep(0.01)
-        ser.write(b'\n') 
-
-        res = ser.readline().decode().strip()
-        if(res == "OK"):
-            print("비밀번호 일치")
-            break
-        elif(res == "FAILED"):
-            print("비밀번호가 일치하지 않습니다.")
-        else:
-            if(res == ''):
-                print(f">> 응답 없음 또는 알 수 없는 응답: '{res}'")
+    read_from_serial()
 
     print("RC카 키보드 제어 시작 (ESC 종료)")
     with keyboard.Listener(on_press=on_press, on_release=on_release) as listener:
