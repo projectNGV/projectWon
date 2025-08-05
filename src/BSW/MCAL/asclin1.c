@@ -1,37 +1,33 @@
 #include "asclin1.h"
 #include "main0.h"
 
-#define RX_BUFFER_SIZE 32
-
 extern MotorState motorState;
+extern volatile boolean g_isLogin;
 
-volatile boolean g_isLogin = FALSE;
-volatile boolean g_getLine;
+volatile boolean g_rx_getLine;
 volatile char g_rx_buffer[RX_BUFFER_SIZE];
 volatile int g_rx_idx = 0;
 
 IFX_INTERRUPT(asclin1RxIsrHandler, 0, ISR_PRIORITY_ASCLIN1_RX);
 void asclin1RxIsrHandler (void)
 {
-    char key = asclin1InUart();
+    char data = asclin1InUart();
     if (!g_isLogin)
     {
-        if(key == '\n' || key == '\r'){
+        if(data == '\n' || data == '\r'){
             g_rx_buffer[g_rx_idx] = '\0';
-            g_getLine = TRUE;
+            g_rx_getLine = TRUE;
         } else {
             if (g_rx_idx < (RX_BUFFER_SIZE - 1)){
-                g_rx_buffer[g_rx_idx++] = key;
+                g_rx_buffer[g_rx_idx++] = data;
 
             }
         }
     }
     else
     {
-        motorState.lastKeyInput = key;
+        motorState.lastKeyInput = data;
     }
-
-    //bluetoothIsr(key);
 }
 
 /* Initialise asynchronous interface to operate at baudrate,8,n,1 */
