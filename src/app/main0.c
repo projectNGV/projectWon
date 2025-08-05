@@ -10,7 +10,8 @@
 #include "buzzerport.h"
 #include "buzzer.h"
 
-MotorState motorState = {.baseDuty = 50,      // 사용자 설정 Duty
+MotorState motorState = {
+        .baseDuty = 50,      // 사용자 설정 Duty
         .currentDuty = 0,   // 현재 Duty
         .currentDir = '5',  // 현재 주행 방향
         .prevDir = '5',     // 이전 주행 방향
@@ -22,17 +23,10 @@ void main0 (void)
     systemInit();
     myPrintf("System Start\n");
 
+    authenticate();
+
     while (1)
     {
-        buzzerParkingWarning(550); // 무음
-        delayMs(1000);
-        buzzerParkingWarning(450); // 느리게
-        delayMs(2000);
-        buzzerParkingWarning(250); // 빠르게
-        delayMs(2000);
-        buzzerParkingWarning(100); // 지속 울림
-        delayMs(2000);
-
         if (motorState.lastKeyInput == 't')
         {
             tofOnOff();

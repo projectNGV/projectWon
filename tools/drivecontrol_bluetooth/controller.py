@@ -3,7 +3,7 @@ import serial
 import time
 
 # ─── 시리얼 포트 설정 ───
-ser = serial.Serial('COM4', 115200, timeout=2)
+ser = serial.Serial('COM10', 115200, timeout=2)
 
 # ─── NumPad VK → 문자 매핑 ───
 NUMPAD_VK = {
