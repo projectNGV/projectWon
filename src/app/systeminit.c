@@ -7,5 +7,8 @@ void systemInit(){
     asclin0InitUart();
     tofInit();
     uartInit();
-    //ultrasonicInit();
+    ultrasonicInit();
+    ledInit();
+    gpt12Init();
+
 }

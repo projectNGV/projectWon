@@ -17,8 +17,8 @@ void moveBackward(int duty)
 // 제자리 좌회전
 void turnLeftInPlace(int duty)
 {
-    motorMovChBPwm(duty, Forward);
     motorMovChAPwm(duty, Backward);
+    motorMovChBPwm(duty, Forward);
 }
 
 // 제자리 우회전
@@ -31,29 +31,29 @@ void turnRightInPlace(int duty)
 // 직진 좌회전
 void moveForwardLeft(int duty)
 {
-    motorMovChBPwm(duty, Forward);
-    motorStopChA();
+    motorMovChAPwm(duty, Forward);
+    motorMovChBPwm(duty / 2, Forward);
 }
 
 // 직진 우회전
 void moveForwardRight(int duty)
 {
     motorMovChAPwm(duty, Forward);
-    motorStopChB();
+    motorMovChBPwm(duty / 2, Forward);
 }
 
 // 후진 좌회전
 void moveBackwardkLeft(int duty)
 {
+    motorMovChAPwm(duty / 2, Backward);
     motorMovChBPwm(duty, Backward);
-    motorStopChA();
 }
 
 // 후진 우회전
 void moveBackwardRight(int duty)
 {
     motorMovChAPwm(duty, Backward);
-    motorStopChB();
+    motorMovChBPwm(duty / 2, Backward);
 }
 
 // 숫자키(1~9) 입력에 따라 주행 방향 업데이트
@@ -67,14 +67,15 @@ void handleDirectionCommand(char cmd, MotorState* state)
 void handleDutyCommand(char cmd, MotorState* state)
 {
     switch (cmd) {
-        case 'a': state->baseDuty = 300; break;
-        case 's': state->baseDuty = 400; break;
-        case 'd': state->baseDuty = 500; break;
-        case 'f': state->baseDuty = 600; break;
-        case 'g': state->baseDuty = 700; break;
-        case 'h': state->baseDuty = 800; break;
-        case 'j': state->baseDuty = 900; break;
-        case 'k': state->baseDuty = 1000; break;
+        case 'a': state->baseDuty = 200; break;
+        case 's': state->baseDuty = 300; break;
+        case 'd': state->baseDuty = 400; break;
+        case 'f': state->baseDuty = 500; break;
+        case 'g': state->baseDuty = 600; break;
+        case 'h': state->baseDuty = 700; break;
+        case 'j': state->baseDuty = 800; break;
+        case 'k': state->baseDuty = 900; break;
+        case 'l': state->baseDuty = 1000; break;
         default: break;  // 예외 처리 (필요하면 로그 추가)
     }
 }
@@ -96,8 +97,7 @@ void motorUpdateState(MotorState* state)
     }
     // 알파벳 키(a,s,d,f,g,h,j,k,l) 입력에 따라 목표 듀티(baseDuty) 업데이트
     else if (cmd == 'a' || cmd == 's' || cmd == 'd' || cmd == 'f' ||
-        cmd == 'g' || cmd == 'h' || cmd == 'j' || cmd == 'k' || cmd == 'z' ||
-        cmd == 'x' || cmd == 'c') {
+        cmd == 'g' || cmd == 'h' || cmd == 'j' || cmd == 'k' || cmd == 'l') {
         handleDutyCommand(cmd, state);
     }
     // 키 떼면 감속
