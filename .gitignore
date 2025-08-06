@@ -12,7 +12,6 @@ TriCore Debug (TASKING)
 
 
 .metadata/
-.settings/
 *.user
 *.useros
 *.launch

@@ -120,7 +120,7 @@ typedef enum
     FOUNDWALL, FOUNDEDGE, FOUNDREAR
 } ParkingStatus;
 
-void auto_park ()
+void auto_park (void)
 {
     UltraDir ultDir = ULT_LEFT;
     bluetoothPrintf("주차 시작");

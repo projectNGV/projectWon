@@ -1,7 +1,5 @@
 #include "control.h"
 
-extern volatile int AEBFlag;
-
 // 전진
 void moveForward(int duty)
 {
@@ -85,10 +83,7 @@ void handleDutyCommand(char cmd, MotorState* state)
 // 키 뗴면 감속
 void handleBrakeCommand(MotorState* state)
 {
-    while (state->currentDuty > 0) {
-        state->currentDuty = (state->currentDuty >= 100) ? (state->currentDuty - 100) : 0;
-        motorSoftBraking(state->currentDuty);
-    }
+    motorSoftBraking(state->currentDuty);
 }
 
 // 키 입력 별로 모드 설정
@@ -108,6 +103,7 @@ void motorUpdateState(MotorState* state)
     // 키 떼면 감속
     else if (cmd == 'B') {
         handleBrakeCommand(state);
+        ledStartBlinking(LED_NONE);
     }
     // 자동 주차 모드 (예정)
     else if (cmd == 'p') {
@@ -132,12 +128,12 @@ void motorRunCommand (MotorState* state)
     switch (cmd)
     {
         case '8' : moveForward(duty); break;
-        case '2' : moveBackward(duty); break;
-        case '4' : turnLeftInPlace(duty); break;
-        case '6' : turnRightInPlace(duty); break;
+        case '2' : moveBackward(duty); ledStartBlinking(LED_REAR); break;
+        case '4' : turnLeftInPlace(duty); ledStartBlinking(LED_LEFT); break;
+        case '6' : turnRightInPlace(duty); ledStartBlinking(LED_RIGHT); break;
         case '5' : motorStop(); break;
-        case '7' : moveForwardLeft(duty); break;
-        case '9' : moveForwardRight(duty); break;
+        case '7' : moveForwardLeft(duty); ledStartBlinking(LED_LEFT); break;
+        case '9' : moveForwardRight(duty); ledStartBlinking(LED_RIGHT); break;
         case '1' : moveBackwardkLeft(duty); break;
         case '3' : moveBackwardRight(duty); break;
     }
