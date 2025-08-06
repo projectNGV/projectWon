@@ -13,6 +13,7 @@
 #include "gpt12.h"
 #include "led.h"
 #include "ledport.h"
+#include "buzzerport.h"
 
 void systemInit(void);
 

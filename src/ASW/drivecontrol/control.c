@@ -129,8 +129,8 @@ void motorRunCommand (MotorState* state)
     {
         case '8' : moveForward(duty); break;
         case '2' : moveBackward(duty); ledStartBlinking(LED_REAR); break;
-        case '4' : turnLeftInPlace(duty); break;
-        case '6' : turnRightInPlace(duty); break;
+        case '4' : turnLeftInPlace(duty); ledStartBlinking(LED_LEFT); break;
+        case '6' : turnRightInPlace(duty); ledStartBlinking(LED_RIGHT); break;
         case '5' : motorStop(); break;
         case '7' : moveForwardLeft(duty); ledStartBlinking(LED_LEFT); break;
         case '9' : moveForwardRight(duty); ledStartBlinking(LED_RIGHT); break;

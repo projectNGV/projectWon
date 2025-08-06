@@ -15,13 +15,19 @@
 #include "IfxGpt12.h"
 #include "priority.h"
 #include "led.h"
+#include "buzzerport.h"
 
-unsigned int getCnt();
-void gpt12Init();
-void runGpt12T6();
-void setBeepCycle(int cycle);
-void Gpt2_Interrupt_Enable();
-void Gpt2_Interrupt_Disable();
+#define BEEP_INITIAL_INTERVAL 8000      // 초기 주기 (느리게 시작)
+#define BEEP_MIN_INTERVAL     3000      // 최소 주기 (0.1초 정도)
+#define BEEP_INTERVAL_STEP    1000      // 인터럽트마다 줄이는 양
 
+void gpt1_init ();
+void gpt2_init (void);
+void gpt12Init(void);
+
+void Gpt1_Interrupt_Enable (void);
+void Gpt1_Interrupt_Disable (void);
+void Gpt2_Interrupt_Enable(void);
+void Gpt2_Interrupt_Disable(void);
 
 #endif /* BSW_DRIVER_GPT12_H_ */
