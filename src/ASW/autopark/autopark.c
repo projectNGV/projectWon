@@ -169,7 +169,7 @@ static void tuneRotate ()
 
 static boolean isTuned = FALSE;
 
-void autoParkTune ()
+void autoParkTune (void)
 {
 //    tuneParkingDistance();
 //    tuneParkingFoundSpeed();
@@ -216,7 +216,7 @@ void autoParkTune ()
     }
 }
 
-void autoPark ()
+void autoPark (void)
 {
     foundSpace();
     rotate();

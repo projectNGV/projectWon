@@ -1,9 +1,6 @@
 #ifndef ASW_APP_SYSTEMINIT_H_
 #define ASW_APP_SYSTEMINIT_H_
 
-
-#include <asclin0.h>
-#include <buzzer.h>
 #include "asclin1.h"
 #include "bluetooth.h"
 #include "motor.h"

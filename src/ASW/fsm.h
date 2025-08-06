@@ -3,6 +3,7 @@
 
 #include "control.h"
 #include "aeb.h"
+#include "autopark.h"
 
 typedef enum {
     STATE_IDLE,
