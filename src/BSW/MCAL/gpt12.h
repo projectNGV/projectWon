@@ -17,10 +17,6 @@
 #include "led.h"
 #include "buzzerport.h"
 
-#define BEEP_INITIAL_INTERVAL 8000      // 초기 주기 (느리게 시작)
-#define BEEP_MIN_INTERVAL     3000      // 최소 주기 (0.1초 정도)
-#define BEEP_INTERVAL_STEP    1000      // 인터럽트마다 줄이는 양
-
 void gpt1_init ();
 void gpt2_init (void);
 void gpt12Init(void);

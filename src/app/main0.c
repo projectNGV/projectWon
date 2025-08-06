@@ -4,7 +4,6 @@
 #include "aeb.h"
 #include "tof.h"
 #include "control.h"
-<<<<<<< HEAD
 #include "aeb.h"
 
 #include "auth.h"
@@ -13,8 +12,6 @@
 
 
 extern volatile bool aebFlag;
-=======
->>>>>>> 33fb2eb56f0fdc037ab62d3593b21b3f203eb92f
 #include "fsm.h"
 #include "led.h"
 #include "buzzerport.h"
@@ -28,10 +25,30 @@ MotorState motorState = {
         .lastKeyInput = '5' // 방금 받은 키보드 입력
         };
 
+extern volatile uint16 g_beepInterval;
+
 void main0 (void)
 {
     systemInit();
+    stmInterruptInit();
     myPrintf("System Start\n");
+
+//    uint16 beep, delay;
+//    myPrintf("beep: ");
+//    myScanf("%d", &beep);
+//    myPrintf("delay(ms): ");
+//    myScanf("%d", &delay);
+//    g_beepInterval = beep;
+//    MODULE_GPT120.T3.B.T3 = beep;
+//    MODULE_GPT120.T3CON.B.T3R = 1;
+//    setBuzzerOffTimer(delay);
+//
+//    while(1){
+//        myPrintf("main");
+//        delayMs(2000);
+//    }
+
+
 
     authenticate();
 

@@ -1,26 +1,14 @@
 #include "gpt12.h"
 
-volatile uint16 g_beepInterval = BEEP_INITIAL_INTERVAL;
+volatile uint16 g_beepInterval = 1;
+
+
 
 // GPT1 타이머 인터럽트 핸들러 - 0.5초마다 BUZZER 토글
 IFX_INTERRUPT(IsrGpt1T3Handler, 0, ISR_PRIORITY_GPT1T3_TIMER);
 void IsrGpt1T3Handler(void)
 {
-    MODULE_GPT120.T3.B.T3 = 25000000;
-    // 부저 토글
     buzzerToggle();
-
-    // 주기 감소 (더 이상 줄이지 않도록 최소 한계 체크)
-    if (g_beepInterval > BEEP_MIN_INTERVAL)
-    {
-        g_beepInterval -= BEEP_INTERVAL_STEP;
-        if (g_beepInterval < BEEP_MIN_INTERVAL)
-        {
-            g_beepInterval = BEEP_MIN_INTERVAL;
-        }
-    }
-
-    // 새로운 주기로 타이머 설정
     MODULE_GPT120.T3.B.T3 = g_beepInterval;
 }
 
@@ -40,7 +28,7 @@ void gpt1_init ()
     t3con->BPS1 = 2;    // 분주기 설정 (25MHz 기준)
     t3con->T3I = 7;     // 인터럽트 우선순위
     t3con->T3UD = 1;    // 카운트 다운 모드
-    MODULE_GPT120.T3.B.T3 = 24414; // 타이머 값
+    MODULE_GPT120.T3.B.T3 = g_beepInterval; // 타이머 값
 
     // 인터럽트 설정 (일단 비활성화 상태)
     Ifx_SRC_SRCR_Bits* src = (Ifx_SRC_SRCR_Bits*) &MODULE_SRC.GPT12.GPT12[0].T3.B;
@@ -50,7 +38,7 @@ void gpt1_init ()
     src->SRE = 1; // Enable은 외부에서
 
     // 타이머 시작
-    t3con->T3R = 1;
+    t3con->T3R = 0;
 }
 
 // led용 gpt타이머

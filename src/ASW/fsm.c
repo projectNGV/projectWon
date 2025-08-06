@@ -61,7 +61,7 @@ void handleStateMachine (MotorState *motorState)
 
         case STATE_AUTO_PARK:
             // 자동 주차 알고리즘 실행
-            auto_park();
+            autoPark();
 
             // 주차 완료 후 IDLE 상태로 전환
             currentState = STATE_IDLE;

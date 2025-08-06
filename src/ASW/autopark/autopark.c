@@ -305,12 +305,5 @@ void autoPark ()
     foundSpace();
     rotate();
     delayMs(MOTOR_STOP_DELAY);
-    int dis = getDistanceByUltra(ULT_REAR);
-    motorMoveReverse(1000);
-    delayMs(getTargetDelay(dis));
-    motorStop();
-    delayMs(MOTOR_STOP_DELAY);
     goBackWard();
-    delayMs(MOTOR_STOP_DELAY);
 }
-
