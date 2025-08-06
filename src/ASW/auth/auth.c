@@ -4,12 +4,9 @@
 
 #include "auth.h"
 #include "asclin1.h"
+#include "autopark.h"
 
 #include <string.h>
-
-/*********************************************************************************************************************/
-/*------------------------------------------------------Macros-------------------------------------------------------*/
-/*********************************************************************************************************************/
 
 /*********************************************************************************************************************/
 /*-------------------------------------------------Global variables--------------------------------------------------*/
@@ -19,19 +16,18 @@ volatile boolean g_isLogin = FALSE;
 
 extern volatile boolean g_rx_getLine;
 extern volatile char g_rx_buffer[];
-extern volatile int g_rx_idx;
-
-static const char *password = "1234";
 
 /*********************************************************************************************************************/
 /*--------------------------------------------Private Variables/Constants--------------------------------------------*/
 /*********************************************************************************************************************/
 
+static const char *PASSWORD = "1234";
+
 /*********************************************************************************************************************/
 /*------------------------------------------------Function Prototypes------------------------------------------------*/
 /*********************************************************************************************************************/
 
-void authenticate(void);
+void authenticate (void);
 
 /*********************************************************************************************************************/
 /*---------------------------------------------Function Implementations----------------------------------------------*/
@@ -41,23 +37,25 @@ void authenticate (void)
 {
     while (!g_isLogin)
     {
-        if (g_rx_getLine)
-        {
-            myPrintf("Received from ISR: %s\n", (const char*) g_rx_buffer);
-            if (strcmp((const char*) g_rx_buffer, password) == 0)
-            {
-                g_isLogin = TRUE;
-                bluetoothPrintf("OK\n");
-            }
-            else
-            {
-                bluetoothPrintf("FAILED\n");
-            }
+        bluetoothPrintf("?Input Password (tune - Tune Mode)\n");
+        while (!g_rx_getLine)
+            ;
 
-            g_rx_idx = 0;
-            memset((void*) g_rx_buffer, 0, RX_BUFFER_SIZE);
-            g_rx_getLine = FALSE;
+        if (strcmp(g_rx_buffer, "tune") == 0)
+        {
+            rxBufferFlush();
+            autoParkTune();
         }
+        else if (strcmp((const char*) g_rx_buffer, PASSWORD) == 0)
+        {
+            g_isLogin = TRUE;
+            bluetoothPrintf("!OK\n");
+        }
+        else
+        {
+            bluetoothPrintf("FAILED\n");
+        }
+        rxBufferFlush();
     }
 }
 
