@@ -74,13 +74,15 @@ void handleStateMachine (MotorState *motorState)
             // → 다시 수동 주행 상태로 전환 (후방 거리 확보 여부는 외부 로직에서 판단)
             if (motorState->lastKeyInput == '1' || motorState->lastKeyInput == '2' || motorState->lastKeyInput == '3')
             {
+                buzzerFlag = TRUE;    // 다음 번 AEB 때 부저가 다시 울릴 수 있도록 초기화
                 currentState = STATE_MANUAL_DRIVE;
             }
 
             // 또는 AEB가 해제되면(앞에 장애물이 사라짐) → IDLE 상태로 복귀
             else if (!aebFlag)
             {
-                buzzerFlag = TRUE;           // 다음 번 AEB 때 부저가 다시 울릴 수 있도록 초기화
+
+                buzzerFlag = TRUE;    // 다음 번 AEB 때 부저가 다시 울릴 수 있도록 초기화
                 currentState = STATE_IDLE;
             }
 
