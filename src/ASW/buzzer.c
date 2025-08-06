@@ -8,6 +8,8 @@ void buzzerParkingWarning (int rearDistance)
     {
         Gpt1_Interrupt_Disable();  // 인터럽트 끄고
         buzzerOn();                // 지속 울림
+//        delayMs(2000);             // 2초 지속
+//        buzzerOff();               // 울림 없음
     }
     else if (rearDistance <= 300)
     {

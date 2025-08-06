@@ -5,6 +5,17 @@ volatile bool aebFlag = false;
 extern volatile bool tofFlag;
 extern MotorState motorState;
 
+void emergencyBuzzer (void)
+{
+    buzzerOn();
+    delayMs(100);
+    buzzerOff();
+    delayMs(150);
+    buzzerOn();
+    delayMs(100);
+    buzzerOff();
+}
+
 void performEmergencyStop(void)
 {
     motorMoveReverse(motorState.currentDuty); // 현재 듀티로 역회전
@@ -24,6 +35,7 @@ void updateAebFlagByTof (unsigned int g_TofValue)
     }
     else
     {
+//        buzzerParkingWarning(g_TofValue);
         if (!aebFlag)  // 아직 AEB가 작동하지 않은 상태
         {
             if (g_TofValue <= DUTY_LIMIT_DISTANCE_MM)

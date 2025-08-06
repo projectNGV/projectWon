@@ -8,8 +8,10 @@
 #include "led.h"
 #include "buzzerport.h"
 #include "buzzer.h"
+#include "auth.h"
 
-MotorState motorState = {.baseDuty = 50,      // 사용자 설정 Duty
+MotorState motorState = {
+        .baseDuty = 50,      // 사용자 설정 Duty
         .currentDuty = 0,   // 현재 Duty
         .currentDir = '5',  // 현재 주행 방향
         .prevDir = '5',     // 이전 주행 방향
@@ -22,20 +24,15 @@ void main0 (void)
 {
     systemInit();
     myPrintf("System Start\n");
-    g_isLogin = TRUE; // Debugging
+
+//    g_isLogin = TRUE;
     authenticate();
 
     while (1)
     {
-        if (motorState.lastKeyInput == 't')
-        {
-            tofOnOff();
-            motorState.lastKeyInput = ' ';
-        }
-
         handleStateMachine(&motorState);
 
-//        myPrintf("distance : %d mm,   flag : %d,    duty : %d\n", tofGetValue(), aebFlag, motorState.currentDuty);
+//        myPrintf("distance : %d mm,   tofflag : %d,    aebflag : %d\n", tofGetValue(), tofFlag, aebFlag);
 //        delayMs(500);
     }
 }

@@ -16,7 +16,7 @@ void handleStateMachine (MotorState *motorState)
     // 현재 상태에 따라 동작 분기
     switch (currentState)
     {
-        case STATE_IDLE:
+        case STATE_IDLE :
             // 1~9 방향키가 눌리면 수동 주행 상태로 전환
             if (motorState->lastKeyInput >= '1' && motorState->lastKeyInput <= '9')
             {
@@ -29,39 +29,40 @@ void handleStateMachine (MotorState *motorState)
             }
             break;
 
-        case STATE_MANUAL_DRIVE:
-            // 주행 중 'p' 키가 눌리면 자동 주차로 전환
-            if (motorState->lastKeyInput == 'p')
-            {
-                currentState = STATE_AUTO_PARK;
-            }
-            // AEB 발동 시, 단 후진(1,2,3번 키 제외)이 아닐 경우 긴급 정지 상태로 전환
-            if (aebFlag && !(motorState->lastKeyInput == '1' || motorState->lastKeyInput == '2' || motorState->lastKeyInput == '3'))
+        case STATE_MANUAL_DRIVE :
+            // AEB가 발동되었고, 후진 키가 아닌 경우 긴급정지
+            if (aebFlag
+                    && !(motorState->lastKeyInput == '1' || motorState->lastKeyInput == '2'
+                            || motorState->lastKeyInput == '3'))
             {
                 currentState = STATE_EMERGENCY_STOP;
             }
             else
             {
-                // 평상시: 키 입력에 따른 상태 갱신 및 모터 구동
+                // 후진 키거나, AEB가 꺼진 상태라면 정상 주행
                 motorUpdateState(motorState);
                 motorRunCommand(motorState);
             }
             break;
 
-        case STATE_EMERGENCY_STOP:
-            // 긴급 정지 동작 수행 (예: 모터 정지, 경고 출력 등)
+        case STATE_EMERGENCY_STOP :
             performEmergencyStop();
-
-            // AEB가 해제되면 IDLE 상태로 복귀
-            if (!aebFlag)
+            emergencyBuzzer();
+            // 후진 키 입력 + 후방 거리 확보 → 다시 수동 주행
+            if ((motorState->lastKeyInput == '1' || motorState->lastKeyInput == '2' || motorState->lastKeyInput == '3'))
+            {
+                currentState = STATE_MANUAL_DRIVE;
+            }
+            // 또는 AEB 해제되었을 경우 → IDLE
+            else if (!aebFlag)
             {
                 currentState = STATE_IDLE;
             }
             break;
 
-        case STATE_AUTO_PARK:
+        case STATE_AUTO_PARK :
             // 자동 주차 알고리즘 실행
-            auto_park();
+            autoPark();
 
             // 주차 완료 후 IDLE 상태로 전환
             currentState = STATE_IDLE;
