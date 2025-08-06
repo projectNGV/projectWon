@@ -11,6 +11,7 @@
 #define AEB_DISTANCE_MM         350
 #define SAFETY_DISTANCE_MM      500
 
+void emergencyBuzzer (void);
 void performEmergencyStop(void);
 void updateAebFlagByTof (unsigned int g_TofValue);
 

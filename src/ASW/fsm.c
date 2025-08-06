@@ -47,7 +47,7 @@ void handleStateMachine (MotorState *motorState)
 
         case STATE_EMERGENCY_STOP :
             performEmergencyStop();
-
+            emergencyBuzzer();
             // 후진 키 입력 + 후방 거리 확보 → 다시 수동 주행
             if ((motorState->lastKeyInput == '1' || motorState->lastKeyInput == '2' || motorState->lastKeyInput == '3'))
             {
@@ -62,7 +62,7 @@ void handleStateMachine (MotorState *motorState)
 
         case STATE_AUTO_PARK :
             // 자동 주차 알고리즘 실행
-            auto_park();
+            autoPark();
 
             // 주차 완료 후 IDLE 상태로 전환
             currentState = STATE_IDLE;
