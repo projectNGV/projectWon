@@ -28,18 +28,18 @@ extern volatile char g_rx_buffer[RX_BUFFER_SIZE];
 /*********************************************************************************************************************/
 
 // Parking Distance
-static int parkingDistance = 150000;
+static int parkingDistance = 200000;
 
 // Parking Speed
-static int parkingSpeedForward = 400;
-static int parkingSpeedBackward = 400;
+static int parkingSpeedForward = 350;
+static int parkingSpeedBackward = 350;
 
 // Parking Tick
-static int parkingFoundTick = 3;
+static volatile int parkingFoundTick = 4;
 
 // Forward & Rotate 90 Degree Rightward
-static int goForwardDelay = 100;
-static int rotateDelay = 263;
+static int goForwardDelay = 0;
+static int rotateDelay = 370;
 
 // Backward Stop Distance
 static int stopDistance = 35000;
@@ -51,11 +51,13 @@ static int stopDistance = 35000;
 static void foundSpace ();
 static void rotate ();
 static void goBackWard ();
+
 static void tuneParkingDistance ();
 static void tuneParkingSpeed ();
 static void tuneParkingFoundTick ();
 static void tuneRotate ();
 static void tuneStopDistance ();
+
 void autoParkTune ();
 void autoPark ();
 
@@ -72,7 +74,7 @@ static void foundSpace ()
         if (parkingDistance <= getDistanceByUltra(ULT_LEFT))
         {
             curTick++;
-            if (curTick < parkingFoundTick)
+            if (curTick >= parkingFoundTick)
                 break;
         }
         else
@@ -86,7 +88,7 @@ static void foundSpace ()
 
 static void rotate ()
 {
-    motorMoveForward(1000);
+    motorMoveForward(parkingSpeedForward);
     delayMs(goForwardDelay);
     motorStop();
     delayMs(MOTOR_STOP_DELAY);
@@ -139,13 +141,13 @@ static void tuneParkingSpeed ()
 {
     while (1)
     {
-        bluetoothPrintf("[주차 공간 찾기] 직진 후진 속도 조절 (현재 속도: %d)\n", parkingSpeedForward);
-        bluetoothPrintf("?[y] - 확인\t직진 후진 속도\n");
+        bluetoothPrintf("[주차 공간 찾기] 직진 후진 속도 조절\n");
+        bluetoothPrintf("?[y] - 확인\t(현재 직진: %d, 현재 후진: %d)\n", parkingSpeedForward, parkingSpeedBackward);
         while (!g_rx_getLine)
             ;
         if (g_rx_buffer[0] == 'y')
         {
-            bluetoothPrintf("속도 설정 완료\n", parkingSpeedForward);
+            bluetoothPrintf("속도 설정 완료\n");
             bluetoothPrintf("직진: %d\t후진: %d\n", parkingSpeedForward, parkingSpeedBackward);
             rxBufferFlush();
             break;
@@ -160,11 +162,11 @@ static void tuneParkingSpeed ()
          * 직진 보여줘야 되는데 몇초나 할지
          */
         motorMoveForward(parkingSpeedForward);
-        delayMs(1000);
+        delayMs(2000);
         motorStop();
         delayMs(MOTOR_STOP_DELAY);
         motorMoveReverse(parkingSpeedBackward);
-        delayMs(1000);
+        delayMs(2000);
         motorStop();
         delayMs(MOTOR_STOP_DELAY);
     }
@@ -232,7 +234,7 @@ static void tuneStopDistance ()
             ;
         if (g_rx_buffer[0] == 'y')
         {
-            bluetoothPrintf("후진 거리 설정 완료 직진: %d\n", stopDistance);
+            bluetoothPrintf("후진 거리 설정 완료: %d\n", stopDistance);
             rxBufferFlush();
             break;
         }
@@ -244,9 +246,9 @@ static void tuneStopDistance ()
         else
         {
             stopDistance = atoi(g_rx_buffer);
+            goBackWard();
         }
         rxBufferFlush();
-        goBackWard();
     }
 }
 
@@ -256,44 +258,56 @@ void autoParkTune ()
 
     while (1)
     {
-        bluetoothPrintf("===========현재 값===========");
+        bluetoothPrintf("\n");
+        bluetoothPrintf("\n");
+        bluetoothPrintf("===========현재 값===========\n");
         bluetoothPrintf("1. [주차 공간 찾기] 주차공간: %d\n", parkingDistance);
-        bluetoothPrintf("2. [주차 공간 찾기] 전진속도: %d\n", parkingSpeedForward);
-        bluetoothPrintf("2. [주차 공간 찾기] 후진속도: %d\n", parkingSpeedBackward);
+        bluetoothPrintf("2. [주차 공간 찾기] 전진속도: %d\t", parkingSpeedForward);
+        bluetoothPrintf("후진속도: %d\n", parkingSpeedBackward);
         bluetoothPrintf("3. [주차 공간 찾기] Tick: %d\n", parkingFoundTick);
-        bluetoothPrintf("4. [주차] 전진 딜레이: %d\t", goForwardDelay);
-        bluetoothPrintf("4. [주차] 후진 우회전 딜레이: %d\n", rotateDelay);
-        bluetoothPrintf("5. [주차] 후진 거리: %d\n", stopDistance);
+        bluetoothPrintf("4. [주차 90도 들어가기] 전진 딜레이: %d\t", goForwardDelay);
+        bluetoothPrintf("4. 후진 우회전 딜레이: %d\n", rotateDelay);
+        bluetoothPrintf("5. [주차] 후진 정지 거리: %d\n", stopDistance);
         bluetoothPrintf("?[r] - 시험 주행\t[c]- 확인\t[#]- 재설정\n");
         while (!g_rx_getLine)
             ;
         switch (g_rx_buffer[0])
         {
             case 'r' :
+                rxBufferFlush();
                 autoPark();
                 break;
             case 'c' :
+                rxBufferFlush();
                 isTuned = true;
                 break;
             case '1' :
+                rxBufferFlush();
                 tuneParkingDistance();
                 break;
             case '2' :
+                rxBufferFlush();
                 tuneParkingSpeed();
                 break;
             case '3' :
+                rxBufferFlush();
                 tuneParkingFoundTick();
                 break;
             case '4' :
+                rxBufferFlush();
                 tuneRotate();
                 break;
             case '5' :
+                rxBufferFlush();
                 tuneStopDistance();
                 break;
             default :
+                rxBufferFlush();
                 bluetoothPrintf("UNKNOWN COMMAND\n");
                 break;
         }
+
+
 
         if (isTuned)
             break;

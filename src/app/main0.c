@@ -4,18 +4,11 @@
 #include "aeb.h"
 #include "tof.h"
 #include "control.h"
-#include "aeb.h"
-
-#include "auth.h"
-
-#include <string.h>
-
-
-extern volatile bool aebFlag;
 #include "fsm.h"
 #include "led.h"
 #include "buzzerport.h"
 #include "buzzer.h"
+#include "auth.h"
 
 MotorState motorState = {
         .baseDuty = 50,      // 사용자 설정 Duty
@@ -54,15 +47,9 @@ void main0 (void)
 
     while (1)
     {
-        if (motorState.lastKeyInput == 't')
-        {
-            tofOnOff();
-            motorState.lastKeyInput = ' ';
-        }
-
         handleStateMachine(&motorState);
 
-//        myPrintf("distance : %d mm,   flag : %d,    duty : %d\n", tofGetValue(), aebFlag, motorState.currentDuty);
+//        myPrintf("distance : %d mm,   tofflag : %d,    aebflag : %d\n", tofGetValue(), tofFlag, aebFlag);
 //        delayMs(500);
     }
 }

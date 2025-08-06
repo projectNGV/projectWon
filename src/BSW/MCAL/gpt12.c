@@ -8,6 +8,7 @@ volatile uint16 g_beepInterval = 1;
 IFX_INTERRUPT(IsrGpt1T3Handler, 0, ISR_PRIORITY_GPT1T3_TIMER);
 void IsrGpt1T3Handler(void)
 {
+    // 부저 토글
     buzzerToggle();
     MODULE_GPT120.T3.B.T3 = g_beepInterval;
 }
@@ -35,7 +36,7 @@ void gpt1_init ()
     src->SRPN = ISR_PRIORITY_GPT1T3_TIMER;
     src->TOS = 0;
     src->CLRR = 1;
-    src->SRE = 1; // Enable은 외부에서
+    src->SRE = 0; // Enable은 외부에서
 
     // 타이머 시작
     t3con->T3R = 0;
