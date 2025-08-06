@@ -38,6 +38,10 @@ void ledUpdateBlinking(void)
         case LED_REAR :
             ledToggleRear();
             break;
+        case LED_BOTH :
+            ledToggleRight();
+            ledToggleLeft();
+            break;
         case LED_NONE :
         default :
             ledStopAll();
