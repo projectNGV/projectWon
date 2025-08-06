@@ -1,11 +1,31 @@
+/*********************************************************************************************************************/
+/*-----------------------------------------------------Includes------------------------------------------------------*/
+/*********************************************************************************************************************/
+
 #include "autopark.h"
 
 #include "asclin1.h"
 #include "ultrasonic.h"
+
 #include <stdlib.h>
 #include <stdio.h>
 
+/*********************************************************************************************************************/
+/*------------------------------------------------------Macros-------------------------------------------------------*/
+/*********************************************************************************************************************/
+
 #define MOTOR_STOP_DELAY 500
+
+/*********************************************************************************************************************/
+/*-------------------------------------------------Global variables--------------------------------------------------*/
+/*********************************************************************************************************************/
+
+extern volatile boolean g_rx_getLine;
+extern volatile char g_rx_buffer[RX_BUFFER_SIZE];
+
+/*********************************************************************************************************************/
+/*--------------------------------------------Private Variables/Constants--------------------------------------------*/
+/*********************************************************************************************************************/
 
 // Parking Distance
 static int parkingDistance = 150000;
@@ -24,13 +44,24 @@ static int rotateDelay = 263;
 // Backward Stop Distance
 static int stopDistance = 35000;
 
+/*********************************************************************************************************************/
+/*------------------------------------------------Function Prototypes------------------------------------------------*/
+/*********************************************************************************************************************/
 
-// RX
-extern volatile boolean g_rx_getLine;
-extern volatile char g_rx_buffer[RX_BUFFER_SIZE];
+static void foundSpace ();
+static void rotate ();
+static void goBackWard ();
+static void tuneParkingDistance ();
+static void tuneParkingSpeed ();
+static void tuneParkingFoundTick ();
+static void tuneRotate ();
+static void tuneStopDistance ();
+void autoParkTune ();
+void autoPark ();
 
-
-void autoPark(void);
+/*********************************************************************************************************************/
+/*---------------------------------------------Function Implementations----------------------------------------------*/
+/*********************************************************************************************************************/
 
 static void foundSpace ()
 {
@@ -65,17 +96,17 @@ static void rotate ()
     motorStop();
 }
 
-static void goBackWard(){
+static void goBackWard ()
+{
     motorMoveReverse(parkingSpeedBackward);
     int rearDis = getDistanceByUltra(ULT_REAR);
-    while(rearDis > stopDistance){
+    while (rearDis > stopDistance)
+    {
         delayMs(50);
         rearDis = getDistanceByUltra(ULT_REAR);
     }
     motorStop();
 }
-
-
 
 static void tuneParkingDistance ()
 {
@@ -191,33 +222,33 @@ static void tuneRotate ()
     }
 }
 
-static void tuneStopDistance(){
+static void tuneStopDistance ()
+{
     while (1)
+    {
+        bluetoothPrintf("[주차] 후진 거리 조절 (현재 후진 거리: %d)\n", stopDistance);
+        bluetoothPrintf("?[c] - 뒤쪽 거리 출력\t[y] - 확인 \n");
+        while (!g_rx_getLine)
+            ;
+        if (g_rx_buffer[0] == 'y')
         {
-            bluetoothPrintf("[주차] 후진 거리 조절 (현재 후진 거리: %d)\n", stopDistance);
-            bluetoothPrintf("?[c] - 뒤쪽 거리 출력\t[y] - 확인 \n");
-            while (!g_rx_getLine)
-                ;
-            if (g_rx_buffer[0] == 'y')
-            {
-                bluetoothPrintf("후진 거리 설정 완료 직진: %d\n", stopDistance);
-                rxBufferFlush();
-                break;
-            }
-            else if (g_rx_buffer[0] == 'c')
-            {
-                int rearDis = getDistanceByUltra(ULT_REAR);
-                bluetoothPrintf("현재 초음파 거리: %d\n", rearDis);
-            }
-            else
-            {
-                stopDistance = atoi(g_rx_buffer);
-            }
+            bluetoothPrintf("후진 거리 설정 완료 직진: %d\n", stopDistance);
             rxBufferFlush();
-            goBackWard();
+            break;
         }
+        else if (g_rx_buffer[0] == 'c')
+        {
+            int rearDis = getDistanceByUltra(ULT_REAR);
+            bluetoothPrintf("현재 초음파 거리: %d\n", rearDis);
+        }
+        else
+        {
+            stopDistance = atoi(g_rx_buffer);
+        }
+        rxBufferFlush();
+        goBackWard();
+    }
 }
-
 
 void autoParkTune ()
 {
@@ -256,7 +287,7 @@ void autoParkTune ()
             case '4' :
                 tuneRotate();
                 break;
-            case '5':
+            case '5' :
                 tuneStopDistance();
                 break;
             default :
@@ -282,3 +313,4 @@ void autoPark ()
     goBackWard();
     delayMs(MOTOR_STOP_DELAY);
 }
+
