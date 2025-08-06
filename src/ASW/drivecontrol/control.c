@@ -32,32 +32,32 @@ void turnRightInPlace(int duty)
     motorMovChBPwm(duty, Backward);
 }
 
-// 전진하면서 좌회전 (좌측 바퀴 정상 속도, 우측 바퀴 속도 감소 → 회전 반경 생성)
+// 전진하면서 좌회전
 void moveForwardLeft(int duty)
 {
-    motorMovChAPwm(duty, Forward);
-    motorMovChBPwm(duty / 2, Forward);
+    motorMovChBPwm(duty, Forward);
+    motorStopChA();
 }
 
-// 전진하면서 우회전 (우측 바퀴 속도 감소)
+// 전진하면서 우회전
 void moveForwardRight(int duty)
 {
     motorMovChAPwm(duty, Forward);
-    motorMovChBPwm(duty / 2, Forward);
+    motorStopChB();
 }
 
-// 후진하면서 좌회전 (좌측 바퀴 속도 감소)
+// 후진하면서 좌회전
 void moveBackwardkLeft(int duty)
 {
-    motorMovChAPwm(duty / 2, Backward);
     motorMovChBPwm(duty, Backward);
+    motorStopChA();
 }
 
-// 후진하면서 우회전 (우측 바퀴 속도 감소)
+// 후진하면서 우회전
 void moveBackwardRight(int duty)
 {
     motorMovChAPwm(duty, Backward);
-    motorMovChBPwm(duty / 2, Backward);
+    motorStopChB();
 }
 
 /*********************************************************************************************************************/
@@ -119,7 +119,14 @@ void motorUpdateState(MotorState* state)
     else if (cmd == 'B')
     {
         handleBrakeCommand(state);        // 감속 실행
-        ledStartBlinking(LED_NONE);       // 모든 방향등 끄기
+        ledStopAll();
+    }
+
+    else if (cmd == 'p')
+    {
+        autoPark();                                 // 주차 절차 수행 (장애물 회피, 후진 등 포함 가능)
+        while(state->lastKeyInput != '8');
+        ledStopAll();
     }
 
     // TOF 센서 On/Off 전환
@@ -158,13 +165,11 @@ void motorRunCommand (MotorState* state)
 
         case '4' :
             turnLeftInPlace(duty);
-            ledSetRight(0);                 // 우측 깜빡이 끄기
             ledStartBlinking(LED_LEFT);     // 좌측 깜빡이 점등
             break;
 
         case '6' :
             turnRightInPlace(duty);
-            ledSetLeft(0);                  // 좌측 깜빡이 끄기
             ledStartBlinking(LED_RIGHT);    // 우측 깜빡이 점등
             break;
 
@@ -174,13 +179,11 @@ void motorRunCommand (MotorState* state)
 
         case '7' :
             moveForwardLeft(duty);
-            ledSetRight(0);                 // 우측 깜빡이 끄기
             ledStartBlinking(LED_LEFT);     // 좌측 깜빡이 점등
             break;
 
         case '9' :
             moveForwardRight(duty);
-            ledSetLeft(0);                  // 좌측 깜빡이 끄기
             ledStartBlinking(LED_RIGHT);    // 우측 깜빡이 점등
             break;
 

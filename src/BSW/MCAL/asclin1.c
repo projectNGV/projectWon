@@ -8,7 +8,9 @@ volatile boolean g_rx_getLine;
 volatile char g_rx_buffer[RX_BUFFER_SIZE];
 static int rx_idx = 0;
 
-void rxBufferFlush ()
+void rxBufferFlush (void);
+
+void rxBufferFlush (void)
 {
     rx_idx = 0;
     memset((void*) g_rx_buffer, 0, RX_BUFFER_SIZE);

@@ -39,7 +39,7 @@ void gpt1_init ()
     t3con->BPS1 = 2;    // 분주기 설정 (25MHz 기준)
     t3con->T3I = 7;     // 인터럽트 우선순위
     t3con->T3UD = 1;    // 카운트 다운 모드
-    MODULE_GPT120.T3.B.T3 = 24414; // 타이머 값
+    MODULE_GPT120.T3.B.T3 = g_beepInterval; // 타이머 값
 
     // 인터럽트 설정 (일단 비활성화 상태)
     Ifx_SRC_SRCR_Bits* src = (Ifx_SRC_SRCR_Bits*) &MODULE_SRC.GPT12.GPT12[0].T3.B;

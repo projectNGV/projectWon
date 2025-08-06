@@ -12,8 +12,8 @@ NUMPAD_VK = {
 }
 
 # ─── 키 종류 구분 ───
-MOVEMENT_KEYS = {'1','2','3','4','5','6','7','8','9','t'}
-CONFIG_KEYS = {'a', 's', 'd', 'f', 'g', 'h', 'j', 'k', 'p'}
+MOVEMENT_KEYS = {'1','2','3','4','5','6','7','8','9','t', 'p'}
+CONFIG_KEYS = {'a', 's', 'd', 'f', 'g', 'h', 'j', 'k'}
 
 # ─── 상태 변수 ───
 current_direction = None
@@ -45,8 +45,7 @@ def on_press(key):
             'g': "듀티: 70%", 
             'h': "듀티: 80%", 
             'j': "듀티: 90%", 
-            'k': "듀티: 100%",
-            'p': "자율 주차 모드"
+            'k': "듀티: 100%"
         }
         print(config_map.get(ch, "설정 키"))
         return

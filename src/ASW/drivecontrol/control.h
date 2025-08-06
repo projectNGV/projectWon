@@ -6,6 +6,7 @@
 #include "motor.h"
 #include "tof.h"
 #include "led.h"
+#include "autopark.h"
 
 #define Forward 1
 #define Backward 0
