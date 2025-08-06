@@ -3,14 +3,12 @@
 #include "ultrasonic.h"
 #include "aeb.h"
 #include "tof.h"
-#include "level.h"
 #include "control.h"
 #include "fsm.h"
 #include "led.h"
 #include "buzzerport.h"
 #include "buzzer.h"
 #include "auth.h"
-#include "level.h"
 
 MotorState motorState = {
         .baseDuty = 50,      // 사용자 설정 Duty

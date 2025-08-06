@@ -171,13 +171,9 @@ static boolean isTuned = FALSE;
 
 void autoParkTune ()
 {
-//    tuneParkingDistance();
-//    tuneParkingFoundSpeed();
-//    tuneParkingFoundTick();
-    tuneRotate();
     while (1)
     {
-        bluetoothPrintf("===========최종값===========");
+        bluetoothPrintf("=========== 현재값 ===========\n");
         bluetoothPrintf("1. 주차공간: %d\n", parkingDistance);
         bluetoothPrintf("2. 전진속도: %d\n", parkingFoundSpeed);
         bluetoothPrintf("3. Tick: %d\n", parkingFoundTick);
@@ -189,27 +185,36 @@ void autoParkTune ()
         switch (g_rx_buffer[0])
         {
             case 'r' :
+                rxBufferFlush();
                 autoPark();
                 break;
             case 'c' :
+                rxBufferFlush();
                 isTuned = true;
                 break;
             case '1' :
+                rxBufferFlush();
                 tuneParkingDistance();
                 break;
             case '2' :
+                rxBufferFlush();
                 tuneParkingFoundSpeed();
                 break;
             case '3' :
+                rxBufferFlush();
                 tuneParkingFoundTick();
                 break;
             case '4' :
+                rxBufferFlush();
                 tuneRotate();
                 break;
             default :
+                rxBufferFlush();
                 bluetoothPrintf("UNKNOWN COMMAND\n");
                 break;
         }
+
+
 
         if (isTuned)
             break;
