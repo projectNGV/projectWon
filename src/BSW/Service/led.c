@@ -35,6 +35,11 @@ void ledtogglefunction ()
     {
         MODULE_P02.OUT.B.P0 ^= 1;
     }
+    else if (num == LED_BOTH)
+    {
+        MODULE_P13.OUT.B.P2 ^= 1;
+        MODULE_P13.OUT.B.P1 ^= 1;
+    }
     else if (num == EMPTY)
     {
         MODULE_P13.OUT.B.P2 = 0;

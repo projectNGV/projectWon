@@ -7,7 +7,7 @@
 
 typedef enum lednum
 {
-    LED_RIGHT, LED_LEFT, LED_REAR, EMPTY
+    LED_RIGHT, LED_LEFT, LED_REAR, LED_BOTH, EMPTY
 } LedNum;
 
 void ledInit (void);

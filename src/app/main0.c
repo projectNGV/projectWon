@@ -72,9 +72,13 @@ void main0 ()
 
         if (command == 'c')
         {
-            printState();
-            bluetoothPrintf("left dis: %d\n", getDistanceByUltra(ULT_LEFT));
-            bluetoothPrintf("rear dis: %d\n", getDistanceByUltra(ULT_REAR));
+//            printState();
+            //bluetoothPrintf("left dis: %d\n", getDistanceByUltra(ULT_LEFT));
+           // bluetoothPrintf("rear dis: %d\n", getDistanceByUltra(ULT_REAR));
+            myPrintf("left dis: %d\n", getDistanceByUltra(ULT_LEFT));
+            myPrintf("right dis: %d\n", getDistanceByUltra(ULT_RIGHT));
+            myPrintf("rear dis: %d\n", getDistanceByUltra(ULT_REAR));
+
         }
 
         if (command == 'p')
