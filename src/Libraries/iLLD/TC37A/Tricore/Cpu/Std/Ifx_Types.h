@@ -63,14 +63,14 @@ typedef struct
 
 typedef struct
 {
-    sint32 real;				/**< \brief Real part */
-    sint32 imag;				/**< \brief Imaginary part */
+    sint32 real;                /**< \brief Real part */
+    sint32 imag;                /**< \brief Imaginary part */
 } csint32;
 
 typedef struct
 {
-    sint16 real;				/**< \brief Real part */
-    sint16 imag;				/**< \brief Imaginary part */
+    sint16 real;                /**< \brief Real part */
+    sint16 imag;                /**< \brief Imaginary part */
 } csint16;
 
 typedef sint64             Ifx_TickTime;    /**< \brief Time in ticks */
@@ -207,14 +207,14 @@ typedef enum
 
 typedef struct
 {
-    fract real;				/**< \brief Real part */
-    fract imag;				/**< \brief Imaginary part */
+    fract real;             /**< \brief Real part */
+    fract imag;             /**< \brief Imaginary part */
 } cfract;
 
 typedef struct
 {
-    sfract real;				/**< \brief Real part */
-    sfract imag;				/**< \brief Imaginary part */
+    sfract real;                /**< \brief Real part */
+    sfract imag;                /**< \brief Imaginary part */
 } csfract;
 
 #define IFX_PI                  (3.1415926535897932384626433832795f)
