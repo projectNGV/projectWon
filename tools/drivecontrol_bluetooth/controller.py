@@ -1,6 +1,5 @@
 from pynput import keyboard
 import serial
-import time
 
 # ─── 시리얼 포트 설정 ───
 ser = serial.Serial('COM10', 115200, timeout=2)
@@ -86,7 +85,6 @@ if __name__ == "__main__":
         
         for char in send_data:
             ser.write(char.encode('utf-8'))
-            time.sleep(0.01)
         ser.write(b'\n') 
 
         res = ser.readline().decode().strip()

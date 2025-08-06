@@ -109,6 +109,11 @@ void motorUpdateState(MotorState* state)
     else if (cmd == 'p') {
         // handleAutoParkCommand(state); // 향후 추가될 기능
     }
+    else if (cmd == 't')
+    {
+        tofOnOff();
+        state->lastKeyInput = '5';
+    }
 }
 
 // RC카 바퀴를 입력된 방향과 듀티에 따라 실제로 구동시키는 함수
@@ -129,11 +134,11 @@ void motorRunCommand (MotorState* state)
     {
         case '8' : moveForward(duty); break;
         case '2' : moveBackward(duty); ledStartBlinking(LED_REAR); break;
-        case '4' : turnLeftInPlace(duty); ledStartBlinking(LED_LEFT); break;
-        case '6' : turnRightInPlace(duty); ledStartBlinking(LED_RIGHT); break;
+        case '4' : turnLeftInPlace(duty); ledSetRight(0); ledStartBlinking(LED_LEFT); break;
+        case '6' : turnRightInPlace(duty); ledSetLeft(0); ledStartBlinking(LED_RIGHT); break;
         case '5' : motorStop(); break;
-        case '7' : moveForwardLeft(duty); ledStartBlinking(LED_LEFT); break;
-        case '9' : moveForwardRight(duty); ledStartBlinking(LED_RIGHT); break;
+        case '7' : moveForwardLeft(duty); ledSetRight(0); ledStartBlinking(LED_LEFT); break;
+        case '9' : moveForwardRight(duty); ledSetLeft(0); ledStartBlinking(LED_RIGHT); break;
         case '1' : moveBackwardkLeft(duty); break;
         case '3' : moveBackwardRight(duty); break;
     }
