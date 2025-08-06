@@ -17,7 +17,7 @@
 #include "led.h"
 #include "buzzerport.h"
 
-#define BEEP_INITIAL_INTERVAL 8000      // 초기 주기 (느리게 시작)
+//#define BEEP_INITIAL_INTERVAL 8000      // 초기 주기 (느리게 시작)
 #define BEEP_MIN_INTERVAL     1000      // 최소 주기 (0.1초 정도)
 #define BEEP_INTERVAL_STEP    2000      // 인터럽트마다 줄이는 양
 

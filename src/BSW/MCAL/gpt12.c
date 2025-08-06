@@ -1,6 +1,6 @@
 #include "gpt12.h"
 
-volatile uint16 g_beepInterval = BEEP_INITIAL_INTERVAL;
+volatile uint16 g_beepInterval = 8000;
 
 // GPT1 타이머 인터럽트 핸들러 - 0.5초마다 BUZZER 토글
 IFX_INTERRUPT(IsrGpt1T3Handler, 0, ISR_PRIORITY_GPT1T3_TIMER);
@@ -10,14 +10,14 @@ void IsrGpt1T3Handler(void)
     buzzerToggle();
 
     // 주기 감소 (더 이상 줄이지 않도록 최소 한계 체크)
-    if (g_beepInterval > BEEP_MIN_INTERVAL)
-    {
-        g_beepInterval -= BEEP_INTERVAL_STEP;
-        if (g_beepInterval < BEEP_MIN_INTERVAL)
-        {
-            g_beepInterval = BEEP_MIN_INTERVAL;
-        }
-    }
+//    if (g_beepInterval > BEEP_MIN_INTERVAL)
+//    {
+//        g_beepInterval -= BEEP_INTERVAL_STEP;
+//        if (g_beepInterval < BEEP_MIN_INTERVAL)
+//        {
+//            g_beepInterval = BEEP_MIN_INTERVAL;
+//        }
+//    }
 
     // 새로운 주기로 타이머 설정
     MODULE_GPT120.T3.B.T3 = g_beepInterval;
@@ -31,7 +31,7 @@ void IsrGpt2T6Handler(void)
 }
 
 // buzzer용 gpt타이머
-void gpt1_init ()
+void gpt1_init (void)
 {
     Ifx_GPT12_T3CON_Bits *t3con = (Ifx_GPT12_T3CON_Bits*) &MODULE_GPT120.T3CON.B;
 
@@ -107,6 +107,6 @@ void gpt12Init ()
     MODULE_GPT120.CLC.U = 0;
     IfxScuWdt_setCpuEndinit(IfxScuWdt_getGlobalEndinitPassword());
 
-    gpt1_init();
+//    gpt1_init();
     gpt2_init();
 }

@@ -8,6 +8,7 @@
 #include "ultrasonic.h"
 #include "buzzer.h"
 #include "led.h"
+#include "gpt12.h"
 
 #include <stdlib.h>
 #include <stdio.h>
@@ -24,6 +25,7 @@
 
 extern volatile boolean g_rx_getLine;
 extern volatile char g_rx_buffer[RX_BUFFER_SIZE];
+extern volatile uint16 g_beepInterval;
 
 /*********************************************************************************************************************/
 /*--------------------------------------------Private Variables/Constants--------------------------------------------*/
@@ -105,12 +107,15 @@ static void goBackWard ()
     motorMoveReverse(parkingSpeedBackward);
 
     int rearDis = getDistanceByUltra(ULT_REAR);
+    g_beepInterval = rearDis / 100;
+    gpt1_init();
     buzzerOn();
     Gpt1_Interrupt_Enable ();
     while (rearDis > stopDistance)
     {
         delayMs(50);
         rearDis = getDistanceByUltra(ULT_REAR);
+        g_beepInterval = rearDis / 100;
     }
     motorStop();
     Gpt1_Interrupt_Disable();
