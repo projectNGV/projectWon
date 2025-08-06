@@ -2,6 +2,9 @@
 
 extern volatile bool aebFlag;  // 긴급 제동 여부를 나타내는 전역 변수 (true면 장애물 감지됨)
 
+volatile bool buzzerFlag = TRUE; // 긴급 제동시 부저 울리기
+
+
 VehicleState currentState = STATE_IDLE;  // 현재 차량 상태 (초기 상태는 IDLE)
 
 // 상태 기계 메인 함수
@@ -47,7 +50,11 @@ void handleStateMachine (MotorState *motorState)
 
         case STATE_EMERGENCY_STOP :
             performEmergencyStop();
-            emergencyBuzzer();
+            if(buzzerFlag){
+                emergencyBuzzer();
+                buzzerFlag = FALSE;
+            }
+
             // 후진 키 입력 + 후방 거리 확보 → 다시 수동 주행
             if ((motorState->lastKeyInput == '1' || motorState->lastKeyInput == '2' || motorState->lastKeyInput == '3'))
             {
@@ -56,6 +63,7 @@ void handleStateMachine (MotorState *motorState)
             // 또는 AEB 해제되었을 경우 → IDLE
             else if (!aebFlag)
             {
+                buzzerFlag = TRUE;
                 currentState = STATE_IDLE;
             }
             break;
