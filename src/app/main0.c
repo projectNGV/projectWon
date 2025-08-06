@@ -20,14 +20,11 @@ MotorState motorState = {
         .lastKeyInput = '5' // 방금 받은 키보드 입력
         };
 
-extern volatile boolean g_isLogin;
-
 void main0 (void)
 {
     systemInit();
     myPrintf("System Start\n");
 
-    g_isLogin = TRUE;
     authenticate();
 
     while (1)
