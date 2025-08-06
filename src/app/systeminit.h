@@ -1,8 +1,6 @@
 #ifndef ASW_APP_SYSTEMINIT_H_
 #define ASW_APP_SYSTEMINIT_H_
 
-
-#include <asclin0.h>
 #include "asclin1.h"
 #include "bluetooth.h"
 #include "motor.h"
@@ -12,8 +10,7 @@
 #include "ultrasonic.h"
 #include "gpt12.h"
 #include "led.h"
-#include "ledport.h"
-#include "buzzerport.h"
+#include "buzzer.h"
 
 void systemInit(void);
 

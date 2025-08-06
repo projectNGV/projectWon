@@ -6,8 +6,9 @@ void systemInit(){
     motorInit();
     asclin0InitUart();
     tofInit();
-    gpt12Init();
-    ledInit();
-    buzzerInit();
+    uartInit();
     ultrasonicInit();
+    ledInit();
+    gpt12Init();
+    buzzerInit();
 }

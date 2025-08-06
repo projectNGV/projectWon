@@ -7,6 +7,7 @@ typedef enum {
     LED_RIGHT,
     LED_LEFT,
     LED_REAR,
+    LED_BOTH,
     LED_NONE
 } LedPosition;
 

@@ -252,7 +252,7 @@ static void tuneStopDistance ()
     }
 }
 
-void autoParkTune ()
+void autoParkTune (void)
 {
     boolean isTuned = FALSE;
 
@@ -314,7 +314,7 @@ void autoParkTune ()
     }
 }
 
-void autoPark ()
+void autoPark (void)
 {
     foundSpace();
     rotate();
