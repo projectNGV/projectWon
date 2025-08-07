@@ -69,12 +69,14 @@ void handleStateMachine (MotorState *motorState)
             {
                 emergencyBuzzer();   // 경고음 출력
                 buzzerFlag = FALSE;  // 다시 울리지 않도록 플래그 꺼줌
+                ledStartBlinking(LED_BOTH);
             }
             // 후진 키(1,2,3)가 입력된 경우 → 사용자가 장애물을 피하려는 의도
             // → 다시 수동 주행 상태로 전환 (후방 거리 확보 여부는 외부 로직에서 판단)
             if (motorState->lastKeyInput == '1' || motorState->lastKeyInput == '2' || motorState->lastKeyInput == '3')
             {
                 buzzerFlag = TRUE;    // 다음 번 AEB 때 부저가 다시 울릴 수 있도록 초기화
+                ledStopAll();
                 currentState = STATE_MANUAL_DRIVE;
             }
 
@@ -83,6 +85,7 @@ void handleStateMachine (MotorState *motorState)
             {
 
                 buzzerFlag = TRUE;    // 다음 번 AEB 때 부저가 다시 울릴 수 있도록 초기화
+                ledStopAll();
                 currentState = STATE_IDLE;
             }
 
