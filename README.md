@@ -12,8 +12,7 @@
 |-----------------|----------------------------------------------------------------------|
 | `autopark`      | 초음파 센서를 기반으로 주차 공간을 탐색하고 자동으로 후진 주차 수행       |
 | `fcw`           | 전방 거리 감지를 통해 장애물과의 충돌을 방지하는 경고 시스템               |
-| `fwd`           | Bluetooth를 통한 전진, 회전, 정지 등 수동 제어 기능                        |
-| `level`         | 초음파 거리값을 필터링하고 PID 기반 조향 보정 수행                         |
+| `control`       | Bluetooth를 통한 전진, 회전, 정지 등 수동 제어 기능                        |
 | `motor`         | PWM 제어를 통해 모터의 속도 및 방향을 제어                                 |
 | `bluetooth`     | UART 통신 기반 Bluetooth 입력 수신 처리                                   |
 | `buzzer`, `led` | 주행 상태 또는 경고 상황을 사용자에게 알리는 출력 장치 제어                |
@@ -24,19 +23,15 @@
 ## 📁 프로젝트 구조
 ```
 projectWon/
-├── ASW/
-│ ├── autopark/ # 자율주차 FSM
-│ ├── fcw/ # 전방 추돌 방지
-│ ├── fwd/ # 수동 주행 (전진/회전 등)
-│ ├── level/ # 거리 필터링 및 PID 제어
-│ ├── motor/ # 모터 제어
-│ ├── bluetooth/ # Bluetooth 입력 처리
-│ ├── buzzer/, led/ # 경고음 및 상태 LED
-├── BSW/
-│ ├── ultrasonic/ # 초음파 센서 트리거 및 거리 계산
-│ ├── gpt12/ # 타이머 기반 인터럽트
-│ └── asclin/ # UART 초기화 및 송수신
-└── Configurations/ # 초기화 코드 및 링커 설정
+  ├── ASW/
+  │    ├── auth/ # 암호키
+  │    ├── autopark/ # 자율주차
+  │    ├── drivecontrol/ # 원격주행
+  │    ├── emergencystop/ # 긴급제동
+  │    └── fsm # 상태전이
+  └── BSW/
+     ├── MCAL/ # Microcontroller Abstraction Layer
+     └── Service
 ```
 
 
@@ -47,11 +42,11 @@ projectWon/
 | 부품             | 설명                                       |
 |------------------|--------------------------------------------|
 | MCU              | Infineon AURIX TC375 Lite Kit             |
-| 초음파 센서       | HC-SR04 또는 GP2Y0E03 (거리 측정용)        |
+| 초음파 센서       | HC-SR04 (거리 측정용)        |
 | Bluetooth 모듈   | HC-06 (UART 통신 기반)                    |
-| 모터 드라이버     | L298N 또는 유사 모듈                       |
+| 모터 드라이버     | L298N                       |
 | 액추에이터        | 부저, LED                                   |
-| 섀시 및 구동계    | 4WD RC카 섀시, DC 모터 2개 이상             |
+| 섀시 및 구동계    | 4WD RC카             |
 
 ---
 
@@ -74,15 +69,14 @@ projectWon/
   보드 및 모터 드라이버에 전원 공급
 
 - **Bluetooth 연결**  
-  스마트폰 앱 또는 PC에서 HC-06에 연결  
-  `'w'`, `'a'`, `'s'`, `'d'` 등의 키 입력으로 제어 가능
+  PC에서 tools/drivecontrol_bluetooth/controller.py 실행  
+  키 입력으로 제어 가능
 
 - **Autopark 모드 진입**  
-  특정 입력 또는 조건 만족 시 자동 주차 FSM 실행
+  'p' 입력 시 자동 주차 FSM 실행
 
-- **센서 디버깅 출력**  
-  UART 시리얼 터미널을 통해 거리 정보 출력 확인 가능
-
+- **AEB 모드 진입**
+  't' 입력 시 AEB 모드 실행
 ---
 
 ## 📎 참고 사항
@@ -90,7 +84,7 @@ projectWon/
 - 실시간성 확보를 위해 GPT12 타이머 인터럽트를 활용
 - 거리 필터링에 이동 평균(Moving Average) 사용
 - 상태 기반 FSM으로 시나리오 동작 구현
-- 자율 주차 기능은 좌우 센서 기반으로 공간을 인식하며 후진 정렬까지 수행
+- 자율 주차 기능은 초음파 센서 기반으로 공간을 인식하며 후진 정렬까지 수행
 
 ---
 
@@ -100,9 +94,10 @@ projectWon/
 - IDE: AURIX Development Studio
 - 언어: C
 - 디버깅: On-Chip Debugger via USB
+- 디버깅툴: UDE Starterkit
 
 ---
 
 ## 📝 라이선스
 
-이 프로젝트는 교육 및 연구 목적으로 사용되며 별도의 상업적 이용을 허가하지 않습니다.
+이 프로젝트는 교육 목적으로 사용되며 별도의 상업적 이용을 허가하지 않습니다.
