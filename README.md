@@ -1,147 +1,108 @@
-# TC375 AURIX Project
+# 🏎️ RC카 자율주행 프로젝트 (TC375 기반)
 
-A multi-core embedded project for the Infineon AURIX TC375 microcontroller using the iLLD (Infineon Low Level Driver) framework.
+## 📌 프로젝트 개요
+이 프로젝트는 **Infineon AURIX TC375 Lite Kit**을 기반으로 한 RC카 자율주행 시스템입니다.  
+초음파 센서와 Bluetooth 통신을 활용하여 **후방 자율 주차**, **전방 추돌 경고**, **수동 조작 주행** 기능을 구현하였습니다.
 
-## Overview
+---
 
-This project implements a basic multi-core application for the TC375 microcontroller with three CPU cores:
-- **CPU0**: Main application core
-- **CPU1**: Secondary processing core  
-- **CPU2**: Additional processing core
+## ⚙️ 주요 기능
 
-## Project Structure
+| 기능            | 설명                                                                 |
+|-----------------|----------------------------------------------------------------------|
+| `autopark`      | 초음파 센서를 기반으로 주차 공간을 탐색하고 자동으로 후진 주차 수행       |
+| `fcw`           | 전방 거리 감지를 통해 장애물과의 충돌을 방지하는 경고 시스템               |
+| `fwd`           | Bluetooth를 통한 전진, 회전, 정지 등 수동 제어 기능                        |
+| `level`         | 초음파 거리값을 필터링하고 PID 기반 조향 보정 수행                         |
+| `motor`         | PWM 제어를 통해 모터의 속도 및 방향을 제어                                 |
+| `bluetooth`     | UART 통신 기반 Bluetooth 입력 수신 처리                                   |
+| `buzzer`, `led` | 주행 상태 또는 경고 상황을 사용자에게 알리는 출력 장치 제어                |
 
+---
+
+
+## 📁 프로젝트 구조
 ```
-src/
-├── Cpu0_Main.c          # Main application code for CPU0
-├── Cpu1_Main.c          # Secondary core code for CPU1
-├── Cpu2_Main.c          # Additional core code for CPU2
-├── Configurations/      # Generated configuration files
-├── Libraries/           # iLLD libraries and services
-│   ├── iLLD/           # Infineon Low Level Drivers
-│   ├── Service/        # Service layer components
-│   └── Infra/          # Infrastructure components
-├── Lcf_Gnuc_Tricore_Tc.lsl    # GNU linker script
-└── Lcf_Tasking_Tricore_Tc.lsl # TASKING linker script
-```
-
-## Features
-
-- **Multi-core synchronization**: All three cores are synchronized using events
-- **Watchdog management**: Individual watchdog timers for each core (currently disabled)
-- **Interrupt handling**: Interrupts enabled on all cores
-- **iLLD framework**: Uses Infineon's Low Level Driver libraries
-
-## Prerequisites
-
-### Required Software
-- **AURIX Development Studio (ADS)** - IDE for AURIX development
-- **TASKING VX-toolset** or **GNU ARM Embedded Toolchain** - Compiler toolchain
-- **Infineon iLLD Libraries** - Low-level driver libraries (included)
-
-### Hardware
-- **Infineon AURIX TC375** microcontroller
-- **Development board** with TC375 (e.g., AURIX TC375 Lite Kit)
-- **Debug probe** (e.g., MiniWiggler, DAS, or J-Link)
-
-## Building the Project
-
-### Using AURIX Development Studio (ADS)
-1. Open AURIX Development Studio
-2. Import the project: `File > Import > Existing Projects into Workspace`
-3. Select the project directory
-4. Build the project: `Project > Build All`
-
-### Using Command Line
-```bash
-# Navigate to project directory
-cd src/
-
-# Build using TASKING toolchain
-make -f Makefile
-
-# Or build using GNU toolchain
-make -f Makefile.gnu
+projectWon/
+├── ASW/
+│ ├── autopark/ # 자율주차 FSM
+│ ├── fcw/ # 전방 추돌 방지
+│ ├── fwd/ # 수동 주행 (전진/회전 등)
+│ ├── level/ # 거리 필터링 및 PID 제어
+│ ├── motor/ # 모터 제어
+│ ├── bluetooth/ # Bluetooth 입력 처리
+│ ├── buzzer/, led/ # 경고음 및 상태 LED
+├── BSW/
+│ ├── ultrasonic/ # 초음파 센서 트리거 및 거리 계산
+│ ├── gpt12/ # 타이머 기반 인터럽트
+│ └── asclin/ # UART 초기화 및 송수신
+└── Configurations/ # 초기화 코드 및 링커 설정
 ```
 
-## Configuration
 
-### Pin Configuration
-The project includes a pin configuration file:
-- `src/Libraries/pinmapper.pincfg` - Pin mapping configuration
+---
 
-### Linker Scripts
-Two linker scripts are provided:
-- `Lcf_Gnuc_Tricore_Tc.lsl` - For GNU toolchain
-- `Lcf_Tasking_Tricore_Tc.lsl` - For TASKING toolchain
+## 🔌 사용된 하드웨어
 
-## Multi-Core Architecture
+| 부품             | 설명                                       |
+|------------------|--------------------------------------------|
+| MCU              | Infineon AURIX TC375 Lite Kit             |
+| 초음파 센서       | HC-SR04 또는 GP2Y0E03 (거리 측정용)        |
+| Bluetooth 모듈   | HC-06 (UART 통신 기반)                    |
+| 모터 드라이버     | L298N 또는 유사 모듈                       |
+| 액추에이터        | 부저, LED                                   |
+| 섀시 및 구동계    | 4WD RC카 섀시, DC 모터 2개 이상             |
 
-### CPU0 (Main Core)
-- Primary application core
-- Handles main system initialization
-- Coordinates with other cores via synchronization events
+---
 
-### CPU1 (Secondary Core)
-- Secondary processing core
-- Synchronized with main core
-- Can handle parallel processing tasks
+## 🛠️ 빌드 방법
 
-### CPU2 (Additional Core)
-- Third processing core
-- Synchronized with other cores
-- Available for additional parallel processing
+1. **IDE 설치**
+   - Infineon AURIX Development Studio (ADS) 사용
+2. **프로젝트 임포트**
+   - `projectWon` 폴더를 ADS에서 Import
+3. **Build Config**
+   - `Debug` 또는 `Release` 선택 후 빌드
+4. **보드에 업로드**
+   - USB 연결 후 Flash 버튼 클릭
 
-## Development Notes
+---
 
-### Watchdog Timers
-⚠️ **Warning**: Watchdog timers are currently disabled in all cores. For production use:
-- Enable watchdog timers
-- Implement proper watchdog service routines
-- Consider safety requirements
+## ▶️ 실행 방법
 
-### Interrupts
-- All cores have interrupts enabled
-- Implement interrupt service routines as needed
-- Consider interrupt priority levels
+- **전원 공급**  
+  보드 및 모터 드라이버에 전원 공급
 
-### Memory Management
-- Each core has dedicated memory regions
-- Shared memory areas available for inter-core communication
-- Stack and heap configurations in linker scripts
+- **Bluetooth 연결**  
+  스마트폰 앱 또는 PC에서 HC-06에 연결  
+  `'w'`, `'a'`, `'s'`, `'d'` 등의 키 입력으로 제어 가능
 
-## Debugging
+- **Autopark 모드 진입**  
+  특정 입력 또는 조건 만족 시 자동 주차 FSM 실행
 
-### Debug Configuration
-1. Connect debug probe to development board
-2. Configure debug settings in ADS
-3. Set breakpoints in individual core files
-4. Use multi-core debugging features
+- **센서 디버깅 출력**  
+  UART 시리얼 터미널을 통해 거리 정보 출력 확인 가능
 
-### Common Debug Issues
-- **Synchronization**: Ensure all cores reach sync points
-- **Memory**: Check stack/heap allocation
-- **Interrupts**: Verify interrupt vector table setup
+---
 
-## License
+## 📎 참고 사항
 
-This project uses the Boost Software License - Version 1.0. See individual source files for license details.
+- 실시간성 확보를 위해 GPT12 타이머 인터럽트를 활용
+- 거리 필터링에 이동 평균(Moving Average) 사용
+- 상태 기반 FSM으로 시나리오 동작 구현
+- 자율 주차 기능은 좌우 센서 기반으로 공간을 인식하며 후진 정렬까지 수행
 
-## Contributing
+---
 
-1. Follow the existing code style
-2. Add proper documentation for new features
-3. Test on actual hardware when possible
-4. Update this README for significant changes
+## 👨‍💻 개발 환경
 
-## Support
+- MCU: Infineon AURIX TC375
+- IDE: AURIX Development Studio
+- 언어: C
+- 디버깅: On-Chip Debugger via USB
 
-For issues and questions:
-- Check Infineon AURIX documentation
-- Review iLLD library documentation
-- Consult AURIX Development Studio help
+---
 
-## Version 
-- **v1.0.0**: Initial multi-core setup with basic synchronization
-- Basic watchdog and interrupt configuration
-- iLLD framework integration
+## 📝 라이선스
+
+이 프로젝트는 교육 및 연구 목적으로 사용되며 별도의 상업적 이용을 허가하지 않습니다.
