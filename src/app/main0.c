@@ -22,4 +22,5 @@ void main0 (void)
         // 사용자의 키 입력, 센서 값 등에 따라 상태를 변경하고 그에 맞는 행동 수행
         handleStateMachine(&motorState);
     }
+
 }
