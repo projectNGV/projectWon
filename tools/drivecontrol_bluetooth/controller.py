@@ -106,6 +106,9 @@ def read_from_serial():
 
 # ─── 메인 실행 ───
 if __name__ == "__main__":
+    while(not ser.is_open):
+        continue
+    print("연결 완료")
     read_from_serial()
 
     print("RC카 키보드 제어 시작 (ESC 종료)")

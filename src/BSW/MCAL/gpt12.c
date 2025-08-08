@@ -107,6 +107,6 @@ void gpt12Init ()
     MODULE_GPT120.CLC.U = 0;
     IfxScuWdt_setCpuEndinit(IfxScuWdt_getGlobalEndinitPassword());
 
-//    gpt1_init();
+    gpt1_init();
     gpt2_init();
 }

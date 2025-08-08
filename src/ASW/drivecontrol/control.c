@@ -4,56 +4,56 @@
 // 모터 주행 제어 함수들
 /*********************************************************************************************************************/
 
-// 차량을 전진시킴 (양쪽 바퀴 모두 정방향 회전)
+// 8 차량을 전진시킴 (양쪽 바퀴 모두 정방향 회전)
 void moveForward(int duty)
 {
     motorMovChAPwm(duty, Forward);  // 왼쪽 바퀴 정방향
     motorMovChBPwm(duty, Forward);  // 오른쪽 바퀴 정방향
 }
 
-// 차량을 후진시킴 (양쪽 바퀴 모두 역방향 회전)
+// 2 차량을 후진시킴 (양쪽 바퀴 모두 역방향 회전)
 void moveBackward(int duty)
 {
     motorMovChAPwm(duty, Backward);  // 왼쪽 바퀴 역방향
     motorMovChBPwm(duty, Backward);  // 오른쪽 바퀴 역방향
 }
 
-// 차량을 제자리에서 왼쪽으로 회전시킴 (좌측 바퀴 역방향, 우측 바퀴 정방향)
+// 4 차량을 제자리에서 왼쪽으로 회전시킴 (좌측 바퀴 역방향, 우측 바퀴 정방향)
 void turnLeftInPlace(int duty)
 {
     motorMovChAPwm(duty, Backward);
     motorMovChBPwm(duty, Forward);
 }
 
-// 차량을 제자리에서 오른쪽으로 회전시킴 (좌측 바퀴 정방향, 우측 바퀴 역방향)
+// 6 차량을 제자리에서 오른쪽으로 회전시킴 (좌측 바퀴 정방향, 우측 바퀴 역방향)
 void turnRightInPlace(int duty)
 {
     motorMovChAPwm(duty, Forward);
     motorMovChBPwm(duty, Backward);
 }
 
-// 전진하면서 좌회전
+// 7 전진하면서 좌회전
 void moveForwardLeft(int duty)
 {
     motorMovChBPwm(duty, Forward);
-    motorStopChA();
+    motorMovChAPwm(duty/32, Forward);
 }
 
-// 전진하면서 우회전
+// 9 전진하면서 우회전
 void moveForwardRight(int duty)
 {
     motorMovChAPwm(duty, Forward);
-    motorStopChB();
+    motorMovChBPwm(duty/32, Forward);
 }
 
-// 후진하면서 좌회전
+// 1 후진하면서 좌회전
 void moveBackwardkLeft(int duty)
 {
     motorMovChBPwm(duty, Backward);
     motorStopChA();
 }
 
-// 후진하면서 우회전
+// 3 후진하면서 우회전
 void moveBackwardRight(int duty)
 {
     motorMovChAPwm(duty, Backward);
@@ -157,41 +157,52 @@ void motorRunCommand (MotorState* state)
     // 방향에 따라 모터 및 LED 제어
     switch (cmd)
     {
-        case '8' : moveForward(duty); break;
+        case '8' :
+            ledStopAll();
+            moveForward(duty);
+            break;
 
         case '2' :
+            ledStopAll();
             moveBackward(duty);
             break;
 
         case '4' :
             turnLeftInPlace(duty);
+            ledSetRight(0);
             ledStartBlinking(LED_LEFT);     // 좌측 깜빡이 점등
             break;
 
         case '6' :
             turnRightInPlace(duty);
+            ledSetLeft(0);
             ledStartBlinking(LED_RIGHT);    // 우측 깜빡이 점등
             break;
 
         case '5' :
             motorStop();                    // 정지
+            ledStopAll();
             break;
 
         case '7' :
             moveForwardLeft(duty);
+            ledSetRight(0);
             ledStartBlinking(LED_LEFT);     // 좌측 깜빡이 점등
             break;
 
         case '9' :
             moveForwardRight(duty);
+            ledSetLeft(0);
             ledStartBlinking(LED_RIGHT);    // 우측 깜빡이 점등
             break;
 
         case '1' :
+            ledStopAll();
             moveBackwardkLeft(duty);
             break;
 
         case '3' :
+            ledStopAll();
             moveBackwardRight(duty);
             break;
     }

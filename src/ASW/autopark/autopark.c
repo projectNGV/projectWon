@@ -32,7 +32,7 @@ extern volatile uint16 g_beepInterval;
 /*********************************************************************************************************************/
 
 // Parking Distance
-static int parkingDistance = 200000;
+static int parkingDistance = 250000;
 
 // Parking Speed
 static int parkingSpeedForward = 350;
@@ -43,10 +43,10 @@ static volatile int parkingFoundTick = 4;
 
 // Forward & Rotate 90 Degree Rightward
 static int goForwardDelay = 0;
-static int rotateDelay = 370;
+static int rotateDelay = 375;
 
 // Backward Stop Distance
-static int stopDistance = 100000;
+static int stopDistance = 120000;
 
 /*********************************************************************************************************************/
 /*------------------------------------------------Function Prototypes------------------------------------------------*/
@@ -108,7 +108,6 @@ static void goBackWard ()
 
     int rearDis = getDistanceByUltra(ULT_REAR);
     g_beepInterval = rearDis / 100;
-    gpt1_init();
     buzzerOn();
     Gpt1_Interrupt_Enable ();
     while (rearDis > stopDistance)

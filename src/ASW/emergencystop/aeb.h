@@ -6,7 +6,7 @@
 #include "buzzer.h"
 
 #define REVERSE_TIME_MS         150
-#define DUTY_LIMIT_DISTANCE_MM  800
+#define DUTY_LIMIT_DISTANCE_MM  950
 
 #define AEB_DISTANCE_MM         350
 #define SAFETY_DISTANCE_MM      500
